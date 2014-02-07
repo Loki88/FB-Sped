@@ -1,0 +1,204 @@
+@import 'mixins';
+@import 'grid';
+
+$nav-background-color: #206DB3;
+
+$color1: #f7fcf0;
+$color2: #e0f3db;
+$color3: #ccebc5;
+$color4: #a8ddb5;
+$color5: #7bccc4;
+$color6: #4eb3d3;
+$color7: #2b8cbe;
+$color8: #0868ac;
+$color9: #084081;
+
+$navbar_height: 3em;
+$nav_v_divider: 2px;
+$nav_hr_height: 2px;
+
+$nav_button_margin: 10;
+
+@mixin nav_v_divider($width, $color) {
+    display: inline-block;
+    position: relative;
+    width: $width;
+    float: left;
+    background-color: $color;
+}
+
+@mixin nav_h_divider($height, $color){
+    position: relative;
+    clear: both;
+    width: 100%;
+    height: $height;
+    background-color: $color;
+}
+
+#navigation{
+    clear: both;
+    display: block;
+    position: relative;
+    z-index: 2;
+    width: 96%;
+    overflow: hidden;
+    border-width: 2pt 0 2pt 0;
+    border-style: double;
+    border-color: $color6;
+    margin-top: 0.9765625%;
+    margin-bottom: 1.2722646%;
+    background-color: $nav-background-color;
+    padding: 0 2%;
+    
+    .nav-button {
+        display: block;
+        float: left;
+        text-align: center;
+        text-decoration: none;
+        height: $navbar_height;
+        padding: 0.5em  0;
+        height: $navbar_height;
+        margin: 0.5em 0;
+        width: (100%)/6;
+        vertical-align: middle;
+
+        a {
+            display: block;
+            position: relative;
+            text-decoration: none;
+            text-align: center;
+            width: 90%;
+            height: $navbar_height - 0.5em;
+            padding: 0.25em 0;
+            margin: 0 auto;
+            color: #FFFFFF;
+            vertical-align: middle;
+        }
+
+    }
+    
+    .nav_h_divider{
+        @include nav_h_divider($nav_hr_height, #FFFFFF);
+        display: none;
+        float: left;
+    }
+    
+    .nav-button:first-child {
+        padding-left: 0;
+        border-left: 0;
+    }
+
+    .nav-button:last-child {
+        padding-right: 0;
+        border-right: 0;
+    }
+
+    .nav-button:hover {
+        background-color: #8EA7D6;
+    }
+
+    .nav-button-selected {
+        background-color: #8EA7D6;
+    }
+}
+
+@media all and (min-width: 481px) and (max-width: 768px), all and (min-device-width: 481px) and (max-device-width: 768px)
+{
+    #navigation{
+        padding: 0 10 / 768 * 100%;
+        margin: 0;
+        height: auto;
+        margin: 0.5em 0;
+        width: 748 / 768 * 100%;
+        $width: 748 /(5 * 768) * 100%;
+        
+        .nav-button {
+            width: $width;
+            padding: 0.2em  0;
+        }
+        
+        #nav_6{
+            margin-left: (748 - $width * 768 / 100%) / (2 * 768) * 100%;
+        }
+        
+        #break1 {
+            clear: both;
+            display: block;
+        }
+    }
+}
+
+@media all and (min-width: 420px) and (max-width: 480px), all and (min-device-width: 420px) and (max-device-width: 480px)
+{
+    #navigation{
+        padding: 0 10 / 480 * 100%;
+        margin: 0;
+        height: auto;
+        margin: 0.5em 0;
+        width: 460 / 480 * 100%;
+        $width: ( 460 - (3 * $nav_v_divider / 1px))/(4 * 480) * 100%;
+        
+        .nav-button, #nav_6, #nav_5 {
+            width: $width;
+            padding: 0.2em  0;
+        }
+        
+        #nav_5 {
+            margin-left: (460 - $nav_v_divider / 1px - 2 * $width / 100% * 480 ) / (2 * 480) * 100%;
+        }
+        
+        #nav_6{
+            margin-left: 0;
+        }
+        
+        #break1 {
+            clear: both;
+            display: none;
+        }
+        
+        #break2 {
+            clear: both;
+            display: block;
+        }
+    }
+}
+
+@media all and (max-width: 420px), all and (max-device-width: 420px)
+{
+   #navigation{
+        padding: 0 10 / 420 * 100%;
+        margin: 0;
+        height: auto;
+        margin: 0.5em auto;
+        width: 400 / 420 * 100%;
+        $width: ( 400 )/(3 * 420) * 100%;
+        
+        .nav-button, #nav_6, #nav_5, #nav_4 {
+            width: $width;
+            padding: 0.2em  0;
+        }
+        
+        #nav_5 {
+            margin-left: 0;
+        }
+        
+        #nav_6{
+            margin-left: 0;
+        }
+        
+        #break1 {
+            clear: both;
+            display: none;
+        }
+        
+        #break2 {
+            clear: both;
+            display: none;
+        }
+        #break3 {
+            clear: both;
+            display: block;
+        }
+        
+    }
+}

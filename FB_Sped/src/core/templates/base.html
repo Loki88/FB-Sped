@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        {% block head %}
+            {% block title %}
+            
+            {% endblock %}
+            <meta charset="windows-1252">
+            <meta name="viewport" content="width=device-width">
+        {% endblock %}
+        {% block css %}
+        
+        {% endblock %}
+        
+        {% block js %}
+        
+        {% endblock %}
+    </head>
+    <body>
+        {% block header %}
+        
+        
+        {% endblock %}
+        
+        {% block navigation %}
+            {% include 'navigation.html' %}
+        {% endblock %}
+        
+        {% block content %}
+            {% block left-column %}
+            
+            {% endblock %}
+            {% block right-column %}
+            
+            {% endblock %}        
+        {% endblock %}
+    </body>
+</html>

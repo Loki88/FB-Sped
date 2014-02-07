@@ -1,0 +1,13 @@
+/* 
+    Created on : 27-gen-2014, 12.13.54
+    Author     : Lorenzo Di Giuseppe
+*/
+body {
+  font-family: sans-serif; }
+
+@media all and (min-width: 420px) and (max-width: 480px), all and (min-device-width: 420px) and (max-device-width: 480px) {
+  body {
+    font-size: 1em; } }
+@media all and (max-width: 420px) and (orientation: portrait), all and (max-device-width: 420px) and (orientation: portrait) {
+  body {
+    font-size: 1em; } }

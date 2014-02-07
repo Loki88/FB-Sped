@@ -1,0 +1,91 @@
+/* 
+    Created on : 6-feb-2014, 20.08.35
+    Author     : Lorenzo Di Giuseppe
+*/
+
+nav {
+    display: inline-block;
+    position: relative;
+    width: 100%;
+    clear: both;
+}
+
+nav > div {
+    display: block;
+    position: relative;
+    float: left;
+    width: 16%;
+    cursor: pointer;
+}
+
+#img_home {
+    background-image: url('/images/home.png');
+}
+
+#img_chi {
+    background-image: url('/images/chi.png');
+}
+
+#img_cosa {
+    background-image: url('/images/cosa.png');
+}
+
+#img_trasporto{
+    background-image: url('/images/trasporto.png');
+}
+
+#img_dove {
+    background-image: url('/images/dove.png');
+}
+
+#img_contatti {
+    background-image: url('/images/contatti.png');
+}
+
+#img_home_current, nav > div:hover > #img_home {
+    background-image: url('/images/home_sel.png');
+}
+
+#img_chi_current, nav > div:hover > #img_chi {
+    background-image: url('/images/chi_sel.png');
+}
+
+#img_cosa_current, nav > div:hover > #img_cosa {
+    background-image: url('/images/cosa_sel.png');
+}
+
+#img_trasporto_current, nav > div:hover > #img_trasporto {
+    background-image: url('/images/trasporto_sel.png');
+}
+
+#img_dove_current, nav > div:hover > #img_dove {
+    background-image: url('/images/dove_sel.png');
+}
+
+#img_contatti_current, nav > div:hover > #img_contatti {
+    background-image: url('/images/contatti_sel.png');
+}
+
+nav > div > .icon {
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 5em;
+    margin: auto;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
+nav > div > span {
+    display: inline-block;
+    position: relative;
+    padding-top: 0.5em;
+    height: 1.3em;
+    font-size: 1.3em;
+    width: 90%;
+    padding-left: 5%;
+    padding-right: 5%;
+    text-align: center;
+    float: left;
+    clear: both;
+}

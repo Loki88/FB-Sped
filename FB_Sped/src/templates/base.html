@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="{{request.lang}}">
+    <head>
+        <title>FB Sped S.r.l. - Home Page</title>
+        {% if language == 'it' %}
+        	<meta name="description" content="FB Sped S.r.l. è un'azienda che si occupa di spedizioni multimodali e logistica. L'azienda consta di una grande esperienza nel settore delle spedizioniere multimodali e offre servizi professionali e affidabili per i suoi clienti. Attualmente la sua unica sede si trova a Teramo, Italia, ma offre servizi di spedizione in campo internazionale, da e verso l'estero.">
+        {% else %}
+        	<meta name="description" content="FB Sped S.r.l. is a company.">
+        {% endif %}
+        <meta name="revisit-after" content="30 days">
+        <META NAME="ROBOTS" CONTENT="INDEX, FOLLOW">
+        {% block links %}
+            <link href="/stylesheets/test-nav.css" type="text/css" rel="stylesheet" />
+            
+        {% endblock %}
+        <meta charset="UTF-8">
+    </head>
+    <body>
+    	{% block body %}
+    		{% block header %}
+    			<a id="logo" class="span3 span-divide-r margin-border-l margin-border-t margin-border-b" href=".	/home.html">
+		            <img class="" src="/images/FBSPED_LOGO_WEB.png" id="logo"  alt="Logo aziendale"/>
+		        </a>
+		        {% block language %}
+                            <div class="span2 margin-border-t margin-border-r" id="language">
+                                <a class="current_language" href="#">Italiano</a>
+                                <a href="/eng/home.html#">English</a>
+                            </div>
+                        {% endblock %}
+    		{% endblock %}
+    		{% block navigation %}
+                    {% block breadcumb %}
+    			<div class="span5" id="nav-breadcumb">Sei qu&igrave;:
+		            <a href="./home.html">{% block nav-position %}Home page{% endblock %}</a>
+		        </div>
+		    {% endblock %}
+                    {% block navbar %}
+		        {% include 'navigation.html' %}
+                    {% endblock %}
+    		{% endblock %}
+    		{% block main-image %}
+    			<div class="section-image span5 margin-border-l margin-border-r">
+		            {% block image %}<img src="./img/FB-Sped-main-image.png" alt="Immagine di presentazione dell'azienda" />{% endblock %}
+		        </div>
+    		{% endblock %}
+    		{% block content %}
+    			{% block left-column %}
+	    			<div class="span2 menu-secondario margin-border-l span-divide-r">
+			            <h6>Collegamenti rapidi</h6>
+			            <a class="" href="./trasporto-su-ruote.html">Trasporto su ruote</a>
+			            <a class="" href="./trasporto-in-mare.html">Trasporto in mare</a>
+			            <a class="" href="./trasporto-aereo.html">Trasporto aereo</a>
+			            <a class="" href="./trasporto-combinato.html">Trasporto combinato</a>
+			        </div>
+		        {% endblock %}
+		        {% block right-column %}
+			        <div class="span3 span-divide-l margin-border-r" id="main-content">
+			            <h4 class="title">Chi siamo</h4>
+			            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+			            Mauris sit amet velit semper, imperdiet urna at, consequat erat. Sed aliquet eros in purus consequat,
+			            vel auctor purus convallis. Vestibulum sit amet hendrerit mi. Morbi dapibus ante eget erat scelerisque,
+			            at interdum ipsum sagittis. Nulla rutrum, neque quis lacinia blandit, ante mi porta ligula, vitae 
+			            tincidunt justo arcu sit amet purus. Suspendisse potenti. Duis semper, elit ut hendrerit pellentesque, 
+			            urna ante luctus risus, sit amet pellentesque nunc tortor sit amet tellus. Vestibulum ante ipsum primis 
+			            in faucibus orci luctus et ultrices posuere cubilia Curae; Donec iaculis convallis velit vel placerat. 
+			            Suspendisse potenti. Sed egestas cursus ultricies. Donec vestibulum lectus non ullamcorper scelerisque. 
+			            Donec eu porttitor mi. Nulla quis molestie libero. Nunc et urna sodales, mollis neque ut, placerat quam.</p>
+			            <a href="./chi-siamo.html">Continua a leggere</a>
+			            <br/><br/>
+			            <h4 class="title">Cosa facciamo</h4>
+			            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+			            Mauris sit amet velit semper, imperdiet urna at, consequat erat. Sed aliquet eros in purus consequat,
+			            vel auctor purus convallis. Vestibulum sit amet hendrerit mi. Morbi dapibus ante eget erat scelerisque,
+			            at interdum ipsum sagittis. Nulla rutrum, neque quis lacinia blandit, ante mi porta ligula, vitae 
+			            tincidunt justo arcu sit amet purus. Suspendisse potenti. Duis semper, elit ut hendrerit pellentesque, 
+			            urna ante luctus risus, sit amet pellentesque nunc tortor sit amet tellus. Vestibulum ante ipsum primis 
+			            in faucibus orci luctus et ultrices posuere cubilia Curae; Donec iaculis convallis velit vel placerat. 
+			            Suspendisse potenti. Sed egestas cursus ultricies. Donec vestibulum lectus non ullamcorper scelerisque. 
+			            Donec eu porttitor mi. Nulla quis molestie libero. Nunc et urna sodales, mollis neque ut, placerat quam.</p>
+			            <a href="./cosa-facciamo.html">Continua a leggere</a>
+			        </div>
+		        {% endblock %}
+    		{% endblock %}
+    	{% endblock %}
+    	{% block footer %}
+    		<footer>via V. Pilotti - 64100 Teramo (Te) - c/o Centro Commerciale &nbsp;&nbsp;&nbsp; P.iva IT 01881060675<br/>
+	            <b>tel. +39 0861 221349 - fax. +39 0861 1850749</b>&nbsp;&nbsp;
+	            <a href="mailto:info@fbsped.it">info@fbsped.it</a><br/>
+	            Per informazioni e suggerimenti su come migliorare questo sito contattatemi a: questaemail@prova.it
+	        </footer>
+    	{% endblock %}
+    </body>
+</html>

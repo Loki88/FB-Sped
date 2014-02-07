@@ -1,0 +1,152 @@
+/* 
+    Created on : 26-gen-2014, 13.03.45
+    Author     : Lorenzo Di Giuseppe
+*/
+
+/* Griglia basata su 1024px*/
+body{
+    width: 96%;
+    margin: 0 auto;
+    /*overflow-x: hidden;*/
+}
+
+.span5 {
+    width: 94.140625%;
+}
+
+.span4 {
+    width: 74.921875%;
+}
+
+.span3 {
+    width: 55.703125%;
+}
+
+.span2 {
+    width: 36.484375%;
+}
+
+.span1 {
+    width: 17.265625%;
+}
+
+.span-divide-l {
+    margin-left: 0.9765625%;
+}
+
+.span-divide-r {
+    margin-right: 0.9765625%;
+}
+
+.margin-border-l {
+    margin-left: 2.9296875%;
+}
+
+.margin-border-r {
+    margin-right: 2.9296875%;
+}
+
+.margin-border-t {
+    margin-top: 2.5445293%;
+}
+
+.margin-border-b {
+    margin-bottom: 1.2722646%;
+}
+
+@media all and (min-width: 480px) and (max-width: 768px), all and (min-device-width: 480px) and (max-device-width: 768px)
+{
+    body{
+        width: 100%;
+    }
+    
+    .span5 {
+        width: 580 / 600 * 100%;
+    }
+    
+    .span2 {
+        width: 220 / 600 * 100%;
+    }
+    
+    .span3 {
+        width: 340 / 600 * 100%;
+    }
+    
+    .span1 {
+        width: 100 / 600 * 100%;
+    }
+    
+    .span-divide-l {
+        margin-left: 10 / 600 * 100%;
+    }
+
+    .span-divide-r {
+        margin-right: 10 / 600 * 100%;
+    }
+
+    .margin-border-l {
+        margin-left: 10 / 600 * 100%;
+    }
+
+    .margin-border-r {
+        margin-right: 10 / 600 * 100%;
+    }
+
+    .margin-border-t {
+        margin-top: 10 / 400 * 100%;
+    }
+
+    .margin-border-b {
+        margin-bottom: 10 / 400 * 100%;
+    }
+}
+
+@media all and (max-width: 480px), all and (max-device-width: 480px)
+{
+    body{
+        width: 100%;
+    }
+    .span5 {
+        width: 460 / 480 * 100%;
+    }
+    
+     .span4 {
+        width: 460 / 480 * 100%;
+    }
+    
+    .span3 {
+        width: 460 / 480 * 100%;
+    }
+    
+    .span2 {
+        width: 460 / 480 * 100%;
+    }
+    
+    .span1 {
+        width: 460 / 480 * 100%;
+    }
+    
+    .span-divide-l {
+        margin-left: 10 / 480 * 100%;
+    }
+
+    .span-divide-r {
+        margin-right: 10 / 480 * 100%;
+    }
+    
+    .margin-border-l {
+        margin-left: 10 / 480 * 100%;
+    }
+
+    .margin-border-r {
+        margin-right: 10 / 480 * 100%;
+    }
+
+    .margin-border-t {
+        margin-top: 10 / 480 * 100%;
+    }
+
+    .margin-border-b {
+        margin-bottom: 10 / 480 * 100%;
+    }
+}
