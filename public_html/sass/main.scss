@@ -1,0 +1,297 @@
+/* 
+    Created on : 9-feb-2014, 18.15.20
+    Author     : Lorenzo Di Giuseppe <lorenzo.digiuseppe88@gmail.com>
+*/
+
+header{
+    #logo {
+        display: block;
+        position: relative;
+        height: 8em;
+        padding: 0;
+        margin: 0;
+        border: 0;
+        img{
+            display: block;
+            height: 100%;
+            float: left;
+            margin: auto;
+        }
+    }
+    
+    #breadcrumb {
+        display: block;
+        position: relative;
+        height: 1.6em;
+        padding: 0.2em 0;
+        line-height: 2em;
+    }
+}
+
+
+
+@media only screen and (max-width: 480px)
+{
+    header{
+        #logo{
+            img{
+                float: none;
+            }
+        }
+    }
+}
+
+.img {
+    display: block;
+    position:relative;
+    width: 100%;
+    height: auto;
+    margin: auto;
+}
+
+#language {
+    display: block;
+    position: relative;
+    
+    a{
+        display:block;
+        width: 70%;
+        background-color: #4C99D4;
+        color: #FFFFFF;
+        height: 2em;
+        padding: 0.2em 15%;
+        text-decoration: none;
+        text-align: center;
+        line-height: 2em;
+        &:hover {
+            opacity: .7;
+        }
+    }
+    
+    .lang-menu {
+        background-image: url('../img/menu-white.png');
+        background-repeat: no-repeat;
+        background-position: right center;
+        background-size: 1.2em;
+    }
+    
+    #lang-close{
+        display: none;
+        left: -10000px;
+    }
+    
+    .selected {
+        opacity: .6;
+    }
+    
+    ul{
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        
+        li{
+            display: block;
+            position: relative;
+            margin: 1px 0;
+            &:first-child {
+                margin-top: 1px;
+            }
+            
+            a{
+                display: block;
+                position: relative;
+                left: -10000px;
+                height: 0px;
+                padding: 0;
+                background-color: #70AB4B;
+                -webkit-transition: height 0.25;
+                -moz-transition: height 0.25s;
+                -o-transition: height 0.25s;
+                transition: height 0.25s;
+            }
+        }
+    }
+    
+    &:target {
+        #lang-close{
+            display: block;
+            left: 0;
+        }
+        
+        #lang-open {
+            display: none;
+            left: -10000px;
+        }
+        
+        ul{
+            li{
+                a {
+                    left: 0;
+                    height: 2em;
+                    padding: 0.2em 15%;
+                }
+            }
+        }
+    }
+}
+
+#main-image{
+    display: block;
+    position: relative;
+    z-index: -10;
+    
+    img{
+        display: block;
+        width: 100%;
+        position: relative;
+    }
+}
+
+#sol-trasporti, #short-azienda {
+    float:left;
+}
+
+#sol-trasporti {
+    
+    ul{
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        
+        li{
+            display: block;
+            position: relative;
+            padding: 0;
+            border-width: 0.2%;
+            
+            &:hover {
+                h5{
+                    text-decoration: underline;
+                }
+                
+                background-color: #F2E9C2;
+            }
+            
+            a{
+                display: block;
+                width: 100%;
+                height: 100%;
+                text-decoration: none;
+                h5{
+                    display: block;
+                    position: relative;
+                    width: 78%;
+                    padding: 0.2em 10%;
+                    padding-bottom: 0.8em;
+                    height: 2em;
+                    text-decoration: none;
+                    text-align: center;
+                    border-bottom: 2px solid;
+                    border-bottom-color: #4C99D4;
+                }
+                
+                p{
+                    display: block;
+                    position: relative;
+                    padding: 0.2em 0.1em;
+                    width: 97.5%;
+                    margin: 0 1.6%;
+                   
+                }
+            }
+        }
+    }
+}
+
+#short-azienda {
+    &:hover{
+        a{
+           background-color: #F2E9C2;
+           h5{
+               text-decoration: underline;
+           }
+        }
+        
+    }
+    
+    a {
+        display: block;
+        position: relative;
+        float: left;
+        margin: 0  1.6%;
+        padding: 0;
+        border-width: 0.2%;
+        text-decoration: none;
+    }
+}
+
+#menu-secondario {
+    ul{
+        margin:0;
+        padding:0;
+        list-style: none;
+        
+        
+        li{
+            a{
+                text-decoration: none;
+                width: 100%;
+                height: 4em;
+            }
+            &:hover{
+                a{
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 480px)
+{
+    #sol-trasporti {
+        ul{
+            li{
+                margin: 1% 1.6%;
+                float: left;
+                width: 96.4%;
+            }
+        }
+    }
+    
+    #short-azienda{
+        a{
+            margin: 1% 1.6%;
+            float: left;
+            width: 96.4%;
+        }
+    }
+}
+
+.content-box {
+    border-style: outset;
+    border-color: #F2E9C2;
+    color: #666666;
+    h1, h2, h3, h4, h5, h6 {
+        color: #4C99D4;
+        display: block;
+        position: relative;
+        width: 78%;
+        padding: 0.2em 10%;
+        padding-bottom: 0.8em;
+        height: 2em;
+        text-decoration: none;
+        text-align: center;
+        border-bottom: 2px solid;
+        border-bottom-color: #4C99D4;
+    }
+}
+
+footer{
+    color: #FFFFFF;
+    background-color: #4C99D4;
+    p{
+        text-align: center;
+        
+    }
+}

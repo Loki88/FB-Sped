@@ -11,7 +11,6 @@ $second-level-text: #FFFFFF;
         nav {
           margin: 0;
           padding: 0;
-          width: 100%;
 
           #liv-trasporti {
             display: block;
@@ -78,6 +77,10 @@ $second-level-text: #FFFFFF;
                 
                 &:first-child{
                     margin-top: 2px;
+                }
+                
+                .selected{
+                    opacity: .6;
                 }
                 
                 .drop-menu{
@@ -242,7 +245,6 @@ $second-level-text: #FFFFFF;
 { 
         nav{
             display: inline-block;
-            width: 100%;
             padding: 0;
             margin: auto;
 
@@ -255,7 +257,11 @@ $second-level-text: #FFFFFF;
                 .menu-link {
                     display: none;
                 }
-
+                
+                .selected{
+                    opacity: .6;
+                }
+                
                 ul{
                     display: block;
                     position: relative;
@@ -278,8 +284,8 @@ $second-level-text: #FFFFFF;
                         .drop-menu {
                             background-image: url('../img/menu-white.png');
                             background-repeat: no-repeat;
-                            background-position: right bottom;
-                            background-size: 1.8em;
+                            background-position: right center;
+                            background-size: 1.2em;
                         }
                         
                         a{
@@ -420,15 +426,24 @@ $second-level-text: #FFFFFF;
         }
 }
 
+@media screen and (max-width: 1280 / 16 * 1em)
+{
+    body{
+        margin: 0;
+        padding: 0;
+    }
+}
+
 @media screen and (min-width: 1280 / 16 * 1em)
 {
     body{
         width: 1140 / 16 * 1em;
+        margin: auto;
+        padding: 0;
         header{
-            width: 1140 / 16 * 1em;
+            width: 100%;
+            padding: 0;
+            margin: 0;
         }
-    }
-    #navigation{
-        width: 1140 / 16 * 1em;
     }
 }

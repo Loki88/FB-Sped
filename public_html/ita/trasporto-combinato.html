@@ -1,86 +1,88 @@
 <!DOCTYPE html>
-<!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
--->
 <html lang="it">
     <head>
-        <title>FB Sped S.r.l. - Trasporto combinato</title>
-        <link href="../css/clearfix.css" type="text/css" rel="stylesheet" />
-        <link href="../css/grid.css" type="text/css" rel="stylesheet" />
+        <title>FB Sped S.r.l. - Servizi per il trasporto combinato</title>
+        <link href="../css/normalize.css" type="text/css" rel="stylesheet" />
+        <link href="../css/col.css" type="text/css" rel="stylesheet" />
+        <link href="../css/5cols.css" type="text/css" rel="stylesheet" />
+        <link href="../css/4cols.css" type="text/css" rel="stylesheet" />
         <link href="../css/text.css" type="text/css" rel="stylesheet" />
-        <link href="../css/nav.css" type="text/css" rel="stylesheet" />
+        <link href="../css/navigation.css" type="text/css" rel="stylesheet" />
         <link href="../css/main.css" type="text/css" rel="stylesheet" />
         <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width">
     </head>
     <body>
-        
-        <a id="logo" class="span3 span-divide-r margin-border-l margin-border-t margin-border-b" href="./home.html">
-            <img class="" src="../img/FBSPED_LOGO_WEB.png" id="logo"  alt="Logo aziendale"/>
-        </a>
+        <header class="section group">
+            <div id="logo" class="col span_3_of_5">
+                <img src="../img/FBSPED_LOGO_WEB.png" alt="Logo della società" />
+            </div>
+            <div class="col span_1_of_5"></div>
+            <div class="col span_1_of_5" id="language">
+                <a id="lang-open" class="lang-menu" href="#language">Lingua</a>
+                <a id="lang-close" class="lang-menu" href="#">Lingua</a>
+                <ul>
+                    <li><a href="#">Italiano</a></li>
+                    <li><a href="../eng/what-we-do.html">English</a></li>
+                </ul>
+            </div>
+            <div class="col span_3_of_5" id="breadcrumb">
+                Sei in <span>Cosa facciamo</span>
+            </div>
+            <nav class="span_5_of_5" id="navigation">
+                <div id="liv-trasporti">
+                    <a id="open1" class="menu-link" href="#navigation" alt="Apri menù">Menu</a>
+                    <a id="close1" class="menu-link" href="#" alt="Chiudi menù">Chiudi</a>
+                    <ul id="menu1">
+                        <li><a href="./home.html">Home</a></li>
+                        <li><a href="./chi-siamo.html">Chi siamo</a></li>
+                        <li><a href="./cosa-facciamo.html">Cosa facciamo</a></li>
+                        <li id="trasporti">
+                            <a id="open2" class="selected drop-menu" href="#liv-trasporti" alt="Apri sotto menù">Soluzioni di trasporto</a>
+                            <a id="close2" class="drop-menu" href="#navigation" alt="Chiudi sotto menù">Soluzioni di trasporto</a>
+                            <ul id="dropdown">
+                                <li><a class="secondLevel" href="./trasporto-su-gomma.html">Trasporto su gomma</a></li>
+                                <li><a class="secondLevel" href="./trasporto-ferroviario.html">Trasporto ferroviario</a></li>
+                                <li><a class="secondLevel" href="./trasporto-marittimo.html">Trasporto marittimo</a></li>
+                                <li><a class="secondLevel" href="./trasporto-aereo.html">Trasporto aereo</a></li>
+                                <li><a class="selected secondLevel" href="./trasporto-combinato.html">Trasporto combinato</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="./dove-siamo.html">Dove siamo</a></li>
+                        <li><a href="./contatti.html">Contatti</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <div class="section group span_2_of_2">
+            <div class="col span_1_of_2">
+                <div class='span_2_of_2 content-box' id='storia'>
+                    <h4 class="title">Cosa facciamo alla FB Sped</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                        Donec nec tempor diam. Donec at mi vitae ante tincidunt aliquam. 
+                        Duis nec pretium odio. Integer turpis purus, fringilla et odio eget, 
+                        gravida convallis felis. Vivamus placerat mi tempor est posuere, eget 
+                        consectetur libero feugiat. Vivamus ullamcorper risus venenatis leo 
+                        accumsan egestas. Vivamus eget quam in nulla auctor gravida nec ac mauris.
+                        Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
 
-        
-        <div class="span2 margin-border-t margin-border-r" id="language">
-            <a class="current_language" href="#">Italiano</a>
-            <a href="../eng/combined-transport.html">English</a>
-        </div>
-                
-        <div class="span5" id="nav-breadcumb">Sei qu&igrave;:
-            <a href="trasporto-ferroviario.html">Soluzioni di trasporto</a> -> 
-            <a href="trasporto-su-ruote.html">Trasporto combinato</a>
-        </div>
-        
-        <!--Navbar-->
-        <nav id="navigation">
-            
-            <div class="nav-button" id="nav_1"><a class="" href="./home.html">Home</a></div>
-            
-            <div class="nav-button" id="nav_2"><a class="" href="./chi-siamo.html">Chi siamo</a></div>
-            
-            <div class="nav-button" id="nav_3"><a class="" href="./cosa-facciamo.html">Cosa facciamo</a></div>
-            <div class="nav_h_divider" id="break3"></div>
-            
-            <div class="nav-button nav-button-selected" id="nav_4"><a class="" href="./trasporto-ferroviario.html">Soluzioni di trasporto</a></div>
-            <div class="nav_h_divider" id="break2"></div>
-            
-            <div class="nav-button" id="nav_5"><a class="" href="./dove-siamo.html">Dove siamo</a></div>
-            <div class="nav_h_divider" id="break1"></div>
-            
-            <div class="nav-button" id="nav_6"><a class="" href="./contatti.html">Contatti</a></div>
-            
-        </nav>
-        
-  
-        <div class="span2 menu-secondario margin-border-l span-divide-r">
-            <h6>Soluzioni di trasporto</h6>
-            <a class="" href="./trasporto-su-ruote.html">Trasporto su ruote</a>
-            <a class="" href="./trasporto-in-mare.html">Trasporto in mare</a>
-            <a class="" href="./trasporto-aereo.html">Trasporto aereo</a>
-            <a class="menu-secondario-selected" href="./trasporto-combinato.html">Trasporto combinato</a>
-        </div>
-        
-        <div class="span3 span-divide-l margin-border-r" id="main-content">
-            <h4 class="title">Soluzioni per il trasporto combinato o multimodale</h4>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-                Donec nec tempor diam. Donec at mi vitae ante tincidunt aliquam. 
-                Duis nec pretium odio. Integer turpis purus, fringilla et odio eget, 
-                gravida convallis felis. Vivamus placerat mi tempor est posuere, eget 
-                consectetur libero feugiat. Vivamus ullamcorper risus venenatis leo 
-                accumsan egestas. Vivamus eget quam in nulla auctor gravida nec ac mauris.
-                Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
-
-            <p>Nulla blandit mi quis aliquam adipiscing. Sed feugiat in dui ac pulvinar. Vivamus neque sapien,
-                tincidunt non placerat vel, lacinia et lectus. Quisque quis facilisis lacus. Pellentesque sed 
-                mauris lobortis odio volutpat feugiat non vel odio. Suspendisse id erat sit amet odio congue 
-                tempor. In at diam libero. </p>
+                    <p>Nulla blandit mi quis aliquam adipiscing. Sed feugiat in dui ac pulvinar. Vivamus neque sapien,
+                        tincidunt non placerat vel, lacinia et lectus. Quisque quis facilisis lacus. Pellentesque sed 
+                        mauris lobortis odio volutpat feugiat non vel odio. Suspendisse id erat sit amet odio congue 
+                        tempor. In at diam libero. </p>
+                </div>
+            </div>
+            <div class="col span_1_of_2" >
+                <img class="span_2_of_2" src="../img/slide4.jpg" alt="" />
+            </div>
         </div>
         
         
-        <footer>via V. Pilotti - 64100 Teramo (Te) - c/o Centro Commerciale &nbsp;&nbsp;&nbsp; P.iva IT 01881060675<br/>
-            <b>tel. +39 0861 221349 - fax. +39 0861 1850749</b>&nbsp;&nbsp;
-            <a href="mailto:info@fbsped.it">info@fbsped.it</a><br/>
-            Per informazioni e suggerimenti su come migliorare questo sito contattatemi a: questaemail@prova.it
+        <footer class="section group">
+            <p class="col span_5_of_5">via V. Pilotti - 64100 Teramo (Te) - c/o Centro Commerciale &nbsp;&nbsp;&nbsp; P.iva IT 01881060675</p>
+            <p class="group span_5_of_5"><b class="col span_3_of_5">tel. +39 0861 221349 - fax. +39 0861 1850749</b>
+            <a class="col span_2_of_5" href="mailto:info@fbsped.it">info@fbsped.it</a></p>
+            <p class="col span_5_of_5">Per informazioni e suggerimenti su come migliorare questo sito contattatemi a: questaemail@prova.it</p>
         </footer>
         
         
