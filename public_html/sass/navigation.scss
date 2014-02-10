@@ -42,9 +42,11 @@ $second-level-text: #FFFFFF;
               height: 2.4em;
               padding: 0.2em 10%;
               line-height: auto;
+              text-decoration: none;
               
               &:hover{
                   opacity: .7;
+                  text-decoration: underline;
               }
             }
 
@@ -301,9 +303,10 @@ $second-level-text: #FFFFFF;
                             text-align: center;
                             background-color: $menu-color;
                             color: $menu-text;
-
+                            text-decoration: none;
                             &:hover {
                                 opacity: .7;
+                                text-decoration: underline;
                             }
                         }
 

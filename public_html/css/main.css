@@ -21,6 +21,9 @@ header #breadcrumb {
   padding: 0.2em 0;
   line-height: 2em; }
 
+.inverse {
+  float: right; }
+
 @media only screen and (max-width: 480px) {
   header #logo img {
     float: none; } }
@@ -221,6 +224,8 @@ header #breadcrumb {
     height: auto;
     text-decoration: none;
     text-align: center; }
+  .content-box p {
+    margin: 0.5em 0.5em; }
 
 footer {
   color: #FFFFFF;

@@ -28,9 +28,11 @@
         text-align: center;
         height: 2.4em;
         padding: 0.2em 10%;
-        line-height: auto; }
+        line-height: auto;
+        text-decoration: none; }
         nav #liv-trasporti a:hover {
-          opacity: .7; }
+          opacity: .7;
+          text-decoration: underline; }
       nav #liv-trasporti #close1 {
         display: none; }
       nav #liv-trasporti ul {
@@ -208,9 +210,11 @@
             line-height: auto;
             text-align: center;
             background-color: #666666;
-            color: white; }
+            color: white;
+            text-decoration: none; }
             nav #liv-trasporti ul li a:hover {
-              opacity: .7; }
+              opacity: .7;
+              text-decoration: underline; }
     nav #liv-trasporti:target #open2 {
       display: none;
       clear: none;
