@@ -1,4 +1,4 @@
-@charset "CP850";
+@charset "UTF-8";
 @media screen and (max-width: 769px) {
   nav {
     margin: 0;
@@ -167,7 +167,8 @@
   nav {
     display: inline-block;
     padding: 0;
-    margin: auto; }
+    margin: auto;
+    z-index: 10; }
     nav #liv-trasporti {
       display: inline-block;
       width: 100%;
@@ -239,6 +240,9 @@
         clear: both;
         width: 100%;
         height: 3em; }
+        nav #trasporti:hover #dropdown li .selected, nav #liv-trasporti:target #dropdown li .selected {
+          opacity: 1;
+          background-color: #8eb7d6; }
         nav #trasporti:hover #dropdown li a, nav #liv-trasporti:target #dropdown li a {
           display: block;
           position: relative;
@@ -252,7 +256,11 @@
           -webkit-transition: height 0.25;
           -moz-transition: height 0.25s;
           -o-transition: height 0.25s;
-          transition: height 0.25s; }
+          transition: height 0.25s;
+          z-index: 11; }
+          nav #trasporti:hover #dropdown li a:hover, nav #liv-trasporti:target #dropdown li a:hover {
+            opacity: 1;
+            background-color: #75a9d2; }
     nav #trasporti {
       display: block;
       position: relative;

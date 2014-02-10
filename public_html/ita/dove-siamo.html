@@ -20,7 +20,9 @@
     <body>
         <header class="section group">
             <div id="logo" class="col span_3_of_5">
-                <img src="../img/FBSPED_LOGO_WEB.png" alt="Logo della società" />
+                <a href="./home.html">
+                    <img src="../img/FBSPED_LOGO_WEB.png" alt="Logo della società" />
+                </a>
             </div>
             <div class="col span_1_of_5"></div>
             <div class="col span_1_of_5" id="language">
@@ -32,7 +34,7 @@
                 </ul>
             </div>
             <div class="col span_3_of_5" id="breadcrumb">
-                Sei in <span>Dove siamo</span>
+                Sei in <span><a href="./dove-siamo.html">Dove siamo</a></span>
             </div>
             <nav class="span_5_of_5" id="navigation">
                 <div id="liv-trasporti">
@@ -43,8 +45,8 @@
                         <li><a href="./chi-siamo.html">Chi siamo</a></li>
                         <li><a href="./cosa-facciamo.html">Cosa facciamo</a></li>
                         <li id="trasporti">
-                            <a id="open2" class="drop-menu" href="#liv-trasporti" alt="Apri sotto menù">Soluzioni di trasporto</a>
-                            <a id="close2" class="drop-menu" href="#navigation" alt="Chiudi sotto menù">Soluzioni di trasporto</a>
+                            <a id="open2" class="drop-menu" href="#liv-trasporti" alt="Apri sotto menù">Trasporti</a>
+                            <a id="close2" class="drop-menu" href="#navigation" alt="Chiudi sotto menù">Trasporti</a>
                             <ul id="dropdown">
                                 <li><a class="secondLevel" href="./trasporto-su-gomma.html">Trasporto su gomma</a></li>
                                 <li><a class="secondLevel" href="./trasporto-ferroviario.html">Trasporto ferroviario</a></li>
@@ -59,10 +61,21 @@
                 </div>
             </nav>
         </header>
+        <div id="main-image" class="span_5_of_5">
+            <div id="map-canvas"></div>
+        </div>
         <div class="section group span_2_of_2">
             <div class="col span_1_of_2">
-                <div class='span_2_of_2 content-box' id='storia'>
-                    <h4 class="title">Cosa facciamo alla FB Sped</h4>
+                <div class="content-box">
+                    <h4 class="title">Dove siamo</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                        Donec nec tempor diam. Donec at mi vitae ante tincidunt aliquam. 
+                    </p>
+                </div>
+            </div>
+            <div class="col span_1_of_2">
+                <div class="content-box">
+                    <h4 class="title">Come raggiungere i nostri uffici</h4>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
                         Donec nec tempor diam. Donec at mi vitae ante tincidunt aliquam. 
                         Duis nec pretium odio. Integer turpis purus, fringilla et odio eget, 
@@ -76,9 +89,6 @@
                         mauris lobortis odio volutpat feugiat non vel odio. Suspendisse id erat sit amet odio congue 
                         tempor. In at diam libero. </p>
                 </div>
-            </div>
-            <div class="col span_1_of_2" >
-                <div id="map-canvas"/>
             </div>
         </div>
         
