@@ -83,17 +83,43 @@ header #breadcrumb {
         -moz-transition: height 0.25s;
         -o-transition: height 0.25s;
         transition: height 0.25s; }
-  #language:target #lang-close, #language:hover #lang-close {
+  #language:target #lang-close {
     display: block;
     left: 0; }
-  #language:target #lang-open, #language:hover #lang-open {
+  #language:target #lang-open {
     display: none;
     left: -10000px; }
-  #language:target ul li a, #language:hover ul li a {
+  #language:target ul li a {
     left: 0;
     height: 2em;
     padding: 0.2em 15%; }
 
+/*@media not screen and (orientation: portrait), not screen and (orientation: landscape)
+{
+    #language{
+        &:hover {
+            #lang-close{
+                display: block;
+                left: 0;
+            }
+
+            #lang-open {
+                display: none;
+                left: -10000px;
+            }
+
+            ul{
+                li{
+                    a {
+                        left: 0;
+                        height: 2em;
+                        padding: 0.2em 15%;
+                    }
+                }
+            }
+        }
+    }
+}*/
 #main-image {
   display: block;
   position: relative; }
@@ -230,6 +256,16 @@ header #breadcrumb {
     text-align: center; }
   .content-box p {
     margin: 0.5em 0.5em; }
+
+.map-canvas {
+  background-size: 100% 100%;
+  background-image: url("../img/mappa.png");
+  background-repeat: no-repeat; }
+
+.infoWindow {
+  line-height: 1.35em;
+  overflow: hidden;
+  white-space: nowrap; }
 
 footer {
   color: #FFFFFF;

@@ -118,7 +118,7 @@ header{
         }
     }
     
-    &:target, &:hover {
+    &:target {
         #lang-close{
             display: block;
             left: 0;
@@ -140,6 +140,33 @@ header{
         }
     }
 }
+
+/*@media not screen and (orientation: portrait), not screen and (orientation: landscape)
+{
+    #language{
+        &:hover {
+            #lang-close{
+                display: block;
+                left: 0;
+            }
+
+            #lang-open {
+                display: none;
+                left: -10000px;
+            }
+
+            ul{
+                li{
+                    a {
+                        left: 0;
+                        height: 2em;
+                        padding: 0.2em 15%;
+                    }
+                }
+            }
+        }
+    }
+}*/
 
 #main-image{
     display: block;
@@ -348,6 +375,18 @@ header{
     p{
         margin: 0.5em 0.5em;
     }
+}
+
+.map-canvas{
+    background-size: 100% 100%;
+    background-image: url('../img/mappa.png');
+    background-repeat: no-repeat;
+}
+
+.infoWindow {
+	line-height:1.35em;
+	overflow:hidden;
+	white-space:nowrap;
 }
 
 footer{

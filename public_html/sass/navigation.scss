@@ -336,7 +336,8 @@ $second-level-text: #FFFFFF;
 
             }
 
-            #trasporti:hover, #liv-trasporti:target{
+/*            #trasporti:hover, #liv-trasporti:target{*/
+            #liv-trasporti:target{
                 #open2{
                     opacity: .7;
                 }
