@@ -213,7 +213,8 @@ header #breadcrumb {
 .content-box {
   border-style: outset;
   border-color: #F2E9C2;
-  color: #666666; }
+  color: #666666;
+  margin: 0.2em 0; }
   .content-box h1, .content-box h2, .content-box h3, .content-box h4, .content-box h5, .content-box h6 {
     color: #4C99D4;
     display: block;
