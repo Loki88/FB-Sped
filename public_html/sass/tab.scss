@@ -1,0 +1,165 @@
+/* 
+    Created on : 16-feb-2014, 10.59.34
+    Author     : Lorenzo Di Giuseppe <lorenzo.digiuseppe88@gmail.com>
+*/
+
+@media only screen and (min-width: 481px){
+
+    #responsive-tab {
+        clear: both;
+        display: block;
+        position: relative;
+        width: 100%;
+        margin: 2em auto;
+
+        .content-box{
+            width: 100%;
+        }
+
+        .tab-panel{
+            display: block;
+            position: relative;
+            height: auto !important;
+            float: left;
+            width: 20%;
+
+            &:first-child{
+                top: 0;
+
+                &:target{
+                    a{
+                        z-index: 2;
+                        border-bottom: none;
+                    }
+
+                    .tab-content{
+                        display: block;
+                        left: 0;
+                        z-index: 1;
+                        position: relative;
+                    }
+                }
+            }
+
+            &:nth-child(2){
+                top: 0;
+
+                
+                &:target {
+                    a{
+                        z-index: 3;
+                        border-bottom: none;
+                    }
+
+                    .tab-content{
+                        display: block;
+                        left: -100%;
+                        position: relative;
+                    }
+                }
+            }
+
+            &:nth-child(3){
+                top: 0;
+
+                &:target {
+                    a{
+                        z-index: 3;
+                        border-bottom: none;
+                    }
+
+                    .tab-content{
+                        display: block;
+                        left: -200%;
+                        position: relative;
+                    }
+                }
+            }
+
+            &:nth-child(4){
+                top: 0;
+
+                &:target {
+                    a{
+                        z-index: 3;
+                        border-bottom: none;
+                    }
+
+                    .tab-content{
+                        display: block;
+                        left: -300%;
+                        position: relative;
+                    }
+                }
+            }
+            &:nth-child(5){
+                top: 0;
+
+                &:target {
+                    a{
+                        z-index: 3;
+                        border-bottom: none;
+                    }
+
+                    .tab-content{
+                        display: block;
+                        left: -400%;
+                        position: relative;
+                    }
+                }
+            }
+
+            a {
+                display: block;
+                position: relative;
+                float: left;
+                width: 90%;
+                height: 3em;
+                padding: 0.2em 4%;
+                text-align: center;
+                border-radius: 0.5em;
+                border-style: solid;
+                border-bottom-left-radius: 0;
+                border-bottom-right-radius: 0;
+                border-color: #666666;
+                border-width: 0.4pt;
+                background-color: #FFFFFF;
+            }
+
+            .tab-content {
+                display: block;
+                position: relative;
+                float: left;
+                left: -100000px;
+                width: 498%;
+                border-style: solid;
+                top: -0.9pt;
+                border-color: #666666;
+                border-width: 0.5pt;
+                background-color: #FFFFFF;
+                margin: 0 auto;
+                margin-bottom: 2em;
+                z-index: 2;
+                color: #666666;
+
+                h5{
+                    text-align: center;
+                }
+
+                
+
+
+                img{
+                    float: left;
+                    max-width: 100%;
+                }
+            }
+
+        }
+    }
+}
+
+@media only screen and (max-width: 480px)
+{
+    
+}

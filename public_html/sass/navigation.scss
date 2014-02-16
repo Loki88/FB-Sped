@@ -287,7 +287,6 @@ $second-level-text: #FFFFFF;
                         top: 0;
                         
                         .drop-menu {
-                            background-image: url('../img/menu-white.png');
                             background-repeat: no-repeat;
                             background-position: right center;
                             background-size: 1.2em;
@@ -336,8 +335,7 @@ $second-level-text: #FFFFFF;
 
             }
 
-/*            #trasporti:hover, #liv-trasporti:target{*/
-            #liv-trasporti:target{
+            #trasporti:hover, #liv-trasporti:target{
                 #open2{
                     opacity: .7;
                 }
@@ -444,9 +442,14 @@ $second-level-text: #FFFFFF;
         }
 }
 
+html, body {
+    height: 100%;
+}
+
 @media screen and (max-width: 1280 / 16 * 1em)
 {
     body{
+        
         margin: 0;
         padding: 0;
     }

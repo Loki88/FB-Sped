@@ -1,11 +1,11 @@
-//
-//$(document).ready(function(){
-//    
-//    $('#dropdown').slideUp();
-//    var open1 = $('#open1');
-//    var open2 = $('#open2');
-//    var close1 = $('#close1');
-//    var close2 = $('#close2');
+
+$(document).ready(function(){
+    
+    $('#dropdown').slideUp();
+    var open1 = $('#open1');
+    var open2 = $('#open2');
+    var close1 = $('#close1');
+    var close2 = $('#close2');
 //        function slideMenu(event)
 //        {   
 //            $('#open1').unbind('click');
@@ -49,20 +49,15 @@
 //        }
 //        $(window).resize(slideMenu());
 //        slideMenu();
-//        
-//    $('#dropdown').data('slide', false).css('display', 'block');
-//    $('#trasporti').hover(function(event){
-//        event.preventDefault();
-//        $('#dropdown').slideToggle(400);
-//        if($('#dropdown').data('slide'))
-//            $('#dropdown').data('slide', false);
-//        else
-//            $('#dropdown').data('slide', true);
-//
-//    });
-//    $('#open2').click(function(event){
-//        event.preventDefault();
-//        if(!$('#dropdown').data('slide'))
-//            $('#dropdown').slideToggle(400);
-//    });
-//});
+        
+    $('#dropdown').data('slide', false).css('display', 'block');
+    $('#trasporti').hover(function(event){
+        event.preventDefault();
+        $('#dropdown').slideToggle(400);
+        if($('#dropdown').data('slide'))
+            $('#dropdown').data('slide', false);
+        else
+            $('#dropdown').data('slide', true);
+
+    });
+});

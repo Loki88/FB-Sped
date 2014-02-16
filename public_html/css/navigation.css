@@ -1,4 +1,4 @@
-@charset "CP850";
+@charset "UTF-8";
 @media screen and (max-width: 769px) {
   nav {
     margin: 0;
@@ -170,8 +170,7 @@
     display: inline-block;
     padding: 0;
     margin: auto;
-    z-index: 10;
-    /*            #trasporti:hover, #liv-trasporti:target{*/ }
+    z-index: 10; }
     nav #liv-trasporti {
       display: inline-block;
       width: 100%;
@@ -198,7 +197,6 @@
           padding: 0;
           top: 0; }
           nav #liv-trasporti ul li .drop-menu {
-            background-image: url("../img/menu-white.png");
             background-repeat: no-repeat;
             background-position: right center;
             background-size: 1.2em; }
@@ -228,9 +226,9 @@
       position: relative;
       left: 0;
       opacity: .7; }
-    nav #liv-trasporti:target #open2 {
+    nav #trasporti:hover #open2, nav #liv-trasporti:target #open2 {
       opacity: .7; }
-    nav #liv-trasporti:target #dropdown {
+    nav #trasporti:hover #dropdown, nav #liv-trasporti:target #dropdown {
       clear: both;
       display: block;
       position: relative;
@@ -239,16 +237,16 @@
       margin: 0;
       padding: 0;
       left: 0; }
-      nav #liv-trasporti:target #dropdown li {
+      nav #trasporti:hover #dropdown li, nav #liv-trasporti:target #dropdown li {
         display: block;
         position: relative;
         clear: both;
         width: 100%;
         height: 3em; }
-        nav #liv-trasporti:target #dropdown li .selected {
+        nav #trasporti:hover #dropdown li .selected, nav #liv-trasporti:target #dropdown li .selected {
           opacity: 1;
           background-color: #8eb7d6; }
-        nav #liv-trasporti:target #dropdown li a {
+        nav #trasporti:hover #dropdown li a, nav #liv-trasporti:target #dropdown li a {
           display: block;
           position: relative;
           width: 100%;
@@ -263,7 +261,7 @@
           -o-transition: height 0.25s;
           transition: height 0.25s;
           z-index: 11; }
-          nav #liv-trasporti:target #dropdown li a:hover {
+          nav #trasporti:hover #dropdown li a:hover, nav #liv-trasporti:target #dropdown li a:hover {
             opacity: 1;
             background-color: #75a9d2; }
     nav #trasporti {
@@ -303,6 +301,9 @@
             text-align: center;
             background-color: #4c99d4;
             color: white; } }
+html, body {
+  height: 100%; }
+
 @media screen and (max-width: 80em) {
   body {
     margin: 0;
