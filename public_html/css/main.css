@@ -3,7 +3,7 @@
     Author     : Lorenzo Di Giuseppe <lorenzo.digiuseppe88@gmail.com>
 */
 body {
-  overflow-x: hidden; }
+  /*overflow-x: hidden;*/ }
 
 header #logo {
   display: block;

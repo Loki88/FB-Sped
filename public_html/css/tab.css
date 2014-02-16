@@ -9,8 +9,6 @@
     position: relative;
     width: 100%;
     margin: 2em auto; }
-    #responsive-tab .content-box {
-      width: 100%; }
     #responsive-tab .tab-panel {
       display: block;
       position: relative;
@@ -21,6 +19,7 @@
         top: 0; }
         #responsive-tab .tab-panel:first-child:target a {
           z-index: 2;
+          border-style: ridge;
           border-bottom: none; }
         #responsive-tab .tab-panel:first-child:target .tab-content {
           display: block;
@@ -31,6 +30,7 @@
         top: 0; }
         #responsive-tab .tab-panel:nth-child(2):target a {
           z-index: 3;
+          border-style: ridge;
           border-bottom: none; }
         #responsive-tab .tab-panel:nth-child(2):target .tab-content {
           display: block;
@@ -40,6 +40,7 @@
         top: 0; }
         #responsive-tab .tab-panel:nth-child(3):target a {
           z-index: 3;
+          border-style: ridge;
           border-bottom: none; }
         #responsive-tab .tab-panel:nth-child(3):target .tab-content {
           display: block;
@@ -49,6 +50,7 @@
         top: 0; }
         #responsive-tab .tab-panel:nth-child(4):target a {
           z-index: 3;
+          border-style: ridge;
           border-bottom: none; }
         #responsive-tab .tab-panel:nth-child(4):target .tab-content {
           display: block;
@@ -58,6 +60,7 @@
         top: 0; }
         #responsive-tab .tab-panel:nth-child(5):target a {
           z-index: 3;
+          border-style: ridge;
           border-bottom: none; }
         #responsive-tab .tab-panel:nth-child(5):target .tab-content {
           display: block;
@@ -66,28 +69,34 @@
       #responsive-tab .tab-panel a {
         display: block;
         position: relative;
-        float: left;
-        width: 90%;
+        width: 80%;
         height: 3em;
-        padding: 0.2em 4%;
+        padding: 0.2em 7%;
+        margin: auto;
         text-align: center;
         border-radius: 0.5em;
-        border-style: solid;
+        border-style: ridge;
         border-bottom-left-radius: 0;
         border-bottom-right-radius: 0;
-        border-color: #666666;
-        border-width: 0.4pt;
-        background-color: #FFFFFF; }
+        border-color: #70AB4B;
+        border-width: 2pt;
+        background-color: #FFFFFF;
+        text-decoration: none;
+        color: #666666;
+        font-weight: 3pt bold; }
+        #responsive-tab .tab-panel a:hover {
+          text-decoration: underline;
+          background-color: #F2E9C2; }
       #responsive-tab .tab-panel .tab-content {
         display: block;
         position: relative;
         float: left;
         left: -100000px;
         width: 498%;
-        border-style: solid;
-        top: -0.9pt;
-        border-color: #666666;
-        border-width: 0.5pt;
+        border-style: ridge;
+        top: -2pt;
+        border-color: #F2E9C2;
+        border-width: 2pt;
         background-color: #FFFFFF;
         margin: 0 auto;
         margin-bottom: 2em;
