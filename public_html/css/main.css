@@ -232,12 +232,18 @@ header #breadcrumb {
   white-space: nowrap; }
 
 .wrapper {
+  position: relative;
+  clear: both;
   min-height: 100%;
-  height: auto !important;
-  height: 100%;
   margin: 0 auto -15em; }
 
+.push {
+  display: block;
+  clear: both;
+  height: 15em; }
+
 footer {
+  position: relative;
   clear: both;
   width: 100%;
   bottom: 0;
@@ -247,12 +253,9 @@ footer {
   footer div p {
     text-align: center; }
 
-/*.push {
-    clear: both;
-}*/
 @media only screen and (max-width: 480px) {
   .wrapper {
     margin-bottom: -20em; }
 
-  footer {
+  footer, .push {
     height: 20em; } }

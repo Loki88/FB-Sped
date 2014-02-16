@@ -1,0 +1,90 @@
+/* 
+    Created on : 16-feb-2014, 17.35.40
+    Author     : Lorenzo Di Giuseppe <lorenzo.digiuseppe88@gmail.com>
+*/
+.col-right {
+  float: right; }
+  .col-right:first-child {
+    margin-left: 1.6%;
+    margin-right: 0; }
+  .col-right:nth-child(2) {
+    margin-left: 0;
+    margin-right: 0; }
+
+@media only screen and (min-width: 481px) {
+  #page-menu {
+    display: block;
+    position: relative;
+    margin-left: -2pt;
+    margin-top: 0.2em;
+    border-color: #666666;
+    border-style: solid;
+    border-width: 1pt;
+    margin-bottom: 3em; }
+    #page-menu a:hover, #page-menu .selected {
+      text-decoration: underline;
+      background-color: #666666;
+      color: #FFFFFF; }
+    #page-menu .selected {
+      opacity: .6; }
+    #page-menu a {
+      display: block;
+      height: 2em;
+      padding: 0.2em auto;
+      margin: auto;
+      text-align: center;
+      line-height: 2em;
+      background-color: #FFFFFF;
+      text-decoration: none;
+      color: #666666; }
+      #page-menu a:hover {
+        opacity: .7; }
+
+  .paragraph {
+    border-style: outset;
+    border-color: #F2E9C2;
+    color: #666666;
+    margin-bottom: 0.4em; }
+    .paragraph h1, .paragraph h2, .paragraph h3, .paragraph h4, .paragraph h5, .paragraph h6 {
+      color: #4C99D4;
+      display: block;
+      position: relative;
+      width: 78%;
+      padding: 0.2em 10%;
+      padding-bottom: 0.8em;
+      height: auto;
+      text-decoration: none;
+      text-align: center; }
+    .paragraph p {
+      margin: 0.5em 0.5em; } }
+@media only screen and (max-width: 480px) {
+  #transport-img {
+    position: relative; }
+
+  #page-menu {
+    display: block;
+    position: relative;
+    margin-left: -2pt;
+    margin-top: 0.2em;
+    border-color: #666666;
+    border-style: solid;
+    border-width: 1pt;
+    margin-bottom: 1em; }
+    #page-menu a:hover, #page-menu .selected {
+      text-decoration: underline;
+      background-color: #666666;
+      color: #FFFFFF; }
+    #page-menu .selected {
+      opacity: .6; }
+    #page-menu a {
+      display: block;
+      height: 2em;
+      padding: 0.2em auto;
+      margin: auto;
+      text-align: center;
+      line-height: 2em;
+      background-color: #FFFFFF;
+      text-decoration: none;
+      color: #666666; }
+      #page-menu a:hover {
+        opacity: .7; } }

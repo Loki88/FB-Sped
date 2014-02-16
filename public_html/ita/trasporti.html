@@ -10,7 +10,7 @@
         <link href="../css/navigation.css" type="text/css" rel="stylesheet" />
         <link href="../css/main.css" type="text/css" rel="stylesheet" />
         <link href="../css/left_menu.css" type="text/css" rel="stylesheet" />
-        <link href="../css/tab.css" type="text/css" rel="stylesheet" />
+        <link href="../css/page-panel.css" type="text/css" rel="stylesheet" />
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width">
     </head>
@@ -38,17 +38,7 @@
                             <li><a href="./home.html">Home</a></li>
                             <li><a href="./chi-siamo.html">Chi siamo</a></li>
                             <li><a href="./cosa-facciamo.html">Cosa facciamo</a></li>
-                            <li class="selected" id="trasporti"><a href="./trasporti.html#trasporto-gomma">Trasporti</a>
-                                <!--<a id="open2" class="drop-menu" href="#liv-trasporti" alt="Apri sotto menù">Trasporti</a>
-                                <a id="close2" class="drop-menu" href="#navigation" alt="Chiudi sotto menù">Trasporti</a>
-                                <ul id="dropdown">
-                                    <li><a class="secondLevel" href="./trasporto-su-gomma.html">Trasporto su gomma</a></li>
-                                    <li><a class="secondLevel" href="./trasporto-ferroviario.html">Trasporto ferroviario</a></li>
-                                    <li><a class="secondLevel" href="./trasporto-marittimo.html">Trasporto marittimo</a></li>
-                                    <li><a class="secondLevel" href="./trasporto-aereo.html">Trasporto aereo</a></li>
-                                    <li><a class="secondLevel" href="./trasporto-combinato.html">Trasporto combinato</a></li>
-                                </ul>-->
-                            </li>
+                            <li class="selected" id="trasporti"><a href="./trasporti.html">Trasporti</a></li>
                             <li><a href="./dove-siamo.html">Dove siamo</a></li>
                             <li><a href="./contatti.html">Contatti</a></li>
                         </ul>
@@ -56,129 +46,54 @@
                 </nav>
             </header>
             <div class="section group">
-                <div class="span_5_of_5"  id="responsive-tab">
-                    <div>
-                        <div id="trasporto-gomma" class="tab-panel">
-                            <a href="#trasporto-gomma" class="title">Trasporto su gomma</a>
-                            <div class="tab-content">
-                                <h5>Il trasporto su gomma</h5>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-                                    Donec nec tempor diam. Donec at mi vitae ante tincidunt aliquam. 
-                                    Duis nec pretium odio. Integer turpis purus, fringilla et odio eget, 
-                                    gravida convallis felis. Vivamus placerat mi tempor est posuere, eget 
-                                    consectetur libero feugiat. Vivamus ullamcorper risus venenatis leo 
-                                    accumsan egestas. Vivamus eget quam in nulla auctor gravida nec ac mauris.
-                                    Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
-                                <img src="../img/camion.png" />
-                            </div>
-                        </div>
-                        <div id="trasporto-ferroviario" class="tab-panel">
-                            <a href="#trasporto-ferroviario" class="title">Trasporto ferroviario</a>
-                            <div class="tab-content section group">
-                                <h5 class="col span_5_of_5">Il trasporto ferroviario</h5>
-                                <div class="col span_3_of_5">
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-                                        Donec nec tempor diam. Donec at mi vitae ante tincidunt aliquam. 
-                                        Duis nec pretium odio. Integer turpis purus, fringilla et odio eget, 
-                                        gravida convallis felis. Vivamus placerat mi tempor est posuere, eget 
-                                        consectetur libero feugiat. Vivamus ullamcorper risus venenatis leo 
-                                        accumsan egestas. Vivamus eget quam in nulla auctor gravida nec ac mauris.
-                                        Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
-                                </div>
-                                <div class="col span_2_of_5">
-                                    <img class="img" src="../img/treno.png"/>
-                                </div>
-                            </div>
-                        </div>
-                        <div id="trasporto-marittimo" class="tab-panel">
-                            <a href="#trasporto-marittimo" class="title">Trasporto marittimo</a>
-                            <div class="tab-content">
-                                <h5>Il trasporto marittimo</h5>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-                                    Donec nec tempor diam. Donec at mi vitae ante tincidunt aliquam. 
-                                    Duis nec pretium odio. Integer turpis purus, fringilla et odio eget, 
-                                    gravida convallis felis. Vivamus placerat mi tempor est posuere, eget 
-                                    consectetur libero feugiat. Vivamus ullamcorper risus venenatis leo 
-                                    accumsan egestas. Vivamus eget quam in nulla auctor gravida nec ac mauris.
-                                    Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
-                                <img src="../img/camion.png" />
-                            </div>
-                        </div>
-                        <div id="trasporto-aereo" class="tab-panel">
-                            <a href="#trasporto-aereo" class="title">Trasporto aereo</a>
-                            <div class="tab-content">
-                                <h5>Il trasporto aereo</h5>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-                                    Donec nec tempor diam. Donec at mi vitae ante tincidunt aliquam. 
-                                    Duis nec pretium odio. Integer turpis purus, fringilla et odio eget, 
-                                    gravida convallis felis. Vivamus placerat mi tempor est posuere, eget 
-                                    consectetur libero feugiat. Vivamus ullamcorper risus venenatis leo 
-                                    accumsan egestas. Vivamus eget quam in nulla auctor gravida nec ac mauris.
-                                    Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
-                                <img src="../img/camion.png" />
-                            </div>
-                        </div>
-                        <div id="trasporto-combinato" class="tab-panel">
-                            <a href="#trasporto-combinato" class="title">Trasporto combinato</a>
-                            <div class="tab-content">
-                                <h5>Il trasporto combinato</h5>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-                                    Donec nec tempor diam. Donec at mi vitae ante tincidunt aliquam. 
-                                    Duis nec pretium odio. Integer turpis purus, fringilla et odio eget, 
-                                    gravida convallis felis. Vivamus placerat mi tempor est posuere, eget 
-                                    consectetur libero feugiat. Vivamus ullamcorper risus venenatis leo 
-                                    accumsan egestas. Vivamus eget quam in nulla auctor gravida nec ac mauris.
-                                    Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
-                                <img src="../img/camion.png" />
-                            </div>
-                        </div>
+                <div class="col span_2_of_5 col-right">
+                    <div id="page-menu">
+                        <a data-paragraph="./partial/trasporto-su-gomma.html" data-img="../img/camion.png" class="selected" href="#" class="title">Trasporto su gomma</a>
+                        <a data-paragraph="./partial/trasporto-ferroviario.html" data-img="../img/treno.png" href="./trasporto-ferroviario.html" class="title">Trasporto ferroviario</a>
+                        <a data-paragraph="./partial/trasporto-marittimo.html" data-img="../img/nave.png" href="./trasporto-marittimo.html" class="title">Trasporto marittimo</a>
+                        <a data-paragraph="./partial/trasporto-aereo.html" data-img="../img/aereo.png" href="./trasporto-aereo.html" class="title">Trasporto aereo</a>
+                        <a data-paragraph="./partial/trasporto-combinato.html" data-img="../img/combinato.png" href="./trasporto-combinato.html" class="title">Trasporto combinato</a>
+                    </div>
+                    <img class="img" id="transport-img" src="../img/camion.png" />
+                </div>
+                <div class="col span_3_of_5 col-right" id="responsive-pane">
+                    <div class="paragraph">
+                        <h5>Il trasporto su gomma</h5>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                            Donec nec tempor diam. Donec at mi vitae ante tincidunt aliquam. 
+                            Duis nec pretium odio. Integer turpis purus, fringilla et odio eget, 
+                            gravida convallis felis. Vivamus placerat mi tempor est posuere, eget 
+                            consectetur libero feugiat. Vivamus ullamcorper risus venenatis leo 
+                            accumsan egestas. Vivamus eget quam in nulla auctor gravida nec ac mauris.
+                            Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
+
+                        <h5>Come possiamo aiutarvi per il trasporto su gomma</h5>
+                        <p>
+                            Nam cursus arcu felis, vel adipiscing justo gravida et. Sed eget odio congue, posuere eros sed, 
+                            suscipit dui. Quisque egestas ornare rutrum. Sed ullamcorper dui non lacus suscipit luctus.
+                            Mauris neque tortor, rhoncus sit amet tempus a, bibendum nec nisi. Nulla adipiscing metus eget 
+                            felis ultrices iaculis. In et turpis imperdiet, consequat dolor dignissim, pretium est. Aliquam 
+                            eu aliquam quam, sed hendrerit justo. Morbi rutrum sagittis orci, at laoreet erat cursus ultricies.
+                            Nunc ultricies, nibh cursus elementum porta, dui augue tristique diam, elementum tincidunt felis 
+                            nisl a nunc. Curabitur lorem magna, sodales eu elementum in, vestibulum id neque. Mauris pellentesque
+                            mauris nulla, eget commodo ante luctus vitae. Morbi non suscipit libero, in tincidunt risus. Proin 
+                            consectetur scelerisque quam sit amet malesuada. Pellentesque habitant morbi tristique senectus et 
+                            netus et malesuada fames ac turpis egestas. Praesent vitae enim mattis mauris dignissim laoreet ut ut mi.
+                            Mauris a diam a lectus ultricies dapibus at in nunc. Aliquam pellentesque lobortis condimentum. 
+                            In aliquet at elit eget ultricies. Curabitur risus erat, condimentum in velit nec, commodo ornare arcu. 
+                            Suspendisse egestas in sem viverra fermentum. Donec at sollicitudin erat. Praesent sed iaculis purus. 
+                            Aenean volutpat ligula vitae ultrices vehicula. Proin consequat nibh at faucibus posuere. Suspendisse 
+                            congue est ac malesuada tincidunt. Donec sit amet lectus auctor, tempus tellus id, fringilla nibh. </p>
+                        <a class="to-menu" href="#page-menu">Torna al menu trasporti</a>
                     </div>
                 </div>
-
-                <!--<div class="col group span_2_of_5">
-                    <img class="img" src="../img/ufficio.png" />
-                    <div class="left_menu" id="left-menu">
-                        <a href="#left-menu" class="open"></a>
-                        <a href="" class="close"></a>
-                        <a class="title" href="./trasporti.html">
-                            <h5>Trasporti</h5>
-                        </a>
-                        <ul>
-                            <li class="span_5_of_5">
-                                <a href="./trasporto-su-gomma.html">
-                                    <span>Trasporto su gomma</span>
-                                </a>
-                            </li>
-                            <li class="span_5_of_5">
-                                <a href="./trasporto-ferroviario.html">
-                                    <span>Trasporto ferroviario</span>
-                                </a>
-                            </li>
-                            <li class="span_5_of_5">
-                                <a href="./trasporto-marittimo.html">
-                                    <span>Trasporto marittimo</span>
-                                </a>
-                            </li>
-                            <li class="span_5_of_5">
-                                <a href="./trasporto-aereo.html">
-                                    <span>Trasporto aereo</span>
-                                </a>
-                            </li>
-                            <li class="span_5_of_5">
-                                <a href="./trasporto-combinato.html">
-                                    <span>Trasporto combinato</span>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-
-
-                </div> -->
-
-            </div>        
+                
+                <script src="../js/libs/ui/jquery/jquery.js"></script>
+                <script src="../js/trasporti.js"></script>
+            </div>
         </div>
-        
-        <footer >
+        <div class="push"></div>
+        <footer>
             <div class="section group">
                 <p class="col span_5_of_5"><a href="#menu1">Torna al menù</a></p>
                 <p class="col span_5_of_5">via V. Pilotti - 64100 Teramo (Te) - c/o Centro Commerciale &nbsp;&nbsp;&nbsp; P.iva IT 01881060675</p>
