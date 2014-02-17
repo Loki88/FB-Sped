@@ -87,13 +87,16 @@
       padding: 0.2em -2pt;
       margin: auto 5%;
       text-align: center;
-      border-style: groove;
+      border-style: inset;
       border-color: #F2E9C2;
       border-width: 2pt;
       background-color: #4C99D4;
       color: #FFFFFF;
       text-decoration: none;
-      font-weight: 3pt bold; }
+      font-weight: 3pt bold;
+      /*            &:first-child {
+                      margin-left: 0;
+                  }*/ }
       #responsive-tab a:hover {
         text-decoration: underline;
         background-color: #75a9d2; }
@@ -104,7 +107,7 @@
       position: relative;
       float: left;
       left: -100000px;
-      width: 500%;
+      width: 499%;
       border-top-style: groove;
       border-color: #F2E9C2;
       border-top-width: 2pt;
@@ -114,9 +117,9 @@
       z-index: 2;
       color: #666666;
       /*                img{
-                          float: left;
-                          max-width: 100%;
-                      }*/ }
+                      float: left;
+                      max-width: 100%;
+                  }*/ }
       #responsive-tab .tab-content h5 {
         text-align: center; }
       #responsive-tab .tab-content p {
@@ -255,20 +258,21 @@
     #responsive-tab .tab-content {
       display: block;
       position: absolute;
-      float: left;
       left: -100000px;
-      width: 95%;
+      width: 100%;
       height: 0;
-      border-top-style: groove;
-      border-color: #F2E9C2;
-      border-width: 2pt;
-      background-color: #FFFFFF;
-      margin: 0.2em -2pt;
-      margin-bottom: 2em;
+      border-style: inset none;
+      border-color: #FFFFFF;
+      border-width: 1pt;
+      background-color: #F2E9C2;
+      margin: auto auto;
+      padding-bottom: 1em;
       z-index: 2;
       color: #666666; }
       #responsive-tab .tab-content h5 {
         text-align: center; }
+      #responsive-tab .tab-content .content-box {
+        border: 0; }
       #responsive-tab .tab-content p {
         margin: 1em 0.5em; }
       #responsive-tab .tab-content .intro {
