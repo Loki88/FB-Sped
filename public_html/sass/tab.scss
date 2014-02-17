@@ -12,6 +12,10 @@
         width: 100%;
         margin: 2em auto;
         
+        .icon{
+            display: none;
+        }
+        
         .wrap {
             display:block;
             position: relative;
@@ -33,6 +37,7 @@
                 .tab-panel:first-child{
                     top: 0;
                     a{
+                        opacity: .6;
                         z-index: 3;
                     }
 
@@ -50,6 +55,9 @@
                 
                 &:target {
                     .tab-panel:first-child {
+                        a{
+                            opacity: 1;
+                        }
                         .tab-content {
                             left: -100000px;
                         }
@@ -58,6 +66,7 @@
                     .tab-panel:nth-child(2){
                         top: 0;
                         a{
+                            opacity: .6;
                             z-index: 3;
                         }
 
@@ -75,7 +84,11 @@
                 
                 &:target {
                     .tab-panel:first-child {
+                        a{
+                            opacity: 1;
+                        }
                         .tab-content {
+                            
                             left: -100000px;
                         }
                     }
@@ -83,6 +96,7 @@
                     .tab-panel:nth-child(3){
                         top: 0;
                         a{
+                            opacity: .6;
                             z-index: 3;
                         }
 
@@ -100,6 +114,9 @@
                 
                 &:target {
                     .tab-panel:first-child {
+                        a{
+                            opacity: 1;
+                        }
                         .tab-content {
                             left: -100000px;
                         }
@@ -109,6 +126,7 @@
                         top: 0;
                         a{
                             z-index: 3;
+                            opacity: .6;
                         }
 
                         .tab-content{
@@ -125,6 +143,9 @@
                 
                 &:target {
                     .tab-panel:first-child {
+                        a{
+                            opacity: 1;
+                        }
                         .tab-content {
                             left: -100000px;
                         }
@@ -133,6 +154,7 @@
                     .tab-panel:nth-child(5){
                         top: 0;
                         a{
+                            opacity: .6;
                             z-index: 3;
                         }
 
@@ -142,21 +164,6 @@
                         }
                     }
                     
-                }
-            }
-            &:nth-child(5){
-                top: 0;
-
-                &:target {
-                    a{
-                        z-index: 3;
-                    }
-
-                    .tab-content{
-                        display: block;
-                        left: -400%;
-                        position: relative;
-                    }
                 }
             }
 
@@ -169,16 +176,16 @@
                 margin: auto 5%;
                 text-align: center;
                 border-style: groove;
-                border-color: #70AB4B;
+                border-color: #F2E9C2;
                 border-width: 2pt;
-                background-color: #666666;
+                background-color: #4C99D4;
                 color: #FFFFFF;
                 text-decoration: none;
                 font-weight: 3pt bold;
                 
                 &:hover{
                     text-decoration: underline;
-                    background-color: #F2E9C2;
+                    background-color: #75a9d2;
                 }
             }
             
@@ -194,7 +201,7 @@
                 width: 500%;
                 border-top-style: groove;
                 border-color: #F2E9C2;
-                border-width: 2pt;
+                border-top-width: 2pt;
                 background-color: #FFFFFF;
                 margin: 0.2em auto;
                 margin-bottom: 2em;
@@ -219,10 +226,10 @@
                     position: relative;
                 }
                 
-                img{
+/*                img{
                     float: left;
                     max-width: 100%;
-                }
+                }*/
             }
 
         }
@@ -268,17 +275,32 @@
             height: auto !important;
             float: left;
             width: 100%;
+            
+            .icon{
+                    display: block;
+                    position: absolute;
+                    right: 0;
+                    top: 0;
+                    height: 2em;
+                    width: 2em;
+                    margin: 0.7em;
+                    background-image: url('../img/arrow-right.png');
+                    background-size: 2em 2em;
+                    z-index: 4;
+                }
         }
         #trasporto-gomma{
             
             &:target{
                 .tab-panel:first-child{
-                    
                     top: 0;
+                    
+                    .icon {
+                        background-image: url('../img/arrow-down.png');
+                    }
                     a{
                         display: none;
                         opacity: .6;
-                        z-index: 3;
                     }
                     
                     .close{
@@ -300,10 +322,13 @@
 
                 .tab-panel:nth-child(2){
                     top: 0;
+                    
+                    .icon {
+                        background-image: url('../img/arrow-down.png');
+                    }
                     a{
                         display: none;
                         opacity: .6;
-                        z-index: 3;
                     }
                     
                     .close{
@@ -327,10 +352,13 @@
 
                 .tab-panel:nth-child(3){
                     top: 0;
+                    
+                    .icon {
+                        background-image: url('../img/arrow-down.png');
+                    }
                     a{
                         display: none;
                         opacity: .6;
-                        z-index: 3;
                     }
                     
                     .close{
@@ -354,10 +382,13 @@
 
                 .tab-panel:nth-child(4){
                     top: 0;
+                    
+                    .icon {
+                        background-image: url('../img/arrow-down.png');
+                    }
                     a{
                         display: none;
                         opacity: .6;
-                        z-index: 3;
                     }
                     
                     .close{
@@ -379,18 +410,16 @@
 
 
             &:target {
-                .tab-panel:first-child {
-                    .tab-content {
-                        left: -100000px;
-                    }
-                }
 
                 .tab-panel:nth-child(5){
                     top: 0;
+                    
+                    .icon {
+                        background-image: url('../img/arrow-down.png');
+                    }
                     a{
                         display: none;
                         opacity: .6;
-                        z-index: 3;
                     }
                     
                     .close{
@@ -413,20 +442,22 @@
                 position: relative;
                 width: 100%;
                 height: 3em;
-                padding: 0.2em -2pt;
-                margin: auto 0;
+                padding: 0.2em 0;
+                margin: auto;
                 text-align: center;
-                border-style: groove;
-                border-color: #70AB4B;
-                border-width: 2pt;
-                background-color: #666666;
+                border-bottom-style: groove;
+                border-color: #F2E9C2;
+                border-bottom-width: 0.5%;
+                background-color: #4C99D4;
                 color: #FFFFFF;
                 text-decoration: none;
                 font-weight: 3pt bold;
                 
+                
+                
                 &:hover{
                     text-decoration: underline;
-                    background-color: #F2E9C2;
+                    background-color: #75a9d2;
                 }
             }
 

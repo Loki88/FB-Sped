@@ -96,15 +96,17 @@ header{
 {
     #language{
         a{
-            width: 20%;
+            width: 30%;
             float: left;
+            span{
+                width: 50%;
+            }
             &:first-child{
-                margin-left: 25%;
+                margin-left: 15%;
                 margin-right: 5%;
                 span {
-                    
-                    width: auto;
                     float: right;
+                    text-align: right;
                 }
                 img{
                     float: right;
@@ -113,6 +115,11 @@ header{
             
             &:last-child{
                 margin-left: 5%;
+                
+                span{
+                    float: left;
+                    text-align: left;
+                }
             }
 
         }
@@ -171,21 +178,6 @@ header{
                     text-decoration: underline;
                 }
                 
-                a {
-                    height: auto;
-                    
-                    .icon {
-                        background-image: url('../img/arrow-down.png');
-                    }
-                    
-                    p {
-                        position: relative;
-                        left: 0;
-                        height: auto;
-                        padding: 0.2em 0.1em;
-                    }
-                }
-                
                 background-color: #F2E9C2;
             }
             
@@ -232,11 +224,11 @@ header{
                 
                 p{
                     display: block;
-                    position: absolute;
+                    position: relative;
                     border-top: 2pt solid;
                     border-top-color: #4C99D4;
-                    padding: 0.3em 0;
-                    left: -10000px;
+                    height: auto;
+                    padding: 0.2em 0.1em;
                     margin: 0.3em 1.6%;
                     color: #666666;
                 }
@@ -364,8 +356,9 @@ header{
 }
 
 .content-box {
-    border-style: outset;
-    border-color: #F2E9C2;
+    background-color: #F2E9C2;
+    border-style: ridge;
+    border-color: #FFFFFF;
     color: #666666;
     margin-bottom: 0.4em;
     
@@ -418,7 +411,11 @@ footer{
     bottom: 0;
     height: 15em;
     color: #FFFFFF;
-    background-color: #4C99D4;
+    background-color: #666666;
+    a{
+        color: #F2E9C2;
+    }
+    
     div{
         p{
             text-align: center;

@@ -67,18 +67,23 @@ header #breadcrumb {
 
 @media only screen and (max-width: 480px) {
   #language a {
-    width: 20%;
+    width: 30%;
     float: left; }
+    #language a span {
+      width: 50%; }
     #language a:first-child {
-      margin-left: 25%;
+      margin-left: 15%;
       margin-right: 5%; }
       #language a:first-child span {
-        width: auto;
-        float: right; }
+        float: right;
+        text-align: right; }
       #language a:first-child img {
         float: right; }
     #language a:last-child {
-      margin-left: 5%; } }
+      margin-left: 5%; }
+      #language a:last-child span {
+        float: left;
+        text-align: left; } }
 @media only screen and (min-width: 481px) and (max-width: 768px) {
   #language a {
     float: none;
@@ -111,15 +116,6 @@ header #breadcrumb {
       background-color: #F2E9C2; }
       #sol-trasporti ul li:hover h5 {
         text-decoration: underline; }
-      #sol-trasporti ul li:hover a {
-        height: auto; }
-        #sol-trasporti ul li:hover a .icon {
-          background-image: url("../img/arrow-down.png"); }
-        #sol-trasporti ul li:hover a p {
-          position: relative;
-          left: 0;
-          height: auto;
-          padding: 0.2em 0.1em; }
     #sol-trasporti ul li a {
       display: inline-block;
       position: relative;
@@ -154,11 +150,11 @@ header #breadcrumb {
         text-align: center; }
       #sol-trasporti ul li a p {
         display: block;
-        position: absolute;
+        position: relative;
         border-top: 2pt solid;
         border-top-color: #4C99D4;
-        padding: 0.3em 0;
-        left: -10000px;
+        height: auto;
+        padding: 0.2em 0.1em;
         margin: 0.3em 1.6%;
         color: #666666; }
 
@@ -235,8 +231,9 @@ header #breadcrumb {
     float: left;
     width: 96.4%; } }
 .content-box {
-  border-style: outset;
-  border-color: #F2E9C2;
+  background-color: #F2E9C2;
+  border-style: ridge;
+  border-color: #FFFFFF;
   color: #666666;
   margin-bottom: 0.4em; }
   .content-box h1, .content-box h2, .content-box h3, .content-box h4, .content-box h5, .content-box h6 {
@@ -280,7 +277,9 @@ footer {
   bottom: 0;
   height: 15em;
   color: #FFFFFF;
-  background-color: #4C99D4; }
+  background-color: #666666; }
+  footer a {
+    color: #F2E9C2; }
   footer div p {
     text-align: center; }
 

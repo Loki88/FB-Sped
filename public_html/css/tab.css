@@ -9,6 +9,8 @@
     position: relative;
     width: 100%;
     margin: 2em auto; }
+    #responsive-tab .icon {
+      display: none; }
     #responsive-tab .wrap {
       display: block;
       position: relative;
@@ -26,52 +28,57 @@
     #responsive-tab #trasporto-gomma .tab-panel:first-child {
       top: 0; }
       #responsive-tab #trasporto-gomma .tab-panel:first-child a {
+        opacity: .6;
         z-index: 3; }
       #responsive-tab #trasporto-gomma .tab-panel:first-child .tab-content {
         display: block;
         left: 0;
         z-index: 1;
         position: relative; }
+    #responsive-tab #trasporto-ferroviario:target .tab-panel:first-child a {
+      opacity: 1; }
     #responsive-tab #trasporto-ferroviario:target .tab-panel:first-child .tab-content {
       left: -100000px; }
     #responsive-tab #trasporto-ferroviario:target .tab-panel:nth-child(2) {
       top: 0; }
       #responsive-tab #trasporto-ferroviario:target .tab-panel:nth-child(2) a {
+        opacity: .6;
         z-index: 3; }
       #responsive-tab #trasporto-ferroviario:target .tab-panel:nth-child(2) .tab-content {
         left: -100%; }
+    #responsive-tab #trasporto-marittimo:target .tab-panel:first-child a {
+      opacity: 1; }
     #responsive-tab #trasporto-marittimo:target .tab-panel:first-child .tab-content {
       left: -100000px; }
     #responsive-tab #trasporto-marittimo:target .tab-panel:nth-child(3) {
       top: 0; }
       #responsive-tab #trasporto-marittimo:target .tab-panel:nth-child(3) a {
+        opacity: .6;
         z-index: 3; }
       #responsive-tab #trasporto-marittimo:target .tab-panel:nth-child(3) .tab-content {
         left: -200%; }
+    #responsive-tab #trasporto-aereo:target .tab-panel:first-child a {
+      opacity: 1; }
     #responsive-tab #trasporto-aereo:target .tab-panel:first-child .tab-content {
       left: -100000px; }
     #responsive-tab #trasporto-aereo:target .tab-panel:nth-child(4) {
       top: 0; }
       #responsive-tab #trasporto-aereo:target .tab-panel:nth-child(4) a {
-        z-index: 3; }
+        z-index: 3;
+        opacity: .6; }
       #responsive-tab #trasporto-aereo:target .tab-panel:nth-child(4) .tab-content {
         left: -300%; }
+    #responsive-tab #trasporto-combinato:target .tab-panel:first-child a {
+      opacity: 1; }
     #responsive-tab #trasporto-combinato:target .tab-panel:first-child .tab-content {
       left: -100000px; }
     #responsive-tab #trasporto-combinato:target .tab-panel:nth-child(5) {
       top: 0; }
       #responsive-tab #trasporto-combinato:target .tab-panel:nth-child(5) a {
+        opacity: .6;
         z-index: 3; }
       #responsive-tab #trasporto-combinato:target .tab-panel:nth-child(5) .tab-content {
         left: -400%; }
-    #responsive-tab:nth-child(5) {
-      top: 0; }
-      #responsive-tab:nth-child(5):target a {
-        z-index: 3; }
-      #responsive-tab:nth-child(5):target .tab-content {
-        display: block;
-        left: -400%;
-        position: relative; }
     #responsive-tab a {
       display: block;
       position: relative;
@@ -81,15 +88,15 @@
       margin: auto 5%;
       text-align: center;
       border-style: groove;
-      border-color: #70AB4B;
+      border-color: #F2E9C2;
       border-width: 2pt;
-      background-color: #666666;
+      background-color: #4C99D4;
       color: #FFFFFF;
       text-decoration: none;
       font-weight: 3pt bold; }
       #responsive-tab a:hover {
         text-decoration: underline;
-        background-color: #F2E9C2; }
+        background-color: #75a9d2; }
     #responsive-tab .close {
       display: none; }
     #responsive-tab .tab-content {
@@ -100,12 +107,16 @@
       width: 500%;
       border-top-style: groove;
       border-color: #F2E9C2;
-      border-width: 2pt;
+      border-top-width: 2pt;
       background-color: #FFFFFF;
       margin: 0.2em auto;
       margin-bottom: 2em;
       z-index: 2;
-      color: #666666; }
+      color: #666666;
+      /*                img{
+                          float: left;
+                          max-width: 100%;
+                      }*/ }
       #responsive-tab .tab-content h5 {
         text-align: center; }
       #responsive-tab .tab-content p {
@@ -115,10 +126,7 @@
         position: relative; }
       #responsive-tab .tab-content .body {
         display: inline-block;
-        position: relative; }
-      #responsive-tab .tab-content img {
-        float: left;
-        max-width: 100%; } }
+        position: relative; } }
 .img-wrapper {
   display: block;
   position: relative;
@@ -150,12 +158,24 @@
       height: auto !important;
       float: left;
       width: 100%; }
+      #responsive-tab .tab-panel .icon {
+        display: block;
+        position: absolute;
+        right: 0;
+        top: 0;
+        height: 2em;
+        width: 2em;
+        margin: 0.7em;
+        background-image: url("../img/arrow-right.png");
+        background-size: 2em 2em;
+        z-index: 4; }
     #responsive-tab #trasporto-gomma:target .tab-panel:first-child {
       top: 0; }
+      #responsive-tab #trasporto-gomma:target .tab-panel:first-child .icon {
+        background-image: url("../img/arrow-down.png"); }
       #responsive-tab #trasporto-gomma:target .tab-panel:first-child a {
         display: none;
-        opacity: .6;
-        z-index: 3; }
+        opacity: .6; }
       #responsive-tab #trasporto-gomma:target .tab-panel:first-child .close {
         display: block; }
       #responsive-tab #trasporto-gomma:target .tab-panel:first-child .tab-content {
@@ -164,10 +184,11 @@
         left: 0; }
     #responsive-tab #trasporto-ferroviario:target .tab-panel:nth-child(2) {
       top: 0; }
+      #responsive-tab #trasporto-ferroviario:target .tab-panel:nth-child(2) .icon {
+        background-image: url("../img/arrow-down.png"); }
       #responsive-tab #trasporto-ferroviario:target .tab-panel:nth-child(2) a {
         display: none;
-        opacity: .6;
-        z-index: 3; }
+        opacity: .6; }
       #responsive-tab #trasporto-ferroviario:target .tab-panel:nth-child(2) .close {
         display: block; }
       #responsive-tab #trasporto-ferroviario:target .tab-panel:nth-child(2) .tab-content {
@@ -176,10 +197,11 @@
         left: 0; }
     #responsive-tab #trasporto-marittimo:target .tab-panel:nth-child(3) {
       top: 0; }
+      #responsive-tab #trasporto-marittimo:target .tab-panel:nth-child(3) .icon {
+        background-image: url("../img/arrow-down.png"); }
       #responsive-tab #trasporto-marittimo:target .tab-panel:nth-child(3) a {
         display: none;
-        opacity: .6;
-        z-index: 3; }
+        opacity: .6; }
       #responsive-tab #trasporto-marittimo:target .tab-panel:nth-child(3) .close {
         display: block; }
       #responsive-tab #trasporto-marittimo:target .tab-panel:nth-child(3) .tab-content {
@@ -188,24 +210,24 @@
         left: 0; }
     #responsive-tab #trasporto-aereo:target .tab-panel:nth-child(4) {
       top: 0; }
+      #responsive-tab #trasporto-aereo:target .tab-panel:nth-child(4) .icon {
+        background-image: url("../img/arrow-down.png"); }
       #responsive-tab #trasporto-aereo:target .tab-panel:nth-child(4) a {
         display: none;
-        opacity: .6;
-        z-index: 3; }
+        opacity: .6; }
       #responsive-tab #trasporto-aereo:target .tab-panel:nth-child(4) .close {
         display: block; }
       #responsive-tab #trasporto-aereo:target .tab-panel:nth-child(4) .tab-content {
         position: relative;
         height: auto;
         left: 0; }
-    #responsive-tab #trasporto-combinato:target .tab-panel:first-child .tab-content {
-      left: -100000px; }
     #responsive-tab #trasporto-combinato:target .tab-panel:nth-child(5) {
       top: 0; }
+      #responsive-tab #trasporto-combinato:target .tab-panel:nth-child(5) .icon {
+        background-image: url("../img/arrow-down.png"); }
       #responsive-tab #trasporto-combinato:target .tab-panel:nth-child(5) a {
         display: none;
-        opacity: .6;
-        z-index: 3; }
+        opacity: .6; }
       #responsive-tab #trasporto-combinato:target .tab-panel:nth-child(5) .close {
         display: block; }
       #responsive-tab #trasporto-combinato:target .tab-panel:nth-child(5) .tab-content {
@@ -217,19 +239,19 @@
       position: relative;
       width: 100%;
       height: 3em;
-      padding: 0.2em -2pt;
-      margin: auto 0;
+      padding: 0.2em 0;
+      margin: auto;
       text-align: center;
-      border-style: groove;
-      border-color: #70AB4B;
-      border-width: 2pt;
-      background-color: #666666;
+      border-bottom-style: groove;
+      border-color: #F2E9C2;
+      border-bottom-width: 0.5%;
+      background-color: #4C99D4;
       color: #FFFFFF;
       text-decoration: none;
       font-weight: 3pt bold; }
       #responsive-tab a:hover {
         text-decoration: underline;
-        background-color: #F2E9C2; }
+        background-color: #75a9d2; }
     #responsive-tab .tab-content {
       display: block;
       position: absolute;
