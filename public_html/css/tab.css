@@ -9,101 +9,119 @@
     position: relative;
     width: 100%;
     margin: 2em auto; }
+    #responsive-tab .wrap {
+      display: block;
+      position: relative;
+      margin: 0;
+      padding: 0;
+      border: 0;
+      width: 100%;
+      height: 100%; }
     #responsive-tab .tab-panel {
       display: block;
       position: relative;
       height: auto !important;
       float: left;
       width: 20%; }
-      #responsive-tab .tab-panel:first-child {
-        top: 0; }
-        #responsive-tab .tab-panel:first-child:target a {
-          z-index: 2;
-          border-style: ridge;
-          border-bottom: none; }
-        #responsive-tab .tab-panel:first-child:target .tab-content {
-          display: block;
-          left: 0;
-          z-index: 1;
-          position: relative; }
-      #responsive-tab .tab-panel:nth-child(2) {
-        top: 0; }
-        #responsive-tab .tab-panel:nth-child(2):target a {
-          z-index: 3;
-          border-style: ridge;
-          border-bottom: none; }
-        #responsive-tab .tab-panel:nth-child(2):target .tab-content {
-          display: block;
-          left: -100%;
-          position: relative; }
-      #responsive-tab .tab-panel:nth-child(3) {
-        top: 0; }
-        #responsive-tab .tab-panel:nth-child(3):target a {
-          z-index: 3;
-          border-style: ridge;
-          border-bottom: none; }
-        #responsive-tab .tab-panel:nth-child(3):target .tab-content {
-          display: block;
-          left: -200%;
-          position: relative; }
-      #responsive-tab .tab-panel:nth-child(4) {
-        top: 0; }
-        #responsive-tab .tab-panel:nth-child(4):target a {
-          z-index: 3;
-          border-style: ridge;
-          border-bottom: none; }
-        #responsive-tab .tab-panel:nth-child(4):target .tab-content {
-          display: block;
-          left: -300%;
-          position: relative; }
-      #responsive-tab .tab-panel:nth-child(5) {
-        top: 0; }
-        #responsive-tab .tab-panel:nth-child(5):target a {
-          z-index: 3;
-          border-style: ridge;
-          border-bottom: none; }
-        #responsive-tab .tab-panel:nth-child(5):target .tab-content {
-          display: block;
-          left: -400%;
-          position: relative; }
-      #responsive-tab .tab-panel a {
+    #responsive-tab #trasporto-gomma .tab-panel:first-child {
+      top: 0; }
+      #responsive-tab #trasporto-gomma .tab-panel:first-child a {
+        z-index: 3; }
+      #responsive-tab #trasporto-gomma .tab-panel:first-child .tab-content {
         display: block;
-        position: relative;
-        width: 80%;
-        height: 3em;
-        padding: 0.2em 7%;
-        margin: auto;
-        text-align: center;
-        border-radius: 0.5em;
-        border-style: ridge;
-        border-bottom-left-radius: 0;
-        border-bottom-right-radius: 0;
-        border-color: #70AB4B;
-        border-width: 2pt;
-        background-color: #FFFFFF;
-        text-decoration: none;
-        color: #666666;
-        font-weight: 3pt bold; }
-        #responsive-tab .tab-panel a:hover {
-          text-decoration: underline;
-          background-color: #F2E9C2; }
-      #responsive-tab .tab-panel .tab-content {
+        left: 0;
+        z-index: 1;
+        position: relative; }
+    #responsive-tab #trasporto-ferroviario:target .tab-panel:first-child .tab-content {
+      left: -100000px; }
+    #responsive-tab #trasporto-ferroviario:target .tab-panel:nth-child(2) {
+      top: 0; }
+      #responsive-tab #trasporto-ferroviario:target .tab-panel:nth-child(2) a {
+        z-index: 3; }
+      #responsive-tab #trasporto-ferroviario:target .tab-panel:nth-child(2) .tab-content {
+        left: -100%; }
+    #responsive-tab #trasporto-marittimo:target .tab-panel:first-child .tab-content {
+      left: -100000px; }
+    #responsive-tab #trasporto-marittimo:target .tab-panel:nth-child(3) {
+      top: 0; }
+      #responsive-tab #trasporto-marittimo:target .tab-panel:nth-child(3) a {
+        z-index: 3; }
+      #responsive-tab #trasporto-marittimo:target .tab-panel:nth-child(3) .tab-content {
+        left: -200%; }
+    #responsive-tab #trasporto-aereo:target .tab-panel:first-child .tab-content {
+      left: -100000px; }
+    #responsive-tab #trasporto-aereo:target .tab-panel:nth-child(4) {
+      top: 0; }
+      #responsive-tab #trasporto-aereo:target .tab-panel:nth-child(4) a {
+        z-index: 3; }
+      #responsive-tab #trasporto-aereo:target .tab-panel:nth-child(4) .tab-content {
+        left: -300%; }
+    #responsive-tab #trasporto-combinato:target .tab-panel:first-child .tab-content {
+      left: -100000px; }
+    #responsive-tab #trasporto-combinato:target .tab-panel:nth-child(5) {
+      top: 0; }
+      #responsive-tab #trasporto-combinato:target .tab-panel:nth-child(5) a {
+        z-index: 3; }
+      #responsive-tab #trasporto-combinato:target .tab-panel:nth-child(5) .tab-content {
+        left: -400%; }
+    #responsive-tab:nth-child(5) {
+      top: 0; }
+      #responsive-tab:nth-child(5):target a {
+        z-index: 3; }
+      #responsive-tab:nth-child(5):target .tab-content {
         display: block;
-        position: relative;
+        left: -400%;
+        position: relative; }
+    #responsive-tab a {
+      display: block;
+      position: relative;
+      width: 90%;
+      height: 3em;
+      padding: 0.2em -2pt;
+      margin: auto 5%;
+      text-align: center;
+      border-style: groove;
+      border-color: #70AB4B;
+      border-width: 2pt;
+      background-color: #666666;
+      color: #FFFFFF;
+      text-decoration: none;
+      font-weight: 3pt bold; }
+      #responsive-tab a:hover {
+        text-decoration: underline;
+        background-color: #F2E9C2; }
+    #responsive-tab .tab-content {
+      display: block;
+      position: relative;
+      float: left;
+      left: -100000px;
+      width: 500%;
+      border-top-style: groove;
+      border-color: #F2E9C2;
+      border-width: 2pt;
+      background-color: #FFFFFF;
+      margin: 0.2em auto;
+      margin-bottom: 2em;
+      z-index: 2;
+      color: #666666; }
+      #responsive-tab .tab-content h5 {
+        text-align: center; }
+      #responsive-tab .tab-content p {
+        margin: 1em 0.5em; }
+      #responsive-tab .tab-content .intro {
+        display: block;
+        position: relative; }
+      #responsive-tab .tab-content .body {
+        display: inline-block;
+        position: relative; }
+      #responsive-tab .tab-content img {
         float: left;
-        left: -100000px;
-        width: 498%;
-        border-style: ridge;
-        top: -2pt;
-        border-color: #F2E9C2;
-        border-width: 2pt;
-        background-color: #FFFFFF;
-        margin: 0 auto;
-        margin-bottom: 2em;
-        z-index: 2;
-        color: #666666; }
-        #responsive-tab .tab-panel .tab-content h5 {
-          text-align: center; }
-        #responsive-tab .tab-panel .tab-content img {
-          float: left;
-          max-width: 100%; } }
+        max-width: 100%; } }
+.img-wrapper {
+  display: block;
+  position: relative;
+  width: 90%;
+  margin: auto; }
+  .img-wrapper img {
+    display: block;
+    max-width: 100%; }

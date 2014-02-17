@@ -12,22 +12,28 @@
         width: 100%;
         margin: 2em auto;
 
-
+        .wrap {
+            display:block;
+            position: relative;
+            margin: 0;
+            padding: 0;
+            border: 0;
+            width: 100%;
+            height: 100%;
+        }
         .tab-panel{
             display: block;
             position: relative;
             height: auto !important;
             float: left;
             width: 20%;
-            
-            &:first-child{
-                top: 0;
+        }
+        #trasporto-gomma{
 
-                &:target{
+                .tab-panel:first-child{
+                    top: 0;
                     a{
-                        z-index: 2;
-                        border-style: ridge;
-                        border-bottom: none;
+                        z-index: 3;
                     }
 
                     .tab-content{
@@ -39,58 +45,103 @@
                 }
             }
 
-            &:nth-child(2){
-                top: 0;
+            #trasporto-ferroviario{
 
                 
                 &:target {
-                    a{
-                        z-index: 3;
-                        border-style: ridge;
-                        border-bottom: none;
+                    .tab-panel:first-child {
+                        .tab-content {
+                            left: -100000px;
+                        }
                     }
+                    
+                    .tab-panel:nth-child(2){
+                        top: 0;
+                        a{
+                            z-index: 3;
+                        }
 
-                    .tab-content{
-                        display: block;
-                        left: -100%;
-                        position: relative;
+                        .tab-content{
+                            left: -100%;
+                            
+                        }
                     }
+                    
+                }
+            }
+            
+            #trasporto-marittimo{
+
+                
+                &:target {
+                    .tab-panel:first-child {
+                        .tab-content {
+                            left: -100000px;
+                        }
+                    }
+                    
+                    .tab-panel:nth-child(3){
+                        top: 0;
+                        a{
+                            z-index: 3;
+                        }
+
+                        .tab-content{
+                            left: -200%;
+                            
+                        }
+                    }
+                    
+                }
+            }
+            
+            #trasporto-aereo{
+
+                
+                &:target {
+                    .tab-panel:first-child {
+                        .tab-content {
+                            left: -100000px;
+                        }
+                    }
+                    
+                    .tab-panel:nth-child(4){
+                        top: 0;
+                        a{
+                            z-index: 3;
+                        }
+
+                        .tab-content{
+                            left: -300%;
+                            
+                        }
+                    }
+                    
                 }
             }
 
-            &:nth-child(3){
-                top: 0;
+            #trasporto-combinato{
 
+                
                 &:target {
-                    a{
-                        z-index: 3;
-                        border-style: ridge;
-                        border-bottom: none;
+                    .tab-panel:first-child {
+                        .tab-content {
+                            left: -100000px;
+                        }
                     }
+                    
+                    .tab-panel:nth-child(5){
+                        top: 0;
+                        a{
+                            z-index: 3;
+                        }
 
-                    .tab-content{
-                        display: block;
-                        left: -200%;
-                        position: relative;
+                        .tab-content{
+                            left: -400%;
+                            
+                        }
                     }
-                }
-            }
-
-            &:nth-child(4){
-                top: 0;
-
-                &:target {
-                    a{
-                        z-index: 3;
-                        border-style: ridge;
-                        border-bottom: none;
-                    }
-
-                    .tab-content{
-                        display: block;
-                        left: -300%;
-                        position: relative;
-                    }
+                    
                 }
             }
             &:nth-child(5){
@@ -99,8 +150,6 @@
                 &:target {
                     a{
                         z-index: 3;
-                        border-style: ridge;
-                        border-bottom: none;
                     }
 
                     .tab-content{
@@ -114,20 +163,17 @@
             a {
                 display: block;
                 position: relative;
-                width: 80%;
+                width: 90%;
                 height: 3em;
-                padding: 0.2em 7%;
-                margin: auto;
+                padding: 0.2em -2pt;
+                margin: auto 5%;
                 text-align: center;
-                border-radius: 0.5em;
-                border-style: ridge;
-                border-bottom-left-radius: 0;
-                border-bottom-right-radius: 0;
+                border-style: groove;
                 border-color: #70AB4B;
                 border-width: 2pt;
-                background-color: #FFFFFF;
+                background-color: #666666;
+                color: #FFFFFF;
                 text-decoration: none;
-                color: #666666;
                 font-weight: 3pt bold;
                 
                 &:hover{
@@ -141,13 +187,12 @@
                 position: relative;
                 float: left;
                 left: -100000px;
-                width: 498%;
-                border-style: ridge;
-                top: -2pt;
+                width: 500%;
+                border-top-style: groove;
                 border-color: #F2E9C2;
                 border-width: 2pt;
                 background-color: #FFFFFF;
-                margin: 0 auto;
+                margin: 0.2em auto;
                 margin-bottom: 2em;
                 z-index: 2;
                 color: #666666;
@@ -156,9 +201,20 @@
                     text-align: center;
                 }
 
+                p {
+                    margin: 1em 0.5em;
+                }
                 
-
-
+                .intro{
+                    display: block;
+                    position: relative;
+                }
+                
+                .body {
+                    display: inline-block;
+                    position: relative;
+                }
+                
                 img{
                     float: left;
                     max-width: 100%;
@@ -166,6 +222,18 @@
             }
 
         }
+    
+}
+
+.img-wrapper{
+    display: block;
+    position: relative;
+    width: 90%;
+    margin: auto;
+    
+    img{
+        display: block;
+        max-width: 100%;
     }
 }
 
