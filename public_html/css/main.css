@@ -99,37 +99,68 @@ header #breadcrumb {
   margin: 0;
   padding: 0; }
   #sol-trasporti ul li {
-    display: block;
+    display: inline-block;
     position: relative;
     float: left;
-    padding: 0;
-    border-width: 0.2%; }
+    width: 99.6%;
+    border-width: 0.2%;
+    padding: 0.3em 0; }
+    #sol-trasporti ul li:first-child {
+      padding-top: 0; }
     #sol-trasporti ul li:hover {
       background-color: #F2E9C2; }
       #sol-trasporti ul li:hover h5 {
         text-decoration: underline; }
+      #sol-trasporti ul li:hover a {
+        height: auto; }
+        #sol-trasporti ul li:hover a .icon {
+          background-image: url("../img/arrow-down.png"); }
+        #sol-trasporti ul li:hover a p {
+          position: relative;
+          left: 0;
+          height: auto;
+          padding: 0.2em 0.1em; }
     #sol-trasporti ul li a {
-      display: block;
+      display: inline-block;
+      position: relative;
       width: 100%;
-      height: 100%;
+      padding: 0;
+      margin: 0;
+      overflow: hidden;
       text-decoration: none; }
+      #sol-trasporti ul li a img {
+        display: block;
+        position: relative;
+        float: left;
+        height: 2.4em;
+        margin: 0.3em 0.5em; }
+      #sol-trasporti ul li a .icon {
+        float: right;
+        height: 2.4em;
+        width: 2.4em;
+        margin-right: 0.3em;
+        margin-top: 0.3em;
+        margin-bottom: 0.3em;
+        background-image: url("../img/arrow-right.png");
+        background-size: 2.4em 2.4em; }
       #sol-trasporti ul li a h5 {
         display: block;
         position: relative;
-        width: 78%;
-        padding: 0.2em 10%;
-        padding-bottom: 0.8em;
-        height: 2em;
+        padding: 0.3em 10%;
+        margin: auto;
+        height: 2.4em;
+        line-height: 2.4em;
         text-decoration: none;
-        text-align: center;
-        border-bottom: 2px solid;
-        border-bottom-color: #4C99D4; }
+        text-align: center; }
       #sol-trasporti ul li a p {
         display: block;
-        position: relative;
-        padding: 0.2em 0.1em;
-        width: 97.5%;
-        margin: 0 1.6%; }
+        position: absolute;
+        border-top: 2pt solid;
+        border-top-color: #4C99D4;
+        padding: 0.3em 0;
+        left: -10000px;
+        margin: 0.3em 1.6%;
+        color: #666666; }
 
 #short-azienda:hover a {
   background-color: #F2E9C2; }
