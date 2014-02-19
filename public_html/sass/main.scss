@@ -8,25 +8,79 @@ body{
 }
 
 header{
+    display: block;
+    background-color: #000000;
+    padding-top: 1em;
+        
     #logo {
         display: block;
         position: relative;
-        height: 8em;
         padding: 0;
-        margin: 0;
         border: 0;
-        img{
-            display: block;
-            height: 100%;
-            max-width: 100%;
+        #logo-img{
+            
+            display: inline-table;
             float: left;
+            height: 4em;
+            width: 8em;
+            margin: 0 5%;
+            
+            a {
+                z-index: 2;
+                display: table;
+                width: 100%;
+                height: 100%;
+                float: left;
+                position: relative;
+                
+                img{
+                    display: block;
+                    max-height: 4em;
+                    max-width: 8em;
+                    float: left;
+                    margin: auto 0;
+                }
+            }
+
+            
+        }
+        
+    
+        #logo-text{
+            display: block;
+            position: relative;
+            color: #DFEBF6;
             margin: auto;
+
+            h4{
+                display: block;
+                color: #DFEBF6;
+                font-family: 'sorts_mill_goudyregular';
+                font-size: 20pt;
+                padding: 0;
+                margin: 0 auto;
+                margin-bottom: 0.1em;
+            }
+
+            h6{
+                display: block;
+                color: #DFEBF6;
+                font-family: 'sorts_mill_goudyregular';
+                font-size: 10pt;
+                margin: 0;
+                padding: 0;
+            }
+
+            display: block;
+            position: relative;
+            color: #FFFFFF;
         }
     }
     
     #breadcrumb {
         display: block;
-        position: relative;
+        position: absolute;
+        left: -10000px;
         height: 1.6em;
         padding: 0.2em 0;
         line-height: 2em;
@@ -41,9 +95,28 @@ header{
 {
     header{
         #logo{
-            img{
+            #logo-img{
+                width: 50%;
+                height: auto;
+                max-height: auto;
+                margin: auto 25%;
                 float: none;
+                a{
+                    margin: auto;
+                    img{
+                        float: none;
+                        margin: 0 auto;
+                    }
+                }
+                
             }
+            #logo-text{
+                width: 80%;
+                float: none;
+                margin: auto 10%;
+                text-align: center;
+            }
+            
         }
     }
 }
@@ -61,7 +134,8 @@ header{
 #language{
     display: block;
     position: relative;
-    height: 3em;
+    height: auto;
+    
     
     a{
         display: block;
@@ -85,22 +159,38 @@ header{
             display: block;
             width: 40%;
             height: 1.5em;
-            margin: 0.25em 0.2em;
+            margin: auto 0.2em;
+            padding: 0.25em auto;
             line-height: 1.5em;
             float: left;
+            color: #FFFFFF;
         }
+        
+                    
+        &:hover{
+            span{
+                text-decoration: underline;
+                text-decoration-style: wavy;
+            }
+        }
+            
+            
     }
 }
 
-@media only screen and (max-width: 480px)
+@media only screen and (max-width: 481px)
 {
     #language{
+        margin-bottom: 0.4em;
         a{
             width: 30%;
             float: left;
+            text-decoration: none;
+           
             span{
                 width: 50%;
             }
+            
             &:first-child{
                 margin-left: 15%;
                 margin-right: 5%;
@@ -121,6 +211,8 @@ header{
                     text-align: left;
                 }
             }
+            
+ 
 
         }
     }
