@@ -236,6 +236,7 @@ header{
     position: relative;
     width: 100%;
     height: auto;
+    box-shadow: 1pt 1pt 5pt #000000;
     
     img {
         display: block;
@@ -431,10 +432,18 @@ header{
 
 
 .content-box {
-    background-color: #DFEBF6;
+    background-color: #FFFFFF;
     color: #000000;
     margin-bottom: 0.4em;
     box-shadow: 1pt 1pt 5pt #000000;
+    
+    .header {
+        margin: 0;
+        margin-bottom: 0.2em;
+        padding: 0;
+        background-color: #DFEBF6;
+        color: #000000;
+    }
     
     h1, h2, h3, h4, h5, h6 {
         display: block;
