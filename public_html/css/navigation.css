@@ -1,15 +1,77 @@
 @charset "UTF-8";
 @media screen and (max-width: 769px) {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/loki\/NetBeansProjects\/FB\/public_html\/sass\/navigation\.scss}line{font-family:\0000313}}
   nav {
     margin: 0;
     padding: 0;
-    /* Stile per i bottoni del menù di secondo livello, quando sono visibili */ }
+    /* Stile per i bottoni del menù di secondo livello, quando sono visibili */
+    /*          #liv-trasporti:target{
+                  #close1 {
+                    display: inline-block;
+                    opacity: .6;}
+    
+                #open1 {
+                  display: none; }
+    
+                ul{
+                    display: block;
+                    position: relative;
+                    left: 0px;
+                    top: 0;
+    
+                    li {
+                      height: 2.8em;
+                      margin: 1px 0;
+                      line-height: auto;
+                     }
+                     #trasporti{
+                         display: inline-block;
+                         height: auto;
+                         background-color: none;
+                         padding: 0;
+    
+                         #close2 {
+                            display: inline-block;
+                            opacity: .6;
+                         }
+    
+                         #open2{
+                             display: none;
+                         }
+    
+                         ul {
+                            display: block;
+                            position: relative;
+                            height: auto;
+                            left: 0;
+                            top: 0; 
+    
+                            li{
+                                display: block;
+                                position: relative;
+                                width: 100%;
+                                height: 2.8em;
+                                margin: 1px 0;
+                                line-height: auto;
+                                float:left;
+                                -webkit-transition: height 0.25;
+                                -moz-transition: height 0.25s;
+                                -o-transition: height 0.25s;
+                                transition: height 0.25s;
+    
+                            }
+                          }
+                     }*/
+    /*}*/
+    /*}*/ }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/loki\/NetBeansProjects\/FB\/public_html\/sass\/navigation\.scss}line{font-family:\0000317}}
     nav #liv-trasporti {
       display: block;
       width: 100%;
       margin: 0;
       padding: 0;
       /* Stile di base per il menù chiuso */ }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/loki\/NetBeansProjects\/FB\/public_html\/sass\/navigation\.scss}line{font-family:\0000324}}
       nav #liv-trasporti .menu-link {
         line-height: 2em;
         width: 70%;
@@ -18,9 +80,10 @@
         background-repeat: no-repeat;
         background-position: right center;
         background-size: 2em;
-        background-color: #666666;
+        background-color: black;
         color: white;
         background-position-x: 0.2em; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/loki\/NetBeansProjects\/FB\/public_html\/sass\/navigation\.scss}line{font-family:\0000337}}
       nav #liv-trasporti a {
         display: inline-block;
         clear: both;
@@ -30,11 +93,14 @@
         padding: 0.2em 10%;
         line-height: auto;
         text-decoration: none; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/loki\/NetBeansProjects\/FB\/public_html\/sass\/navigation\.scss}line{font-family:\0000347}}
         nav #liv-trasporti a:hover {
           opacity: .7;
           text-decoration: underline; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/loki\/NetBeansProjects\/FB\/public_html\/sass\/navigation\.scss}line{font-family:\0000353}}
       nav #liv-trasporti #close1 {
         display: none; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/loki\/NetBeansProjects\/FB\/public_html\/sass\/navigation\.scss}line{font-family:\0000356}}
       nav #liv-trasporti ul {
         display: block;
         position: absolute;
@@ -45,6 +111,7 @@
         height: auto;
         top: 0;
         left: -10000px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/loki\/NetBeansProjects\/FB\/public_html\/sass\/navigation\.scss}line{font-family:\0000367}}
         nav #liv-trasporti ul li {
           display: block;
           width: 100%;
@@ -53,112 +120,100 @@
           -webkit-transition: height 0.25;
           -moz-transition: height 0.25s;
           -o-transition: height 0.25s;
-          transition: height 0.25s; }
+          transition: height 0.25s;
+          /*                .drop-menu{
+                              background-image: url('../img/menu-white.png');
+                              background-repeat: no-repeat;
+                              background-position: right center;
+                              background-size: 1.3em;
+                              
+                          }*/
+          /*                #close2{
+                              display: none;
+                          }*/
+          /*                ul {
+                              display: block;
+                              position: relative;
+                              list-style: none;
+                              margin: 0;
+                              padding: 0;
+                              width: 100%;
+                              height: auto;
+                              top: 0; 
+                              
+                              li{
+                                  display: block;
+                                  position: absolute;
+                                  width: 100%;
+                                  height: 0em;
+                                  float: left;
+                                  -webkit-transition: height 0.25;
+                                  -moz-transition: height 0.25s;
+                                  -o-transition: height 0.25s;
+                                  transition: height 0.25s;
+                                  a{
+                                      background-color: $second-level-color;
+                                      color: $second-level-text;
+                                  }
+                                                              
+                                  &:first-child{
+                                      margin-top:2px;
+                                  }
+          
+                                  &:last-child {
+                                      margin-bottom: 0px;
+                                  }
+          
+                              }
+                            }*/ }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/loki\/NetBeansProjects\/FB\/public_html\/sass\/navigation\.scss}line{font-family:\0000377}}
           nav #liv-trasporti ul li a {
-            background-color: #4c99d4;
+            /*background-color: $first-level-color;*/
             color: white; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/loki\/NetBeansProjects\/FB\/public_html\/sass\/navigation\.scss}line{font-family:\0000382}}
           nav #liv-trasporti ul li:first-child {
             margin-top: 2px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/loki\/NetBeansProjects\/FB\/public_html\/sass\/navigation\.scss}line{font-family:\0000386}}
           nav #liv-trasporti ul li .selected {
             opacity: .6; }
-          nav #liv-trasporti ul li .drop-menu {
-            background-image: url("../img/menu-white.png");
-            background-repeat: no-repeat;
-            background-position: right center;
-            background-size: 1.3em; }
-          nav #liv-trasporti ul li #close2 {
-            display: none; }
-          nav #liv-trasporti ul li ul {
-            display: block;
-            position: relative;
-            list-style: none;
-            margin: 0;
-            padding: 0;
-            width: 100%;
-            height: auto;
-            top: 0; }
-            nav #liv-trasporti ul li ul li {
-              display: block;
-              position: absolute;
-              width: 100%;
-              height: 0em;
-              float: left;
-              -webkit-transition: height 0.25;
-              -moz-transition: height 0.25s;
-              -o-transition: height 0.25s;
-              transition: height 0.25s; }
-              nav #liv-trasporti ul li ul li a {
-                background-color: #70ab4b;
-                color: white; }
-              nav #liv-trasporti ul li ul li:first-child {
-                margin-top: 2px; }
-              nav #liv-trasporti ul li ul li:last-child {
-                margin-bottom: 0px; }
-    nav #liv-trasporti:target #close1 {
-      display: inline-block;
-      opacity: .6; }
-    nav #liv-trasporti:target #open1 {
-      display: none; }
-    nav #liv-trasporti:target ul {
-      display: block;
-      position: relative;
-      left: 0px;
-      top: 0; }
-      nav #liv-trasporti:target ul li {
-        height: 2.8em;
-        margin: 1px 0;
-        line-height: auto; }
-      nav #liv-trasporti:target ul #trasporti {
-        display: inline-block;
-        height: auto;
-        background-color: none;
-        padding: 0; }
-        nav #liv-trasporti:target ul #trasporti #close2 {
-          display: inline-block;
-          opacity: .6; }
-        nav #liv-trasporti:target ul #trasporti #open2 {
-          display: none; }
-        nav #liv-trasporti:target ul #trasporti ul {
-          display: block;
-          position: relative;
-          height: auto;
-          left: 0;
-          top: 0; }
-          nav #liv-trasporti:target ul #trasporti ul li {
-            display: block;
-            position: relative;
-            width: 100%;
-            height: 2.8em;
-            margin: 1px 0;
-            line-height: auto;
-            float: left;
-            -webkit-transition: height 0.25;
-            -moz-transition: height 0.25s;
-            -o-transition: height 0.25s;
-            transition: height 0.25s; }
 
   /* Stile per i bottoni del menù di primo livello, quando sono visibili */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/loki\/NetBeansProjects\/FB\/public_html\/sass\/navigation\.scss}line{font-family:\00003205}}
   #navigation:target #close1 {
     display: inline-block; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/loki\/NetBeansProjects\/FB\/public_html\/sass\/navigation\.scss}line{font-family:\00003209}}
   #navigation:target #open1 {
     display: none; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/loki\/NetBeansProjects\/FB\/public_html\/sass\/navigation\.scss}line{font-family:\00003212}}
   #navigation:target ul {
     display: block;
     position: relative;
     height: auto;
     left: 0px;
     top: 0; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/loki\/NetBeansProjects\/FB\/public_html\/sass\/navigation\.scss}line{font-family:\00003219}}
     #navigation:target ul li {
       display: block;
       position: relative;
       height: 2.8em;
-      margin: 1px 0;
-      line-height: auto; }
+      margin: 0;
+      border-top: 1px groove;
+      border-bottom: 1px solid;
+      line-height: auto;
+      border-color: #dfebf6; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/loki\/NetBeansProjects\/FB\/public_html\/sass\/navigation\.scss}line{font-family:\00003229}}
+      #navigation:target ul li:first-child {
+        border-top: 2px groove; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/loki\/NetBeansProjects\/FB\/public_html\/sass\/navigation\.scss}line{font-family:\00003233}}
+      #navigation:target ul li:last-child {
+        border-bottom: 2px groove; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/loki\/NetBeansProjects\/FB\/public_html\/sass\/navigation\.scss}line{font-family:\00003239}}
     #navigation:target ul #trasporti ul {
       position: absolute;
       width: 100%;
       height: 0em;
       left: -10000px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/loki\/NetBeansProjects\/FB\/public_html\/sass\/navigation\.scss}line{font-family:\00003245}}
       #navigation:target ul #trasporti ul li {
         height: 0em;
         -webkit-transition: height 0.25;
@@ -166,153 +221,201 @@
         -o-transition: height 0.25s;
         transition: height 0.25s; } }
 @media screen and (min-width: 769px) {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/loki\/NetBeansProjects\/FB\/public_html\/sass\/navigation\.scss}line{font-family:\00003261}}
   nav {
     display: inline-block;
+    position: relative;
+    height: 1.8em;
     padding: 0;
-    margin: auto;
-    z-index: 10; }
+    margin-top: 0.2em;
+    margin-bottom: -0.2em;
+    z-index: 10;
+    /*            #liv-trasporti:target {
+                    #open2 {
+                        display: none;
+                        clear: none;
+                        height: 0px;
+                        left: -1000000px;
+                        padding: 0;
+                        margin: 0;
+                    }
+    
+                    #close2 {
+                        display: block;
+                        position: relative;
+                        left: 0;
+                        opacity: .7;
+                    }
+    
+    
+                }
+    
+                #trasporti:hover, #liv-trasporti:target{
+                    #open2{
+                        opacity: .7;
+                    }
+                        #dropdown{
+                            clear: both;
+                            display: block;
+                            position: relative;
+                            width: 100%;
+                            height: auto;
+                            margin: 0;
+                            padding: 0;
+                            left: 0;
+    
+    
+                            li{
+                                display: block;
+                                position: relative;
+                                clear: both;
+                                width: 100%;
+                                height: 3em;
+                                
+                                .selected {
+                                        opacity: 1;
+                                        background-color: $first-level-color-selected;
+                                    }
+                                    
+                                a {
+                                    display: block;
+                                    position: relative;
+                                    width: 100%;
+                                    height: 2.6em;
+                                    padding: 0.2em 0;
+                                    line-height: auto;
+                                    text-align: center;
+                                    background-color: $first-level-color;
+                                    color: $first-level-text;
+                                    -webkit-transition: height 0.25;
+                                    -moz-transition: height 0.25s;
+                                    -o-transition: height 0.25s;
+                                    transition: height 0.25s;
+                                    z-index: 11;
+                                    
+                                    
+                                    &:hover{
+                                        opacity: 1;
+                                        background-color: $first-level-color-hover;
+                                    }
+                                }
+                                
+                            }
+                        }
+                    }*/
+    /*            #trasporti{
+                    display: block;
+                    position: relative;
+                    width: 100%;
+                    min-height: 3em;
+    
+                    #close2 {
+                        display: none;
+                        height: 0px;
+                        clear: none;
+                        left: -1000000px;
+                    }
+    
+                    ul{
+                        clear: both;
+                        display: block;
+                        position: relative;
+                        width: 100%;
+                        clear: both;
+                        height: 0em;
+                        left: -100000px;
+                        margin: 0;
+                        float: left;
+                        padding: 0;
+    
+                        li{
+                            display: block;
+                            position: relative;
+                            clear: both;
+                            width: 100%;
+                            height: 0em;
+    
+                            a {
+                                display: inline-block;
+                                position: relative;
+                                width: 100%;
+                                height: 0em;
+                                margin: 0;
+                                line-height: auto;
+                                text-align: center;
+                                background-color: $first-level-color;
+                                color: $first-level-text;
+                            }
+                            
+                        }
+                    }
+                }*/ }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/loki\/NetBeansProjects\/FB\/public_html\/sass\/navigation\.scss}line{font-family:\00003270}}
     nav #liv-trasporti {
       display: inline-block;
+      position: relative;
+      bottom: 0;
+      height: 1.8em;
+      border-bottom: 0.2em solid #666666;
       width: 100%;
       padding: 0;
       margin: 0; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/loki\/NetBeansProjects\/FB\/public_html\/sass\/navigation\.scss}line{font-family:\00003280}}
       nav #liv-trasporti .menu-link {
         display: none; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/loki\/NetBeansProjects\/FB\/public_html\/sass\/navigation\.scss}line{font-family:\00003284}}
       nav #liv-trasporti .selected {
-        opacity: .6; }
+        border-bottom: 0.2em solid #FFFFFF; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/loki\/NetBeansProjects\/FB\/public_html\/sass\/navigation\.scss}line{font-family:\00003288}}
       nav #liv-trasporti ul {
-        display: block;
+        display: inline-block;
         position: relative;
         list-style: none;
-        width: 100%;
+        /*width: 100%;*/
         margin: 0;
         padding: 0; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/loki\/NetBeansProjects\/FB\/public_html\/sass\/navigation\.scss}line{font-family:\00003297}}
         nav #liv-trasporti ul li {
           display: block;
-          height: 3em;
+          height: 1.8em;
           position: relative;
-          width: 16.66667%;
+          /*width: 1 / 6 * 100%;*/
           float: left;
           margin: 0;
-          padding: 0;
-          top: 0; }
-          nav #liv-trasporti ul li .drop-menu {
-            background-repeat: no-repeat;
-            background-position: right center;
-            background-size: 1.2em; }
+          padding: auto 0.4em;
+          /*                        top: 0;*/ }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/loki\/NetBeansProjects\/FB\/public_html\/sass\/navigation\.scss}line{font-family:\00003306}}
+          nav #liv-trasporti ul li:hover:not(.selected) {
+            border-bottom: 0.2em solid #DFEBF6; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/loki\/NetBeansProjects\/FB\/public_html\/sass\/navigation\.scss}line{font-family:\00003310}}
           nav #liv-trasporti ul li a {
-            display: block;
-            position: relative;
-            width: 80%;
-            min-height: 2.6em;
-            padding: 0.2em 10%;
-            line-height: auto;
-            text-align: center;
-            background-color: #666666;
-            color: white;
-            text-decoration: none; }
-            nav #liv-trasporti ul li a:hover {
-              opacity: .7;
-              text-decoration: underline; }
-    nav #liv-trasporti:target #open2 {
-      display: none;
-      clear: none;
-      height: 0px;
-      left: -1000000px;
-      padding: 0;
-      margin: 0; }
-    nav #liv-trasporti:target #close2 {
-      display: block;
-      position: relative;
-      left: 0;
-      opacity: .7; }
-    nav #trasporti:hover #open2, nav #liv-trasporti:target #open2 {
-      opacity: .7; }
-    nav #trasporti:hover #dropdown, nav #liv-trasporti:target #dropdown {
-      clear: both;
-      display: block;
-      position: relative;
-      width: 100%;
-      height: auto;
-      margin: 0;
-      padding: 0;
-      left: 0; }
-      nav #trasporti:hover #dropdown li, nav #liv-trasporti:target #dropdown li {
-        display: block;
-        position: relative;
-        clear: both;
-        width: 100%;
-        height: 3em; }
-        nav #trasporti:hover #dropdown li .selected, nav #liv-trasporti:target #dropdown li .selected {
-          opacity: 1;
-          background-color: #8eb7d6; }
-        nav #trasporti:hover #dropdown li a, nav #liv-trasporti:target #dropdown li a {
-          display: block;
-          position: relative;
-          width: 100%;
-          height: 2.6em;
-          padding: 0.2em 0;
-          line-height: auto;
-          text-align: center;
-          background-color: #4c99d4;
-          color: white;
-          -webkit-transition: height 0.25;
-          -moz-transition: height 0.25s;
-          -o-transition: height 0.25s;
-          transition: height 0.25s;
-          z-index: 11; }
-          nav #trasporti:hover #dropdown li a:hover, nav #liv-trasporti:target #dropdown li a:hover {
-            opacity: 1;
-            background-color: #75a9d2; }
-    nav #trasporti {
-      display: block;
-      position: relative;
-      width: 100%;
-      min-height: 3em; }
-      nav #trasporti #close2 {
-        display: none;
-        height: 0px;
-        clear: none;
-        left: -1000000px; }
-      nav #trasporti ul {
-        clear: both;
-        display: block;
-        position: relative;
-        width: 100%;
-        clear: both;
-        height: 0em;
-        left: -100000px;
-        margin: 0;
-        float: left;
-        padding: 0; }
-        nav #trasporti ul li {
-          display: block;
-          position: relative;
-          clear: both;
-          width: 100%;
-          height: 0em; }
-          nav #trasporti ul li a {
             display: inline-block;
             position: relative;
-            width: 100%;
-            height: 0em;
+            height: 100%;
+            padding: 0 1em;
+            padding-top: 0.2em;
             margin: 0;
             line-height: auto;
             text-align: center;
-            background-color: #4c99d4;
-            color: white; } }
+            /*background-color: $menu-color;*/
+            color: white;
+            text-decoration: none; } }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/loki\/NetBeansProjects\/FB\/public_html\/sass\/navigation\.scss}line{font-family:\00003460}}
 html, body {
   height: 100%; }
 
 @media screen and (max-width: 80em) {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/loki\/NetBeansProjects\/FB\/public_html\/sass\/navigation\.scss}line{font-family:\00003466}}
   body {
     margin: 0;
     padding: 0; } }
 @media screen and (min-width: 80em) {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/loki\/NetBeansProjects\/FB\/public_html\/sass\/navigation\.scss}line{font-family:\00003475}}
   body {
     width: 71.25em;
     margin: auto;
     padding: 0; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/loki\/NetBeansProjects\/FB\/public_html\/sass\/navigation\.scss}line{font-family:\00003479}}
     body header {
       width: 100%;
       padding: 0;

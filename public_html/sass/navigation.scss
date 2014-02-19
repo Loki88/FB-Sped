@@ -1,6 +1,6 @@
-$menu-color: #666666;
+$menu-color: #000000;
 $menu-text: #FFFFFF;
-$first-level-color: #4C99D4;
+$first-level-color: #DFEBF6;
 $first-level-color-hover: #75a9d2;
 $first-level-color-selected: #8eb7d6;
 $first-level-text: #FFFFFF;
@@ -75,7 +75,7 @@ $second-level-text: #FFFFFF;
                 transition: height 0.25s;
 
                 a {
-                    background-color: $first-level-color;
+                    /*background-color: $first-level-color;*/
                     color: $first-level-text;
                 }
                 
@@ -87,19 +87,19 @@ $second-level-text: #FFFFFF;
                     opacity: .6;
                 }
                 
-                .drop-menu{
+/*                .drop-menu{
                     background-image: url('../img/menu-white.png');
                     background-repeat: no-repeat;
                     background-position: right center;
                     background-size: 1.3em;
                     
-                }
+                }*/
                 
-                #close2{
+/*                #close2{
                     display: none;
-                }
+                }*/
 
-                ul {
+/*                ul {
                     display: block;
                     position: relative;
                     list-style: none;
@@ -133,13 +133,13 @@ $second-level-text: #FFFFFF;
                         }
 
                     }
-                  }
+                  }*/
               }
             }
           }
           /* Stile per i bottoni del menù di secondo livello, quando sono visibili */
           
-          #liv-trasporti:target{
+/*          #liv-trasporti:target{
               #close1 {
                 display: inline-block;
                 opacity: .6;}
@@ -195,9 +195,9 @@ $second-level-text: #FFFFFF;
 
                         }
                       }
-                 }
-            }
-          }
+                 }*/
+            /*}*/
+          /*}*/
         }
         
         /* Stile per i bottoni del menù di primo livello, quando sono visibili */
@@ -220,8 +220,19 @@ $second-level-text: #FFFFFF;
                   display: block;
                   position: relative;
                   height: 2.8em;
-                  margin: 1px 0;
+                  margin: 0;
+                  border-top: 1px groove;
+                  border-bottom: 1px solid;
                   line-height: auto;
+                  border-color: $first-level-color;
+                  
+                  &:first-child{
+                      border-top: 2px groove;
+                  }
+                  
+                  &:last-child{
+                      border-bottom: 2px groove;
+                  }
                  }
                  #trasporti{
 
@@ -249,12 +260,19 @@ $second-level-text: #FFFFFF;
 { 
         nav{
             display: inline-block;
+            position: relative;
+            height: 1.8em;
             padding: 0;
-            margin: auto;
+            margin-top: 0.2em;
+            margin-bottom: -0.2em;
             z-index: 10;
 
             #liv-trasporti{
                 display: inline-block;
+                position: relative;
+                bottom: 0;
+                height: 1.8em;
+                border-bottom: 0.2em solid #666666;
                 width: 100%;
                 padding: 0;
                 margin: 0;
@@ -264,48 +282,45 @@ $second-level-text: #FFFFFF;
                 }
                 
                 .selected{
-                    opacity: .6;
+                    border-bottom: 0.2em solid #FFFFFF;
                 }
                 
                 ul{
-                    display: block;
+                    display: inline-block;
                     position: relative;
                     list-style: none;
-                    width: 100%;
+                    /*width: 100%;*/
                     margin: 0;
                     padding: 0;
 
 
                     li {
                         display: block;
-                        height: 3em;
+                        height: 1.8em;
                         position: relative;
-                        width: 1 / 6 * 100%;
+                        /*width: 1 / 6 * 100%;*/
                         float: left;
                         margin: 0;
-                        padding: 0;
-                        top: 0;
-                        
-                        .drop-menu {
-                            background-repeat: no-repeat;
-                            background-position: right center;
-                            background-size: 1.2em;
+                        padding: auto 0.4em;
+/*                        top: 0;*/
+                        &:hover:not(.selected){
+                            border-bottom: 0.2em solid #DFEBF6;
                         }
 
                         a{
-                            display: block;
+                            display: inline-block;
                             position: relative;
-                            width: 80%;
-                            min-height: 2.6em;
-                            padding: 0.2em 10%;
+                            height: 100%;
+                            padding: 0 1em;
+                            padding-top: 0.2em;
+                            margin: 0;
                             line-height: auto;
                             text-align: center;
-                            background-color: $menu-color;
+                            /*background-color: $menu-color;*/
                             color: $menu-text;
                             text-decoration: none;
                             &:hover {
-                                opacity: .7;
-                                text-decoration: underline;
+
                             }
                         }
 
@@ -315,7 +330,7 @@ $second-level-text: #FFFFFF;
             }
             
             
-            #liv-trasporti:target {
+/*            #liv-trasporti:target {
                 #open2 {
                     display: none;
                     clear: none;
@@ -387,10 +402,10 @@ $second-level-text: #FFFFFF;
                             
                         }
                     }
-                }
+                }*/
 
 
-            #trasporti{
+/*            #trasporti{
                 display: block;
                 position: relative;
                 width: 100%;
@@ -436,7 +451,7 @@ $second-level-text: #FFFFFF;
                         
                     }
                 }
-            }
+            }*/
 
             
         }
