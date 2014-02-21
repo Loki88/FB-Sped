@@ -30,15 +30,15 @@ function initialize() {
 
 	var mapOptions = {
 		center: fbSpedLatLng,
-		zoom: 14,
+		zoom: 12,
 		mapTypeId: google.maps.MapTypeId.ROADMAP
 	};
 
 	var contentString = '<div id="content" class="infoWindow">'+
-		'<h1 id="firstHeading" class="firstHeading">FB Sped S.r.l. - Uffici</h1>'+
-		'<div id="bodyContent">'+
+		'<div class="header">'+
+                '<h4 class="title">Uffici FB Sped</h4>'+
+                '</div>'+
 		'<p>Via V. Pilotti c\\o Centro Commerciale Gran Sasso, Teramo (TE) 64100</p>'+
-		'</div>'+
 		'</div>';
 	//FARE IN MODO CHE LA INFOWINDOW RISPONDA ALL'HOVER SUL MARKER E SI POSIZIONI SOPRA AL PUNTATORE DEL MOUSE
 

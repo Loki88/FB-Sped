@@ -8,9 +8,10 @@ body{
 }
 
 header{
-    background-color: #000000;
+    background-color: rgba(0,0,0,0.9);
     padding-top: 1em;
     padding-bottom: 0;
+    max-width: 100%;
     margin: 0;
     border: 0;
         
@@ -56,7 +57,7 @@ header{
                 display: block;
                 color: #DFEBF6;
                 font-family: 'sorts_mill_goudyregular';
-                font-size: 20pt;
+                font-size: 22pt;
                 padding: 0;
                 margin: 0 auto;
                 margin-bottom: 0.1em;
@@ -234,7 +235,7 @@ header{
     margin-top: 1.6%;
     display: inline-block;
     position: relative;
-    width: 100%;
+
     height: auto;
     box-shadow: 1pt 1pt 5pt #000000;
     
@@ -242,7 +243,9 @@ header{
         display: block;
         top: 0;
         width: 100%;
+        margin: auto;
         left: 0;
+        
     }
     
     .image-mask{
@@ -251,7 +254,7 @@ header{
         height: 100%;
         left: 0;
         top: 0;
-        background-color: rgba(0, 0, 0, 0.85);
+        background-color: rgba(17, 133, 94, 0.85);
         
         a{
             display: inline-block;
@@ -263,7 +266,12 @@ header{
             color: #FFFFFF;
             text-decoration: none;
             font-family: 'sorts_mill_goudyregular';
-                
+            
+            &:hover{
+                h5{
+                    text-decoration: underline;
+                }
+            }
             h5 {
                 display: block;
                 position: relative;
@@ -313,21 +321,213 @@ header{
 {
     #main-image{
         .image-mask{
-            background-color: #000000;
+/*            background-color: #000000;*/
             position: relative;
             height: auto;
         }
     } 
 }
 
-#sol-trasporti, #short-azienda {
-    float:left;
+
+
+/*#tab-menu {
+    display: inline-block;
+    position: relative;
+    float: right;
+    margin-top: 1.8em;
+    list-style: none;
+   
+    
+    .tab-button{
+        display: inline-block;
+        position: relative;
+        float: left;
+        width: 100%;
+        margin: 1% auto;
+        height: 3em;
+        box-shadow: 1pt 1pt 5pt #000000;
+        background-color: rgba(17, 133, 94, 1);
+        
+        a{
+            display: block;
+            width: 100%;
+            margin: auto;
+            height: 100%;
+            color: #FFFFFF;
+            text-decoration: none;
+            text-align: center;
+        }
+        
+        .tab-content {
+            position: absolute;
+            width: 136.6803279%;
+            top: -50%;
+            left: -156.1%;
+        }
+    }
+}*/
+
+#tab{
+    list-style: none;
+    padding-left: 0;
+    padding: 0;  
+    
+    .current{
+        a{
+            border-color: #FFFFFF;
+        }
+    }
+    
+    li{
+        display: inline-block;
+        padding: 0;
+        margin: 0;
+        float: left;
+        height: auto;
+        margin-top: -0.34em;
+        @media only screen and (max-width: 481px)
+        {
+            width: 100%;
+            margin-top: 0;
+            border-top: 0.05em solid;
+            border-bottom: 0.05em solid;
+            border-color: #000000;
+            .content-box{
+                display: block;
+                position: relative;
+                box-shadow: none;
+                
+                .header{
+                    display: block;
+                    position: relative;
+                    background-color: #FFFFFF;
+                    color: #11855E;
+                    margin-top: 2em;
+                }
+            }
+        }
+        
+        .tab-page{
+            display: block;
+            float: left;
+            @media only screen and (max-width: 481px)
+            {
+                margin-top: 0;
+                top: 0;
+            }
+        }
+        
+        &:not(.current){
+            &:hover{
+                a{
+                    border-color: #C4D99C;
+                }
+            }
+        }
+        
+        
+        
+        @media only screen and (min-width: 482px)
+        {
+            &:not(.current){
+
+                top: 0;
+                float: right;
+            }
+
+            &:nth-child(2){
+                a{
+                    margin-top: 3.6em;
+                }
+            }
+
+            &:nth-child(3){
+                a{
+                    margin-top: 5.9em;
+                }
+            }
+
+            &:nth-child(4){
+                a{
+                    margin-top: 8.2em;
+                }
+            }
+
+            &:nth-child(5){
+                a{
+                    margin-top: 10.5em;
+                }
+            }
+
+            &:nth-child(6){
+                a{
+                    margin-top: 12.8em;
+                }
+            }
+        }
+        
+        a{
+            display: block;
+            @media only screen and (min-width: 482px)
+            {
+                position: absolute;
+                right: 0;
+                height: 1.8em;
+                margin-top: 1.3em;
+                line-height: 2em;
+                border-bottom: 0.2em solid;
+                border-color: #11855E;
+                padding: auto;
+                
+            }
+            @media only screen and (max-width: 481px)
+            {
+                position: relative;
+                width: 100%;
+            }
+            box-shadow: 1pt 1pt 5pt #000000;
+            background-color: rgba(17, 133, 94, 1);
+            color: #FFFFFF;
+            text-decoration: none;
+            text-align: center;
+            font-family: 'sorts_mill_goudyregular';
+
+            &:hover{
+                text-decoration: underline;
+            }
+        }
+
+        .tab-image{
+            display: inline-block;
+            position: relative;
+            float: right;
+            
+            @media only screen and (min-width: 482px)
+            {
+                right: 0;
+                float: left;
+                margin-left: 1.6%;
+                margin-top: 15.6em;
+
+                @media only screen and (max-width: 481px)
+                {
+                    height: auto;
+                    vertical-align: text-top;
+                    margin-bottom: 2em;
+                }
+            }
+            
+        }
+    }
+
 }
 
+
 #sol-trasporti {
+
     margin-top: 1.6%;
     
-    div{
+     .content-box{
         display: block;
         position: relative;
         margin-top: 0;
@@ -339,19 +539,43 @@ header{
             padding: 0;
             width: 100%;
             height: 100%;
-            img{
-                display: block;
-                max-height: 2em;
-                max-width: 80%;
-                margin: 0.5em auto;
+            text-decoration: none;
+            &:hover{
+                h5{
+                    text-decoration: underline;
+                }
             }
             
-            h5{
-                max-height: 3em;
+            .header{
+                
+                .img-wrapper{
+                    display: table;
+                    position: relative;
+                    margin: 0 auto;
+                    max-height: 3em;
+                    padding: 0.5em auto;
+                    width: 80%;
+                    img{
+                        display: block;
+                        position: relative;
+                        top: 0.5em;
+                        max-height: 2em;
+                        max-width: 100%;
+                        margin: auto;
+
+                    }
+                }
+
+
+                h5{
+                    height: 3em;
+                }
             }
+            
+            
             
             p{
-                
+                color: #000000;
             }
         }
     }
@@ -361,7 +585,7 @@ header{
 @media only screen and (max-width: 480px)
 {
     #sol-trasporti{
-        div{
+        .content-box{
             display: block;
             position: relative;
             margin-top: 0;
@@ -373,17 +597,29 @@ header{
                 padding: 0;
                 width: 100%;
                 height: 100%;
-                img{
-                    max-width: 20%;
-                    margin: 0.5em auto;
-                }
+                .header{
+                    height: 3em;
+                        
+                    .img-wrapper{
+                        display: inline-block;
+                        float: left;
+                        width: 20%;
+                        img{
+                            top: auto;
+                        }
+                    }
 
-                h5{
-                    position: relative;
-                    margin: 0.5em auto;
-                    text-align: center;
-                    vertical-align: middle;
+
+                    h5{
+                        display: block;
+                        float: left;
+                        position: relative;
+                        margin: auto;
+                        width: 60%;
+                        text-align: center;
+                    }
                 }
+                
 
                 p{
                     display: block;
@@ -396,7 +632,7 @@ header{
     }
 }
 
-#menu-secondario {
+/*#menu-secondario {
     ul{
         margin:0;
         padding:0;
@@ -416,7 +652,7 @@ header{
             }
         }
     }
-}
+}*/
 
 #map-canvas {
     display: inline-block;
@@ -427,22 +663,30 @@ header{
     background-image: url('../img/map.png');
     background-repeat: no-repeat;
     z-index: 1;
-}	
+}
 
-
+.page-img{
+    box-shadow: 1pt 1pt 5pt #000000;
+    margin-top: 1.3em;
+    margin-bottom: 0.5em;
+    float: left;
+    height: fit-content;
+}
 
 .content-box {
     background-color: #FFFFFF;
     color: #000000;
     margin-bottom: 0.4em;
     box-shadow: 1pt 1pt 5pt #000000;
+    padding-bottom: 0.5em;
     
     .header {
+        z-index: 2;
+        display: block;
         margin: 0;
-        margin-bottom: 0.2em;
         padding: 0;
-        background-color: #DFEBF6;
-        color: #000000;
+        background-color: #11855E;
+        color: #FFFFFF;
     }
     
     h1, h2, h3, h4, h5, h6 {
@@ -452,25 +696,79 @@ header{
         padding: 0.2em 10%;
         padding-bottom: 0.8em;
         height: auto;
+        font-family: 'sorts_mill_goudyregular';
         text-decoration: none;
         text-align: center;
     }
     
     p{
-        margin: 0.5em 0.5em;
+        font-family: 'shantiregular';
+        margin: 0.6em 0.5em;
     }
 }
 
-.map-canvas{
-    background-size: 100% 100%;
-    background-image: url('../img/mappa.png');
-    background-repeat: no-repeat;
+#map-wrapper{
+    display: block;
+    width: 100%;
+    height: 20em;
+    #map-canvas{
+        display: block;
+        position: relative;
+        height: 100%;
+        width: 100%;
+        background-size: 100% 100%;
+        background-image: url('../img/mappa.png');
+        background-repeat: no-repeat;
+    }
+}
+
+
+@media only screen and (max-width: 481px)
+{
+    #map-wrapper{
+        display: block;
+        width: 70%;
+        margin: auto 15%;
+        height: 10em;
+    }
 }
 
 .infoWindow {
-	line-height:1.35em;
-	overflow:hidden;
-	white-space:nowrap;
+    position: relative;
+    line-height: 1.35em;
+    text-align: center;
+    overflow:hidden;
+    height: 8em;
+    width: 20em;
+    @media only screen and (max-width: 481px)
+    { 
+        width: 11em;
+        height: 11em;
+    }
+    font-family: 'sorts_mill_goudyregular';
+    
+    .header{
+        display: block;
+        position: absolute;
+        background-color: #11855E;
+        color: #FFFFFF;
+        top: 0;
+        width: 100%;
+        height: 3em;
+        h4{
+            display: block;
+            position: relative;
+            width: 100%;
+            height: 100%;
+            line-height: 100%;
+        }
+    }
+    p{
+        display: block;
+        position: relative;
+        top: 3em;
+        height: 3em;
+    }
 }
 
 .wrapper{
@@ -484,15 +782,20 @@ header{
     display: block;
     clear: both;
     height: 15em;
+    z-index: -10;
 }
 
 footer{
-    width: 100%;
+    display: block;
+    position: relative;
+    z-index: 3;
+    max-width: 100%;
     bottom: 0;
     margin-top: 1em;
     height: 15em;
     color: #FFFFFF;
-    background-color: #666666;
+    background-color: rgba(0,0,0,0.9);
+    font-family: 'shantiregular';
     a{
         z-index: 3;
         color: #F2E9C2;

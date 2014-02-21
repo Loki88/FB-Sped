@@ -32,12 +32,12 @@
 
 .col:first-child { margin-left: 0; } /* all browsers except IE6 and lower */
 
-@media only screen and (min-width: 481px) and (max-width: 769px){
+/*@media only screen and (min-width: 481px) and (max-width: 769px){
     .col{
         margin: 1% 0 1% 1.6%;
     }
 
-}
+}*/
 
 
 /*  REMOVE MARGINS AS ALL GO FULL WIDTH AT 480 PIXELS */

@@ -162,18 +162,16 @@
         a {
             display: block;
             position: relative;
-            width: 90%;
+            width: 88%;
             height: 3em;
-            padding: 0.2em -2pt;
+            padding: 0.2em 2%;
             margin: auto 5%;
             text-align: center;
-            border-style: inset;
-            border-color: #F2E9C2;
-            border-width: 2pt;
-            background-color: #4C99D4;
+            box-shadow: 1pt 1pt 5pt #000000;
+            background-color: rgba(17, 133, 94, 1);
             color: #FFFFFF;
             text-decoration: none;
-            font-weight: 3pt bold;
+            font-size: 12pt;
 
 /*            &:first-child {
                 margin-left: 0;
