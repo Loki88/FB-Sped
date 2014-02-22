@@ -334,6 +334,7 @@ header{
     padding: 0;  
     
     .current{
+        min-height: 20em;
         a{
             border-color: #FFFFFF;
         }
@@ -381,6 +382,10 @@ header{
         }
         
         &:not(.current){
+            .tab-page{
+                display: none;
+            }
+            
             &:hover{
                 a{
                     border-color: #C4D99C;
@@ -393,7 +398,6 @@ header{
         @media only screen and (min-width: 482px)
         {
             &:not(.current){
-
                 top: 0;
                 float: right;
             }
