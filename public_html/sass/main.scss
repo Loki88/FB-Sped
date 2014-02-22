@@ -328,45 +328,6 @@ header{
     } 
 }
 
-
-
-/*#tab-menu {
-    display: inline-block;
-    position: relative;
-    float: right;
-    margin-top: 1.8em;
-    list-style: none;
-   
-    
-    .tab-button{
-        display: inline-block;
-        position: relative;
-        float: left;
-        width: 100%;
-        margin: 1% auto;
-        height: 3em;
-        box-shadow: 1pt 1pt 5pt #000000;
-        background-color: rgba(17, 133, 94, 1);
-        
-        a{
-            display: block;
-            width: 100%;
-            margin: auto;
-            height: 100%;
-            color: #FFFFFF;
-            text-decoration: none;
-            text-align: center;
-        }
-        
-        .tab-content {
-            position: absolute;
-            width: 136.6803279%;
-            top: -50%;
-            left: -156.1%;
-        }
-    }
-}*/
-
 #tab{
     list-style: none;
     padding-left: 0;
@@ -604,6 +565,7 @@ header{
                         display: inline-block;
                         float: left;
                         width: 20%;
+                        margin: 0.5em auto;
                         img{
                             top: auto;
                         }
@@ -616,6 +578,8 @@ header{
                         position: relative;
                         margin: auto;
                         width: 60%;
+                        padding: 0;
+                        margin: 0.5em auto;
                         text-align: center;
                     }
                 }
