@@ -2,7 +2,14 @@ var Tab = {
     init: function()
     {
        //Recuperare il menù della tab e collegare ogni bottone al relativo spazio in cui visualizzare il contenuto
-       
+       var tab_elements = $('.tab-element');
+       console.log('tab_elements', tab_elements.length);
+       for(var i=0; i<tab_elements.length; i++)
+       {
+           var element = $(tab_elements[i]);
+           console.log('tab-element', element);
+           Tab.prepareElement(element, i);
+       }
        //Creare un iframe di altezza 0 e visibilità nascosta per ogni link della tab
        
        //Associare ad ogni link della tab l'iframe relativo
@@ -13,41 +20,32 @@ var Tab = {
        
     },
     
-    getParagraph: function(item)
+    prepareElement: function(element)
     {
-        var dataUrl = $(item).data('paragraph');
-        console.log(dataUrl);
-        var paragraph = null;
-        $.ajax({
-            type: "GET",
-            url: dataUrl,
-            dataType: 'html',
-            success: function(data, status, jqXHR){
-                console.log(data);
-                if(data !== undefined)
-                {
-                    $(item).prop('content', data);
-                    
-                }
-            }
-        });
+        element = $(element);
         
-        return paragraph;
+        var link = $(element.find('.tab-link')[0]);
+        
+        if(element.hasClass('current'))
+            link.prop('page', element.find('.tab-page')[0]);
+        else
+        {
+            link.after('<div class="tab-page">');
+            var page = $(element.find('.tab-page')[0]);
+            link.prop('page', page);
+            page.hide();
+        }
+        
+        link.click(Tab.loadPage);
     },
     
-    replaceParagraph: function(event)
+    loadPage: function(event)
     {
-        event.preventDefault();
-        var button = $(this);
-        $('#page-menu .selected').removeClass('selected');
-        button.addClass('selected');
-        var display = button.prop('display');
-        var content = button.prop('content');
-        $('.paragraph').slideDown(1400);
-        $(display).html(content);
-        $('#transport-img').attr("src", button.data("img"));
-    },
+        $.ajax({
+            
+        })
+    }
 
 };
 
-$(document).ready(Trasporti.init());
+$(document).ready(Tab.init());

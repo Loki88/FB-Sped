@@ -350,8 +350,10 @@ header{
         {
             width: 100%;
             margin-top: 0;
-            border-top: 0.05em solid;
-            border-bottom: 0.05em solid;
+            &:first-child{
+                border-top: 0.2em inset;
+            }
+            border-bottom: 0.2em outset;
             border-color: #000000;
             .content-box{
                 display: block;
@@ -368,7 +370,7 @@ header{
             }
         }
         
-        .tab-page{
+        .tab-content{
             display: block;
             float: left;
             @media only screen and (max-width: 481px)
