@@ -37,20 +37,45 @@
   font-weight: normal;
   font-style: normal; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/loki\/NetBeansProjects\/FB\/public_html\/sass\/text\.scss}line{font-family:\0000366}}
 h1, h2, h3, h4, h5, h6 {
   color: #E2E5DF; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/loki\/NetBeansProjects\/FB\/public_html\/sass\/text\.scss}line{font-family:\0000371}}
-#logo-text h4 {
-  font-size: 22pt; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/loki\/NetBeansProjects\/FB\/public_html\/sass\/text\.scss}line{font-family:\0000374}}
-#logo-text h6 {
-  font-size: 10pt; }
+#logo-text {
+  font-family: 'sorts_mill_goudyregular', Times, Arial, Verdana; }
+  #logo-text h4 {
+    font-size: 2em; }
+  #logo-text h6 {
+    font-size: 1em; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/loki\/NetBeansProjects\/FB\/public_html\/sass\/text\.scss}line{font-family:\0000381}}
+nav {
+  font-family: 'sorts_mill_goudyregular', Times, Arial, Verdana;
+  font-size: 1.1em; }
+
+.infoWindow {
+  font-family: 'sorts_mill_goudyregular', Times, Arial, Verdana; }
+
 #main-image .image-mask h5 {
-  font-size: 14pt; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/loki\/NetBeansProjects\/FB\/public_html\/sass\/text\.scss}line{font-family:\0000385}}
+  font-family: 'sorts_mill_goudyregular', Times, Arial, Verdana;
+  line-height: 1.6em;
+  font-size: 1.6em; }
 #main-image .image-mask p {
-  font-size: 10pt; }
+  font-family: 'shantiregular', Times, Arial, Verdana;
+  font-size: 1em; }
+
+#tab a {
+  font-family: 'sorts_mill_goudyregular', Times, Arial, Verdana;
+  font-size: 1.1em; }
+
+.content-box .header h4 {
+  font-size: 1.2em; }
+.content-box h1, .content-box h2, .content-box h3, .content-box h4, .content-box h5, .content-box h6 {
+  font-family: 'sorts_mill_goudyregular',  Times, Arial, Verdana; }
+.content-box h6 {
+  line-height: 2em;
+  font-size: 1em; }
+.content-box p {
+  font-family: 'shantiregular', Times, Arial, Verdana;
+  line-height: 1.5em; }
+
+footer {
+  font-family: 'shantiregular', Times, Arial, Verdana; }
