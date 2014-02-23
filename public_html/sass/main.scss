@@ -239,7 +239,7 @@ header{
 }
 
 #main-image{
-    margin-top: 1.6%;
+    margin-top: 1.4em;
     display: inline-block;
     position: relative;
     height: auto;
@@ -266,7 +266,7 @@ header{
         height: 100%;
         left: 0;
         top: 0;
-        background-color: rgba(22,147,165, 0.75);
+        background-color: rgba(22,147,165, 0.9);
         
         a{
             display: inline-block;
@@ -280,7 +280,7 @@ header{
             
             &:hover{
                 h5{
-                    text-decoration: underline;
+                    
                     color: #FBB820;
                 }
             }
@@ -288,7 +288,7 @@ header{
                 display: block;
                 position: relative;
                 text-align: center;
-/*                font-size: 14pt;*/
+                text-decoration: underline;
                 margin: 0.4em auto;
                 padding: 0 0.4em;
                 
@@ -351,15 +351,20 @@ header{
         a{
             background-color: #1693A5;
             color: #F0F1F7;
-            text-decoration: none;
 
             &:hover{
                 background-color: #1693A5;
-                color: #F0F1F7;
-                text-decoration: none;
+                color: #FBB820;
+                text-decoration: underline;
             }
             @media only screen and (max-width: 481px)
             {
+                text-decoration: none;
+                &:hover{
+                    a{
+                        color: #FBB820;
+                    }
+                }
                 background-image: url('../img/icons/icona_accordion_close.png');
             }
         }
@@ -371,10 +376,12 @@ header{
         margin: 0;
         float: left;
         height: auto;
+        
         @media only screen and (max-width: 481px)
         {
             width: 100%;
             margin-top: 0;
+            background-color: #F0F1F7;
             &:first-child{
                 border-top: 0.2em inset;
             }
@@ -388,10 +395,10 @@ header{
                 .header{
                     display: block;
                     position: relative;
-                    background-color: #FFFFFF;
+                    background-color: #F0F1F7;
                     margin-top: 2em;
                     h4{
-                        color: #002FA7;
+                        color: #1693A5;
                     }
                     
                 }
@@ -431,31 +438,31 @@ header{
 
             &:nth-child(2){
                 a{
-                    margin-top: 3.6em;
+                    margin-top: 2.95em;
                 }
             }
 
             &:nth-child(3){
                 a{
-                    margin-top: 5.9em;
+                    margin-top: 5.25em;
                 }
             }
 
             &:nth-child(4){
                 a{
-                    margin-top: 8.2em;
+                    margin-top: 7.55em;
                 }
             }
 
             &:nth-child(5){
                 a{
-                    margin-top: 10.5em;
+                    margin-top: 9.85em;
                 }
             }
 
             &:nth-child(6){
                 a{
-                    margin-top: 12.8em;
+                    margin-top: 12.15em;
                 }
             }
         }
@@ -467,7 +474,7 @@ header{
                 position: absolute;
                 right: 0;
                 height: 1.8em;
-                margin-top: 1.3em;
+                margin-top: 0.65em;
                 line-height: 1.8em;
                 padding: auto;
                 
@@ -527,7 +534,7 @@ header{
 
 #sol-trasporti {
 
-    margin-top: 1.6%;
+    margin-top: 0.4em;
     
      .content-box{
         display: block;
@@ -652,7 +659,7 @@ header{
 
 .page-img{
     box-shadow: 1pt 1pt 5pt #000000;
-    margin-top: 1.3em;
+    margin-top: 0.7em;
     margin-bottom: 0.5em;
     float: left;
     height: fit-content;
@@ -661,9 +668,6 @@ header{
 .content-box {
     background-color: #F0F1F7;
     color: #000000;
-    &:first-child{
-        margin-top: 0.4em;
-    }
     margin-bottom: 0.4em;
     box-shadow: 1pt 1pt 5pt #000000;
     padding-bottom: 0.5em;
@@ -677,9 +681,8 @@ header{
         h1, h2, h3, h4, h5, h6 {
             display: block;
             position: relative;
-            width: 78%;
+            width: 70%;
             padding: 0.2em 10%;
-            padding-bottom: 0.8em;
             height: auto;
             text-decoration: none;
             text-align: center;
@@ -782,16 +785,14 @@ footer{
     bottom: 0;
     margin-top: 1em;
     height: 15em;
-    color: #000000;
-    background-color: #CDD7B6;
+    color: #CDD7B6;
+    background-color: #000000;
     
     a{
         z-index: 3;
-        color: #1693A5;
-        text-decoration: none;
+        color: #CDD7B6;
         &:hover{
             color: #FBB820;
-            text-decoration: underline;
         }
     }
     

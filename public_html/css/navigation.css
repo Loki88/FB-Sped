@@ -97,9 +97,9 @@
       visibility: hidden; }
     nav .selected {
       border-bottom: 0.3em solid;
-      border-color: #fbb820; }
+      border-color: #1693a5; }
       nav .selected a {
-        color: #fbb820; }
+        /*color: rgba(22,147,165, 1);*/ }
     nav ul {
       display: inline-block;
       position: relative;
@@ -114,9 +114,7 @@
         margin: 0;
         padding: auto 0.4em; }
         nav ul li:hover:not(.selected) {
-          border-bottom: 0.3em solid rgba(251, 184, 32, 0.7); }
-          nav ul li:hover:not(.selected) a {
-            color: rgba(251, 184, 32, 0.7); }
+          border-bottom: 0.3em solid #fbb820; }
         nav ul li a {
           display: inline-block;
           position: relative;

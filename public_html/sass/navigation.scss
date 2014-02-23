@@ -156,9 +156,9 @@ $second-level-text: #FFFFFF;
                 .selected{
                     border-bottom: 0.3em solid;
                    
-                    border-color: rgba(251,184,32, 1); 
+                    border-color: rgba(22,147,165, 1); 
                     a{
-                        color: rgba(251,184,32, 1);
+                        /*color: rgba(22,147,165, 1);*/
                     }
                 }
                 
@@ -178,10 +178,7 @@ $second-level-text: #FFFFFF;
                         margin: 0;
                         padding: auto 0.4em;
                         &:hover:not(.selected){
-                            border-bottom: 0.3em solid rgba(251,184,32, 0.7);
-                            a{
-                                color: rgba(251,184,32, .7);;
-                            }
+                            border-bottom: 0.3em solid rgba(251,184,32,1);
                         }
 
                         a{

@@ -154,7 +154,7 @@ header {
     float: none;
     width: 100%; } }
 #main-image {
-  margin-top: 1.6%;
+  margin-top: 1.4em;
   display: inline-block;
   position: relative;
   height: auto;
@@ -177,7 +177,7 @@ header {
     height: 100%;
     left: 0;
     top: 0;
-    background-color: rgba(22, 147, 165, 0.75); }
+    background-color: rgba(22, 147, 165, 0.9); }
     #main-image .image-mask a {
       display: inline-block;
       position: relative;
@@ -188,13 +188,12 @@ header {
       color: #F0F1F7;
       text-decoration: none; }
       #main-image .image-mask a:hover h5 {
-        text-decoration: underline;
         color: #FBB820; }
       #main-image .image-mask a h5 {
         display: block;
         position: relative;
         text-align: center;
-        /*                font-size: 14pt;*/
+        text-decoration: underline;
         margin: 0.4em auto;
         padding: 0 0.4em; }
       #main-image .image-mask a p {
@@ -231,15 +230,17 @@ header {
     min-height: 20em; }
     #tab .current a {
       background-color: #1693A5;
-      color: #F0F1F7;
-      text-decoration: none; }
+      color: #F0F1F7; }
       #tab .current a:hover {
         background-color: #1693A5;
-        color: #F0F1F7;
-        text-decoration: none; }
+        color: #FBB820;
+        text-decoration: underline; }
       @media only screen and (max-width: 481px) {
         #tab .current a {
-          background-image: url("../img/icons/icona_accordion_close.png"); } }
+          text-decoration: none;
+          background-image: url("../img/icons/icona_accordion_close.png"); }
+          #tab .current a:hover a {
+            color: #FBB820; } }
   #tab li {
     display: inline-block;
     padding: 0;
@@ -250,6 +251,7 @@ header {
       #tab li {
         width: 100%;
         margin-top: 0;
+        background-color: #F0F1F7;
         border-bottom: 0.2em outset;
         border-color: #CBCFBC; }
         #tab li:first-child {
@@ -261,10 +263,10 @@ header {
           #tab li .content-box .header {
             display: block;
             position: relative;
-            background-color: #FFFFFF;
+            background-color: #F0F1F7;
             margin-top: 2em; }
             #tab li .content-box .header h4 {
-              color: #002FA7; } }
+              color: #1693A5; } }
     #tab li .tab-content {
       display: block;
       float: left; }
@@ -281,15 +283,15 @@ header {
         top: 0;
         float: right; }
       #tab li:nth-child(2) a {
-        margin-top: 3.6em; }
+        margin-top: 2.95em; }
       #tab li:nth-child(3) a {
-        margin-top: 5.9em; }
+        margin-top: 5.25em; }
       #tab li:nth-child(4) a {
-        margin-top: 8.2em; }
+        margin-top: 7.55em; }
       #tab li:nth-child(5) a {
-        margin-top: 10.5em; }
+        margin-top: 9.85em; }
       #tab li:nth-child(6) a {
-        margin-top: 12.8em; } }
+        margin-top: 12.15em; } }
     #tab li a {
       display: block;
       box-shadow: 1pt 1pt 5pt #000000;
@@ -302,7 +304,7 @@ header {
           position: absolute;
           right: 0;
           height: 1.8em;
-          margin-top: 1.3em;
+          margin-top: 0.65em;
           line-height: 1.8em;
           padding: auto; } }
       @media only screen and (max-width: 481px) {
@@ -337,7 +339,7 @@ header {
             margin-bottom: 2em; } }
 
 #sol-trasporti {
-  margin-top: 1.6%; }
+  margin-top: 0.4em; }
   #sol-trasporti .content-box {
     display: block;
     position: relative;
@@ -421,7 +423,7 @@ header {
 
 .page-img {
   box-shadow: 1pt 1pt 5pt #000000;
-  margin-top: 1.3em;
+  margin-top: 0.7em;
   margin-bottom: 0.5em;
   float: left;
   height: fit-content; }
@@ -432,8 +434,6 @@ header {
   margin-bottom: 0.4em;
   box-shadow: 1pt 1pt 5pt #000000;
   padding-bottom: 0.5em; }
-  .content-box:first-child {
-    margin-top: 0.4em; }
   .content-box .header {
     z-index: 2;
     display: block;
@@ -443,9 +443,8 @@ header {
     .content-box .header h1, .content-box .header h2, .content-box .header h3, .content-box .header h4, .content-box .header h5, .content-box .header h6 {
       display: block;
       position: relative;
-      width: 78%;
+      width: 70%;
       padding: 0.2em 10%;
-      padding-bottom: 0.8em;
       height: auto;
       text-decoration: none;
       text-align: center;
@@ -525,15 +524,13 @@ footer {
   bottom: 0;
   margin-top: 1em;
   height: 15em;
-  color: #000000;
-  background-color: #CDD7B6; }
+  color: #CDD7B6;
+  background-color: #000000; }
   footer a {
     z-index: 3;
-    color: #1693A5;
-    text-decoration: none; }
+    color: #CDD7B6; }
     footer a:hover {
-      color: #FBB820;
-      text-decoration: underline; }
+      color: #FBB820; }
   footer div p {
     text-align: center; }
 

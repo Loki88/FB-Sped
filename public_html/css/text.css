@@ -49,7 +49,8 @@ h1, h2, h3, h4, h5, h6 {
 
 nav {
   font-family: 'sorts_mill_goudyregular', Times, Arial, Verdana;
-  font-size: 1.1em; }
+  font-size: 1.1em;
+  font-weight: bold; }
 
 .infoWindow {
   font-family: 'sorts_mill_goudyregular', Times, Arial, Verdana; }
