@@ -8,7 +8,7 @@ body{
 }
 
 header{
-    background-color: rgba(0,0,0,0.9);
+    background-color: rgba(0,47,167,0.9);
     padding-top: 1em;
     padding-bottom: 0;
     max-width: 100%;
@@ -50,14 +50,12 @@ header{
         #logo-text{
             display: block;
             position: relative;
-            color: #DFEBF6;
             margin: auto;
 
             h4{
                 display: block;
-                color: #DFEBF6;
                 font-family: 'sorts_mill_goudyregular';
-                font-size: 22pt;
+/*                font-size: 22pt;*/
                 padding: 0;
                 margin: 0 auto;
                 margin-bottom: 0.1em;
@@ -65,16 +63,14 @@ header{
 
             h6{
                 display: block;
-                color: #DFEBF6;
                 font-family: 'sorts_mill_goudyregular';
-                font-size: 10pt;
+/*                font-size: 10pt;*/
                 margin: 0;
                 padding: 0;
             }
 
             display: block;
             position: relative;
-            color: #FFFFFF;
         }
     }
     
@@ -139,8 +135,14 @@ header{
     
     .selected{
         cursor: default;
+        &:hover{
+            span{
+                text-decoration: none;
+            }
+        }
         span{
-            text-decoration: underline;
+            color: #FFA627;
+            text-decoration: none;
             
         }
     }
@@ -171,12 +173,13 @@ header{
             padding: 0.25em auto;
             line-height: 1.5em;
             float: left;
-            color: #FFFFFF;
+            color: #E2E5DF;
         }
         
                     
         &:hover{
             span{
+                color: #FFA627;
                 text-decoration: underline;
                 text-decoration-style: wavy;
             }
@@ -260,7 +263,7 @@ header{
         height: 100%;
         left: 0;
         top: 0;
-        background-color: rgba(17, 133, 94, 0.85);
+        background-color: rgba(0,47,167, 0.75);
         
         a{
             display: inline-block;
@@ -276,13 +279,14 @@ header{
             &:hover{
                 h5{
                     text-decoration: underline;
+                    color: #FFA627;
                 }
             }
             h5 {
                 display: block;
                 position: relative;
                 text-align: center;
-                font-size: 14pt;
+/*                font-size: 14pt;*/
                 margin: 0.4em auto;
                 padding: 0 0.4em;
                 
@@ -291,7 +295,7 @@ header{
             p{
                 display: inline-block;
                 width: 90%;
-                font-size: 10pt;
+/*                font-size: 10pt;*/
                 margin: 5% 5%;
                 overflow:hidden;
                 text-overflow: clip;
@@ -342,7 +346,14 @@ header{
     .current{
         min-height: 20em;
         a{
-            border-color: #FFFFFF;
+            /*background-color: rgba(0,47,167, 0.7);*/
+            color: #FFA627;
+            text-decoration: none;
+
+            &:hover{
+                background-color: rgba(0,47,167, 1);
+                text-decoration: none;
+            }
             @media only screen and (max-width: 481px)
             {
                 background-image: url('../img/icons/icona_accordion_close.png');
@@ -365,7 +376,7 @@ header{
                 border-top: 0.2em inset;
             }
             border-bottom: 0.2em outset;
-            border-color: #000000;
+            border-color: #CBCFBC;
             .content-box{
                 display: block;
                 position: relative;
@@ -375,8 +386,11 @@ header{
                     display: block;
                     position: relative;
                     background-color: #FFFFFF;
-                    color: #11855E;
                     margin-top: 2em;
+                    h4{
+                        color: #002FA7;
+                    }
+                    
                 }
             }
         }
@@ -451,9 +465,9 @@ header{
                 right: 0;
                 height: 1.8em;
                 margin-top: 1.3em;
-                line-height: 2em;
-                border-bottom: 0.2em solid;
-                border-color: #11855E;
+                line-height: 1.8em;
+/*                border-bottom: 0.2em solid;
+                border-color: #11855E;*/
                 padding: auto;
                 
                 
@@ -469,13 +483,11 @@ header{
                 background-image: url('../img/icons/icona_accordion.png');
                 background-size: 1.5em;
                 background-position: left top;
-/*                background-position-y: 1.5em;
-                background-position-x: 0.3em;*/
                 background-repeat: no-repeat;
                 
             }
             box-shadow: 1pt 1pt 5pt #000000;
-            background-color: rgba(17, 133, 94, 1);
+            background-color: rgba(0,47,167, 1);
             color: #FFFFFF;
             text-decoration: none;
             text-align: center;
@@ -483,6 +495,7 @@ header{
 
             &:hover{
                 text-decoration: underline;
+                color: #FFA627;
             }
         }
 
@@ -532,6 +545,7 @@ header{
             &:hover{
                 h5{
                     text-decoration: underline;
+                    color: #FFA627;
                 }
             }
             
@@ -624,27 +638,6 @@ header{
     }
 }
 
-/*#menu-secondario {
-    ul{
-        margin:0;
-        padding:0;
-        list-style: none;
-        
-        
-        li{
-            a{
-                text-decoration: none;
-                width: 100%;
-                height: 4em;
-            }
-            &:hover{
-                a{
-                    text-decoration: underline;
-                }
-            }
-        }
-    }
-}*/
 
 #map-canvas {
     display: inline-block;
@@ -677,8 +670,8 @@ header{
         display: block;
         margin: 0;
         padding: 0;
-        background-color: #11855E;
-        color: #FFFFFF;
+        background-color: #002FA7;
+        color: #FFA627;
     }
     
     h1, h2, h3, h4, h5, h6 {
@@ -742,8 +735,8 @@ header{
     .header{
         display: block;
         position: absolute;
-        background-color: #11855E;
-        color: #FFFFFF;
+        background-color: #002FA7;
+        color: #E2E5DF;
         top: 0;
         width: 100%;
         height: 3em;
@@ -786,11 +779,16 @@ footer{
     margin-top: 1em;
     height: 15em;
     color: #FFFFFF;
-    background-color: rgba(0,0,0,0.9);
+    background-color: rgba(0,47,167,0.9);
     font-family: 'shantiregular';
     a{
         z-index: 3;
         color: #F2E9C2;
+        text-decoration: none;
+        &:hover{
+            color: #FFA627;
+            text-decoration: underline;
+        }
     }
     
     div{

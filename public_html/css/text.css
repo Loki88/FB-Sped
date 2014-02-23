@@ -36,3 +36,21 @@
   src: url("../css/fonts/sofia-regular-webfont.eot?#iefix") format("embedded-opentype"), url("../css/fonts/sofia-regular-webfont.woff") format("woff"), url("../css/fonts/sofia-regular-webfont.ttf") format("truetype"), url("../css/fonts/sofia-regular-webfont.svg#sofiaregular") format("svg");
   font-weight: normal;
   font-style: normal; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/loki\/NetBeansProjects\/FB\/public_html\/sass\/text\.scss}line{font-family:\0000366}}
+h1, h2, h3, h4, h5, h6 {
+  color: #E2E5DF; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/loki\/NetBeansProjects\/FB\/public_html\/sass\/text\.scss}line{font-family:\0000371}}
+#logo-text h4 {
+  font-size: 22pt; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/loki\/NetBeansProjects\/FB\/public_html\/sass\/text\.scss}line{font-family:\0000374}}
+#logo-text h6 {
+  font-size: 10pt; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/loki\/NetBeansProjects\/FB\/public_html\/sass\/text\.scss}line{font-family:\0000381}}
+#main-image .image-mask h5 {
+  font-size: 14pt; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/loki\/NetBeansProjects\/FB\/public_html\/sass\/text\.scss}line{font-family:\0000385}}
+#main-image .image-mask p {
+  font-size: 10pt; }
