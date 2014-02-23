@@ -3,17 +3,14 @@
     Author     : Lorenzo Di Giuseppe <lorenzo.digiuseppe88@gmail.com>
 */
 @media only screen and (min-width: 481px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/loki\/NetBeansProjects\/FB\/public_html\/sass\/tab\.scss}line{font-family:\000038}}
   #responsive-tab {
     clear: both;
     display: block;
     position: relative;
     width: 100%;
     margin: 2em auto; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/loki\/NetBeansProjects\/FB\/public_html\/sass\/tab\.scss}line{font-family:\0000315}}
     #responsive-tab .icon {
       display: none; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/loki\/NetBeansProjects\/FB\/public_html\/sass\/tab\.scss}line{font-family:\0000319}}
     #responsive-tab .wrap {
       display: block;
       position: relative;
@@ -22,91 +19,66 @@
       border: 0;
       width: 100%;
       height: 100%; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/loki\/NetBeansProjects\/FB\/public_html\/sass\/tab\.scss}line{font-family:\0000329}}
     #responsive-tab .tab-panel {
       display: block;
       position: relative;
       height: auto !important;
       float: left;
       width: 20%; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/loki\/NetBeansProjects\/FB\/public_html\/sass\/tab\.scss}line{font-family:\0000337}}
     #responsive-tab #trasporto-gomma .tab-panel:first-child {
       top: 0; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/loki\/NetBeansProjects\/FB\/public_html\/sass\/tab\.scss}line{font-family:\0000339}}
       #responsive-tab #trasporto-gomma .tab-panel:first-child a {
         opacity: .6;
         z-index: 3; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/loki\/NetBeansProjects\/FB\/public_html\/sass\/tab\.scss}line{font-family:\0000344}}
       #responsive-tab #trasporto-gomma .tab-panel:first-child .tab-content {
         display: block;
         left: 0;
         z-index: 1;
         position: relative; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/loki\/NetBeansProjects\/FB\/public_html\/sass\/tab\.scss}line{font-family:\0000356}}
     #responsive-tab #trasporto-ferroviario:target .tab-panel:first-child a {
       opacity: 1; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/loki\/NetBeansProjects\/FB\/public_html\/sass\/tab\.scss}line{font-family:\0000359}}
     #responsive-tab #trasporto-ferroviario:target .tab-panel:first-child .tab-content {
       left: -100000px; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/loki\/NetBeansProjects\/FB\/public_html\/sass\/tab\.scss}line{font-family:\0000364}}
     #responsive-tab #trasporto-ferroviario:target .tab-panel:nth-child(2) {
       top: 0; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/loki\/NetBeansProjects\/FB\/public_html\/sass\/tab\.scss}line{font-family:\0000366}}
       #responsive-tab #trasporto-ferroviario:target .tab-panel:nth-child(2) a {
         opacity: .6;
         z-index: 3; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/loki\/NetBeansProjects\/FB\/public_html\/sass\/tab\.scss}line{font-family:\0000371}}
       #responsive-tab #trasporto-ferroviario:target .tab-panel:nth-child(2) .tab-content {
         left: -100%; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/loki\/NetBeansProjects\/FB\/public_html\/sass\/tab\.scss}line{font-family:\0000383}}
     #responsive-tab #trasporto-marittimo:target .tab-panel:first-child a {
       opacity: 1; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/loki\/NetBeansProjects\/FB\/public_html\/sass\/tab\.scss}line{font-family:\0000386}}
     #responsive-tab #trasporto-marittimo:target .tab-panel:first-child .tab-content {
       left: -100000px; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/loki\/NetBeansProjects\/FB\/public_html\/sass\/tab\.scss}line{font-family:\0000392}}
     #responsive-tab #trasporto-marittimo:target .tab-panel:nth-child(3) {
       top: 0; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/loki\/NetBeansProjects\/FB\/public_html\/sass\/tab\.scss}line{font-family:\0000394}}
       #responsive-tab #trasporto-marittimo:target .tab-panel:nth-child(3) a {
         opacity: .6;
         z-index: 3; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/loki\/NetBeansProjects\/FB\/public_html\/sass\/tab\.scss}line{font-family:\0000399}}
       #responsive-tab #trasporto-marittimo:target .tab-panel:nth-child(3) .tab-content {
         left: -200%; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/loki\/NetBeansProjects\/FB\/public_html\/sass\/tab\.scss}line{font-family:\00003111}}
     #responsive-tab #trasporto-aereo:target .tab-panel:first-child a {
       opacity: 1; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/loki\/NetBeansProjects\/FB\/public_html\/sass\/tab\.scss}line{font-family:\00003114}}
     #responsive-tab #trasporto-aereo:target .tab-panel:first-child .tab-content {
       left: -100000px; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/loki\/NetBeansProjects\/FB\/public_html\/sass\/tab\.scss}line{font-family:\00003119}}
     #responsive-tab #trasporto-aereo:target .tab-panel:nth-child(4) {
       top: 0; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/loki\/NetBeansProjects\/FB\/public_html\/sass\/tab\.scss}line{font-family:\00003121}}
       #responsive-tab #trasporto-aereo:target .tab-panel:nth-child(4) a {
         z-index: 3;
         opacity: .6; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/loki\/NetBeansProjects\/FB\/public_html\/sass\/tab\.scss}line{font-family:\00003126}}
       #responsive-tab #trasporto-aereo:target .tab-panel:nth-child(4) .tab-content {
         left: -300%; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/loki\/NetBeansProjects\/FB\/public_html\/sass\/tab\.scss}line{font-family:\00003138}}
     #responsive-tab #trasporto-combinato:target .tab-panel:first-child a {
       opacity: 1; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/loki\/NetBeansProjects\/FB\/public_html\/sass\/tab\.scss}line{font-family:\00003141}}
     #responsive-tab #trasporto-combinato:target .tab-panel:first-child .tab-content {
       left: -100000px; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/loki\/NetBeansProjects\/FB\/public_html\/sass\/tab\.scss}line{font-family:\00003146}}
     #responsive-tab #trasporto-combinato:target .tab-panel:nth-child(5) {
       top: 0; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/loki\/NetBeansProjects\/FB\/public_html\/sass\/tab\.scss}line{font-family:\00003148}}
       #responsive-tab #trasporto-combinato:target .tab-panel:nth-child(5) a {
         opacity: .6;
         z-index: 3; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/loki\/NetBeansProjects\/FB\/public_html\/sass\/tab\.scss}line{font-family:\00003153}}
       #responsive-tab #trasporto-combinato:target .tab-panel:nth-child(5) .tab-content {
         left: -400%; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/loki\/NetBeansProjects\/FB\/public_html\/sass\/tab\.scss}line{font-family:\00003162}}
     #responsive-tab a {
       display: block;
       position: relative;
@@ -123,14 +95,11 @@
       /*            &:first-child {
                       margin-left: 0;
                   }*/ }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/loki\/NetBeansProjects\/FB\/public_html\/sass\/tab\.scss}line{font-family:\00003180}}
       #responsive-tab a:hover {
         text-decoration: underline;
         background-color: #75a9d2; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/loki\/NetBeansProjects\/FB\/public_html\/sass\/tab\.scss}line{font-family:\00003186}}
     #responsive-tab .close {
       display: none; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/loki\/NetBeansProjects\/FB\/public_html\/sass\/tab\.scss}line{font-family:\00003190}}
     #responsive-tab .tab-content {
       display: block;
       position: relative;
@@ -149,42 +118,33 @@
                       float: left;
                       max-width: 100%;
                   }*/ }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/loki\/NetBeansProjects\/FB\/public_html\/sass\/tab\.scss}line{font-family:\00003205}}
       #responsive-tab .tab-content h5 {
         text-align: center; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/loki\/NetBeansProjects\/FB\/public_html\/sass\/tab\.scss}line{font-family:\00003209}}
       #responsive-tab .tab-content p {
         margin: 1em 0.5em; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/loki\/NetBeansProjects\/FB\/public_html\/sass\/tab\.scss}line{font-family:\00003213}}
       #responsive-tab .tab-content .intro {
         display: block;
         position: relative; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/loki\/NetBeansProjects\/FB\/public_html\/sass\/tab\.scss}line{font-family:\00003218}}
       #responsive-tab .tab-content .body {
         display: inline-block;
         position: relative; } }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/loki\/NetBeansProjects\/FB\/public_html\/sass\/tab\.scss}line{font-family:\00003231}}
 .img-wrapper {
   display: block;
   position: relative;
   width: 90%;
   margin: auto; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/loki\/NetBeansProjects\/FB\/public_html\/sass\/tab\.scss}line{font-family:\00003237}}
   .img-wrapper img {
     display: block;
     max-width: 100%; }
 
 @media only screen and (max-width: 480px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/loki\/NetBeansProjects\/FB\/public_html\/sass\/tab\.scss}line{font-family:\00003245}}
   #responsive-tab {
     clear: both;
     display: block;
     position: relative;
     margin: 2em auto; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/loki\/NetBeansProjects\/FB\/public_html\/sass\/tab\.scss}line{font-family:\00003251}}
     #responsive-tab .close {
       display: none; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/loki\/NetBeansProjects\/FB\/public_html\/sass\/tab\.scss}line{font-family:\00003255}}
     #responsive-tab .wrap {
       display: block;
       position: relative;
@@ -193,14 +153,12 @@
       border: 0;
       width: 100%;
       height: 100%; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/loki\/NetBeansProjects\/FB\/public_html\/sass\/tab\.scss}line{font-family:\00003264}}
     #responsive-tab .tab-panel {
       display: block;
       position: relative;
       height: auto !important;
       float: left;
       width: 100%; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/loki\/NetBeansProjects\/FB\/public_html\/sass\/tab\.scss}line{font-family:\00003271}}
       #responsive-tab .tab-panel .icon {
         display: block;
         position: absolute;
@@ -212,97 +170,71 @@
         background-image: url("../img/arrow-right.png");
         background-size: 2em 2em;
         z-index: 4; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/loki\/NetBeansProjects\/FB\/public_html\/sass\/tab\.scss}line{font-family:\00003287}}
     #responsive-tab #trasporto-gomma:target .tab-panel:first-child {
       top: 0; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/loki\/NetBeansProjects\/FB\/public_html\/sass\/tab\.scss}line{font-family:\00003290}}
       #responsive-tab #trasporto-gomma:target .tab-panel:first-child .icon {
         background-image: url("../img/arrow-down.png"); }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/loki\/NetBeansProjects\/FB\/public_html\/sass\/tab\.scss}line{font-family:\00003293}}
       #responsive-tab #trasporto-gomma:target .tab-panel:first-child a {
         display: none;
         opacity: .6; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/loki\/NetBeansProjects\/FB\/public_html\/sass\/tab\.scss}line{font-family:\00003298}}
       #responsive-tab #trasporto-gomma:target .tab-panel:first-child .close {
         display: block; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/loki\/NetBeansProjects\/FB\/public_html\/sass\/tab\.scss}line{font-family:\00003302}}
       #responsive-tab #trasporto-gomma:target .tab-panel:first-child .tab-content {
         position: relative;
         height: auto;
         left: 0; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/loki\/NetBeansProjects\/FB\/public_html\/sass\/tab\.scss}line{font-family:\00003315}}
     #responsive-tab #trasporto-ferroviario:target .tab-panel:nth-child(2) {
       top: 0; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/loki\/NetBeansProjects\/FB\/public_html\/sass\/tab\.scss}line{font-family:\00003318}}
       #responsive-tab #trasporto-ferroviario:target .tab-panel:nth-child(2) .icon {
         background-image: url("../img/arrow-down.png"); }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/loki\/NetBeansProjects\/FB\/public_html\/sass\/tab\.scss}line{font-family:\00003321}}
       #responsive-tab #trasporto-ferroviario:target .tab-panel:nth-child(2) a {
         display: none;
         opacity: .6; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/loki\/NetBeansProjects\/FB\/public_html\/sass\/tab\.scss}line{font-family:\00003326}}
       #responsive-tab #trasporto-ferroviario:target .tab-panel:nth-child(2) .close {
         display: block; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/loki\/NetBeansProjects\/FB\/public_html\/sass\/tab\.scss}line{font-family:\00003330}}
       #responsive-tab #trasporto-ferroviario:target .tab-panel:nth-child(2) .tab-content {
         position: relative;
         height: auto;
         left: 0; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/loki\/NetBeansProjects\/FB\/public_html\/sass\/tab\.scss}line{font-family:\00003345}}
     #responsive-tab #trasporto-marittimo:target .tab-panel:nth-child(3) {
       top: 0; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/loki\/NetBeansProjects\/FB\/public_html\/sass\/tab\.scss}line{font-family:\00003348}}
       #responsive-tab #trasporto-marittimo:target .tab-panel:nth-child(3) .icon {
         background-image: url("../img/arrow-down.png"); }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/loki\/NetBeansProjects\/FB\/public_html\/sass\/tab\.scss}line{font-family:\00003351}}
       #responsive-tab #trasporto-marittimo:target .tab-panel:nth-child(3) a {
         display: none;
         opacity: .6; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/loki\/NetBeansProjects\/FB\/public_html\/sass\/tab\.scss}line{font-family:\00003356}}
       #responsive-tab #trasporto-marittimo:target .tab-panel:nth-child(3) .close {
         display: block; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/loki\/NetBeansProjects\/FB\/public_html\/sass\/tab\.scss}line{font-family:\00003360}}
       #responsive-tab #trasporto-marittimo:target .tab-panel:nth-child(3) .tab-content {
         position: relative;
         height: auto;
         left: 0; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/loki\/NetBeansProjects\/FB\/public_html\/sass\/tab\.scss}line{font-family:\00003375}}
     #responsive-tab #trasporto-aereo:target .tab-panel:nth-child(4) {
       top: 0; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/loki\/NetBeansProjects\/FB\/public_html\/sass\/tab\.scss}line{font-family:\00003378}}
       #responsive-tab #trasporto-aereo:target .tab-panel:nth-child(4) .icon {
         background-image: url("../img/arrow-down.png"); }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/loki\/NetBeansProjects\/FB\/public_html\/sass\/tab\.scss}line{font-family:\00003381}}
       #responsive-tab #trasporto-aereo:target .tab-panel:nth-child(4) a {
         display: none;
         opacity: .6; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/loki\/NetBeansProjects\/FB\/public_html\/sass\/tab\.scss}line{font-family:\00003386}}
       #responsive-tab #trasporto-aereo:target .tab-panel:nth-child(4) .close {
         display: block; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/loki\/NetBeansProjects\/FB\/public_html\/sass\/tab\.scss}line{font-family:\00003390}}
       #responsive-tab #trasporto-aereo:target .tab-panel:nth-child(4) .tab-content {
         position: relative;
         height: auto;
         left: 0; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/loki\/NetBeansProjects\/FB\/public_html\/sass\/tab\.scss}line{font-family:\00003406}}
     #responsive-tab #trasporto-combinato:target .tab-panel:nth-child(5) {
       top: 0; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/loki\/NetBeansProjects\/FB\/public_html\/sass\/tab\.scss}line{font-family:\00003409}}
       #responsive-tab #trasporto-combinato:target .tab-panel:nth-child(5) .icon {
         background-image: url("../img/arrow-down.png"); }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/loki\/NetBeansProjects\/FB\/public_html\/sass\/tab\.scss}line{font-family:\00003412}}
       #responsive-tab #trasporto-combinato:target .tab-panel:nth-child(5) a {
         display: none;
         opacity: .6; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/loki\/NetBeansProjects\/FB\/public_html\/sass\/tab\.scss}line{font-family:\00003417}}
       #responsive-tab #trasporto-combinato:target .tab-panel:nth-child(5) .close {
         display: block; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/loki\/NetBeansProjects\/FB\/public_html\/sass\/tab\.scss}line{font-family:\00003421}}
       #responsive-tab #trasporto-combinato:target .tab-panel:nth-child(5) .tab-content {
         position: relative;
         height: auto;
         left: 0; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/loki\/NetBeansProjects\/FB\/public_html\/sass\/tab\.scss}line{font-family:\00003432}}
     #responsive-tab a {
       display: block;
       position: relative;
@@ -318,11 +250,9 @@
       color: #FFFFFF;
       text-decoration: none;
       font-weight: 3pt bold; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/loki\/NetBeansProjects\/FB\/public_html\/sass\/tab\.scss}line{font-family:\00003450}}
       #responsive-tab a:hover {
         text-decoration: underline;
         background-color: #75a9d2; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/loki\/NetBeansProjects\/FB\/public_html\/sass\/tab\.scss}line{font-family:\00003456}}
     #responsive-tab .tab-content {
       display: block;
       position: absolute;
@@ -337,24 +267,18 @@
       padding-bottom: 1em;
       z-index: 2;
       color: #666666; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/loki\/NetBeansProjects\/FB\/public_html\/sass\/tab\.scss}line{font-family:\00003471}}
       #responsive-tab .tab-content h5 {
         text-align: center; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/loki\/NetBeansProjects\/FB\/public_html\/sass\/tab\.scss}line{font-family:\00003475}}
       #responsive-tab .tab-content .content-box {
         border: 0; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/loki\/NetBeansProjects\/FB\/public_html\/sass\/tab\.scss}line{font-family:\00003479}}
       #responsive-tab .tab-content p {
         margin: 1em 0.5em; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/loki\/NetBeansProjects\/FB\/public_html\/sass\/tab\.scss}line{font-family:\00003483}}
       #responsive-tab .tab-content .intro {
         display: block;
         position: relative; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/loki\/NetBeansProjects\/FB\/public_html\/sass\/tab\.scss}line{font-family:\00003488}}
       #responsive-tab .tab-content .body {
         display: inline-block;
         position: relative; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/loki\/NetBeansProjects\/FB\/public_html\/sass\/tab\.scss}line{font-family:\00003493}}
       #responsive-tab .tab-content img {
         float: left;
         max-width: 100%; } }

@@ -8,10 +8,13 @@ var Tab = {
     init: function()
     {
         //Stato iniziale
-//       var state = {
-//           href: location.href,
-//       };
-//       history.pushState(state, 'state', location.href);
+       this.initLink = $('.current').children('.tab-link');
+       console.log(this.initLink);
+       var state = {
+           href: location.href,
+           link_id: 'init',
+       };
+       History.replaceState(state, $(document.body.title).text(), location.href);
        //Recuperare il menù della tab e collegare ogni bottone al relativo spazio in cui visualizzare il contenuto
        var tab_elements = $('.tab-element');
        for(var i=0; i<tab_elements.length; i++)
@@ -41,14 +44,23 @@ var Tab = {
             }  
         });
         
-        $(window).on('popstate', function(event){
-            event.preventDefault();
-            var state = event.originalEvent.state;
-            if(state != null)
-                window.location.assign(state.href);
-            else
-                window.location.assign(window.location.href);
+        History.Adapter.bind(window,'statechange',function(){
+            Tab.updateContent(History.getState());
         });
+    },
+    
+    updateContent: function(state)
+    {
+        var link;
+        console.log(state);
+        var id = state.data.link_id;
+        console.log(id);
+        if(id === 'init')
+            link = $(Tab.initLink);
+        else
+            link = $(state.data.link_id);
+        console.log(link);
+        Tab.loadPage(link);
     },
     
     prepareElement: function(element, i)
@@ -72,19 +84,23 @@ var Tab = {
             link.prop('setted', false);
         }
         
-        link.click(Tab.loadPage);
+        var state = {
+            href: link.attr('href'),
+            link_id: '#'+id,
+        };
+        link.prop('state', state);
+        
+        link.click(Tab.pushHistory);
     },
 
     
-    loadPage: function(event)
+    loadPage: function(link)
     {
-        event.preventDefault();
         $(document.body).css('cursor', 'wait');
-        var link = $(this);
-        
+        link = $(link);
         if(!link.prop('setted'))
         {
-            var dataUrl = $(this).attr('href');
+            var dataUrl = link.attr('href');
             $.ajax({
                 type: "GET",
                 url: dataUrl,
@@ -109,7 +125,6 @@ var Tab = {
         }
         else
             Tab.changePage(link);
-        Tab.pushHistory(link);
     },
     
     changePage: function(link)
@@ -184,15 +199,12 @@ var Tab = {
         link.parent('.tab-element').removeClass('section group current');
     },
 
-    pushHistory: function(link)
+    pushHistory: function(event)
     {
-        link = $(link);
-        var id = link.attr('id');
-        var state = {
-            href: link.attr('href'),
-            link_id: id,
-        };
-        history.pushState(state, 'state', link.attr('href'));
+        event.preventDefault();
+        link = $(this);
+        
+        History.pushState(link.prop('state'), link.data('title'), link.attr('href'));
     }
 };
 
