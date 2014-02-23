@@ -13,6 +13,7 @@ var Tab = {
        var state = {
            href: location.href,
            link_id: 'init',
+           'open': true,
        };
        History.replaceState(state, $(document.body.title).text(), location.href);
        //Recuperare il menù della tab e collegare ogni bottone al relativo spazio in cui visualizzare il contenuto
@@ -25,21 +26,28 @@ var Tab = {
        }
        $(window).on('fluidGrid', function(event){
             var link = $(Tab.current);
-            if(!link.prop(open))
+            var state = link.prop('state');
+            if(!state.open)
             {
                 var page = $(link.prop('page'));
                 var element = link.parent('.tab-element');
                 element.addClass('section group current');
+                
+                state.open = true;
+                link.prop('state', state);
                 page.show();
             }   
         });
         $(window).on('noMobile', function(event){
             var link = $(Tab.current);
-            if(!link.prop(open))
+            var state = link.prop('state');
+            if(!state.open)
             {
                 var page = $(link.prop('page'));
                 var element = link.parent('.tab-element');
                 element.addClass('section group current');
+                state.open = true;
+                link.prop('state', state);
                 page.show();
             }  
         });
@@ -52,14 +60,11 @@ var Tab = {
     updateContent: function(state)
     {
         var link;
-        console.log(state);
         var id = state.data.link_id;
-        console.log(id);
         if(id === 'init')
             link = $(Tab.initLink);
         else
             link = $(state.data.link_id);
-        console.log(link);
         Tab.loadPage(link);
     },
     
@@ -68,13 +73,20 @@ var Tab = {
         element = $(element);
         
         var link = $(element.find('.tab-link')[0]);
+        console.log('preparing link', link);
         var id = 'tab_link_'+i;
         link.attr('id', id);
+        var state = {
+            href: link.attr('href'),
+            link_id: '#'+id,
+            'open': false
+        };
         if(element.hasClass('current'))
         {
             Tab.current = link;
             link.prop('page', element.find('.tab-page')[0]);
             link.prop('setted', true);
+            state.open = true;
         }
         else
         {
@@ -84,12 +96,8 @@ var Tab = {
             link.prop('setted', false);
         }
         
-        var state = {
-            href: link.attr('href'),
-            link_id: '#'+id,
-        };
-        link.prop('state', state);
         
+        link.prop('state', state);
         link.click(Tab.pushHistory);
     },
 
@@ -124,29 +132,19 @@ var Tab = {
             });
         }
         else
+        {
+            console.log("action");
             Tab.changePage(link);
+        }
     },
     
     changePage: function(link)
     {
-        var link = $(link);
-        var currentLink = $(Tab.current);
+        link = $(link);
         var width = $(document).width();
         if(width > 481)
         {
-            Tab.current = link;
-            
-            $(currentLink.prop('page')).fadeOut(Tab.time, function(){
-                currentLink.parent('.tab-element').removeClass('section group current');
-                currentLink.prop('open', false);
-                var element = link.parent('.tab-element');
-                element.addClass('section group current');
-                var page = $(link.prop('page'));
-                page.fadeIn(Tab.time, function(){
-                    page.prop('open', true);
-                    $(document.body).css('cursor', 'auto');
-                });
-            });
+            Tab.manageTab(link);
         }
         else
         {
@@ -155,56 +153,90 @@ var Tab = {
         
     },
     
+    manageTab: function(link)
+    {
+        var currentLink = $(Tab.current);
+        Tab.current = link;
+        var state = currentLink.prop('state');
+        $(currentLink.prop('page')).fadeOut(Tab.time, function(){
+            currentLink.parent('.tab-element').removeClass('section group current');
+            state.open = false;
+            link.prop('state', state);
+            var element = link.parent('.tab-element');
+            element.addClass('section group current');
+            var page = $(link.prop('page'));
+            page.fadeIn(Tab.time, function(){
+                state = link.prop('state');
+                state.open = true;
+                link.prop('state', state);
+                $(document.body).css('cursor', 'auto');
+            });
+        });
+    },
+    
     accordion: function(link)
     {
         var link = $(link);
-        var currentLink = $(Tab.current);
-        if(link.parent('.tab-element').hasClass('current'))
+        
+        var state = link.prop('state');
+        if(!state.open)
         {
+            //L'elemento deve essere chiuso
             var page = $(link.prop('page'));
+            console.log('close accordion');
             page.slideUp(Tab.time, function(){
-                page.parent('.tab-element').removeClass('section group current');
                 $(document.body).css('cursor', 'auto');
-                link.prop('open', false);
             });
+            link.parent('.tab-element').removeClass('section group current');
         }
         else{
-            Tab.current = link;
-            if(currentLink != undefined)
-            {    $(currentLink.prop('page')).slideUp(Tab.time, function(){
-                   currentLink.parent('.tab-element').removeClass('section group current');
-                   currentLink.prop('open', false);
+            //L'elemento deve essere aperto
+            var currentLink = $(Tab.current);
+            
+            if(link.is(currentLink))
+            {   
+                //Non esiste un altro elemento aperto
+                console.log('open one');
+                $(link.prop('page')).slideDown(Tab.time
+                , function(){
+                   link.parent('.tab-element').addClass('section group current');
+                   
                });
-               link.parent('.tab-element').addClass('section group current');
-                $(link.prop('page')).slideDown(Tab.time, function(){
-                    $(document.body).css('cursor', 'auto');
-                    link.prop('open', true);
-                });
+                Tab.current = link;
             }
             else
-               $(link.prop('page')).slideDown(Tab.time, function(){
-                   link.parent('.tab-element').addClass('section group current');
-                   link.prop('open', true);
+            {
+                //Esiste un elemento aperto che deve essere chiuso
+                var currentLinkState = currentLink.prop('state');
+                currentLinkState.open = false;
+                currentLink.prop('state', currentLinkState);
+                console.log('open different accordion')
+                $(currentLink.prop('page')).slideUp(Tab.time, function(){
+                   currentLink.parent('.tab-element').removeClass('section group current');
                });
-            
+               link.parent('.tab-element').addClass('section group current');
+               $(link.prop('page')).slideDown(Tab.time, function(){
+                    $(document.body).css('cursor', 'auto');
+                    
+                });
+                Tab.current = link;
+           }
         }
-//        $(currentLink.prop('page')).slideToggle()
-    },
-        
-    closeAccordion: function(link)
-    {
-        link = $(link);
-        $(link.prop('page')).slideUp(Tab.time);
-        link.prop('open', false);
-        link.parent('.tab-element').removeClass('section group current');
     },
 
     pushHistory: function(event)
     {
         event.preventDefault();
         link = $(this);
-        
-        History.pushState(link.prop('state'), link.data('title'), link.attr('href'));
+        console.log('link', link);
+        var link_state = link.prop('state');
+        if(link_state.open)
+            link_state.open = false;
+        else
+            link_state.open = true;
+        link.prop('state', link_state);
+        console.log('link state', link_state);
+        History.pushState(link_state, link.data('title'), link.attr('href'));
     }
 };
 

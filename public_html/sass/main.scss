@@ -137,6 +137,13 @@ header{
     position: relative;
     height: auto;
     
+    .selected{
+        cursor: default;
+        span{
+            text-decoration: underline;
+            
+        }
+    }
     
     a{
         display: block;
@@ -235,7 +242,6 @@ header{
     margin-top: 1.6%;
     display: inline-block;
     position: relative;
-
     height: auto;
     box-shadow: 1pt 1pt 5pt #000000;
     
@@ -321,7 +327,6 @@ header{
 {
     #main-image{
         .image-mask{
-/*            background-color: #000000;*/
             position: relative;
             height: auto;
         }
@@ -331,7 +336,8 @@ header{
 #tab{
     list-style: none;
     padding-left: 0;
-    padding: 0;  
+    padding: 0;
+    margin-top: 1.6%;
     
     .current{
         min-height: 20em;
