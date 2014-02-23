@@ -26,7 +26,7 @@ $second-level-text: #FFFFFF;
                 background-size: 2em;
 /*                background-color: $menu-color;*/
                 color: $menu-text;
-                background-position-x: 0.2em;
+                /*background-position-x: 0.2em;*/
                 &:hover{
                     text-decoration: underline;
                 }
@@ -150,6 +150,7 @@ $second-level-text: #FFFFFF;
 
                 .menu-link {
                     display: none;
+                    visibility: hidden;
                 }
                 
                 .selected{

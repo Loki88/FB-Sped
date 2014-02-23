@@ -266,79 +266,83 @@ header {
   list-style: none;
   padding-left: 0;
   padding: 0;
-  margin-top: 1.6%; }
+  margin-top: 1%; }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/home\/loki\/NetBeansProjects\/FB\/public_html\/sass\/main\.scss}line{font-family:\00003342}}
   #tab .current {
     min-height: 20em; }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/home\/loki\/NetBeansProjects\/FB\/public_html\/sass\/main\.scss}line{font-family:\00003344}}
     #tab .current a {
       border-color: #FFFFFF; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/loki\/NetBeansProjects\/FB\/public_html\/sass\/main\.scss}line{font-family:\00003349}}
+      @media only screen and (max-width: 481px) {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/loki\/NetBeansProjects\/FB\/public_html\/sass\/main\.scss}line{font-family:\00003344}}
+        #tab .current a {
+          background-image: url("../img/icons/icona_accordion_close.png"); } }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/loki\/NetBeansProjects\/FB\/public_html\/sass\/main\.scss}line{font-family:\00003353}}
   #tab li {
     display: inline-block;
     padding: 0;
     margin: 0;
     float: left;
     height: auto;
-    margin-top: -0.34em; }
+    /*margin-top: -0.34em;*/ }
     @media only screen and (max-width: 481px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/loki\/NetBeansProjects\/FB\/public_html\/sass\/main\.scss}line{font-family:\00003349}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/loki\/NetBeansProjects\/FB\/public_html\/sass\/main\.scss}line{font-family:\00003353}}
       #tab li {
         width: 100%;
         margin-top: 0;
         border-bottom: 0.2em outset;
         border-color: #000000; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/loki\/NetBeansProjects\/FB\/public_html\/sass\/main\.scss}line{font-family:\00003360}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/loki\/NetBeansProjects\/FB\/public_html\/sass\/main\.scss}line{font-family:\00003364}}
         #tab li:first-child {
           border-top: 0.2em inset; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/loki\/NetBeansProjects\/FB\/public_html\/sass\/main\.scss}line{font-family:\00003365}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/loki\/NetBeansProjects\/FB\/public_html\/sass\/main\.scss}line{font-family:\00003369}}
         #tab li .content-box {
           display: block;
           position: relative;
           box-shadow: none; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/loki\/NetBeansProjects\/FB\/public_html\/sass\/main\.scss}line{font-family:\00003370}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/loki\/NetBeansProjects\/FB\/public_html\/sass\/main\.scss}line{font-family:\00003374}}
           #tab li .content-box .header {
             display: block;
             position: relative;
             background-color: #FFFFFF;
             color: #11855E;
             margin-top: 2em; } }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/loki\/NetBeansProjects\/FB\/public_html\/sass\/main\.scss}line{font-family:\00003380}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/loki\/NetBeansProjects\/FB\/public_html\/sass\/main\.scss}line{font-family:\00003384}}
     #tab li .tab-content {
       display: block;
       float: left; }
       @media only screen and (max-width: 481px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/loki\/NetBeansProjects\/FB\/public_html\/sass\/main\.scss}line{font-family:\00003380}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/loki\/NetBeansProjects\/FB\/public_html\/sass\/main\.scss}line{font-family:\00003384}}
         #tab li .tab-content {
           margin-top: 0;
           top: 0; } }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/loki\/NetBeansProjects\/FB\/public_html\/sass\/main\.scss}line{font-family:\00003391}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/loki\/NetBeansProjects\/FB\/public_html\/sass\/main\.scss}line{font-family:\00003395}}
     #tab li:not(.current) .tab-page {
       display: none; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/loki\/NetBeansProjects\/FB\/public_html\/sass\/main\.scss}line{font-family:\00003396}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/loki\/NetBeansProjects\/FB\/public_html\/sass\/main\.scss}line{font-family:\00003400}}
     #tab li:not(.current):hover a {
       border-color: #C4D99C; }
     @media only screen and (min-width: 482px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/loki\/NetBeansProjects\/FB\/public_html\/sass\/main\.scss}line{font-family:\00003406}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/loki\/NetBeansProjects\/FB\/public_html\/sass\/main\.scss}line{font-family:\00003410}}
       #tab li:not(.current) {
         top: 0;
         float: right; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/loki\/NetBeansProjects\/FB\/public_html\/sass\/main\.scss}line{font-family:\00003412}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/loki\/NetBeansProjects\/FB\/public_html\/sass\/main\.scss}line{font-family:\00003416}}
       #tab li:nth-child(2) a {
         margin-top: 3.6em; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/loki\/NetBeansProjects\/FB\/public_html\/sass\/main\.scss}line{font-family:\00003418}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/loki\/NetBeansProjects\/FB\/public_html\/sass\/main\.scss}line{font-family:\00003422}}
       #tab li:nth-child(3) a {
         margin-top: 5.9em; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/loki\/NetBeansProjects\/FB\/public_html\/sass\/main\.scss}line{font-family:\00003424}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/loki\/NetBeansProjects\/FB\/public_html\/sass\/main\.scss}line{font-family:\00003428}}
       #tab li:nth-child(4) a {
         margin-top: 8.2em; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/loki\/NetBeansProjects\/FB\/public_html\/sass\/main\.scss}line{font-family:\00003430}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/loki\/NetBeansProjects\/FB\/public_html\/sass\/main\.scss}line{font-family:\00003434}}
       #tab li:nth-child(5) a {
         margin-top: 10.5em; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/loki\/NetBeansProjects\/FB\/public_html\/sass\/main\.scss}line{font-family:\00003436}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/loki\/NetBeansProjects\/FB\/public_html\/sass\/main\.scss}line{font-family:\00003440}}
       #tab li:nth-child(6) a {
         margin-top: 12.8em; } }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/loki\/NetBeansProjects\/FB\/public_html\/sass\/main\.scss}line{font-family:\00003442}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/loki\/NetBeansProjects\/FB\/public_html\/sass\/main\.scss}line{font-family:\00003446}}
     #tab li a {
       display: block;
       box-shadow: 1pt 1pt 5pt #000000;
@@ -348,7 +352,7 @@ header {
       text-align: center;
       font-family: 'sorts_mill_goudyregular'; }
       @media only screen and (min-width: 482px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/loki\/NetBeansProjects\/FB\/public_html\/sass\/main\.scss}line{font-family:\00003442}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/loki\/NetBeansProjects\/FB\/public_html\/sass\/main\.scss}line{font-family:\00003446}}
         #tab li a {
           position: absolute;
           right: 0;
@@ -359,45 +363,53 @@ header {
           border-color: #11855E;
           padding: auto; } }
       @media only screen and (max-width: 481px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/loki\/NetBeansProjects\/FB\/public_html\/sass\/main\.scss}line{font-family:\00003442}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/loki\/NetBeansProjects\/FB\/public_html\/sass\/main\.scss}line{font-family:\00003446}}
         #tab li a {
           position: relative;
           height: 3em;
           line-height: 1.5em;
-          width: 100%; } }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/loki\/NetBeansProjects\/FB\/public_html\/sass\/main\.scss}line{font-family:\00003470}}
+          width: 70%;
+          padding-left: 15%;
+          padding-right: 15%;
+          background-image: url("../img/icons/icona_accordion.png");
+          background-size: 1.5em;
+          background-position: left top;
+          /*                background-position-y: 1.5em;
+                          background-position-x: 0.3em;*/
+          background-repeat: no-repeat; } }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/loki\/NetBeansProjects\/FB\/public_html\/sass\/main\.scss}line{font-family:\00003484}}
       #tab li a:hover {
         text-decoration: underline; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/loki\/NetBeansProjects\/FB\/public_html\/sass\/main\.scss}line{font-family:\00003475}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/loki\/NetBeansProjects\/FB\/public_html\/sass\/main\.scss}line{font-family:\00003489}}
     #tab li .tab-image {
       display: inline-block;
       position: relative;
       float: right; }
       @media only screen and (min-width: 482px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/loki\/NetBeansProjects\/FB\/public_html\/sass\/main\.scss}line{font-family:\00003475}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/loki\/NetBeansProjects\/FB\/public_html\/sass\/main\.scss}line{font-family:\00003489}}
         #tab li .tab-image {
           right: 0;
           float: left;
           margin-left: 1.6%;
           margin-top: 15.6em; } }
         @media only screen and (min-width: 482px) and (max-width: 481px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/loki\/NetBeansProjects\/FB\/public_html\/sass\/main\.scss}line{font-family:\00003475}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/loki\/NetBeansProjects\/FB\/public_html\/sass\/main\.scss}line{font-family:\00003489}}
           #tab li .tab-image {
             height: auto;
             vertical-align: text-top;
             margin-bottom: 2em; } }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/loki\/NetBeansProjects\/FB\/public_html\/sass\/main\.scss}line{font-family:\00003501}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/loki\/NetBeansProjects\/FB\/public_html\/sass\/main\.scss}line{font-family:\00003515}}
 #sol-trasporti {
   margin-top: 1.6%; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/loki\/NetBeansProjects\/FB\/public_html\/sass\/main\.scss}line{font-family:\00003505}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/loki\/NetBeansProjects\/FB\/public_html\/sass\/main\.scss}line{font-family:\00003519}}
   #sol-trasporti .content-box {
     display: block;
     position: relative;
     margin-top: 0;
     height: 100%;
     padding: 0; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/loki\/NetBeansProjects\/FB\/public_html\/sass\/main\.scss}line{font-family:\00003511}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/loki\/NetBeansProjects\/FB\/public_html\/sass\/main\.scss}line{font-family:\00003525}}
     #sol-trasporti .content-box a {
       display: block;
       margin: 0;
@@ -405,10 +417,10 @@ header {
       width: 100%;
       height: 100%;
       text-decoration: none; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/loki\/NetBeansProjects\/FB\/public_html\/sass\/main\.scss}line{font-family:\00003519}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/loki\/NetBeansProjects\/FB\/public_html\/sass\/main\.scss}line{font-family:\00003533}}
       #sol-trasporti .content-box a:hover h5 {
         text-decoration: underline; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/loki\/NetBeansProjects\/FB\/public_html\/sass\/main\.scss}line{font-family:\00003526}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/loki\/NetBeansProjects\/FB\/public_html\/sass\/main\.scss}line{font-family:\00003540}}
       #sol-trasporti .content-box a .header .img-wrapper {
         display: table;
         position: relative;
@@ -416,7 +428,7 @@ header {
         max-height: 3em;
         padding: 0.5em auto;
         width: 80%; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/loki\/NetBeansProjects\/FB\/public_html\/sass\/main\.scss}line{font-family:\00003533}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/loki\/NetBeansProjects\/FB\/public_html\/sass\/main\.scss}line{font-family:\00003547}}
         #sol-trasporti .content-box a .header .img-wrapper img {
           display: block;
           position: relative;
@@ -424,41 +436,41 @@ header {
           max-height: 2em;
           max-width: 100%;
           margin: auto; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/loki\/NetBeansProjects\/FB\/public_html\/sass\/main\.scss}line{font-family:\00003545}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/loki\/NetBeansProjects\/FB\/public_html\/sass\/main\.scss}line{font-family:\00003559}}
       #sol-trasporti .content-box a .header h5 {
         height: 3em; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/loki\/NetBeansProjects\/FB\/public_html\/sass\/main\.scss}line{font-family:\00003552}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/loki\/NetBeansProjects\/FB\/public_html\/sass\/main\.scss}line{font-family:\00003566}}
       #sol-trasporti .content-box a p {
         color: #000000; }
 
 @media only screen and (max-width: 480px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/loki\/NetBeansProjects\/FB\/public_html\/sass\/main\.scss}line{font-family:\00003563}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/loki\/NetBeansProjects\/FB\/public_html\/sass\/main\.scss}line{font-family:\00003577}}
   #sol-trasporti .content-box {
     display: block;
     position: relative;
     margin-top: 0;
     height: 100%;
     padding: 0; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/loki\/NetBeansProjects\/FB\/public_html\/sass\/main\.scss}line{font-family:\00003569}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/loki\/NetBeansProjects\/FB\/public_html\/sass\/main\.scss}line{font-family:\00003583}}
     #sol-trasporti .content-box a {
       display: block;
       margin: 0;
       padding: 0;
       width: 100%;
       height: 100%; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/loki\/NetBeansProjects\/FB\/public_html\/sass\/main\.scss}line{font-family:\00003575}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/loki\/NetBeansProjects\/FB\/public_html\/sass\/main\.scss}line{font-family:\00003589}}
       #sol-trasporti .content-box a .header {
         height: 3em; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/loki\/NetBeansProjects\/FB\/public_html\/sass\/main\.scss}line{font-family:\00003578}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/loki\/NetBeansProjects\/FB\/public_html\/sass\/main\.scss}line{font-family:\00003592}}
         #sol-trasporti .content-box a .header .img-wrapper {
           display: inline-block;
           float: left;
           width: 20%;
           margin: 0.5em auto; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/loki\/NetBeansProjects\/FB\/public_html\/sass\/main\.scss}line{font-family:\00003583}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/loki\/NetBeansProjects\/FB\/public_html\/sass\/main\.scss}line{font-family:\00003597}}
           #sol-trasporti .content-box a .header .img-wrapper img {
             top: auto; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/loki\/NetBeansProjects\/FB\/public_html\/sass\/main\.scss}line{font-family:\00003589}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/loki\/NetBeansProjects\/FB\/public_html\/sass\/main\.scss}line{font-family:\00003603}}
         #sol-trasporti .content-box a .header h5 {
           display: block;
           float: left;
@@ -468,7 +480,7 @@ header {
           padding: 0;
           margin: 0.5em auto;
           text-align: center; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/loki\/NetBeansProjects\/FB\/public_html\/sass\/main\.scss}line{font-family:\00003602}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/loki\/NetBeansProjects\/FB\/public_html\/sass\/main\.scss}line{font-family:\00003616}}
       #sol-trasporti .content-box a p {
         display: block;
         float: left;
@@ -495,7 +507,7 @@ header {
         }
     }
 }*/
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/loki\/NetBeansProjects\/FB\/public_html\/sass\/main\.scss}line{font-family:\00003635}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/loki\/NetBeansProjects\/FB\/public_html\/sass\/main\.scss}line{font-family:\00003649}}
 #map-canvas {
   display: inline-block;
   position: relative;
@@ -506,7 +518,7 @@ header {
   background-repeat: no-repeat;
   z-index: 1; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/loki\/NetBeansProjects\/FB\/public_html\/sass\/main\.scss}line{font-family:\00003646}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/loki\/NetBeansProjects\/FB\/public_html\/sass\/main\.scss}line{font-family:\00003660}}
 .page-img {
   box-shadow: 1pt 1pt 5pt #000000;
   margin-top: 1.3em;
@@ -514,14 +526,14 @@ header {
   float: left;
   height: fit-content; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/loki\/NetBeansProjects\/FB\/public_html\/sass\/main\.scss}line{font-family:\00003654}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/loki\/NetBeansProjects\/FB\/public_html\/sass\/main\.scss}line{font-family:\00003668}}
 .content-box {
   background-color: #FFFFFF;
   color: #000000;
   margin-bottom: 0.4em;
   box-shadow: 1pt 1pt 5pt #000000;
   padding-bottom: 0.5em; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/loki\/NetBeansProjects\/FB\/public_html\/sass\/main\.scss}line{font-family:\00003661}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/loki\/NetBeansProjects\/FB\/public_html\/sass\/main\.scss}line{font-family:\00003675}}
   .content-box .header {
     z-index: 2;
     display: block;
@@ -529,7 +541,7 @@ header {
     padding: 0;
     background-color: #11855E;
     color: #FFFFFF; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/loki\/NetBeansProjects\/FB\/public_html\/sass\/main\.scss}line{font-family:\00003670}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/loki\/NetBeansProjects\/FB\/public_html\/sass\/main\.scss}line{font-family:\00003684}}
   .content-box h1, .content-box h2, .content-box h3, .content-box h4, .content-box h5, .content-box h6 {
     display: block;
     position: relative;
@@ -540,17 +552,17 @@ header {
     font-family: 'sorts_mill_goudyregular';
     text-decoration: none;
     text-align: center; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/loki\/NetBeansProjects\/FB\/public_html\/sass\/main\.scss}line{font-family:\00003682}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/loki\/NetBeansProjects\/FB\/public_html\/sass\/main\.scss}line{font-family:\00003696}}
   .content-box p {
     font-family: 'shantiregular';
     margin: 0.6em 0.5em; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/loki\/NetBeansProjects\/FB\/public_html\/sass\/main\.scss}line{font-family:\00003688}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/loki\/NetBeansProjects\/FB\/public_html\/sass\/main\.scss}line{font-family:\00003702}}
 #map-wrapper {
   display: block;
   width: 100%;
   height: 20em; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/loki\/NetBeansProjects\/FB\/public_html\/sass\/main\.scss}line{font-family:\00003692}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/loki\/NetBeansProjects\/FB\/public_html\/sass\/main\.scss}line{font-family:\00003706}}
   #map-wrapper #map-canvas {
     display: block;
     position: relative;
@@ -561,13 +573,13 @@ header {
     background-repeat: no-repeat; }
 
 @media only screen and (max-width: 481px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/loki\/NetBeansProjects\/FB\/public_html\/sass\/main\.scss}line{font-family:\00003706}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/loki\/NetBeansProjects\/FB\/public_html\/sass\/main\.scss}line{font-family:\00003720}}
   #map-wrapper {
     display: block;
     width: 70%;
     margin: auto 15%;
     height: 10em; } }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/loki\/NetBeansProjects\/FB\/public_html\/sass\/main\.scss}line{font-family:\00003714}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/loki\/NetBeansProjects\/FB\/public_html\/sass\/main\.scss}line{font-family:\00003728}}
 .infoWindow {
   position: relative;
   line-height: 1.35em;
@@ -577,11 +589,11 @@ header {
   width: 20em;
   font-family: 'sorts_mill_goudyregular'; }
   @media only screen and (max-width: 481px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/loki\/NetBeansProjects\/FB\/public_html\/sass\/main\.scss}line{font-family:\00003714}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/loki\/NetBeansProjects\/FB\/public_html\/sass\/main\.scss}line{font-family:\00003728}}
     .infoWindow {
       width: 11em;
       height: 11em; } }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/loki\/NetBeansProjects\/FB\/public_html\/sass\/main\.scss}line{font-family:\00003728}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/loki\/NetBeansProjects\/FB\/public_html\/sass\/main\.scss}line{font-family:\00003742}}
   .infoWindow .header {
     display: block;
     position: absolute;
@@ -590,35 +602,35 @@ header {
     top: 0;
     width: 100%;
     height: 3em; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/loki\/NetBeansProjects\/FB\/public_html\/sass\/main\.scss}line{font-family:\00003736}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/loki\/NetBeansProjects\/FB\/public_html\/sass\/main\.scss}line{font-family:\00003750}}
     .infoWindow .header h4 {
       display: block;
       position: relative;
       width: 100%;
       height: 100%;
       line-height: 100%; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/loki\/NetBeansProjects\/FB\/public_html\/sass\/main\.scss}line{font-family:\00003744}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/loki\/NetBeansProjects\/FB\/public_html\/sass\/main\.scss}line{font-family:\00003758}}
   .infoWindow p {
     display: block;
     position: relative;
     top: 3em;
     height: 3em; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/loki\/NetBeansProjects\/FB\/public_html\/sass\/main\.scss}line{font-family:\00003752}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/loki\/NetBeansProjects\/FB\/public_html\/sass\/main\.scss}line{font-family:\00003766}}
 .wrapper {
   position: relative;
   clear: both;
   min-height: 100%;
   margin: 0 auto -15em; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/loki\/NetBeansProjects\/FB\/public_html\/sass\/main\.scss}line{font-family:\00003759}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/loki\/NetBeansProjects\/FB\/public_html\/sass\/main\.scss}line{font-family:\00003773}}
 .push {
   display: block;
   clear: both;
   height: 15em;
   z-index: -10; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/loki\/NetBeansProjects\/FB\/public_html\/sass\/main\.scss}line{font-family:\00003766}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/loki\/NetBeansProjects\/FB\/public_html\/sass\/main\.scss}line{font-family:\00003780}}
 footer {
   display: block;
   position: relative;
@@ -630,19 +642,19 @@ footer {
   color: #FFFFFF;
   background-color: rgba(0, 0, 0, 0.9);
   font-family: 'shantiregular'; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/loki\/NetBeansProjects\/FB\/public_html\/sass\/main\.scss}line{font-family:\00003777}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/loki\/NetBeansProjects\/FB\/public_html\/sass\/main\.scss}line{font-family:\00003791}}
   footer a {
     z-index: 3;
     color: #F2E9C2; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/loki\/NetBeansProjects\/FB\/public_html\/sass\/main\.scss}line{font-family:\00003783}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/loki\/NetBeansProjects\/FB\/public_html\/sass\/main\.scss}line{font-family:\00003797}}
   footer div p {
     text-align: center; }
 
 @media only screen and (max-width: 480px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/loki\/NetBeansProjects\/FB\/public_html\/sass\/main\.scss}line{font-family:\00003792}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/loki\/NetBeansProjects\/FB\/public_html\/sass\/main\.scss}line{font-family:\00003806}}
   .wrapper {
     margin-bottom: -20em; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/loki\/NetBeansProjects\/FB\/public_html\/sass\/main\.scss}line{font-family:\00003796}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/loki\/NetBeansProjects\/FB\/public_html\/sass\/main\.scss}line{font-family:\00003810}}
   footer, .push {
     height: 20em; } }

@@ -1,10 +1,12 @@
 @charset "UTF-8";
 @media screen and (max-width: 769px) {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/loki\/NetBeansProjects\/FB\/public_html\/sass\/navigation\.scss}line{font-family:\0000313}}
   nav {
     margin: 0;
     padding: 0;
     font-family: 'sorts_mill_goudyregular';
     /* Stile di base per il menù chiuso */ }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/loki\/NetBeansProjects\/FB\/public_html\/sass\/navigation\.scss}line{font-family:\0000319}}
     nav .menu-link {
       line-height: 2em;
       width: 70%;
@@ -15,9 +17,11 @@
       background-size: 2em;
       /*                background-color: $menu-color;*/
       color: white;
-      background-position-x: 0.2em; }
+      /*background-position-x: 0.2em;*/ }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/loki\/NetBeansProjects\/FB\/public_html\/sass\/navigation\.scss}line{font-family:\0000330}}
       nav .menu-link:hover {
         text-decoration: underline; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/loki\/NetBeansProjects\/FB\/public_html\/sass\/navigation\.scss}line{font-family:\0000335}}
     nav a {
       display: inline-block;
       clear: both;
@@ -27,8 +31,10 @@
       padding: 0.2em 10%;
       line-height: auto;
       text-decoration: none; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/loki\/NetBeansProjects\/FB\/public_html\/sass\/navigation\.scss}line{font-family:\0000346}}
     nav #close1 {
       display: none; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/loki\/NetBeansProjects\/FB\/public_html\/sass\/navigation\.scss}line{font-family:\0000349}}
     nav ul {
       display: block;
       position: absolute;
@@ -39,6 +45,7 @@
       height: auto;
       top: 0;
       left: -10000px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/loki\/NetBeansProjects\/FB\/public_html\/sass\/navigation\.scss}line{font-family:\0000360}}
       nav ul li {
         display: block;
         width: 100%;
@@ -48,28 +55,36 @@
         -moz-transition: height 0.25s;
         -o-transition: height 0.25s;
         transition: height 0.25s; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/loki\/NetBeansProjects\/FB\/public_html\/sass\/navigation\.scss}line{font-family:\0000370}}
         nav ul li a {
           background-color: #11855E;
           color: white; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/loki\/NetBeansProjects\/FB\/public_html\/sass\/navigation\.scss}line{font-family:\0000375}}
         nav ul li:first-child {
           margin-top: 2px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/loki\/NetBeansProjects\/FB\/public_html\/sass\/navigation\.scss}line{font-family:\0000381}}
         nav ul li:not(.selected):hover a {
           background-color: rgba(17, 133, 94, 0.7);
           text-decoration: underline; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/loki\/NetBeansProjects\/FB\/public_html\/sass\/navigation\.scss}line{font-family:\0000391}}
       nav ul .selected a {
         background-color: rgba(17, 133, 94, 0.4); }
 
   /* Stile per i bottoni del menù di primo livello, quando sono visibili */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/loki\/NetBeansProjects\/FB\/public_html\/sass\/navigation\.scss}line{font-family:\00003101}}
   #navigation:target #close1 {
     display: inline-block; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/loki\/NetBeansProjects\/FB\/public_html\/sass\/navigation\.scss}line{font-family:\00003105}}
   #navigation:target #open1 {
     display: none; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/loki\/NetBeansProjects\/FB\/public_html\/sass\/navigation\.scss}line{font-family:\00003108}}
   #navigation:target ul {
     display: block;
     position: relative;
     height: auto;
     left: 0px;
     top: 0; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/loki\/NetBeansProjects\/FB\/public_html\/sass\/navigation\.scss}line{font-family:\00003115}}
     #navigation:target ul li {
       display: block;
       position: relative;
@@ -79,11 +94,14 @@
       border-bottom: 1px solid;
       line-height: auto;
       border-color: #dfebf6; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/loki\/NetBeansProjects\/FB\/public_html\/sass\/navigation\.scss}line{font-family:\00003125}}
       #navigation:target ul li:first-child {
         border-top: 2px groove; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/loki\/NetBeansProjects\/FB\/public_html\/sass\/navigation\.scss}line{font-family:\00003129}}
       #navigation:target ul li:last-child {
         border-bottom: 2px groove; } }
 @media screen and (min-width: 769px) {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/loki\/NetBeansProjects\/FB\/public_html\/sass\/navigation\.scss}line{font-family:\00003140}}
   nav {
     display: inline-block;
     position: relative;
@@ -94,10 +112,14 @@
     z-index: 10;
     font-family: 'sorts_mill_goudyregular';
     border-bottom: 0.3em solid #C4D99C; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/loki\/NetBeansProjects\/FB\/public_html\/sass\/navigation\.scss}line{font-family:\00003151}}
     nav .menu-link {
-      display: none; }
+      display: none;
+      visibility: hidden; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/loki\/NetBeansProjects\/FB\/public_html\/sass\/navigation\.scss}line{font-family:\00003156}}
     nav .selected {
       border-bottom: 0.3em solid #11855E; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/loki\/NetBeansProjects\/FB\/public_html\/sass\/navigation\.scss}line{font-family:\00003160}}
     nav ul {
       display: inline-block;
       position: relative;
@@ -106,6 +128,7 @@
       margin: 0;
       padding: 0;
       /*}*/ }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/loki\/NetBeansProjects\/FB\/public_html\/sass\/navigation\.scss}line{font-family:\00003169}}
       nav ul li {
         display: block;
         height: 1.8em;
@@ -115,8 +138,10 @@
         margin: 0;
         padding: auto 0.4em;
         /*                        top: 0;*/ }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/loki\/NetBeansProjects\/FB\/public_html\/sass\/navigation\.scss}line{font-family:\00003178}}
         nav ul li:hover:not(.selected) {
           border-bottom: 0.3em solid rgba(17, 133, 94, 0.5); }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/loki\/NetBeansProjects\/FB\/public_html\/sass\/navigation\.scss}line{font-family:\00003182}}
         nav ul li a {
           display: inline-block;
           position: relative;
@@ -129,12 +154,14 @@
           /*background-color: $menu-color;*/
           color: white;
           text-decoration: none; } }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/loki\/NetBeansProjects\/FB\/public_html\/sass\/navigation\.scss}line{font-family:\00003207}}
 .menuMobileVisible {
   display: block;
   position: relative;
   height: auto;
   left: 0px;
   top: 0; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/loki\/NetBeansProjects\/FB\/public_html\/sass\/navigation\.scss}line{font-family:\00003214}}
   .menuMobileVisible li {
     display: block;
     position: relative;
@@ -144,23 +171,29 @@
     border-bottom: 1px solid;
     line-height: auto;
     border-color: #dfebf6; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/loki\/NetBeansProjects\/FB\/public_html\/sass\/navigation\.scss}line{font-family:\00003224}}
     .menuMobileVisible li:first-child {
       border-top: 2px groove; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/loki\/NetBeansProjects\/FB\/public_html\/sass\/navigation\.scss}line{font-family:\00003228}}
     .menuMobileVisible li:last-child {
       border-bottom: 2px groove; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/loki\/NetBeansProjects\/FB\/public_html\/sass\/navigation\.scss}line{font-family:\00003234}}
 html, body {
   height: 100%; }
 
 @media screen and (max-width: 80em) {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/loki\/NetBeansProjects\/FB\/public_html\/sass\/navigation\.scss}line{font-family:\00003240}}
   body {
     margin: 0;
     padding: 0; } }
 @media screen and (min-width: 80em) {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/loki\/NetBeansProjects\/FB\/public_html\/sass\/navigation\.scss}line{font-family:\00003248}}
   body {
     width: 71.25em;
     margin: auto;
     padding: 0; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/loki\/NetBeansProjects\/FB\/public_html\/sass\/navigation\.scss}line{font-family:\00003252}}
     body header {
       width: 100%;
       padding: 0;

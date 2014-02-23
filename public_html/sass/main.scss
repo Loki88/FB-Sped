@@ -337,12 +337,16 @@ header{
     list-style: none;
     padding-left: 0;
     padding: 0;
-    margin-top: 1.6%;
+    margin-top: 1%;
     
     .current{
         min-height: 20em;
         a{
             border-color: #FFFFFF;
+            @media only screen and (max-width: 481px)
+            {
+                background-image: url('../img/icons/icona_accordion_close.png');
+            }
         }
     }
     
@@ -352,7 +356,7 @@ header{
         margin: 0;
         float: left;
         height: auto;
-        margin-top: -0.34em;
+        /*margin-top: -0.34em;*/
         @media only screen and (max-width: 481px)
         {
             width: 100%;
@@ -452,13 +456,23 @@ header{
                 border-color: #11855E;
                 padding: auto;
                 
+                
             }
             @media only screen and (max-width: 481px)
             {
                 position: relative;
                 height: 3em;
                 line-height: 1.5em;
-                width: 100%;
+                width: 70%;
+                padding-left:  15% ;
+                padding-right:  15% ;
+                background-image: url('../img/icons/icona_accordion.png');
+                background-size: 1.5em;
+                background-position: left top;
+/*                background-position-y: 1.5em;
+                background-position-x: 0.3em;*/
+                background-repeat: no-repeat;
+                
             }
             box-shadow: 1pt 1pt 5pt #000000;
             background-color: rgba(17, 133, 94, 1);

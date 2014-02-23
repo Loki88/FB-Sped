@@ -5,6 +5,8 @@ var Tab = {
     
     time: 500,
     
+    time_accordion: 800,
+    
     init: function()
     {
         //Stato iniziale
@@ -61,10 +63,12 @@ var Tab = {
     {
         var link;
         var id = state.data.link_id;
+        console.log('state', state);
         if(id === 'init')
             link = $(Tab.initLink);
         else
             link = $(state.data.link_id);
+        link.prop('state', state.data);
         Tab.loadPage(link);
     },
     
@@ -161,14 +165,11 @@ var Tab = {
         $(currentLink.prop('page')).fadeOut(Tab.time, function(){
             currentLink.parent('.tab-element').removeClass('section group current');
             state.open = false;
-            link.prop('state', state);
+            currentLink.prop('state', state);
             var element = link.parent('.tab-element');
             element.addClass('section group current');
             var page = $(link.prop('page'));
             page.fadeIn(Tab.time, function(){
-                state = link.prop('state');
-                state.open = true;
-                link.prop('state', state);
                 $(document.body).css('cursor', 'auto');
             });
         });
@@ -184,7 +185,7 @@ var Tab = {
             //L'elemento deve essere chiuso
             var page = $(link.prop('page'));
             console.log('close accordion');
-            page.slideUp(Tab.time, function(){
+            page.slideUp(Tab.time_accordion, function(){
                 $(document.body).css('cursor', 'auto');
             });
             link.parent('.tab-element').removeClass('section group current');
@@ -197,8 +198,7 @@ var Tab = {
             {   
                 //Non esiste un altro elemento aperto
                 console.log('open one');
-                $(link.prop('page')).slideDown(Tab.time
-                , function(){
+                $(link.prop('page')).slideDown(Tab.time_accordion, function(){
                    link.parent('.tab-element').addClass('section group current');
                    
                });
@@ -211,11 +211,12 @@ var Tab = {
                 currentLinkState.open = false;
                 currentLink.prop('state', currentLinkState);
                 console.log('open different accordion')
-                $(currentLink.prop('page')).slideUp(Tab.time, function(){
+                $(currentLink.prop('page')).slideUp(Tab.time_accordion, function(){
                    currentLink.parent('.tab-element').removeClass('section group current');
                });
+
                link.parent('.tab-element').addClass('section group current');
-               $(link.prop('page')).slideDown(Tab.time, function(){
+               $(link.prop('page')).slideDown(Tab.time_accordion, function(){
                     $(document.body).css('cursor', 'auto');
                     
                 });
@@ -234,7 +235,7 @@ var Tab = {
             link_state.open = false;
         else
             link_state.open = true;
-        link.prop('state', link_state);
+        
         console.log('link state', link_state);
         History.pushState(link_state, link.data('title'), link.attr('href'));
     }
