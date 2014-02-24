@@ -1,5 +1,5 @@
-@charset "UTF-8";
-@media screen and (max-width: 769px) {
+@charset "CP850";
+@media screen and (max-width: 768px) {
   nav {
     margin: 0;
     padding: 0;
@@ -91,15 +91,15 @@
     margin-top: 0.2em;
     margin-bottom: -0.2em;
     z-index: 10;
-    border-bottom: 0.3em solid #F0F1F7; }
+    border-bottom: 0.3em solid rgba(199, 186, 153, 0.8); }
     nav .menu-link {
       display: none;
       visibility: hidden; }
     nav .selected {
       border-bottom: 0.3em solid;
-      border-color: #1693a5; }
+      border-color: #F4F0E6; }
       nav .selected a {
-        /*color: rgba(22,147,165, 1);*/ }
+        color: #F4F0E6; }
     nav ul {
       display: inline-block;
       position: relative;
@@ -114,7 +114,9 @@
         margin: 0;
         padding: auto 0.4em; }
         nav ul li:hover:not(.selected) {
-          border-bottom: 0.3em solid #fbb820; }
+          border-bottom: 0.3em solid rgba(244, 240, 230, 0.8); }
+          nav ul li:hover:not(.selected) a {
+            color: rgba(244, 240, 230, 0.8); }
         nav ul li a {
           display: inline-block;
           position: relative;
@@ -124,7 +126,7 @@
           margin: 0;
           line-height: auto;
           text-align: center;
-          color: #F0F1F7;
+          color: rgba(199, 186, 153, 0.8);
           text-decoration: none; } }
 .menuMobileVisible {
   display: block;

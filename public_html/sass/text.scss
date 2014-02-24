@@ -68,35 +68,38 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #logo-text{
-    font-family: 'sorts_mill_goudyregular', Times, Arial, Verdana;
+    font-family: Times New Roman, Boldoni;
+    
     h4{
         font-size: 2em;
+        color: #F4F0E6;
     }
     h6{
         font-size: 1em;
+        color: #F4F0E6;
     }
 }
 
 nav{
-    font-family: 'sorts_mill_goudyregular', Times, Arial, Verdana;
+    font-family: Arial, Verdana;
     font-size: 1.1em;
     font-weight: bold;
 }
 
 .infoWindow{
-    font-family: 'sorts_mill_goudyregular', Times, Arial, Verdana;
+    font-family: Arial, Verdana;
 }
 
 #main-image{
     .image-mask{
         h5{
-            font-family: 'sorts_mill_goudyregular', Times, Arial, Verdana;
+            font-family: Times New Roman, Boldoni;
             line-height: 1.6em;
             font-size: 1.6em;
         }
         
         p{
-            font-family: 'shantiregular', Times, Arial, Verdana;
+            font-family: Arial, Verdana;
             font-size: 1em;
         }
     }
@@ -104,7 +107,7 @@ nav{
 
 #tab{
     a{
-        font-family: 'sorts_mill_goudyregular', Times, Arial, Verdana;
+        font-family: Arial, Verdana;
         font-size: 1.1em;
     }
 }
@@ -116,7 +119,7 @@ nav{
         }
     }
     h1, h2, h3, h4, h5, h6{
-        font-family: 'sorts_mill_goudyregular',  Times, Arial, Verdana;
+        font-family: Times New Roman, Boldoni;
     }
     
     h6{
@@ -124,11 +127,11 @@ nav{
         font-size: 1em;
     }
     p{
-        font-family: 'shantiregular', Times, Arial, Verdana;
+        font-family: Arial, Verdana;
         line-height: 1.5em;
     }
 }
 
 footer{
-    font-family: 'shantiregular', Times, Arial, Verdana;
+    font-family: Arial, Verdana;
 }
