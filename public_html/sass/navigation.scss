@@ -23,7 +23,7 @@ $second-level-text: #FFFFFF;
                 background-repeat: no-repeat;
                 background-position: right center;
                 background-size: 2em;
-                color: $menu-text;
+                color: #F4F0E6;
                 &:hover{
                     text-decoration: underline;
                 }
@@ -67,8 +67,8 @@ $second-level-text: #FFFFFF;
                 transition: height 0.25s;
 
                 a {
-                    background-color: #F0F1F7;
-                    color: #000000;
+                    background-color: #F4F0E6;
+                    color: #327CCB;
                 }
                 
                 &:first-child{
@@ -78,7 +78,7 @@ $second-level-text: #FFFFFF;
                 &:not(.selected){
                     &:hover{
                         a{
-                            color: #1693A5;
+                            background-color: #EAE4D3;
                             text-decoration: underline;
                         }
                     }
@@ -88,8 +88,8 @@ $second-level-text: #FFFFFF;
               
               .selected{
                   a{
-                      background-color: #CDD7B6;
-                      color: #000000;
+                      background-color: #EAE4D3;
+                      color: #327CCB;
                   }
                     
                 }
@@ -146,7 +146,7 @@ $second-level-text: #FFFFFF;
             margin-top: 0.2em;
             margin-bottom: -0.2em;
             z-index: 10;
-            border-bottom: 0.3em solid rgba(199,186,153, 0.8);
+            border-bottom: 0.3em solid rgba(234,228,211, 0.8);
 
                 .menu-link {
                     display: none;
@@ -193,7 +193,7 @@ $second-level-text: #FFFFFF;
                             margin: 0;
                             line-height: auto;
                             text-align: center;
-                            color: rgba(199,186,153, 0.8);
+                            color: rgba(234,228,211, 0.8);
                             text-decoration: none;
                         }
                     }
