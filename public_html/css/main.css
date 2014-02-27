@@ -137,7 +137,7 @@ header {
       padding: 0.25em auto;
       line-height: 1.5em;
       float: left;
-      color: #F0F1F7; }
+      color: #1C68AA; }
     #language a:hover span {
       color: #FBB820;
       text-decoration: underline;
@@ -192,7 +192,7 @@ header {
     height: 100%;
     left: 0;
     top: 0;
-    background-color: rgba(22, 147, 165, 0.9); }
+    background-color: rgba(28, 104, 170, 0.9); }
     #main-image .image-mask a {
       display: inline-block;
       position: relative;
@@ -200,7 +200,7 @@ header {
       height: 100%;
       max-height: 100%;
       z-index: 3;
-      color: #F0F1F7;
+      color: #FFFFFF;
       text-decoration: none; }
       #main-image .image-mask a:hover h5 {
         color: #FBB820; }
@@ -444,7 +444,7 @@ header {
   height: fit-content; }
 
 .content-box {
-  background-color: #F0F1F7;
+  background-color: #FFFFFF;
   color: #000000;
   margin-bottom: 0.4em;
   box-shadow: 1pt 1pt 5pt #000000;
@@ -454,7 +454,7 @@ header {
     display: block;
     margin: 0;
     padding: 0;
-    background-color: #1693a5; }
+    background-color: #1C68AA; }
     .content-box .header h1, .content-box .header h2, .content-box .header h3, .content-box .header h4, .content-box .header h5, .content-box .header h6 {
       display: block;
       position: relative;
@@ -519,7 +519,7 @@ header {
     top: 3em;
     height: 3em; }
 
-.wrapper {
+.content_wrapper {
   position: relative;
   clear: both;
   min-height: 100%;
@@ -550,7 +550,7 @@ footer {
     text-align: center; }
 
 @media only screen and (max-width: 481px) {
-  .wrapper {
+  .content_wrapper {
     margin-bottom: -20em; }
 
   footer, .push {

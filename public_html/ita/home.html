@@ -18,8 +18,8 @@
         <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0">
     </head>
     <body>
-        <div class="wrapper">
-            <header class="section group">
+        <header class="section group">
+            <div class="wrapper">
                 <div id="logo" class="col span_4_of_5 section group">
                     <div id="logo-img">
                         <a href="./home.html">
@@ -41,7 +41,9 @@
                 <div class="col span_2_of_5" id="breadcrumb">
                     <a href="#main-image">Salta al contenuto</a>
                 </div>
-                <nav class="span_5_of_5" id="navigation">
+            </div>
+            <nav class="span_5_of_5" id="navigation">
+                <span class="wrapper">
                     <a id="open1" class="menu-link" href="#navigation" alt="Apri menù">Menu</a>
                     <a id="close1" class="menu-link" href="#" alt="Chiudi menù">Chiudi</a>
                     <ul id="menu1">
@@ -52,8 +54,10 @@
                         <li><a href="./dove-siamo.html">Dove siamo</a></li>
                         <li><a href="./contatti.html">Contatti</a></li>
                     </ul>
-                </nav>
-            </header>
+                </span>
+            </nav>
+        </header>
+        <div class="wrapper content_wrapper">
             <div id="main-image" class="group section">
                 <img src="../img/main-image.png" alt="Immagine di presentazione dell'azienda" />
                 <div class="image-mask">
@@ -138,13 +142,15 @@
         <script src="../js/menu.js"></script>
         
         <footer >
-            <div class="section group">
-                <p class="span_5_of_5"><a href="#menu1">Torna al menù</a></p>
-                <p class="span_5_of_5">via V. Pilotti - 64100 Teramo (Te) - c/o Centro Commerciale &nbsp;&nbsp;&nbsp; P.iva IT 01881060675</p>
-                <p class="group span_5_of_5">
-                    <b class="col span_3_of_5">tel. +39 0861 221349 - fax. +39 0861 1850749</b>
-                    <a class="col span_2_of_5" href="mailto:info@fbsped.it">info@fbsped.it</a></p>
-                <p class="span_5_of_5">Per informazioni e suggerimenti su come migliorare questo sito contattatemi a: questaemail@prova.it</p>
+            <div class="wrapper">
+                <div class="section group">
+                    <p class="span_5_of_5"><a href="#menu1">Torna al menù</a></p>
+                    <p class="span_5_of_5">via V. Pilotti - 64100 Teramo (Te) - c/o Centro Commerciale &nbsp;&nbsp;&nbsp; P.iva IT 01881060675</p>
+                    <p class="group span_5_of_5">
+                        <b class="col span_3_of_5">tel. +39 0861 221349 - fax. +39 0861 1850749</b>
+                        <a class="col span_2_of_5" href="mailto:info@fbsped.it">info@fbsped.it</a></p>
+                    <p class="span_5_of_5">Per informazioni e suggerimenti su come migliorare questo sito contattatemi a: questaemail@prova.it</p>
+                </div>
             </div>
         </footer>    
         

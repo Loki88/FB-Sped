@@ -1,43 +1,46 @@
 @charset "CP850";
 nav {
-  display: inline-block;
+  display: table;
   position: relative;
   height: 1.8em;
   padding: 0;
+  margin: 0;
   margin-top: 0.2em;
-  margin-bottom: 0.2em;
   background-color: #1C68AA; }
   nav .menu-link {
     display: none; }
   nav .selected {
-    border-color: #F4F0E6; }
+    background-color: #8DBF3F; }
     nav .selected a {
-      color: #F4F0E6; }
+      color: #1C68AA; }
   nav ul {
-    display: inline-block;
+    display: block;
     position: relative;
     list-style: none;
+    height: 100%;
     margin: 0;
     padding: 0; }
     nav ul li {
-      display: block;
+      display: inline-block;
       height: 1.8em;
       position: relative;
       float: left;
       margin: 0;
       padding: auto 0.4em; }
-      nav ul li:hover:not(.selected) a {
-        color: rgba(244, 240, 230, 0.8); }
+      nav ul li:hover:not(.selected) {
+        background-color: #FFFFFF; }
+        nav ul li:hover:not(.selected) a {
+          color: #1C68AA; }
       nav ul li a {
         display: inline-block;
         position: relative;
         height: 100%;
         padding: 0 1em;
-        padding-top: 0.2em;
+        /*padding-top: 0.2em;*/
         margin: 0;
-        line-height: auto;
+        line-height: 1.8em;
         text-align: center;
-        color: rgba(234, 228, 211, 0.8);
+        color: #FFFFFF;
         text-decoration: none; }
 
 @media screen and (max-width: 769px) {
@@ -91,7 +94,8 @@ nav {
         -o-transition: height 0.25s;
         transition: height 0.25s; }
         nav ul li a {
-          padding: 0.2em 10%;
+          padding-left: 10%;
+          padding-right: 10%;
           background-color: #F4F0E6;
           color: #327CCB; }
         nav ul li:first-child {
@@ -103,7 +107,7 @@ nav {
             background-color: #EAE4D3;
             text-decoration: underline; }
       nav ul .selected a {
-        background-color: #EAE4D3;
+        background-color: #8DBF3F;
         color: #327CCB; }
 
   /* Stile per i bottoni del menù di primo livello, quando sono visibili */
@@ -130,71 +134,6 @@ nav {
         border-top: 2px groove; }
       #navigation:target ul li:last-child {
         border-bottom: 2px groove; } }
-/*
-@media screen and (min-width: 770px)
-{ 
-        nav{
-            display: inline-block;
-            position: relative;
-            height: 1.8em;
-            padding: 0;
-            margin-top: 0.2em;
-            margin-bottom: -0.2em;
-            z-index: 10;
-            border-bottom: 0.3em solid rgba(234,228,211, 0.8);
-
-                .menu-link {
-                    display: none;
-                    visibility: hidden;
-                }
-                
-                .selected{
-                    border-bottom: 0.3em solid;
-                    border-color: #F4F0E6;
-                    a{
-                        color: #F4F0E6;
-                    }
-                }
-                
-                ul{
-                    display: inline-block;
-                    position: relative;
-                    list-style: none;
-                    margin: 0;
-                    padding: 0;
-
-
-                    li {
-                        display: block;
-                        height: 1.8em;
-                        position: relative;
-                        float: left;
-                        margin: 0;
-                        padding: auto 0.4em;
-                        &:hover:not(.selected){
-                            border-bottom: 0.3em solid rgba(244,240,230, 0.8);
-                            
-                            a{
-                                color: rgba(244,240,230, 0.8);
-                            }
-                        }
-
-                        a{
-                            display: inline-block;
-                            position: relative;
-                            height: 100%;
-                            padding: 0 1em;
-                            padding-top: 0.2em;
-                            margin: 0;
-                            line-height: auto;
-                            text-align: center;
-                            color: rgba(234,228,211, 0.8);
-                            text-decoration: none;
-                        }
-                    }
-            }
-        }
-}*/
 .menuMobileVisible {
   display: block;
   position: relative;
@@ -218,16 +157,22 @@ nav {
 html, body {
   height: 100%; }
 
-@media screen and (max-width: 80em) {
+body {
+  background-color: #8DBF3F; }
+
+@media screen and (max-width: 1280px) {
   body {
     margin: 0;
     padding: 0; } }
-@media screen and (min-width: 80em) {
-  body {
-    width: 71.25em;
-    margin: auto;
+.wrapper {
+  width: 100%; }
+
+@media screen and (min-width: 1280px) {
+  .wrapper {
+    width: 1140px;
+    margin: 0 auto;
     padding: 0; }
-    body header {
+    .wrapper header {
       width: 100%;
       padding: 0;
       margin: 0; } }
