@@ -2,7 +2,7 @@
     Created on : 9-feb-2014, 18.15.20
     Author     : Lorenzo Di Giuseppe <lorenzo.digiuseppe88@gmail.com>
 */
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 900px) {
   html {
     overflow-y: hidden;
     width: 100%;
@@ -14,7 +14,7 @@ header {
   background-color: #327CCB;
   padding-top: 1em;
   padding-bottom: 0;
-  max-width: 100%;
+  width: 100%;
   margin: 0;
   border: 0; }
   header #logo {
@@ -23,11 +23,10 @@ header {
     padding: 0;
     border: 0; }
     header #logo #logo-img {
-      display: inline-table;
+      display: inline-block;
+      width: 25%;
       float: left;
-      max-height: 6em;
-      max-width: 10em;
-      margin: 0 5%; }
+      margin: auto 5%; }
       header #logo #logo-img a {
         z-index: 2;
         display: table;
@@ -37,22 +36,27 @@ header {
         position: relative; }
         header #logo #logo-img a img {
           display: block;
-          max-height: 6em;
-          max-width: 10em;
+          position: relative;
+          width: 100%;
           float: left;
           margin: auto 0; }
     header #logo #logo-text {
-      display: inline-block;
+      display: block;
       position: relative;
-      margin: auto;
+      padding: 0;
+      margin-left: 1.6%;
+      width: 50%;
       float: left; }
       header #logo #logo-text h4 {
-        display: inline-block;
+        display: block;
+        position: relative;
         padding: 0;
-        margin: 0 auto;
+        width: 100%;
+        margin: 0;
         margin-bottom: 0.1em; }
       header #logo #logo-text h6 {
-        display: inline-block;
+        display: block;
+        max-width: 100%;
         margin: 0;
         padding: 0; }
   header #breadcrumb {
@@ -66,7 +70,7 @@ header {
 .inverse {
   float: right; }
 
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 481px) {
   header #logo #logo-img {
     width: 50%;
     height: auto;
@@ -131,7 +135,7 @@ header {
       text-decoration: underline;
       text-decoration-style: wavy; }
 
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 481px) {
   #language {
     margin-bottom: 0.4em; }
     #language a {
@@ -153,7 +157,7 @@ header {
         #language a:last-child span {
           float: left;
           text-align: left; } }
-@media only screen and (min-width: 481px) and (max-width: 768px) {
+@media only screen and (min-width: 481px) and (max-width: 769px) {
   #language a {
     float: none;
     width: 100%; } }
@@ -210,7 +214,7 @@ header {
         height: 60%;
         color: #F0F0D8; }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 769px) {
   #main-image .image-mask {
     width: 100%;
     height: 70%;
@@ -221,7 +225,7 @@ header {
     #main-image .image-mask a p {
       text-align: center;
       margin: auto 2%; } }
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 481px) {
   #main-image .image-mask {
     position: relative;
     height: auto; } }
@@ -251,7 +255,7 @@ header {
     margin: 0;
     float: left;
     height: auto; }
-    @media only screen and (max-width: 480px) {
+    @media only screen and (max-width: 481px) {
       #tab li {
         width: 100%;
         margin-top: 0;
@@ -274,7 +278,7 @@ header {
     #tab li .tab-content {
       display: block;
       float: left; }
-      @media only screen and (max-width: 480px) {
+      @media only screen and (max-width: 481px) {
         #tab li .tab-content {
           margin-top: 0;
           top: 0; } }
@@ -311,7 +315,7 @@ header {
           margin-top: 0.65em;
           line-height: 1.8em;
           padding: auto; } }
-      @media only screen and (max-width: 480px) {
+      @media only screen and (max-width: 481px) {
         #tab li a {
           position: relative;
           height: 3em;
@@ -336,7 +340,7 @@ header {
           float: left;
           margin-left: 1.6%;
           margin-top: 15.6em; } }
-        @media only screen and (min-width: 481px) and (max-width: 480px) {
+        @media only screen and (min-width: 481px) and (max-width: 481px) {
           #tab li .tab-image {
             height: auto;
             vertical-align: text-top;
@@ -379,7 +383,7 @@ header {
       #sol-trasporti .content-box a p {
         color: #000000; }
 
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 481px) {
   #sol-trasporti .content-box {
     display: block;
     position: relative;
@@ -471,7 +475,7 @@ header {
     background-image: url("../img/mappa.png");
     background-repeat: no-repeat; }
 
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 481px) {
   #map-wrapper {
     display: block;
     width: 70%;
@@ -484,7 +488,7 @@ header {
   overflow: hidden;
   height: 8em;
   width: 20em; }
-  @media only screen and (max-width: 480px) {
+  @media only screen and (max-width: 481px) {
     .infoWindow {
       width: 11em;
       height: 11em; } }
@@ -538,7 +542,7 @@ footer {
   footer div p {
     text-align: center; }
 
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 481px) {
   .wrapper {
     margin-bottom: -20em; }
 

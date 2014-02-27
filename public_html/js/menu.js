@@ -13,7 +13,7 @@ $(window).resize(function() {
         height: $(document).height(),
         zoom: window.devicePixelRatio
     };
-    if(newSize.width < 482)
+    if(newSize.width <= 481)
     {
         //La finestra è ridimensionata per gli smartphone portrait
         $(window).trigger('oneColumn', newSize);
