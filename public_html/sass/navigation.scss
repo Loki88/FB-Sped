@@ -16,54 +16,64 @@ nav{
     margin-top: 0.2em;
     background-color: #1C68AA;
     
-        .menu-link {
-            display: none;
-        }
+    .wrapper{
+        height: 1.8em;
+        margin-top: 0;
+        margin-bottom: 0;
+        padding: 0;
+        border: 0;
+    }
+    .menu-link {
+        display: none;
+    }
 
-        .selected{
-            background-color: #8DBF3F;
-            a{
-                color: #1C68AA;
-            }
+    .selected{
+        background-color: #8DBF3F;
+        border-width: 1pt 1pt 0 1pt;
+        border-style: outset;
+        border-color: #8DBF3F;
+        a{
+            color: #1C68AA;
         }
+    }
 
-        ul{
-            display: block;
+    ul{
+        display: block;
+        position: relative;
+        list-style: none;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        border: 0;
+
+        li {
+            display: inline-block;
+            height: 1.8em;
             position: relative;
-            list-style: none;
-            height: 100%;
+            float: left;
             margin: 0;
-            padding: 0;
-
-
-            li {
-                display: inline-block;
-                height: 1.8em;
-                position: relative;
-                float: left;
-                margin: 0;
-                padding: auto 0.4em;
-                &:hover:not(.selected){
-                    background-color: #FFFFFF;
-
-                    a{
-                        color: #1C68AA;
-                    }
-                }
+            padding: auto 0.4em;
+            border: 0;
+            &:hover:not(.selected){
+                background-color: #FFFFFF;
 
                 a{
-                    display: inline-block;
-                    position: relative;
-                    height: 100%;
-                    padding: 0 1em;
-                    /*padding-top: 0.2em;*/
-                    margin: 0;
-                    line-height: 1.8em;
-                    text-align: center;
-                    color: #FFFFFF;
-                    text-decoration: none;
+                    color: #1C68AA;
                 }
             }
+
+            a{
+                display: inline-block;
+                position: relative;
+                height: 100%;
+                padding: 0 1em;
+                margin: 0;
+                line-height: 1.8em;
+                text-align: center;
+                color: #FFFFFF;
+                text-decoration: none;
+            }
+        }
     }
 }
 
@@ -75,6 +85,9 @@ nav{
           height: auto;
           border: none;
           
+          .wrapper{
+              height: auto;
+          }
             a {
               display: inline-block;
               clear: both;
