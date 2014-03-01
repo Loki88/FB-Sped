@@ -10,20 +10,19 @@
 
   body {
     overflow-y: auto; } }
-header {
+#page-header {
   background-color: #FFFFFF;
-  padding-top: 1em;
   padding-bottom: 0;
   width: 100%;
   margin: 0;
   border: 0; }
-  header #logo {
+  #page-header #logo {
     display: block;
     position: relative;
     height: 4em;
     padding: 0;
     border: 0; }
-    header #logo #logo-img {
+    #page-header #logo #logo-img {
       display: inline-block;
       position: relative;
       float: left;
@@ -31,39 +30,39 @@ header {
       max-width: 40%;
       margin: auto 5%;
       margin-left: 0; }
-      header #logo #logo-img a {
+      #page-header #logo #logo-img a {
         z-index: 2;
         display: block;
         width: 100%;
         height: 100%;
         float: left;
         position: relative; }
-        header #logo #logo-img a img {
+        #page-header #logo #logo-img a img {
           display: block;
           position: relative;
           height: 100%;
           float: left;
           margin: auto 0; }
-    header #logo #logo-text {
+    #page-header #logo #logo-text {
       display: block;
       position: relative;
       padding: 0;
       margin-left: 1.6%;
       width: 50%;
       float: left; }
-      header #logo #logo-text h4 {
+      #page-header #logo #logo-text h4 {
         display: block;
         position: relative;
         padding: 0;
         width: 100%;
         margin: 0;
         margin-bottom: 0.1em; }
-      header #logo #logo-text h6 {
+      #page-header #logo #logo-text h6 {
         display: block;
         max-width: 100%;
         margin: 0;
         padding: 0; }
-  header #breadcrumb {
+  #page-header #breadcrumb {
     display: block;
     position: absolute;
     left: -10000px;
@@ -75,22 +74,22 @@ header {
   float: right; }
 
 @media only screen and (max-width: 480px) {
-  header #logo {
+  #page-header #logo {
     height: auto; }
-    header #logo #logo-img {
+    #page-header #logo #logo-img {
       width: 50%;
       max-width: 50%;
       height: auto;
       margin: auto 25%;
       float: none; }
-      header #logo #logo-img a {
+      #page-header #logo #logo-img a {
         margin: auto; }
-        header #logo #logo-img a img {
+        #page-header #logo #logo-img a img {
           float: none;
           height: auto;
           width: 100%;
           margin: 0 auto; }
-    header #logo #logo-text {
+    #page-header #logo #logo-text {
       width: 80%;
       float: none;
       margin: auto 10%;
@@ -164,7 +163,7 @@ header {
         #language a:last-child span {
           float: left;
           text-align: left; } }
-@media only screen and (min-width: 481px) and (max-width: 769px) {
+@media only screen and (min-width: 481px) and (max-width: 768px) {
   #language a {
     float: none;
     width: 100%; } }
@@ -207,12 +206,13 @@ header {
       color: #FFFFFF;
       text-decoration: none; }
       #main-image .image-mask a:hover h5 {
-        color: #FBB820; }
+        /*color: #FBB820;*/
+        color: #FFA01A; }
       #main-image .image-mask a h5 {
         display: block;
         position: relative;
         text-align: center;
-        text-decoration: underline;
+        /*text-decoration: underline;*/
         margin: 0.4em auto;
         padding: 0 0.4em; }
       #main-image .image-mask a p {
@@ -225,7 +225,7 @@ header {
         height: 60%;
         color: #F0F0D8; }
 
-@media only screen and (max-width: 769px) {
+@media only screen and (max-width: 768px) {
   #main-image .image-mask {
     width: 100%;
     height: 70%;
@@ -236,7 +236,7 @@ header {
     #main-image .image-mask a p {
       text-align: center;
       margin: auto 2%; } }
-@media only screen and (max-width: 481px) {
+@media only screen and (max-width: 480px) {
   #main-image {
     min-height: 0; }
     #main-image .image-mask {
@@ -256,7 +256,7 @@ header {
         background-color: #1693A5;
         color: #FBB820;
         text-decoration: underline; }
-      @media only screen and (max-width: 481px) {
+      @media only screen and (max-width: 480px) {
         #tab .current a {
           text-decoration: none;
           background-image: url("../img/icons/icona_accordion_close.png"); }
@@ -268,7 +268,7 @@ header {
     margin: 0;
     float: left;
     height: auto; }
-    @media only screen and (max-width: 481px) {
+    @media only screen and (max-width: 480px) {
       #tab li {
         width: 100%;
         margin-top: 0;
@@ -291,7 +291,7 @@ header {
     #tab li .tab-content {
       display: block;
       float: left; }
-      @media only screen and (max-width: 481px) {
+      @media only screen and (max-width: 480px) {
         #tab li .tab-content {
           margin-top: 0;
           top: 0; } }
@@ -301,8 +301,7 @@ header {
       border-color: #C4D99C; }
     @media only screen and (min-width: 481px) {
       #tab li:not(.current) {
-        top: 0;
-        float: right; }
+        top: 0; }
       #tab li:nth-child(2) a {
         margin-top: 2.95em; }
       #tab li:nth-child(3) a {
@@ -328,7 +327,7 @@ header {
           margin-top: 0.65em;
           line-height: 1.8em;
           padding: auto; } }
-      @media only screen and (max-width: 481px) {
+      @media only screen and (max-width: 480px) {
         #tab li a {
           position: relative;
           height: 3em;
@@ -353,7 +352,7 @@ header {
           float: left;
           margin-left: 1.6%;
           margin-top: 15.6em; } }
-        @media only screen and (min-width: 481px) and (max-width: 481px) {
+        @media only screen and (min-width: 481px) and (max-width: 480px) {
           #tab li .tab-image {
             height: auto;
             vertical-align: text-top;
@@ -375,8 +374,9 @@ header {
       height: 100%;
       text-decoration: none; }
       #sol-trasporti .content-box a:hover h5 {
-        text-decoration: underline;
-        color: #FBB820; }
+        /*text-decoration: underline;*/
+        /*color: #FBB820;*/
+        color: #FFA01A; }
       #sol-trasporti .content-box a .header .img-wrapper {
         display: table;
         position: relative;
@@ -392,11 +392,12 @@ header {
           max-width: 100%;
           margin: auto; }
       #sol-trasporti .content-box a .header h5 {
-        height: 3em; }
+        height: 3em;
+        font-size: 0.8em; }
       #sol-trasporti .content-box a p {
         color: #000000; }
 
-@media only screen and (max-width: 481px) {
+@media only screen and (max-width: 480px) {
   #sol-trasporti {
     margin-top: 0.6em; }
     #sol-trasporti .content-box {
@@ -434,6 +435,11 @@ header {
           float: left;
           width: 90%;
           margin: 0.5em 5%; } }
+.clear {
+  display: block;
+  height: border-box;
+  clear: both; }
+
 #map-canvas {
   display: inline-block;
   position: relative;
@@ -457,6 +463,8 @@ header {
   margin-bottom: 0.4em;
   box-shadow: 1pt 1pt 5pt #000000;
   padding-bottom: 0.5em; }
+  .content-box:not(:first-child) {
+    margin-top: 1em; }
   .content-box .header {
     z-index: 2;
     display: block;
@@ -490,7 +498,7 @@ header {
     background-image: url("../img/mappa.png");
     background-repeat: no-repeat; }
 
-@media only screen and (max-width: 481px) {
+@media only screen and (max-width: 480px) {
   #map-wrapper {
     display: block;
     width: 70%;
@@ -503,7 +511,7 @@ header {
   overflow: hidden;
   height: 8em;
   width: 20em; }
-  @media only screen and (max-width: 481px) {
+  @media only screen and (max-width: 480px) {
     .infoWindow {
       width: 11em;
       height: 11em; } }
@@ -527,16 +535,16 @@ header {
     top: 3em;
     height: 3em; }
 
-.content_wrapper {
+.sticky-footer {
   position: relative;
   clear: both;
   min-height: 100%;
-  margin: 0 auto -15em; }
+  margin: 0 auto -15.8em; }
 
 .push {
   display: block;
   clear: both;
-  height: 15em;
+  height: 15.8em;
   z-index: -10; }
 
 footer {
@@ -553,13 +561,17 @@ footer {
     z-index: 3;
     color: #FFFFFF; }
     footer a:hover {
-      color: #94BA65; }
+      /*color: #94BA65;*/
+      color: #FFA01A; }
   footer div p {
     text-align: center; }
 
-@media only screen and (max-width: 481px) {
-  .content_wrapper {
-    margin-bottom: -20em; }
+@media only screen and (max-width: 480px) {
+  .sticky-footer {
+    margin-bottom: -20.8em; }
+
+  .push {
+    height: 20.8em; }
 
   footer, .push {
     height: 20em; } }

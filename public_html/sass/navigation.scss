@@ -7,7 +7,7 @@ $first-level-text: #FFFFFF;
 $second-level-color: #70AB4B;
 $second-level-text: #FFFFFF;
 
-nav{
+#navigation{
     display: table;
     position: relative;
     height: 1.8em;
@@ -15,6 +15,7 @@ nav{
     margin: 0;
     margin-top: 0.2em;
     background-color: #1C68AA;
+    border-bottom: 1pt inset #1C68AA;
     
     .wrapper{
         height: 1.8em;
@@ -30,10 +31,21 @@ nav{
     .selected{
         background-color: #8DBF3F;
         border-width: 1pt 1pt 0 1pt;
+        padding-bottom: 2pt;
+        margin-bottom: -1pt;
+        @media only screen and (min-width: 2500px)
+        {
+            padding-bottom: 3pt;
+            margin-bottom: -2pt;
+        }
         border-style: outset;
         border-color: #8DBF3F;
         a{
-            color: #1C68AA;
+            cursor: default;
+            /*color: #1C68AA;*/
+            color: #030320;
+            
+            /*color: #AD3970;*/
         }
     }
 
@@ -55,10 +67,11 @@ nav{
             padding: auto 0.4em;
             border: 0;
             &:hover:not(.selected){
-                background-color: #FFFFFF;
+                /*background-color: #FFFFFF;*/
 
                 a{
-                    color: #1C68AA;
+                    /*color: #1C68AA;*/
+                    color: #FFA01A;
                 }
             }
 
@@ -77,9 +90,9 @@ nav{
     }
 }
 
-@media screen and (max-width: 769px)
+@media screen and (max-width: 768px)
 { 
-        nav {
+        #navigation {
           margin: 0;
           padding: 0;
           height: auto;
@@ -172,45 +185,46 @@ nav{
                     
                 }
             }
-        }
+
         
-        /* Stile per i bottoni del menù di primo livello, quando sono visibili */
-        #navigation:target{
-            #close1 {
-                display: inline-block;
-                
-            }
+            /* Stile per i bottoni del menù di primo livello, quando sono visibili */
+            &:target{
+                #close1 {
+                    display: inline-block;
 
-            #open1 {
-              display: none; }
+                }
 
-            ul {
-                display: block;
-                position: relative;
-                height: auto;
-                left: 0px;
-                top: 0;
+                #open1 {
+                  display: none; }
 
-                li {
-                  display: block;
-                  position: relative;
-                  height: 2.8em;
-                  margin: 0;
-                  border-top: 1px groove;
-                  border-bottom: 1px solid;
-                  line-height: auto;
-                  border-color: #000000;
-                  
-                  &:first-child{
-                      border-top: 2px groove;
-                  }
-                  
-                  &:last-child{
-                      border-bottom: 2px groove;
-                  }
-            }
+                ul {
+                    display: block;
+                    position: relative;
+                    height: auto;
+                    left: 0px;
+                    top: 0;
+
+                    li {
+                      display: block;
+                      position: relative;
+                      height: 2.8em;
+                      margin: 0;
+                      border-top: 1px groove;
+                      border-bottom: 1px solid;
+                      line-height: auto;
+                      border-color: #000000;
+
+                      &:first-child{
+                          border-top: 2px groove;
+                      }
+
+                      &:last-child{
+                          border-bottom: 2px groove;
+                      }
+                }
+           }
        }
-   }
+    }
 
 }
 
@@ -245,8 +259,16 @@ html, body {
     height: 100%;
 }
 
-body {
-    background-color: #8DBF3F;
+.body-background {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    width: 100%;
+    /*background-color: #8DBF3F;*/
+    background: -webkit-linear-gradient(top, #8DBF3F , #FFFFFF); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(bottom,  #8DBF3F , #FFFFFF); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(bottom,  #8DBF3F , #FFFFFF); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(to bottom,  #8DBF3F , #FFFFFF); /* Standard syntax */
 }
 
 @media screen and (max-width: 1280px)
@@ -258,7 +280,7 @@ body {
 }
 
 .wrapper{
-    width: 100%;
+    width: 100%; 
 }
 
 @media screen and (min-width: 1280px)

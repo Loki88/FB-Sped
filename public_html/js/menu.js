@@ -13,12 +13,12 @@ $(window).resize(function() {
         height: $(document).height(),
         zoom: window.devicePixelRatio
     };
-    if(newSize.width <= 481)
+    if(newSize.width <= 480)
     {
         //La finestra è ridimensionata per gli smartphone portrait
         $(window).trigger('oneColumn', newSize);
     }
-    else if(newSize.width > 481 && newSize.width < 770) {
+    else if(newSize.width > 480 && newSize.width < 769) {
         //La finestra è ridimensionata per i tablet portrait e gli smartphone landscape
         $(window).trigger('fluidGrid', newSize);
     }
@@ -56,7 +56,9 @@ var Menu = {
         
         open.prop('menu', menu);
         close.prop('menu', menu);
-        
+        var inline = false;
+        if(close.css('display') == 'none' || open.css('display') == 'none')
+            inline = true;
         open.prop('closeButton', close);
         close.prop('openButton', open);
         
@@ -66,10 +68,9 @@ var Menu = {
             menu.prop('open', true);
 
         var windowWidth = $(document).width();
-        if(windowWidth < 770)
+        if(windowWidth < 768 && !inline)
         {
             //menù mobile
-            
             Menu.prepareMenu(menu);
             menu.prop('mobile', true);
         }
@@ -84,9 +85,13 @@ var Menu = {
     
     menuMobile: function(event, size)
     {
+        var inline = false;
+        if(close.css('display') == 'none' || open.css('display') == 'none')
+            inline = true;
         var menu = $('#menu1');
-        if(!menu.prop('mobile'))
+        if(!menu.prop('mobile') && !inline)
             Menu.prepareMenu(menu);
+        
     },
     
     menuDesktop: function(event, size)
