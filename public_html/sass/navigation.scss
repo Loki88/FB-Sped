@@ -7,7 +7,7 @@ $first-level-text: #FFFFFF;
 $second-level-color: #70AB4B;
 $second-level-text: #FFFFFF;
 
-#navigation{
+.navigation{
     display: table;
     position: relative;
     height: 1.8em;
@@ -42,10 +42,7 @@ $second-level-text: #FFFFFF;
         border-color: #8DBF3F;
         a{
             cursor: default;
-            /*color: #1C68AA;*/
             color: #030320;
-            
-            /*color: #AD3970;*/
         }
     }
 
@@ -67,10 +64,7 @@ $second-level-text: #FFFFFF;
             padding: auto 0.4em;
             border: 0;
             &:hover:not(.selected){
-                /*background-color: #FFFFFF;*/
-
                 a{
-                    /*color: #1C68AA;*/
                     color: #FFA01A;
                 }
             }
@@ -92,31 +86,32 @@ $second-level-text: #FFFFFF;
 
 @media screen and (max-width: 768px)
 { 
-        #navigation {
-          margin: 0;
-          padding: 0;
-          height: auto;
-          border-width: 2pt 0;
-          border-style: groove;
-          border-color: #1C68AA;
+    .navigation {
+        margin: 0;
+        padding: 0;
+        height: auto;
+        border-width: 2pt 0;
+        border-style: groove;
+        border-color: #1C68AA;
+
+        .wrapper{
+            height: auto;
           
-          .wrapper{
-              height: auto;
-          }
             a {
-              display: inline-block;
-              clear: both;
-              width: 80%;
-              text-align: center;
-              height: 2em;
-              padding: 0.2em 10%;
-              line-height: 2em;
-              text-decoration: none;
+                display: inline-block;
+                clear: both;
+                width: 80%;
+                text-align: center;
+                height: 2em;
+                padding: 0.2em 10%;
+                line-height: 2em;
+                text-decoration: none;
             }
 
             /* Stile di base per il menù chiuso */
             .menu-link {
-                display: inline-block;
+                display: block;
+                height: 1.5em;
                 line-height: 1.5em;
                 width: 70%;
                 padding: 0.35em 15%;
@@ -130,8 +125,7 @@ $second-level-text: #FFFFFF;
                 }
             }
             
-            
-            #close1 {
+            #close {
                 display: none;
                 background-image: url('../img/menu-white.png');
             }
@@ -158,6 +152,7 @@ $second-level-text: #FFFFFF;
                 transition: height 0.25s;
 
                 a {
+                    height: 100%;
                     padding-left: 10%;
                     padding-right: 10%;
                     background-color: #F4F0E6;
@@ -188,15 +183,13 @@ $second-level-text: #FFFFFF;
                 }
             }
 
-        
             /* Stile per i bottoni del menù di primo livello, quando sono visibili */
             &:target{
-                #close1 {
+                #close {
                     display: inline-block;
-
                 }
 
-                #open1 {
+                #open {
                   display: none; }
 
                 ul {
@@ -207,52 +200,55 @@ $second-level-text: #FFFFFF;
                     top: 0;
 
                     li {
-                      display: block;
-                      position: relative;
-                      height: 2.8em;
-                      margin: 0;
-                      border-top: 1px groove;
-                      border-bottom: 1px solid;
-                      line-height: auto;
-                      border-color: #000000;
+                        display: block;
+                        position: relative;
+                        height: 2.4em;
+                        margin: 0;
+                        border-top: 1px groove;
+                        border-bottom: 1px solid;
+                        line-height: auto;
+                        border-color: #000000;
 
-                      &:first-child{
-                          border-top: 2px groove;
-                      }
+                        &:first-child{
+                            border-top: 2px groove;
+                        }
 
-                      &:last-child{
-                          border-bottom: 2px groove;
-                      }
+                        &:last-child{
+                            border-bottom: 2px groove;
+                        }
+                      
+                    }
                 }
-           }
-       }
+            }
+        }
     }
-
 }
 
 .menuMobileVisible{
-    display: block;
-    position: relative;
-    height: auto;
-    left: 0px;
-    top: 0;
-
-    li {
+    #menu{
         display: block;
         position: relative;
-        height: 2.8em;
-        margin: 0;
-        border-top: 1px groove;
-        border-bottom: 1px solid;
-        line-height: auto;
-        border-color: $first-level-color;
+        height: auto;
+        left: 0px;
+        top: 0;
 
-        &:first-child{
-            border-top: 2px groove;
-        }
+        li {
+            display: block;
+            position: relative;
+            height: 2.8em;
+            margin: 0;
+            border-top: 1px groove;
+            border-bottom: 1px solid;
+            line-height: auto;
+            border-color: #000000;
 
-        &:last-child{
-            border-bottom: 2px groove;
+            &:first-child{
+                border-top: 2px groove;
+            }
+
+            &:last-child{
+                border-bottom: 2px groove;
+            }
         }
     }
 }
@@ -283,6 +279,7 @@ html, body {
 }
 
 .wrapper{
+    display: block;
     width: 100%; 
 }
 

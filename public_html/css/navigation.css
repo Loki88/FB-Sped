@@ -1,5 +1,5 @@
 @charset "UTF-8";
-#navigation {
+.navigation {
   display: table;
   position: relative;
   height: 1.8em;
@@ -8,15 +8,15 @@
   margin-top: 0.2em;
   background-color: #1C68AA;
   border-bottom: 1pt inset #1C68AA; }
-  #navigation .wrapper {
+  .navigation .wrapper {
     height: 1.8em;
     margin-top: 0;
     margin-bottom: 0;
     padding: 0;
     border: 0; }
-  #navigation .menu-link {
+  .navigation .menu-link {
     display: none; }
-  #navigation .selected {
+  .navigation .selected {
     background-color: #8DBF3F;
     border-width: 1pt 1pt 0 1pt;
     padding-bottom: 2pt;
@@ -24,15 +24,13 @@
     border-style: outset;
     border-color: #8DBF3F; }
     @media only screen and (min-width: 2500px) {
-      #navigation .selected {
+      .navigation .selected {
         padding-bottom: 3pt;
         margin-bottom: -2pt; } }
-    #navigation .selected a {
+    .navigation .selected a {
       cursor: default;
-      /*color: #1C68AA;*/
-      color: #030320;
-      /*color: #AD3970;*/ }
-  #navigation ul {
+      color: #030320; }
+  .navigation ul {
     display: block;
     position: relative;
     list-style: none;
@@ -40,7 +38,7 @@
     margin: 0;
     padding: 0;
     border: 0; }
-    #navigation ul li {
+    .navigation ul li {
       display: inline-block;
       height: 1.8em;
       position: relative;
@@ -48,12 +46,9 @@
       margin: 0;
       padding: auto 0.4em;
       border: 0; }
-      #navigation ul li:hover:not(.selected) {
-        /*background-color: #FFFFFF;*/ }
-        #navigation ul li:hover:not(.selected) a {
-          /*color: #1C68AA;*/
-          color: #FFA01A; }
-      #navigation ul li a {
+      .navigation ul li:hover:not(.selected) a {
+        color: #FFA01A; }
+      .navigation ul li a {
         display: inline-block;
         position: relative;
         height: 100%;
@@ -65,106 +60,108 @@
         text-decoration: none; }
 
 @media screen and (max-width: 768px) {
-  #navigation {
+  .navigation {
     margin: 0;
     padding: 0;
     height: auto;
     border-width: 2pt 0;
     border-style: groove;
-    border-color: #1C68AA;
-    /* Stile di base per il menù chiuso */
-    /* Stile per i bottoni del menù di primo livello, quando sono visibili */ }
-    #navigation .wrapper {
-      height: auto; }
-    #navigation a {
-      display: inline-block;
-      clear: both;
-      width: 80%;
-      text-align: center;
-      height: 2em;
-      padding: 0.2em 10%;
-      line-height: 2em;
-      text-decoration: none; }
-    #navigation .menu-link {
-      display: inline-block;
-      line-height: 1.5em;
-      width: 70%;
-      padding: 0.35em 15%;
-      background-image: url("../img/menu-white.png");
-      background-repeat: no-repeat;
-      background-position: right center;
-      background-size: 1.3em;
-      color: #F4F0E6; }
-      #navigation .menu-link:hover {
-        text-decoration: underline; }
-    #navigation #close1 {
-      display: none;
-      background-image: url("../img/menu-white.png"); }
-    #navigation ul {
-      display: block;
-      position: absolute;
-      list-style: none;
-      margin: 0;
-      padding: 0;
-      width: 100%;
+    border-color: #1C68AA; }
+    .navigation .wrapper {
       height: auto;
-      top: 0;
-      left: -10000px; }
-      #navigation ul li {
+      /* Stile di base per il menù chiuso */
+      /* Stile per i bottoni del menù di primo livello, quando sono visibili */ }
+      .navigation .wrapper a {
+        display: inline-block;
+        clear: both;
+        width: 80%;
+        text-align: center;
+        height: 2em;
+        padding: 0.2em 10%;
+        line-height: 2em;
+        text-decoration: none; }
+      .navigation .wrapper .menu-link {
         display: block;
+        height: 1.5em;
+        line-height: 1.5em;
+        width: 70%;
+        padding: 0.35em 15%;
+        background-image: url("../img/menu-white.png");
+        background-repeat: no-repeat;
+        background-position: right center;
+        background-size: 1.3em;
+        color: #F4F0E6; }
+        .navigation .wrapper .menu-link:hover {
+          text-decoration: underline; }
+      .navigation .wrapper #close {
+        display: none;
+        background-image: url("../img/menu-white.png"); }
+      .navigation .wrapper ul {
+        display: block;
+        position: absolute;
+        list-style: none;
+        margin: 0;
+        padding: 0;
         width: 100%;
-        height: 0em;
-        float: left;
-        -webkit-transition: height 0.25;
-        -moz-transition: height 0.25s;
-        -o-transition: height 0.25s;
-        transition: height 0.25s; }
-        #navigation ul li a {
-          padding-left: 10%;
-          padding-right: 10%;
-          background-color: #F4F0E6;
+        height: auto;
+        top: 0;
+        left: -10000px; }
+        .navigation .wrapper ul li {
+          display: block;
+          width: 100%;
+          height: 0em;
+          float: left;
+          -webkit-transition: height 0.25;
+          -moz-transition: height 0.25s;
+          -o-transition: height 0.25s;
+          transition: height 0.25s; }
+          .navigation .wrapper ul li a {
+            height: 100%;
+            padding-left: 10%;
+            padding-right: 10%;
+            background-color: #F4F0E6;
+            color: #327CCB; }
+          .navigation .wrapper ul li:first-child {
+            margin-top: 2px; }
+          .navigation .wrapper ul li:hover:not(.selected) {
+            border-bottom: none; }
+            .navigation .wrapper ul li:hover:not(.selected) a {
+              color: #327CCB;
+              background-color: #EAE4D3;
+              text-decoration: underline; }
+        .navigation .wrapper ul .selected a {
+          background-color: #8DBF3F;
           color: #327CCB; }
-        #navigation ul li:first-child {
-          margin-top: 2px; }
-        #navigation ul li:hover:not(.selected) {
-          border-bottom: none; }
-          #navigation ul li:hover:not(.selected) a {
-            color: #327CCB;
-            background-color: #EAE4D3;
-            text-decoration: underline; }
-      #navigation ul .selected a {
-        background-color: #8DBF3F;
-        color: #327CCB; }
-    #navigation:target #close1 {
-      display: inline-block; }
-    #navigation:target #open1 {
-      display: none; }
-    #navigation:target ul {
-      display: block;
-      position: relative;
-      height: auto;
-      left: 0px;
-      top: 0; }
-      #navigation:target ul li {
+      .navigation .wrapper:target #close {
+        display: inline-block; }
+      .navigation .wrapper:target #open {
+        display: none; }
+      .navigation .wrapper:target ul {
         display: block;
         position: relative;
-        height: 2.8em;
-        margin: 0;
-        border-top: 1px groove;
-        border-bottom: 1px solid;
-        line-height: auto;
-        border-color: #000000; }
-        #navigation:target ul li:first-child {
-          border-top: 2px groove; }
-        #navigation:target ul li:last-child {
-          border-bottom: 2px groove; } }
-.menuMobileVisible {
+        height: auto;
+        left: 0px;
+        top: 0; }
+        .navigation .wrapper:target ul li {
+          display: block;
+          position: relative;
+          height: 2.4em;
+          margin: 0;
+          border-top: 1px groove;
+          border-bottom: 1px solid;
+          line-height: auto;
+          border-color: #000000; }
+          .navigation .wrapper:target ul li:first-child {
+            border-top: 2px groove; }
+          .navigation .wrapper:target ul li:last-child {
+            border-bottom: 2px groove; } }
+.menuMobileVisible #menu {
   display: block;
   position: relative;
   height: auto;
   left: 0px;
   top: 0; }
-  .menuMobileVisible li {
+  .menuMobileVisible #menu li {
     display: block;
     position: relative;
     height: 2.8em;
@@ -172,10 +169,10 @@
     border-top: 1px groove;
     border-bottom: 1px solid;
     line-height: auto;
-    border-color: #dfebf6; }
-    .menuMobileVisible li:first-child {
+    border-color: #000000; }
+    .menuMobileVisible #menu li:first-child {
       border-top: 2px groove; }
-    .menuMobileVisible li:last-child {
+    .menuMobileVisible #menu li:last-child {
       border-bottom: 2px groove; }
 
 html, body {
@@ -202,6 +199,7 @@ html, body {
     margin: 0;
     padding: 0; } }
 .wrapper {
+  display: block;
   width: 100%; }
 
 @media screen and (min-width: 1280px) {

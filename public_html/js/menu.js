@@ -47,18 +47,19 @@ $(window).on('noMobile', function(event, size) {
 var Menu = {
     init: function()
     {
-        var menu = $('#menu1');
-        var open = $('#open1');
-        var close = $('#close1');
+        var menu = $('#menu');
+        var open = $('#open');
+        var close = $('#close');
         
         menu.prop('openButton', open);
         menu.prop('closeButton', close);
         
         open.prop('menu', menu);
         close.prop('menu', menu);
-        var inline = false;
-        if(close.css('display') == 'none' || open.css('display') == 'none')
-            inline = true;
+
+        console.log('open', open);
+        console.log('close', close);
+
         open.prop('closeButton', close);
         close.prop('openButton', open);
         
@@ -66,13 +67,12 @@ var Menu = {
             menu.prop('open', false);
         else if(close.css('display') == 'block')
             menu.prop('open', true);
-
+        menu.prop('mobile', false);
         var windowWidth = $(document).width();
-        if(windowWidth < 768 && !inline)
+        if(windowWidth < 769)
         {
             //menù mobile
             Menu.prepareMenu(menu);
-            menu.prop('mobile', true);
         }
         else
         {
@@ -85,18 +85,15 @@ var Menu = {
     
     menuMobile: function(event, size)
     {
-        var inline = false;
-        if(close.css('display') == 'none' || open.css('display') == 'none')
-            inline = true;
-        var menu = $('#menu1');
-        if(!menu.prop('mobile') && !inline)
-            Menu.prepareMenu(menu);
         
+        var menu = $('#menu');
+        if(!menu.prop('mobile'))
+            Menu.prepareMenu(menu);
     },
     
     menuDesktop: function(event, size)
     {
-        var menu = $('#menu1');
+        var menu = $('#menu');
         if(menu.prop('mobile'))
             Menu.rollbackMenu(menu);
     },
@@ -104,16 +101,15 @@ var Menu = {
     prepareMenu: function(menu)
     {
         menu = $(menu);
-        menu.prop('mobile', true);
+        menu.prop('mobile', false);
         var open = menu.prop('openButton');
         var close = menu.prop('closeButton');
-        menu.addClass('menuMobileVisible');
-        
-        open.css('display', 'inline-block');
-        close.css('display', 'inline-block');
+        close.css('display', 'block');
+        open.css('display', 'block');
         
         if(menu.prop('open') != undefined)
         {
+            menu.parent().addClass('menuMobileVisible');
             
             if(menu.prop('open'))
             {
@@ -127,13 +123,12 @@ var Menu = {
                 open.show();
                 menu.hide();
             }
+            menu.prop('mobile', true);
         }
         else
         {
-            open.show();
+            open.hide();
             close.hide();
-            menu.hide();
-            menu.prop('open', false);
         }
 
         open.click(function(event){
@@ -169,8 +164,8 @@ var Menu = {
         var close = menu.prop('closeButton');
         
         //Ripristina il menu per la versione desktop e tablet landscape
-        menu.removeClass('menuMobileVisible');
-        menu.css('display', 'inline-block');
+        menu.parent().removeClass('menuMobileVisible');
+        menu.css('display', 'block');
         
         open.hide();
         close.hide();
