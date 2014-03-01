@@ -363,196 +363,129 @@
     } 
 }
 
-#tab{
-    list-style: none;
-    padding-left: 0;
-    padding: 0;
-    margin-top: 1%;
-    
-    .current{
-        min-height: 20em;
-        a{
-            background-color: #1693A5;
-            color: #F0F1F7;
+.tab_to_accordion{
+    margin-bottom: 2em;
+    .tab-image{
+        display: block;
+        position: relative;
 
-            &:hover{
-                background-color: #1693A5;
-                color: #FBB820;
-                text-decoration: underline;
-            }
-            @media only screen and (max-width: 480px)
-            {
-                text-decoration: none;
-                &:hover{
-                    a{
-                        color: #FBB820;
-                    }
-                }
-                background-image: url('../img/icons/icona_accordion_close.png');
-            }
+        img{
+
+            display: block;
+            position: relative;
+            width: 100%;
         }
     }
     
-    li{
-        display: inline-block;
-        padding: 0;
-        margin: 0;
-        float: left;
-        height: auto;
-        
-        @media only screen and (max-width: 480px)
-        {
-            width: 100%;
-            margin-top: 0;
-            background-color: #F0F1F7;
-            &:first-child{
-                border-top: 0.2em inset;
-            }
-            border-bottom: 0.2em outset;
-            border-color: #CBCFBC;
-            .content-box{
+    .tab_controls{
+        display: block;
+        float: right;
+        ul{
+
+            list-style: none;
+            padding: 0;
+            
+            li{
                 display: block;
                 position: relative;
-                box-shadow: none;
-                
-                .header{
-                    display: block;
-                    position: relative;
-                    background-color: #F0F1F7;
-                    margin-top: 2em;
-                    h4{
-                        color: #1693A5;
-                    }
-                    
+                height: 2em;
+                margin-bottom: 0.2em;
+                border-width: 1pt 1pt 1pt 0;
+                border-style: outset;
+                border-color: #1C68AA;
+                border-left: 1pt inset #1C68AA;
+                text-align: center;
+                line-height: 2em;
+                background-color: #1C68AA;
+                /*left: -4.1%;*/
+                a {
+                    text-decoration: none;
+                    color: #FFFFFF;
                 }
             }
         }
         
-        .tab-content{
-            display: block;
-            float: left;
-            @media only screen and (max-width: 480px)
-            {
-                margin-top: 0;
-                top: 0;
-            }
-        }
-        
-        &:not(.current){
-            .tab-page{
-                display: none;
-            }
-            
-            &:hover{
-                a{
-                    border-color: #C4D99C;
-                }
-            }
-        }
-        
-        
-        
-        @media only screen and (min-width: 481px)
-        {
-            &:not(.current){
-                top: 0;
-            }
-
-            &:nth-child(2){
-                a{
-                    margin-top: 2.95em;
-                }
-            }
-
-            &:nth-child(3){
-                a{
-                    margin-top: 5.25em;
-                }
-            }
-
-            &:nth-child(4){
-                a{
-                    margin-top: 7.55em;
-                }
-            }
-
-            &:nth-child(5){
-                a{
-                    margin-top: 9.85em;
-                }
-            }
-
-            &:nth-child(6){
-                a{
-                    margin-top: 12.15em;
-                }
-            }
-        }
-        
-        a{
-            display: block;
-            @media only screen and (min-width: 481px)
-            {
-                position: absolute;
-                right: 0;
-                height: 1.8em;
-                margin-top: 0.65em;
-                line-height: 1.8em;
-                padding: auto;
-                
-                
-            }
-            @media only screen and (max-width: 480px)
-            {
-                position: relative;
-                height: 3em;
-                line-height: 1.5em;
-                width: 70%;
-                padding-left:  15% ;
-                padding-right:  15% ;
-                background-image: url('../img/icons/icona_accordion.png');
-                background-size: 1.5em;
-                background-position: left top;
-                background-repeat: no-repeat;
-                
-            }
-            box-shadow: 1pt 1pt 5pt #000000;
-            background-color: #CDD7B6;
-            color: #000000;
-            text-decoration: none;
-            text-align: center;
-
-            &:hover{
-                text-decoration: underline;
-                background-color: #F0F1F7;
-            }
-        }
-
         .tab-image{
-            display: inline-block;
-            position: relative;
-            float: right;
-            
-            @media only screen and (min-width: 481px)
-            {
-                right: 0;
-                float: left;
-                margin-left: 1.6%;
-                margin-top: 15.6em;
-
-                @media only screen and (max-width: 480px)
-                {
-                    height: auto;
-                    vertical-align: text-top;
-                    margin-bottom: 2em;
-                }
-            }
-            
+            width: 100%;
+            margin-top: 1em;
         }
     }
-
+    
+    .tab_contents{
+        display: block;
+        
+        .tab_pane{
+            display: block;
+            
+            &:not(.current){
+                display: none;
+                visibility: hidden;
+            }
+            
+            a{
+                display: none;
+                visibility: hidden;
+            }
+            
+            .tab-image{
+                display: none;
+                visibility: hidden;
+                width: 100%;
+            }
+        }
+    }
 }
 
+@media screen and (max-width: 480px)
+{
+    .tab_to_accordion{
+        padding-top: 1em;
+        .tab_controls{
+            display: none;
+            visibility: hidden;
+        }
+        .tab_contents{
+            .tab_pane{
+                a{
+                    display: block;
+                    visibility: visible;
+                    width: 100%;
+                    height: 2.3em;
+                    line-height: 1.15em;
+                    padding: 0.35em auto;
+                    text-align: center;
+                    background-color: #1C68AA;
+                    color: #FFFFFF;
+                    text-decoration: none;
+                    margin-bottom: -0.7em;
+                    border-width: 1pt 0;
+                    border-style: groove;
+                    border-color: #1C68AA;
+                    float: none;
+                }
+                
+                &:not(.current){
+                    display: block;
+                    visibility: visible;
+                    
+                    
+                }
+                
+                .content-box{
+                    padding-top: 0;
+                    margin-top: 0;
+                    box-shadow: 0 0 0 none;
+                    .header{
+                        background-color: #FFFFFF;
+                        h4{
+                            color: #1C68AA;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
 
 #sol-trasporti {
 

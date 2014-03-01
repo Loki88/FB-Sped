@@ -96,7 +96,9 @@ $second-level-text: #FFFFFF;
           margin: 0;
           padding: 0;
           height: auto;
-          border: none;
+          border-width: 2pt 0;
+          border-style: groove;
+          border-color: #1C68AA;
           
           .wrapper{
               height: auto;
@@ -106,22 +108,22 @@ $second-level-text: #FFFFFF;
               clear: both;
               width: 80%;
               text-align: center;
-              height: 2.4em;
+              height: 2em;
               padding: 0.2em 10%;
-              line-height: auto;
+              line-height: 2em;
               text-decoration: none;
             }
 
             /* Stile di base per il menù chiuso */
             .menu-link {
                 display: inline-block;
-                line-height: 2em;
+                line-height: 1.5em;
                 width: 70%;
-                padding: 0.5em 15%;
+                padding: 0.35em 15%;
                 background-image: url('../img/menu-white.png');
                 background-repeat: no-repeat;
                 background-position: right center;
-                background-size: 2em;
+                background-size: 1.3em;
                 color: #F4F0E6;
                 &:hover{
                     text-decoration: underline;
@@ -260,6 +262,7 @@ html, body {
 }
 
 .body-background {
+    z-index: -2;
     margin: 0;
     padding: 0;
     border: 0;
