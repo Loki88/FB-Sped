@@ -337,6 +337,8 @@
         border-color: #1C68AA;
         margin: 0;
         float: none; }
+      .tab_to_accordion .tab_contents .tab_pane .close {
+        display: none; }
       .tab_to_accordion .tab_contents .tab_pane:not(.current) {
         display: block;
         visibility: visible; }
@@ -351,13 +353,26 @@
           background-color: #FFFFFF; }
           .tab_to_accordion .tab_contents .tab_pane .content-box .header h4 {
             color: #1C68AA; }
-      .tab_to_accordion .tab_contents .current a {
+      .tab_to_accordion .tab_contents .current a:not(.close) {
+        display: none; }
+      .tab_to_accordion .tab_contents .current .close {
         margin-bottom: -0.7em; }
+        .tab_to_accordion .tab_contents .current .close:not(.close) {
+          display: none; }
+      .tab_to_accordion .tab_contents .current .close {
+        display: block; }
       .tab_to_accordion .tab_contents .current .tab-image {
         display: block;
         visibility: visible;
         width: 96%;
-        margin: auto; } }
+        margin: auto; }
+
+  #tab:target .current a {
+    display: block; }
+  #tab:target .current .close {
+    display: none; }
+  #tab:target .current .tab_page {
+    display: none; } }
 #sol-trasporti {
   margin-top: 1em; }
   #sol-trasporti .content-box {

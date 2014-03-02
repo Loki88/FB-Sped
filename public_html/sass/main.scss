@@ -492,17 +492,20 @@
                     float: none;
                 }
                 
+                .close{
+                    display: none;
+                }
+                
                 &:not(.current){
                     display: block;
                     visibility: visible;
-                    
-                    
                 }
                 
                 .tab_page{
                     margin: 0;
                     box-shadow: 0pt 0pt 0pt #000000;
                 }
+                
                 .content-box{
                     padding-top: 0;
                     margin-top: 0;
@@ -517,8 +520,18 @@
             }
             
             .current{
-                a{
+                a:not(.close){
+                    display: none;
+                }
+                .close{
                     margin-bottom: -0.7em;
+                    &:not(.close){
+                        display: none;
+                    }
+                }
+
+                .close{
+                    display: block;
                 }
                 
                 .tab-image{
@@ -528,6 +541,22 @@
                     margin: auto;
                 }
             }
+        }
+        
+        
+    }
+    #tab:target{
+        .current{
+            a{
+                display: block;
+            }
+            .close{
+                display: none;
+            }
+            .tab_page{
+                display: none;
+            }
+
         }
     }
 }
