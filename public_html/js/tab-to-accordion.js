@@ -1,16 +1,15 @@
 var TabToAccordion = {
     init: function()
     {
-        $('.current').prop('setted', true);
-        this.current = $('.current');
+        TabToAccordion.current = $('.current');
+        TabToAccordion.current.prop('setted', true);
+        TabToAccordion.current.prop('open', true);
+        
         var accordion_links = $('.tab_pane').find('a:not(.close)');
         var accordion_links_close = $('.tab_pane').find('.close');
         
-        for(var i=0; i<tab_links.length; i++)
+        for(var i=0; i<accordion_links.length; i++)
         {
-            var link = $(tab_links[i]);
-            $(link.data('target')).prop('tabLink', link);
-            link.click(TabToAccordion.tabClick);
             var accordionLink = $(accordion_links[i]);
             accordionLink.click(TabToAccordion.accordionOpenClick);
             var accordionClose = $(accordion_links_close[i]);
@@ -31,14 +30,11 @@ var TabToAccordion = {
         var panel = $(this.current);
         panel.find('a').removeAttr('style');
         panel.find('.tab_page').removeAttr('style');
+        var trigger = panel.data('trigger');
+        $('.tab_right_col').find('.selected').removeClass('selected');
+        $(trigger).addClass('selected');
     },
-    
-    tabClick: function(event)
-    {
-        event.preventDefault();
-        console.log('tab click');
-        TabToAccordion.loadPage($(this));
-    },
+
     
     accordionCloseClick: function(event)
     {
@@ -50,13 +46,14 @@ var TabToAccordion = {
         link.prev('a').css('display', 'block');
         link.hide();
         panel.children('.tab_page').slideUp(600);
+        panel.prop('open', false);
     },
     
     accordionOpenClick: function(event)
     {
         event.preventDefault();
         console.log('accordion open click');
-        
+        TabToAccordion.loadPage($(this));
     },
     
     loadPage: function(link)
@@ -100,18 +97,37 @@ var TabToAccordion = {
     {
         panel = $(panel);
         var current = $(TabToAccordion.current);
-        if(!panel.hasClass('current'))
+        if(!panel.is(current))
         {
-            current.children('.tab_page').hide(400, function(){
+            current.children('.tab_page').slideUp(400, function(){
                 current.removeClass('current');
             });
+            current.prop('open', false);
             TabToAccordion.current = panel;
             $('.tab_controls').children('.selected').removeClass('selected');
             var link = $(panel.prop('tabLink'));
             link.parent().addClass('selected');
             panel.addClass('current');
-            panel.show(400);
+            panel.children('.tab_page').slideDown(400);
             $(document.body).css('cursor', 'auto');
+            panel.prop('open', true);
+        }
+        else{
+            if(panel.prop('open'))
+            {
+                panel.children('.close').hide();
+                panel.children('a:not(.close)').show();
+                panel.children('.tab_page').slideUp(400);
+                panel.prop('open', false);
+            }   
+            else
+            {
+                panel.children('a:not(.close)').hide();
+                panel.children('.close').css('display', 'table');
+                panel.children('.tab_page').slideDown(400);
+                panel.prop('open', true);
+            }
+            
         }
     },
     

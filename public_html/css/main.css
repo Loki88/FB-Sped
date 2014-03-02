@@ -301,7 +301,7 @@
     border: 0;
     float: right; }
     .tab_to_accordion .tab_right_col .tab_menu {
-      background-color: #1C68AA;
+      background-color: #FFFFFF;
       border-width: 0.1em;
       border-style: ridge;
       border-color: #1C68AA;
@@ -326,21 +326,21 @@
           line-height: 1.5em;
           height: 1.5em;
           text-decoration: none;
-          color: #FFFFFF; }
+          color: #1C68AA; }
           @media screen and (max-width: 768px) {
             .tab_to_accordion .tab_right_col .tab_menu .menu-button a {
               height: 3em; } }
         .tab_to_accordion .tab_right_col .tab_menu .menu-button:hover a {
           color: #FFA01A; }
       .tab_to_accordion .tab_right_col .tab_menu .selected {
-        background-color: #FFFFFF;
+        background-color: #1C68AA;
         border-color: #1C68AA;
         border-style: inset; }
         .tab_to_accordion .tab_right_col .tab_menu .selected a {
           cursor: default;
-          color: #1C68AA; }
+          color: #FFFFFF; }
         .tab_to_accordion .tab_right_col .tab_menu .selected:hover a {
-          color: #1C68AA; }
+          color: #FFFFFF; }
   .tab_to_accordion .tab-image {
     width: 100%;
     margin-top: 1em;
@@ -402,7 +402,10 @@
         display: block;
         visibility: visible; }
       .tab_to_accordion .tab_contents .tab_pane .tab_page {
+        display: inline-block;
+        position: relative;
         margin: 0;
+        margin-top: -0.7em;
         box-shadow: 0pt 0pt 0pt #000000; }
       .tab_to_accordion .tab_contents .tab_pane .content-box {
         padding-top: 0;
@@ -414,10 +417,8 @@
             color: #1C68AA; }
       .tab_to_accordion .tab_contents .current a:not(.close) {
         display: none; }
-      .tab_to_accordion .tab_contents .current .close {
-        margin-bottom: -0.7em; }
-        .tab_to_accordion .tab_contents .current .close:not(.close) {
-          display: none; }
+      .tab_to_accordion .tab_contents .current .close:not(.close) {
+        display: none; }
       .tab_to_accordion .tab_contents .current .close {
         display: block; }
       .tab_to_accordion .tab_contents .current .tab-image {
@@ -631,6 +632,10 @@ footer {
   max-width: 100%;
   bottom: 0;
   margin-top: 1em;
+  border: 0;
+  border-top: 2pt;
+  border-color: #1C68AA;
+  border-style: inset;
   height: 15em;
   color: #FFFFFF;
   background-color: #1C68AA; }
