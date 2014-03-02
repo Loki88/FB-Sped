@@ -6,6 +6,7 @@
         <!--[if lt IE 9]>
             <script src="../js/libs/html5shiv.js"></script>
         <![endif]-->
+        <link href="../img/icons/logo.png" type="image/gif" rel="icon">
         <link href="../css/col.css" type="text/css" rel="stylesheet" />
         <link href="../css/5cols.css" type="text/css" rel="stylesheet" />
         <link href="../css/text.css" type="text/css" rel="stylesheet" />
@@ -58,15 +59,17 @@
             <div class="body-background">
                 <div class="content_wrapper wrapper">
                     <div class="section group tab_to_accordion"  id="tab">
-                        <div class="span_2_of_5 tab_controls">
-                            <div class="menu-button selected"><a href="#">Trasporti</a></div>
-                            <div class="menu-button"><a href="./trasporto-su-gomma.html">Trasporto su gomma</a></div>
-                            <div class="menu-button"><a href="./trasporto-ferroviario.html">Trasporto ferroviario</a></div>
-                            <div class="menu-button"><a href="./trasporto-marittimo.html">Trasporto marittimo</a></div>
-                            <div class="menu-button"><a href="./trasporto-aereo.html">Trasporto aereo</a></div>
-                            <div class="menu-button"><a href="./trasporto-combinato.html">Trasporto combinato</a></div>
+                        <div class="span_2_of_5 tab_right_col">
+                            <div class="tab_menu content-box-shadow">
+                                <div class="menu-button"><a data-target="#trasporti" href="./trasporti.html">Trasporti</a></div>
+                                <div class="menu-button"><a data-target="#trasporto-gomma" href="./trasporto-su-gomma.html">Trasporto su gomma</a></div>
+                                <div class="menu-button"><a data-target="#trasporto-ferroviario" href="./trasporto-ferroviario.html">Trasporto ferroviario</a></div>
+                                <div class="menu-button"><a data-target="#trasporto-marittimo" href="./trasporto-marittimo.html">Trasporto marittimo</a></div>
+                                <div class="menu-button"><a data-target="#trasporto-aereo" href="./trasporto-aereo.html">Trasporto aereo</a></div>
+                                <div class="menu-button selected"><a data-target="#trasporto-combinato" href="./trasporto-combinato.html">Trasporto combinato</a></div>
+                            </div>
                             <div class="tab-image">
-                                <img src="../img/trasporti.jpg" />
+                                <img src="../img/combinato.png" />
                             </div>
                         </div>
                         <div class="span_3_of_5 tab_contents">
@@ -129,7 +132,10 @@
                             </div>
                         </div>
                     </div>
-                
+                    <script src="../js/libs/ui/jquery/jquery.js"></script>
+                    <script src="../js/menu.js"></script>
+                    <script src="../js/libs/jquery.history.js"></script>
+                    <script src="../js/tab-to-accordion.js"></script>
                     <!--
                     <script src="../js/libs/ui/jquery/jquery.js"></script>
                     <script src="../js/menu.js"></script>
