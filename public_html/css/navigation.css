@@ -121,19 +121,18 @@
             height: 100%;
             padding-left: 10%;
             padding-right: 10%;
-            background-color: #F4F0E6;
+            background-color: #FFFFFF;
             color: #327CCB; }
           .navigation .wrapper ul li:first-child {
             margin-top: 2px; }
           .navigation .wrapper ul li:hover:not(.selected) {
             border-bottom: none; }
             .navigation .wrapper ul li:hover:not(.selected) a {
-              color: #327CCB;
-              background-color: #EAE4D3;
+              color: #FFA01A;
               text-decoration: underline; }
         .navigation .wrapper ul .selected a {
           background-color: #8DBF3F;
-          color: #327CCB; }
+          color: #000000; }
       .navigation .wrapper:target #close {
         display: inline-block; }
       .navigation .wrapper:target #open {

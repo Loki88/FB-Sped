@@ -358,7 +358,7 @@
       margin: 0;
       border: 0; }
       .tab_to_accordion .tab_contents .tab_pane .tab_page {
-        margin-top: 0;
+        margin-top: 0.7em;
         box-shadow: 1pt 1pt 5pt #000000; }
       .tab_to_accordion .tab_contents .tab_pane:not(.current) {
         display: none;
@@ -434,6 +434,7 @@
   #tab:target .current .tab_page {
     display: none; } }
 #sol-trasporti {
+  display: table;
   margin-top: 1em; }
   #sol-trasporti .content-box {
     display: block;
@@ -452,23 +453,28 @@
         /*text-decoration: underline;*/
         /*color: #FBB820;*/
         color: #FFA01A; }
-      #sol-trasporti .content-box a .header .img-wrapper {
-        display: table;
-        position: relative;
-        margin: 0 auto;
-        max-height: 3em;
-        padding: 0.5em auto;
-        width: 80%; }
-        #sol-trasporti .content-box a .header .img-wrapper img {
-          display: block;
+      #sol-trasporti .content-box a .header {
+        margin: auto; }
+        #sol-trasporti .content-box a .header .img-wrapper {
+          display: table;
           position: relative;
-          top: 0.5em;
-          max-height: 2em;
-          max-width: 100%;
-          margin: auto; }
-      #sol-trasporti .content-box a .header h5 {
-        height: 3em;
-        font-size: 0.8em; }
+          /*margin: 0 auto;*/
+          height: 2em;
+          margin: 0.3em auto;
+          padding: 0 auto;
+          width: 80%; }
+          #sol-trasporti .content-box a .header .img-wrapper img {
+            display: block;
+            position: relative;
+            max-height: 2em;
+            max-width: 100%;
+            margin: auto; }
+        #sol-trasporti .content-box a .header h5 {
+          margin: 0;
+          padding: 0 10%;
+          height: 3em;
+          font-size: 0.8em;
+          width: 80%; }
       #sol-trasporti .content-box a p {
         color: #000000; }
 
@@ -526,7 +532,7 @@
   z-index: 1; }
 
 .page-img {
-  box-shadow: 1pt 1pt 5pt #000000;
+  background-color: #FFFFFF;
   margin-top: 0.7em;
   margin-bottom: 0.5em;
   float: left;
@@ -534,18 +540,23 @@
 
 .content-box-shadow {
   box-shadow: 1pt 1pt 5pt #000000; }
+  @media screen and (max-width: 480px) {
+    .content-box-shadow {
+      box-shadow: 0 0 0 #000000; } }
 
 .content-box {
   background-color: #FFFFFF;
   color: #000000;
+  margin-top: 0.7em;
   margin-bottom: 0.4em;
-  margin-top: 0;
   padding-bottom: 0.5em; }
   .content-box:not(:first-child) {
     margin-top: 1em; }
   .content-box .header {
     z-index: 2;
-    display: block;
+    display: table;
+    width: 100%;
+    top: 0;
     margin: 0;
     padding: 0;
     background-color: #1C68AA; }

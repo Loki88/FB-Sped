@@ -516,7 +516,7 @@
             border: 0;
             
             .tab_page{
-                margin-top: 0;
+                margin-top: 0.7em;
                 box-shadow: 1pt 1pt 5pt #000000;
             }
             &:not(.current){
@@ -642,7 +642,7 @@
 }
 
 #sol-trasporti {
-
+    display: table;
     margin-top: 1em;
     
      .content-box{
@@ -667,18 +667,18 @@
             }
             
             .header{
-                
+                margin: auto;
                 .img-wrapper{
                     display: table;
                     position: relative;
-                    margin: 0 auto;
-                    max-height: 3em;
-                    padding: 0.5em auto;
+                    /*margin: 0 auto;*/
+                    height: 2em;
+                    margin: 0.3em auto;
+                    padding: 0 auto;
                     width: 80%;
                     img{
                         display: block;
                         position: relative;
-                        top: 0.5em;
                         max-height: 2em;
                         max-width: 100%;
                         margin: auto;
@@ -688,8 +688,11 @@
 
 
                 h5{
+                    margin: 0;
+                    padding: 0 10%;
                     height: 3em;
                     font-size: 0.8em;
+                    width: 80%;
                 }
             }
             
@@ -775,7 +778,7 @@
 }
 
 .page-img{
-    box-shadow: 1pt 1pt 5pt #000000;
+    background-color: #FFFFFF;
     margin-top: 0.7em;
     margin-bottom: 0.5em;
     float: left;
@@ -784,13 +787,16 @@
 
 .content-box-shadow{
     box-shadow: 1pt 1pt 5pt #000000;
+    @media screen and (max-width: 480px){
+        box-shadow: 0 0 0 #000000;
+    }
 }
 
 .content-box {
     background-color: #FFFFFF;
     color: #000000;
+    margin-top: 0.7em;
     margin-bottom: 0.4em;
-    margin-top: 0;
     padding-bottom: 0.5em;
     
     &:not(:first-child){
@@ -799,7 +805,9 @@
     
     .header {
         z-index: 2;
-        display: block;
+        display: table;
+        width: 100%;
+        top: 0;
         margin: 0;
         padding: 0;
         background-color: #1C68AA;

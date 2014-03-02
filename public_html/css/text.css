@@ -14,6 +14,9 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 1em;
     color: #1C68AA; }
 
+#sol-trasporti .content-box .header {
+  font-size: 1.2em; }
+
 nav {
   font-family: Arial, Verdana;
   font-size: 1.1em;
