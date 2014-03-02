@@ -1,10 +1,3 @@
-
-//var documentSize = {
-//    width: $(document).width(),
-//    height: $(document).height(),
-//    zoom: window.devicePixelRatio,
-//};
-
 //Listener che trasforma l'evento resize in eventi legati ai breakpoints
 $(window).resize(function() {
     //c'è un cambiamento di zoom
@@ -56,10 +49,7 @@ var Menu = {
         
         open.prop('menu', menu);
         close.prop('menu', menu);
-
-        console.log('open', open);
-        console.log('close', close);
-
+        
         open.prop('closeButton', close);
         close.prop('openButton', open);
         
@@ -73,6 +63,7 @@ var Menu = {
         {
             //menù mobile
             Menu.prepareMenu(menu);
+            menu.prop('mobile', true);
         }
         else
         {
@@ -87,15 +78,13 @@ var Menu = {
     {
         
         var menu = $('#menu');
-        if(!menu.prop('mobile'))
-            Menu.prepareMenu(menu);
+        Menu.prepareMenu(menu);
     },
     
     menuDesktop: function(event, size)
     {
         var menu = $('#menu');
-        if(menu.prop('mobile'))
-            Menu.rollbackMenu(menu);
+        Menu.rollbackMenu(menu);
     },
     
     prepareMenu: function(menu)
@@ -104,54 +93,26 @@ var Menu = {
         menu.prop('mobile', false);
         var open = menu.prop('openButton');
         var close = menu.prop('closeButton');
-        close.css('display', 'block');
-        open.css('display', 'block');
-        
-        if(menu.prop('open') != undefined)
-        {
-            menu.parent().addClass('menuMobileVisible');
-            
-            if(menu.prop('open'))
-            {
-                close.show();
-                open.hide();
-                menu.show();
-            }
-            else
-            {
-                close.hide();
-                open.show();
-                menu.hide();
-            }
-            menu.prop('mobile', true);
-        }
-        else
-        {
-            open.hide();
-            close.hide();
-        }
 
         open.click(function(event){
             event.preventDefault();
-            
+            menu.parent().addClass('menuMobileVisible');
             open.hide();
-            
+            close.css('display', 'block');
             close.show();
 
-            if(!menu.prop('open'))
-                menu.slideDown(800);
+            menu.slideDown(800);
 
         });
         
         close.click(function(event){
             event.preventDefault();
-            
             close.hide();
-            
             open.show();
-
-            if(!menu.prop('open'))
-                menu.slideUp(800);
+            
+            menu.slideUp(800, function(){
+                menu.parent().removeClass('menuMobileVisible');
+            });
 
         });
     },
@@ -167,10 +128,10 @@ var Menu = {
         menu.parent().removeClass('menuMobileVisible');
         menu.css('display', 'block');
         
-        open.hide();
-        close.hide();
+        open.removeAttr('style');
+        close.removeAttr('style');
         
-        menu.show();
+        menu.removeAttr('style');
     }
 };
 

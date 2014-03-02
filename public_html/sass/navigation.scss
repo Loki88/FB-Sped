@@ -124,6 +124,9 @@ $second-level-text: #FFFFFF;
                     text-decoration: underline;
                 }
             }
+            #open{
+                display: block;
+            }
             
             #close {
                 display: none;
@@ -222,37 +225,36 @@ $second-level-text: #FFFFFF;
             }
         }
     }
-}
 
-.menuMobileVisible{
-    #menu{
-        display: block;
-        position: relative;
-        height: auto;
-        left: 0px;
-        top: 0;
-
-        li {
+    .menuMobileVisible{
+        #menu{
             display: block;
             position: relative;
-            height: 2.8em;
-            margin: 0;
-            border-top: 1px groove;
-            border-bottom: 1px solid;
-            line-height: auto;
-            border-color: #000000;
+            height: auto;
+            left: 0px;
+            top: 0;
 
-            &:first-child{
-                border-top: 2px groove;
-            }
+            li {
+                display: block;
+                position: relative;
+                height: 2.8em;
+                margin: 0;
+                border-top: 1px groove;
+                border-bottom: 1px solid;
+                line-height: auto;
+                border-color: #000000;
 
-            &:last-child{
-                border-bottom: 2px groove;
+                &:first-child{
+                    border-top: 2px groove;
+                }
+
+                &:last-child{
+                    border-bottom: 2px groove;
+                }
             }
         }
     }
 }
-
 html, body {
     height: 100%;
 }
