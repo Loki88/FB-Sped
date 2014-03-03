@@ -911,7 +911,7 @@
     z-index: -10;
 }
 
-footer{
+#footer{
     display: block;
     position: relative;
     z-index: 3;
@@ -953,7 +953,7 @@ footer{
         height: 20.8em;
     }
     
-    footer, .push{
+    #footer, .push{
         height: 20em;
     }
 }

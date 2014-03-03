@@ -109,7 +109,7 @@ var TabToAccordion = {
             link.parent().addClass('selected');
             panel.addClass('current');
             panel.children('.tab_page').slideDown(400);
-            $(document.body).css('cursor', 'auto');
+            
             panel.prop('open', true);
         }
         else{
@@ -127,8 +127,8 @@ var TabToAccordion = {
                 panel.children('.tab_page').slideDown(400);
                 panel.prop('open', true);
             }
-            
         }
+        $(document.body).css('cursor', 'auto');
     },
     
 };

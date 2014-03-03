@@ -636,7 +636,7 @@
   height: 15.8em;
   z-index: -10; }
 
-footer {
+#footer {
   display: block;
   position: relative;
   z-index: 3;
@@ -650,13 +650,13 @@ footer {
   height: 15em;
   color: #FFFFFF;
   background-color: #1C68AA; }
-  footer a {
+  #footer a {
     z-index: 3;
     color: #FFFFFF; }
-    footer a:hover {
+    #footer a:hover {
       /*color: #94BA65;*/
       color: #FFA01A; }
-  footer div p {
+  #footer div p {
     text-align: center; }
 
 @media only screen and (max-width: 480px) {
@@ -666,5 +666,5 @@ footer {
   .push {
     height: 20.8em; }
 
-  footer, .push {
+  #footer, .push {
     height: 20em; } }
