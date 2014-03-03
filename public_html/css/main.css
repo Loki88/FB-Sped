@@ -169,7 +169,7 @@
     float: none;
     width: 100%; } }
 #main-image {
-  margin-top: 1.4em;
+  margin-top: 1.5em;
   display: inline-block;
   position: relative;
   height: auto;
@@ -588,6 +588,15 @@
     background-repeat: no-repeat; }
 
 @media only screen and (max-width: 480px) {
+  .content-box .header {
+    background: none;
+    border-bottom-width: 0.2em;
+    border-bottom-style: double;
+    border-bottom-color: #8DBF3F; }
+    .content-box .header h1, .content-box .header h2, .content-box .header h3, .content-box .header h4, .content-box .header h5, .content-box .header h6 {
+      text-align: left;
+      color: #1C68AA; }
+
   #map-wrapper {
     display: block;
     width: 70%;
@@ -641,6 +650,8 @@
   position: relative;
   z-index: 3;
   max-width: 100%;
+  width: 100%;
+  overflow: hidden;
   bottom: 0;
   margin-top: 1em;
   border: 0;

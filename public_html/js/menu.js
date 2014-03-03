@@ -53,9 +53,9 @@ var Menu = {
         open.prop('closeButton', close);
         close.prop('openButton', open);
         
-        if(open.css('display') == 'block')
+        if(open.css('display') != 'none')
             menu.prop('open', false);
-        else if(close.css('display') == 'block')
+        else if(close.css('display') != 'none')
             menu.prop('open', true);
         menu.prop('mobile', false);
         var windowWidth = $(document).width();
@@ -99,7 +99,7 @@ var Menu = {
             menu.parent().addClass('menuMobileVisible');
             menu.hide();
             open.hide();
-            close.css('display', 'block');
+            close.css('display', 'inline-block');
             close.show();
 
             menu.slideDown(700);
@@ -127,7 +127,7 @@ var Menu = {
         
         //Ripristina il menu per la versione desktop e tablet landscape
         menu.parent().removeClass('menuMobileVisible');
-        menu.css('display', 'block');
+//        menu.css('display', 'block');
         
         open.removeAttr('style');
         close.removeAttr('style');
