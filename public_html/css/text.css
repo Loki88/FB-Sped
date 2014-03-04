@@ -13,14 +13,25 @@ h1, h2, h3, h4, h5, h6 {
   #logo-text h6 {
     font-size: 1em;
     color: #1C68AA; }
+  @media screen and (max-width: 480px) {
+    #logo-text h4 {
+      font-size: 1.5em; }
+    #logo-text h6 {
+      font-size: 0.8em; } }
 
-#sol-trasporti .content-box .header {
+#language {
+  font-size: 1em; }
+  @media screen and (max-width: 480px) {
+    #language {
+      font-size: 0.8em; } }
+
+#sol-trasporti .content-box .header h1, #sol-trasporti .content-box .header h2, #sol-trasporti .content-box .header h3, #sol-trasporti .content-box .header h4, #sol-trasporti .content-box .header h5, #sol-trasporti .content-box .header h6 {
   font-size: 1.2em; }
 @media screen and (max-width: 480px) {
-  #sol-trasporti .content-box .header {
-    font-size: 1em; }
-  #sol-trasporti .content-box p {
-    font-size: 0.9em; } }
+  #sol-trasporti .content-box {
+    font-size: 0.7em; }
+    #sol-trasporti .content-box .header h1, #sol-trasporti .content-box .header h2, #sol-trasporti .content-box .header h3, #sol-trasporti .content-box .header h4, #sol-trasporti .content-box .header h5, #sol-trasporti .content-box .header h6 {
+      font-size: 1em; } }
 
 #navigation {
   font-family: Arial, Verdana;
@@ -55,17 +66,25 @@ h1, h2, h3, h4, h5, h6 {
 .content-box .header h4 {
   font-size: 1.2em; }
 .content-box h1, .content-box h2, .content-box h3, .content-box h4, .content-box h5, .content-box h6 {
-  font-family: Times New Roman, Boldoni; }
+  font-family: Times New Roman, Boldoni;
+  margin: 0.6em 0.5em; }
 .content-box h6 {
   line-height: 2em;
   font-size: 1em; }
 .content-box p {
   font-family: Arial, Verdana;
-  line-height: 1.5em; }
+  line-height: 1.5em;
+  margin: 0.6em 0.5em; }
 @media screen and (max-width: 480px) {
   .content-box .header h4 {
+    line-height: 1.2em;
     font-size: 1em; }
+  .content-box h6 {
+    margin-top: 0.8em;
+    margin-bottom: 0.4em;
+    line-height: 1.2em; }
   .content-box p {
+    font-size: 0.8em;
     line-height: 1.2em; } }
 
 #footer {

@@ -257,7 +257,7 @@
 }
 
 #main-image{
-    margin-top: 1.5em;
+    margin-top: 1em;
     display: inline-block;
     position: relative;
     height: auto;
@@ -550,20 +550,22 @@
             margin: 0;
             
             .tab_pane{
-                
                 a{
                     display: table;
                     visibility: visible;
                     width: 100%;
                     height: 2.3em;
                     line-height: 1.15em;
+                    text-align-last: center;
                     padding: 0.35em auto;
+                    padding-bottom: 0;
                     text-align: center;
-                    background-color: #1C68AA;
-                    color: #FFFFFF;
+                    /*background-color: #1C68AA;*/
+                    color: #1C68AA;
                     text-decoration: none;
 /*                    margin-bottom: -0.7em;*/
-                    border-width: 1pt 0;
+                    border:0;
+                    border-bottom-width: 1pt;
                     border-style: groove;
                     border-color: #1C68AA;
                     margin: 0;
@@ -799,22 +801,28 @@
     margin-bottom: 0.4em;
     padding-bottom: 0.5em;
     
+    .decorator{
+        display: none;
+        visibility: hidden;
+    }
+    
     &:not(:first-child){
         margin-top: 1em;
     }
     
     .header {
         z-index: 2;
-        display: table;
+        display: inline-table;
         width: 100%;
         top: 0;
         margin: 0;
         padding: 0;
         background-color: #1C68AA;
         h1, h2, h3, h4, h5, h6 {
-            display: block;
+            display: inline-block;
             position: relative;
-            width: 70%;
+            width: 80%;
+            margin: 0.3em 0;
             padding: 0.2em 10%;
             height: auto;
             text-decoration: none;
@@ -826,11 +834,6 @@
     h1, h2, h3, h4, h5, h6 {
         color: #1693A5;
     }
-    
-    h1, h2, h3, h4, h5, h6, p{
-        margin: 0.6em 0.5em;
-    }
-    
 }
 
 #map-wrapper{
@@ -851,19 +854,31 @@
 
 @media only screen and (max-width: 480px)
 {
-    
     .content-box{
-        .header{
+        .decorator{
+            display: block;
+            visibility: visible;
+            height: 0.6em;
+            width: 100%;
+            background: -webkit-linear-gradient(top, #8DBF3F , #FFFFFF); /* For Safari 5.1 to 6.0 */
+            background: -o-linear-gradient(bottom,  #8DBF3F , #FFFFFF); /* For Opera 11.1 to 12.0 */
+            background: -moz-linear-gradient(bottom,  #8DBF3F , #FFFFFF); /* For Firefox 3.6 to 15 */
+            background: linear-gradient(to bottom,  #8DBF3F , #FFFFFF); /* Standard syntax */
+        }
+        
+        .header {
             background: none;
-            border-bottom-width: 0.2em;
-            border-bottom-style: double;
+            margin-bottom: 0;
+            border-bottom-width: 0.1em;
+            border-bottom-style: solid;
             border-bottom-color: #8DBF3F;
             h1, h2, h3, h4, h5, h6 {
-                text-align: left;
+                background: none;
                 color: #1C68AA;
             }
         }
     }
+    
     
     #map-wrapper{
         display: block;
@@ -921,7 +936,7 @@
 .push {
     display: block;
     clear: both;
-    height: 15.8em;
+    height: 16.8em;
     z-index: -10;
 }
 
@@ -930,15 +945,13 @@
     position: relative;
     z-index: 3;
     max-width: 100%;
-    width: 100%;
-    overflow: hidden;
     bottom: 0;
     margin-top: 1em;
     border: 0;
     border-top: 2pt;
     border-color: #1C68AA;
     border-style: inset;
-    height: 15em;
+    height: 16em;
     color: #FFFFFF;
     background-color: #1C68AA;
     
@@ -957,19 +970,24 @@
         }
     }
     
+    span{
+        width: fit-content;
+        display: block;
+        margin: auto 0.2em;
+    }
 }
 
 @media only screen and (max-width: 480px)
 {
     .sticky-footer{
-        margin-bottom: -20.8em;
+        margin-bottom: -21.8em;
     }
     
     .push{
-        height: 20.8em;
+        height: 21.8em;
     }
     
     #footer, .push{
-        height: 20em;
+        height: 21em;
     }
 }

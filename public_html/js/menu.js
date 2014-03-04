@@ -11,10 +11,10 @@ $(window).resize(function() {
         //La finestra è ridimensionata per gli smartphone portrait
         $(window).trigger('oneColumn', newSize);
     }
-    else if(newSize.width > 480 && newSize.width < 769) {
-        //La finestra è ridimensionata per i tablet portrait e gli smartphone landscape
-        $(window).trigger('fluidGrid', newSize);
-    }
+//    else if(newSize.width > 480 && newSize.width < 768) {
+//        //La finestra è ridimensionata per i tablet portrait e gli smartphone landscape
+//        $(window).trigger('fluidGrid', newSize);
+//    }
     else{
         //La finestra è ridimensionata per ogni altro dispositivo
         $(window).trigger('noMobile', newSize);
@@ -53,13 +53,13 @@ var Menu = {
         open.prop('closeButton', close);
         close.prop('openButton', open);
         
-        if(open.css('display') != 'none')
+        if(open.css('display') == 'block')
             menu.prop('open', false);
-        else if(close.css('display') != 'none')
+        else if(close.css('display') == 'block')
             menu.prop('open', true);
         menu.prop('mobile', false);
         var windowWidth = $(document).width();
-        if(windowWidth < 769)
+        if(windowWidth < 481)
         {
             //menù mobile
             Menu.prepareMenu(menu);
@@ -69,7 +69,7 @@ var Menu = {
         {
             menu.prop('mobile', false);
         }
-        $(window).on('fluidGrid', Menu.menuMobile);
+        $(window).on('fluidGrid', Menu.menuDesktop);
         $(window).on('oneColumn', Menu.menuMobile);
         $(window).on('noMobile', Menu.menuDesktop);
     },
@@ -93,15 +93,15 @@ var Menu = {
         menu.prop('mobile', false);
         var open = menu.prop('openButton');
         var close = menu.prop('closeButton');
-
+        
         open.click(function(event){
             event.preventDefault();
-            menu.parent().addClass('menuMobileVisible');
             menu.hide();
+            menu.parent().addClass('menuMobileVisible');
             open.hide();
-            close.css('display', 'inline-block');
+            close.css('display', 'block');
             close.show();
-
+            
             menu.slideDown(700);
 
         });
@@ -127,7 +127,7 @@ var Menu = {
         
         //Ripristina il menu per la versione desktop e tablet landscape
         menu.parent().removeClass('menuMobileVisible');
-//        menu.css('display', 'block');
+        menu.css('display', 'block');
         
         open.removeAttr('style');
         close.removeAttr('style');
