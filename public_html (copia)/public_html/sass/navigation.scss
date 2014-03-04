@@ -1,0 +1,298 @@
+$menu-color: #000000;
+$menu-text: #FFFFFF;
+$first-level-color: #DFEBF6;
+$first-level-color-hover: #75a9d2;
+$first-level-color-selected: #8eb7d6;
+$first-level-text: #FFFFFF;
+$second-level-color: #70AB4B;
+$second-level-text: #FFFFFF;
+
+.navigation{
+    display: table;
+    position: relative;
+    height: 1.8em;
+    padding: 0;
+    margin: 0;
+    margin-top: 0.2em;
+    background-color: #1C68AA;
+    border-bottom: 1pt inset #1C68AA;
+    
+    .wrapper{
+        height: 1.8em;
+        margin-top: 0;
+        margin-bottom: 0;
+        padding: 0;
+        border: 0;
+    }
+    .menu-link {
+        display: none;
+    }
+
+    .selected{
+        background-color: #8DBF3F;
+        border-width: 1pt 1pt 0 1pt;
+        padding-bottom: 2pt;
+        margin-bottom: -1pt;
+        @media only screen and (min-width: 2500px)
+        {
+            padding-bottom: 3pt;
+            margin-bottom: -2pt;
+        }
+        border-style: outset;
+        border-color: #8DBF3F;
+        a{
+            cursor: default;
+            color: #030320;
+        }
+    }
+
+    ul{
+        display: block;
+        position: relative;
+        list-style: none;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        border: 0;
+
+        li {
+            display: inline-block;
+            height: 1.8em;
+            position: relative;
+            float: left;
+            margin: 0;
+            padding: auto 0.4em;
+            border: 0;
+            &:hover:not(.selected){
+                a{
+                    color: #FFA01A;
+                }
+            }
+
+            a{
+                display: inline-block;
+                position: relative;
+                height: 100%;
+                padding: 0 1em;
+                margin: 0;
+                line-height: 1.8em;
+                text-align: center;
+                color: #FFFFFF;
+                text-decoration: none;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 480px)
+{ 
+    .navigation {
+        margin: 0;
+        padding: 0;
+        height: auto;
+        border-width: 0.1em 0;
+        border-style: groove;
+        border-color: #1C68AA;
+
+        .wrapper{
+            height: auto;
+          
+            a {
+                display: inline-block;
+                clear: both;
+                width: 80%;
+                text-align: center;
+                height: 2em;
+                padding: 0.2em 10%;
+                line-height: 2em;
+                text-decoration: none;
+            }
+
+            /* Stile di base per il menù chiuso */
+            .menu-link {
+                display: block;
+                height: 1.5em;
+                line-height: 1.5em;
+                width: 70%;
+                padding: 0.35em 15%;
+                background-image: url('../img/menu-white.png');
+                background-repeat: no-repeat;
+                background-position: right center;
+                background-size: 1.3em;
+                color: #F4F0E6;
+                &:hover{
+                    text-decoration: underline;
+                }
+            }
+            #open{
+                display: block;
+            }
+            
+            #close {
+                display: none;
+                background-image: url('../img/menu-white.png');
+            }
+
+            ul {
+              display: block;
+              position: absolute;
+              list-style: none;
+              margin: 0;
+              padding: 0;
+              width: 100%;
+              height: auto;
+              top: 2.2em;
+              z-index: 4;
+              left: -10000px;
+
+              li {
+                display: block;
+                width: 100%;
+                height: 0em;
+                border: 0;
+                float: left;
+                -webkit-transition: height 0.25;
+                -moz-transition: height 0.25s;
+                -o-transition: height 0.25s;
+                transition: height 0.25s;
+
+                a {
+                    height: 100%;
+                    padding-left: 10%;
+                    padding-right: 10%;
+                    background-color: #FFFFFF;
+                    color: #327CCB;
+                }
+                
+                &:first-child{
+                    margin-top: 2px;
+                }
+
+                &:hover:not(.selected){
+                     border-bottom: none;
+                     a{
+                         color: #FFA01A;
+                         text-decoration: underline;
+                     }
+                }
+                
+              }
+              
+              .selected{
+                  a{
+                      background-color: #8DBF3F;
+                      color: #000000;
+                  }
+                    
+                }
+            }
+
+            /* Stile per i bottoni del menù di primo livello, quando sono visibili */
+            &:target{
+                #close {
+                    display: inline-block;
+                }
+
+                #open {
+                  display: none; }
+
+                ul {
+                    height: auto;
+                    left: 0px;
+
+                    li {
+                        display: block;
+                        position: relative;
+                        height: 2.4em;
+                        margin: 0;
+                        border-top: 1px groove;
+                        border-bottom: 1px solid;
+                        line-height: auto;
+                        border-color: #000000;
+
+                        &:first-child{
+                            border-top: 2px groove;
+                        }
+
+                        &:last-child{
+                            border-bottom: 2px groove;
+                        }
+                      
+                    }
+                }
+            }
+        }
+    }
+
+    .menuMobileVisible{
+        #menu{
+            height: auto;
+            left: 0px;
+
+            li {
+                display: block;
+                position: relative;
+                height: 2.8em;
+                margin: 0;
+                border-top: 1px groove;
+                border-bottom: 1px solid;
+                line-height: auto;
+                border-color: #000000;
+
+                &:first-child{
+                    border-top: 2px groove;
+                }
+
+                &:last-child{
+                    border-bottom: 2px groove;
+                }
+            }
+        }
+    }
+}
+html, body {
+    height: 100%;
+}
+
+.body-background {
+    z-index: -2;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    width: 100%;
+    background: -webkit-linear-gradient(top, #8DBF3F , #FFFFFF); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(bottom,  #8DBF3F , #FFFFFF); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(bottom,  #8DBF3F , #FFFFFF); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(to bottom,  #8DBF3F , #FFFFFF); /* Standard syntax */
+    @media screen and (max-width: 480px){
+        background: none;
+    }
+}
+
+
+@media screen and (max-width: 1280px)
+{
+    body{
+        margin: 0;
+        padding: 0;
+    }
+}
+
+.wrapper{
+    display: table;
+    width: 100%; 
+}
+
+@media screen and (min-width: 1280px)
+{
+    .wrapper{
+        width: 1140px;
+        margin: 0 auto;
+        padding: 0;
+        header{
+            width: 100%;
+            padding: 0;
+            margin: 0;
+        }
+    }
+}

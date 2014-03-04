@@ -16,11 +16,18 @@ h1, h2, h3, h4, h5, h6 {
 
 #sol-trasporti .content-box .header {
   font-size: 1.2em; }
+@media screen and (max-width: 480px) {
+  #sol-trasporti .content-box .header {
+    font-size: 1em; }
+  #sol-trasporti .content-box p {
+    font-size: 0.9em; } }
 
-nav {
+#navigation {
   font-family: Arial, Verdana;
-  font-size: 1.1em;
-  /*    font-weight: bold;*/ }
+  font-size: 1.1em; }
+  @media screen and (max-width: 768px) {
+    #navigation {
+      font-size: 0.75em; } }
 
 .infoWindow {
   font-family: Arial, Verdana; }
@@ -34,6 +41,12 @@ nav {
   color: #FFFFFF;
   font-family: Arial, Verdana;
   font-size: 1em; }
+@media screen and (max-width: 480px) {
+  #main-image .image-mask h5 {
+    font-size: 1.2em;
+    line-height: 1.2em; }
+  #main-image .image-mask p {
+    font-size: 0.8em; } }
 
 #tab a {
   font-family: Arial, Verdana;
@@ -49,6 +62,14 @@ nav {
 .content-box p {
   font-family: Arial, Verdana;
   line-height: 1.5em; }
+@media screen and (max-width: 480px) {
+  .content-box .header h4 {
+    font-size: 1em; }
+  .content-box p {
+    line-height: 1.2em; } }
 
-footer {
+#footer {
   font-family: Arial, Verdana; }
+  @media screen and (max-width: 480px) {
+    #footer {
+      font-size: 0.9em; } }

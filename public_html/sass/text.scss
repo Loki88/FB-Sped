@@ -25,14 +25,27 @@ h1, h2, h3, h4, h5, h6 {
     .content-box{
         .header{
             font-size: 1.2em;
+            
         }
+        @media screen and (max-width: 480px){
+            .header{
+               font-size: 1em; 
+            }
+            p{
+                font-size: 0.9em;
+            }
+        }
+        
     }
 }
 
-nav{
+#navigation{
     font-family: Arial, Verdana;
     font-size: 1.1em;
-/*    font-weight: bold;*/
+    @media screen and (max-width: 768px)
+    {
+        font-size: 0.75em;
+    }
 }
 
 .infoWindow{
@@ -52,6 +65,15 @@ nav{
             color: #FFFFFF;
             font-family: Arial, Verdana;
             font-size: 1em;
+        }
+        @media screen and (max-width: 480px){
+            h5{
+                font-size: 1.2em;
+                line-height: 1.2em;
+            }
+            p{
+                font-size: 0.8em;
+            }
         }
     }
 }
@@ -81,8 +103,21 @@ nav{
         font-family: Arial, Verdana;
         line-height: 1.5em;
     }
+    @media screen and (max-width: 480px){
+        .header{
+            h4{
+                font-size: 1em;
+            }
+        }
+        p{
+            line-height: 1.2em;
+        }
+    }
 }
 
-footer{
+#footer{
     font-family: Arial, Verdana;
+    @media screen and (max-width: 480px){
+        font-size: 0.9em;
+    }
 }
