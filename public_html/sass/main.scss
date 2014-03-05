@@ -667,7 +667,7 @@
             
             .header{
                 margin: auto;
-                .img-wrapper{
+                .icon{
                     display: table;
                     position: relative;
                     /*margin: 0 auto;*/
@@ -675,16 +675,10 @@
                     margin: 0.3em auto;
                     padding: 0 auto;
                     width: 80%;
-                    img{
-                        display: block;
-                        position: relative;
-                        max-height: 2em;
-                        max-width: 100%;
-                        margin: auto;
-
-                    }
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    background-size: 2em auto;
                 }
-
 
                 h5{
                     margin: 0;
@@ -699,6 +693,66 @@
             
             p{
                 color: #000000;
+            }
+        }
+        
+        #truck{
+            .icon{
+                background-image: url('../img/icons/icona-truck.png');
+            }
+
+            &:hover{
+                .icon{
+                    background-image: url('../img/icons/icona-truck-hover.png');
+                }
+            }
+        }
+
+        #train{
+            .icon{
+                background-image: url('../img/icons/icona-train.png');
+            }
+
+            &:hover{
+                .icon{
+                    background-image: url('../img/icons/icona-train-hover.png');
+                }
+            }
+        }
+
+        #ship{
+            .icon{
+                background-image: url('../img/icons/icona-ship.png');
+            }
+
+            &:hover{
+                .icon{
+                    background-image: url('../img/icons/icona-ship-hover.png');
+                }
+            }
+        }
+
+        #airplane{
+            .icon{
+                background-image: url('../img/icons/icona-plane.png');
+            }
+
+            &:hover{
+                .icon{
+                    background-image: url('../img/icons/icona-plane-hover.png');
+                }
+            }
+        }
+
+        #combined{
+            .icon{
+                background-image: url('../img/icons/icona-combined.png');
+            }
+
+            &:hover{
+                .icon{
+                    background-image: url('../img/icons/icona-combined-hover.png');
+                }
             }
         }
     }
@@ -717,33 +771,36 @@
             padding: 0;
             a{
                 display: block;
+                position: relative;
                 margin: 0;
                 padding: 0;
                 width: 100%;
                 height: 100%;
                 .header{
-                    height: 3em;
+                    height: 2em;
                         
-                    .img-wrapper{
+                    .icon{
                         display: inline-block;
                         float: left;
                         width: 20%;
-                        margin: 0.5em auto;
-                        img{
-                            top: auto;
-                        }
+                        height: 1.5em;
+                        margin: 0.25em auto;
+                        background-size: 1.5em 1.5em;
                     }
 
 
                     h5{
                         display: block;
                         float: left;
-                        position: relative;
-                        margin: auto;
+                        position: absolute;
                         width: 60%;
+                        height: 1.5em;
+                        bottom: 0;
                         padding: 0;
-                        margin: 0.5em auto;
+                        margin: 0.2em 20%;
+                        margin-bottom: 1.5em;
                         text-align: center;
+                        text-wrap: avoid;
                     }
                 }
                 
@@ -753,6 +810,36 @@
                     float: left;
                     width: 90%;
                     margin: 0.5em 5%;
+                }
+            }
+            
+            #truck{
+                .icon{
+                    background-image: url('../img/icons/icona-truck-blue.png');
+                }
+            }
+
+            #train{
+                .icon{
+                    background-image: url('../img/icons/icona-train-blue.png');
+                }
+            }
+
+            #ship{
+                .icon{
+                    background-image: url('../img/icons/icona-ship-blue.png');
+                }
+            }
+
+            #airplane{
+                .icon{
+                    background-image: url('../img/icons/icona-plane-blue.png');
+                }
+            }
+
+            #combined{
+                .icon{
+                    background-image: url('../img/icons/icona-combined-blue.png');
                 }
             }
         }
@@ -830,6 +917,9 @@
     
     h1, h2, h3, h4, h5, h6 {
         color: #1693A5;
+    }
+    p{
+        display: block;
     }
 }
 

@@ -456,20 +456,17 @@
         color: #FFA01A; }
       #sol-trasporti .content-box a .header {
         margin: auto; }
-        #sol-trasporti .content-box a .header .img-wrapper {
+        #sol-trasporti .content-box a .header .icon {
           display: table;
           position: relative;
           /*margin: 0 auto;*/
           height: 2em;
           margin: 0.3em auto;
           padding: 0 auto;
-          width: 80%; }
-          #sol-trasporti .content-box a .header .img-wrapper img {
-            display: block;
-            position: relative;
-            max-height: 2em;
-            max-width: 100%;
-            margin: auto; }
+          width: 80%;
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: 2em auto; }
         #sol-trasporti .content-box a .header h5 {
           margin: 0;
           padding: 0 10%;
@@ -478,6 +475,26 @@
           width: 80%; }
       #sol-trasporti .content-box a p {
         color: #000000; }
+    #sol-trasporti .content-box #truck .icon {
+      background-image: url("../img/icons/icona-truck.png"); }
+    #sol-trasporti .content-box #truck:hover .icon {
+      background-image: url("../img/icons/icona-truck-hover.png"); }
+    #sol-trasporti .content-box #train .icon {
+      background-image: url("../img/icons/icona-train.png"); }
+    #sol-trasporti .content-box #train:hover .icon {
+      background-image: url("../img/icons/icona-train-hover.png"); }
+    #sol-trasporti .content-box #ship .icon {
+      background-image: url("../img/icons/icona-ship.png"); }
+    #sol-trasporti .content-box #ship:hover .icon {
+      background-image: url("../img/icons/icona-ship-hover.png"); }
+    #sol-trasporti .content-box #airplane .icon {
+      background-image: url("../img/icons/icona-plane.png"); }
+    #sol-trasporti .content-box #airplane:hover .icon {
+      background-image: url("../img/icons/icona-plane-hover.png"); }
+    #sol-trasporti .content-box #combined .icon {
+      background-image: url("../img/icons/icona-combined.png"); }
+    #sol-trasporti .content-box #combined:hover .icon {
+      background-image: url("../img/icons/icona-combined-hover.png"); }
 
 @media only screen and (max-width: 480px) {
   #sol-trasporti {
@@ -490,33 +507,47 @@
       padding: 0; }
       #sol-trasporti .content-box a {
         display: block;
+        position: relative;
         margin: 0;
         padding: 0;
         width: 100%;
         height: 100%; }
         #sol-trasporti .content-box a .header {
-          height: 3em; }
-          #sol-trasporti .content-box a .header .img-wrapper {
+          height: 2em; }
+          #sol-trasporti .content-box a .header .icon {
             display: inline-block;
             float: left;
             width: 20%;
-            margin: 0.5em auto; }
-            #sol-trasporti .content-box a .header .img-wrapper img {
-              top: auto; }
+            height: 1.5em;
+            margin: 0.25em auto;
+            background-size: 1.5em 1.5em; }
           #sol-trasporti .content-box a .header h5 {
             display: block;
             float: left;
-            position: relative;
-            margin: auto;
+            position: absolute;
             width: 60%;
+            height: 1.5em;
+            bottom: 0;
             padding: 0;
-            margin: 0.5em auto;
-            text-align: center; }
+            margin: 0.2em 20%;
+            margin-bottom: 1.5em;
+            text-align: center;
+            text-wrap: avoid; }
         #sol-trasporti .content-box a p {
           display: block;
           float: left;
           width: 90%;
-          margin: 0.5em 5%; } }
+          margin: 0.5em 5%; }
+      #sol-trasporti .content-box #truck .icon {
+        background-image: url("../img/icons/icona-truck-blue.png"); }
+      #sol-trasporti .content-box #train .icon {
+        background-image: url("../img/icons/icona-train-blue.png"); }
+      #sol-trasporti .content-box #ship .icon {
+        background-image: url("../img/icons/icona-ship-blue.png"); }
+      #sol-trasporti .content-box #airplane .icon {
+        background-image: url("../img/icons/icona-plane-blue.png"); }
+      #sol-trasporti .content-box #combined .icon {
+        background-image: url("../img/icons/icona-combined-blue.png"); } }
 .clear {
   display: block;
   height: border-box;
@@ -576,6 +607,8 @@
       color: #F0F1F7; }
   .content-box h1, .content-box h2, .content-box h3, .content-box h4, .content-box h5, .content-box h6 {
     color: #1693A5; }
+  .content-box p {
+    display: block; }
 
 #map-wrapper {
   display: block;
