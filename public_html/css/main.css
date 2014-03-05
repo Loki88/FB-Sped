@@ -9,7 +9,8 @@
     height: 100%; }
 
   body {
-    overflow-y: auto; } }
+    overflow-y: auto;
+    overflow-x: hidden; } }
 #page-header {
   background-color: #FFFFFF;
   padding-bottom: 0;
@@ -106,6 +107,14 @@
   display: inline-block;
   position: relative;
   height: auto; }
+  #language .decorator {
+    display: none;
+    visibility: hidden; }
+  #language .controls {
+    display: none;
+    position: absolute;
+    left: -10000px;
+    visibility: hidden; }
   #language .selected {
     cursor: default; }
     #language .selected:hover span {
@@ -114,7 +123,7 @@
     #language .selected span {
       color: #1C68AA;
       text-decoration: underline; }
-  #language a {
+  #language a:not(.controls) {
     display: block;
     position: relative;
     width: 50%;
@@ -122,14 +131,14 @@
     padding: 0;
     margin: 0.5em 0;
     float: left; }
-    #language a img {
+    #language a:not(.controls) img {
       display: block;
       float: left;
       height: 1.5em;
       margin: 0.25em 0.2em;
       margin: auto 0;
       vertical-align: middle; }
-    #language a span {
+    #language a:not(.controls) span {
       display: block;
       width: 40%;
       height: 1.5em;
@@ -138,34 +147,74 @@
       line-height: 1.5em;
       float: left;
       color: #1C68AA; }
-    #language a:hover span {
+    #language a:not(.controls):hover span {
       color: #FBB820;
       text-decoration: underline;
       text-decoration-style: wavy; }
 
 @media only screen and (max-width: 480px) {
   #language {
-    margin-bottom: 0.4em; }
-    #language a {
-      width: 30%;
-      text-decoration: none; }
-      #language a span {
+    display: block;
+    position: relative;
+    right: 0;
+    left: 79%;
+    width: 21%;
+    margin: 0;
+    margin-left: -0.05em;
+    height: 0;
+    border: 0;
+    bottom: -0.4em;
+    margin-bottom: 0.4em;
+    z-index: 3; }
+    #language .controls {
+      font-size: inherit;
+      visibility: visible;
+      display: block;
+      position: relative;
+      left: 0;
+      width: 100%;
+      height: 2.2em;
+      padding: 0.1em -0.05em;
+      border: 0;
+      background-color: rgba(28, 104, 170, 0.7);
+      border-left-width: 0.1em;
+      border-left-style: groove;
+      border-top-width: 0.1em;
+      border-top-style: outset;
+      border-color: #1C68AA; }
+      #language .controls img {
+        display: block;
+        position: relative;
+        height: 100%;
+        margin: 0 auto; }
+    #language #lang-close {
+      display: none; }
+    #language a:not(.controls) {
+      left: -10000px;
+      position: absolute;
+      width: 80%;
+      text-decoration: none;
+      padding: 0.2em 10%;
+      margin: 0; }
+      #language a:not(.controls) span {
         width: 50%; }
-      #language a:first-child {
-        margin-left: 15%;
-        margin-right: 5%; }
-        #language a:first-child span {
-          float: right;
-          text-align: right; }
-        #language a:first-child img {
-          float: right; }
-      #language a:last-child {
-        margin-left: 5%; }
-        #language a:last-child span {
-          float: left;
-          text-align: left; } }
+    #language:target #lang-open {
+      display: none; }
+    #language:target #lang-close {
+      display: block; }
+    #language:target a:not(.controls) {
+      display: inline-block;
+      position: relative;
+      border: 0.05em groove;
+      line-height: auto;
+      border-color: #000000;
+      left: 0; }
+      #language:target a:not(.controls):first-child {
+        border-top-width: 0.1em; }
+      #language:target a:not(.controls):last-child {
+        border-bottom-width: 0.1em; } }
 @media only screen and (min-width: 481px) and (max-width: 768px) {
-  #language a {
+  #language a:not(.controls) {
     float: none;
     width: 100%; } }
 #main-image {
@@ -455,6 +504,10 @@
         /*color: #FBB820;*/
         color: #FFA01A; }
       #sol-trasporti .content-box a .header {
+        display: inline-block;
+        min-height: 5em;
+        height: 5em;
+        max-height: 5em;
         margin: auto; }
         #sol-trasporti .content-box a .header .icon {
           display: table;
@@ -513,7 +566,10 @@
         width: 100%;
         height: 100%; }
         #sol-trasporti .content-box a .header {
-          height: 2em; }
+          min-height: 2em;
+          max-height: auto;
+          height: 2em;
+          border: 0; }
           #sol-trasporti .content-box a .header .icon {
             display: inline-block;
             float: left;
@@ -524,13 +580,14 @@
           #sol-trasporti .content-box a .header h5 {
             display: block;
             float: left;
-            position: absolute;
+            position: relative;
             width: 60%;
             height: 1.5em;
             bottom: 0;
             padding: 0;
-            margin: 0.2em 20%;
-            margin-bottom: 1.5em;
+            margin: 0;
+            margin-top: 0.5em;
+            margin-right: 20%;
             text-align: center;
             text-wrap: avoid; }
         #sol-trasporti .content-box a p {

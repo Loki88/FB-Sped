@@ -11,6 +11,7 @@
 
     body{
         overflow-y: auto;
+        overflow-x: hidden;
     }
 }
 
@@ -148,6 +149,19 @@
     position: relative;
     height: auto;
     
+    .decorator{
+        display: none;
+        visibility: hidden;
+    }
+    
+    .controls{
+        display: none;
+        position: absolute;
+        left: -10000px;
+        visibility: hidden;
+        
+    }
+    
     .selected{
         cursor: default;
         &:hover{
@@ -162,7 +176,7 @@
         }
     }
     
-    a{
+    a:not(.controls){
         display: block;
         position: relative;
         width: 50%;
@@ -207,39 +221,84 @@
 @media only screen and (max-width: 480px)
 {
     #language{
+        display: block;
+        position: relative;
+        right: 0;
+        left: 79%;
+        width: 21%;
+        margin: 0;
+        margin-left: -0.05em;
+        height: 0;
+        border: 0;
+        bottom: -0.4em;
         margin-bottom: 0.4em;
-        a{
-            width: 30%;
+        z-index: 3;
+        
+        .controls{
+            font-size: inherit;
+            visibility: visible;
+            display: block;
+            position: relative;
+            left: 0;
+            width: 100%;
+            height: 2.2em;
+            padding: 0.1em -0.05em;
+            border: 0;
+            background-color: rgba(28, 104, 170, 0.7);
+            border-left-width: 0.1em;
             
+            border-left-style: groove;
+            border-top-width: 0.1em;
+            border-top-style: outset;
+            border-color: #1C68AA;
+            img{
+                display: block;
+                position: relative;
+                height: 100%;
+                margin: 0 auto;
+            }
+        }
+        
+        #lang-close{
+            display: none;
+        }
+        
+        a:not(.controls){
+            left: -10000px;
+            position: absolute;
+            width: 80%;
             text-decoration: none;
-           
+            padding: 0.2em 10%;
+            margin: 0;
             span{
                 width: 50%;
             }
-            
-            &:first-child{
-                margin-left: 15%;
-                margin-right: 5%;
-                span {
-                    float: right;
-                    text-align: right;
-                }
-                img{
-                    float: right;
-                }
+        }
+        &:target{
+            #lang-open{
+                display: none;
             }
-            
-            &:last-child{
-                margin-left: 5%;
-                
-                span{
-                    float: left;
-                    text-align: left;
-                }
-            }
-            
- 
 
+            #lang-close{
+                display: block;
+            }
+            
+            a:not(.controls){
+                display: inline-block;
+                
+                position: relative;
+
+                border: 0.05em groove;
+                line-height: auto;
+                border-color: #000000;
+                left: 0;
+                &:first-child{
+                    border-top-width: 0.1em;
+                }
+                &:last-child{
+                    border-bottom-width: 0.1em;
+                }
+            }
         }
     }
 }
@@ -249,7 +308,7 @@
 @media only screen and (min-width: 481px) and (max-width: 768px)
 {
     #language{
-        a{
+        a:not(.controls){
             float: none;
             width: 100%;
         }
@@ -666,6 +725,10 @@
             }
             
             .header{
+                display: inline-block;
+                min-height: 5em;
+                height: 5em;
+                max-height: 5em;
                 margin: auto;
                 .icon{
                     display: table;
@@ -777,8 +840,10 @@
                 width: 100%;
                 height: 100%;
                 .header{
+                    min-height: 2em;
+                    max-height: auto;
                     height: 2em;
-                        
+                    border: 0;
                     .icon{
                         display: inline-block;
                         float: left;
@@ -792,13 +857,15 @@
                     h5{
                         display: block;
                         float: left;
-                        position: absolute;
+                        position: relative;
                         width: 60%;
                         height: 1.5em;
                         bottom: 0;
                         padding: 0;
-                        margin: 0.2em 20%;
-                        margin-bottom: 1.5em;
+                        margin: 0;
+                        margin-top: 0.5em;
+                        margin-right: 20%;
+                        
                         text-align: center;
                         text-wrap: avoid;
                     }

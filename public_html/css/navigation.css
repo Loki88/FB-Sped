@@ -1,4 +1,4 @@
-@charset "CP850";
+@charset "UTF-8";
 .navigation {
   display: table;
   position: relative;
@@ -8,6 +8,9 @@
   margin-top: 0.2em;
   background-color: #1C68AA;
   border-bottom: 1pt inset #1C68AA; }
+  .navigation .decorator {
+    display: none;
+    visibility: hidden; }
   .navigation .wrapper {
     height: 1.8em;
     margin-top: 0;
@@ -65,18 +68,12 @@
     padding: 0;
     height: auto;
     border: 0;
-    border-bottom-width: 0.1em;
-    border-style: groove;
-    border-color: #1C68AA;
-    background: -webkit-linear-gradient(top, white, #1c68aa);
-    /* For Safari 5.1 to 6.0 */
-    background: -o-linear-gradient(bottom, white, #1c68aa);
-    /* For Opera 11.1 to 12.0 */
-    background: -moz-linear-gradient(bottom, white, #1c68aa);
-    /* For Firefox 3.6 to 15 */
-    background: linear-gradient(to bottom, white, #1c68aa);
-    /* Standard syntax */ }
+    width: 79%;
+    background: none;
+    float: left; }
     .navigation .wrapper {
+      display: block;
+      position: relative;
       height: auto;
       /* Stile di base per il menù chiuso */
       /* Stile per i bottoni del menù di primo livello, quando sono visibili */ }
@@ -93,13 +90,13 @@
         display: inline-block;
         height: 2.2em;
         line-height: 2.2em;
-        width: 70%;
+        width: 98%;
         margin-bottom: -0.01em;
         padding: 0 1%;
-        margin-right: 0 4%;
+        /*margin-right: 4%;*/
         background-color: rgba(28, 104, 170, 0.7);
-        border-radius: 0.1em;
-        border-width: 0.1em 0.1em 0 0.1em;
+        /*border-radius: 0.1em;*/
+        border-width: 0.1em 0 0 0;
         border-style: outset;
         border-color: #1C68AA;
         background-image: url("../img/menu-white.png");
@@ -116,6 +113,7 @@
         display: none;
         background-image: url("../img/menu-white.png"); }
       .navigation .wrapper ul {
+        font-size: inherit;
         display: block;
         position: absolute;
         list-style: none;
@@ -124,7 +122,7 @@
         border: 0;
         width: 100%;
         height: auto;
-        top: 2.2em;
+        top: 2.3em;
         z-index: 3;
         left: -10000px; }
         .navigation .wrapper ul li {
@@ -204,6 +202,22 @@ html, body {
   @media screen and (max-width: 480px) {
     .body-background {
       background: none; } }
+  .body-background .decorator {
+    display: none;
+    visibility: hidden; }
+    @media screen and (max-width: 480px) {
+      .body-background .decorator {
+        display: block;
+        visibility: visible;
+        height: 0.5em;
+        background: -webkit-linear-gradient(top, #1c68aa, white);
+        /* For Safari 5.1 to 6.0 */
+        background: -o-linear-gradient(bottom, #1c68aa, white);
+        /* For Opera 11.1 to 12.0 */
+        background: -moz-linear-gradient(bottom, #1c68aa, white);
+        /* For Firefox 3.6 to 15 */
+        background: linear-gradient(to bottom, #1c68aa, white);
+        /* Standard syntax */ } }
 
 @media screen and (max-width: 1280px) {
   body {

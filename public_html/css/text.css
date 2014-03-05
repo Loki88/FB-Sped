@@ -23,7 +23,7 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 1em; }
   @media screen and (max-width: 480px) {
     #language {
-      font-size: 0.8em; } }
+      font-size: 0.75em; } }
 
 #sol-trasporti .content-box .header h1, #sol-trasporti .content-box .header h2, #sol-trasporti .content-box .header h3, #sol-trasporti .content-box .header h4, #sol-trasporti .content-box .header h5, #sol-trasporti .content-box .header h6 {
   font-size: 1.2em; }
@@ -82,6 +82,7 @@ h1, h2, h3, h4, h5, h6 {
   .content-box h6 {
     margin-top: 0.8em;
     margin-bottom: 0.4em;
+    font-size: 0.9em;
     line-height: 1.2em; }
   .content-box p {
     font-size: 0.8em;
