@@ -258,27 +258,23 @@
 
 #main-image{
     margin-top: 1em;
-    display: inline-block;
+    display: table;
     position: relative;
-    height: auto;
+    height: fit-content;
     min-height: 15em;
     min-width: 100%;
     width: 100%;
     max-width: 100%;
     
     img {
-        display: block;
+        display: table;
         top: 0;
         min-width: 100%;
         width: 100%;
         max-width: 100%;
+        height: auto;
         margin: auto;
         left: 0;
-        resize: none;
-        &:after {
-            content:"";
-            display:table;
-        }
     }
     
     .image-mask{
@@ -334,8 +330,8 @@
     #main-image {
         .image-mask{
             width: 100%;
-            height: 70%;
-            top: auto;
+            height: 65%;
+            top: 35%;
             bottom: 0;
             
             a{

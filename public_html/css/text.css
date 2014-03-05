@@ -52,7 +52,7 @@ h1, h2, h3, h4, h5, h6 {
   color: #FFFFFF;
   font-family: Arial, Verdana;
   font-size: 1em; }
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 767px) {
   #main-image .image-mask h5 {
     font-size: 1.2em;
     line-height: 1.2em; }

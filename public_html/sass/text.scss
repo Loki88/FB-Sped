@@ -84,14 +84,14 @@ h1, h2, h3, h4, h5, h6 {
             font-family: Arial, Verdana;
             font-size: 1em;
         }
-        @media screen and (max-width: 480px){
+        @media screen and (max-width: 767px){
             h5{
                 font-size: 1.2em;
                 line-height: 1.2em;
             }
             p{
                 font-size: 0.8em;
-            }
+            }           
         }
     }
 }
