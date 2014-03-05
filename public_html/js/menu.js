@@ -96,13 +96,15 @@ var Menu = {
         
         open.click(function(event){
             event.preventDefault();
+            
             menu.hide();
             menu.parent().addClass('menuMobileVisible');
+            menu.slideDown(700);
             open.hide();
             close.css('display', 'block');
             close.show();
             
-            menu.slideDown(700);
+            
 
         });
         

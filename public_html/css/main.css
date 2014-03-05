@@ -169,7 +169,7 @@
     float: none;
     width: 100%; } }
 #main-image {
-  margin-top: 1em;
+  margin-top: 1.2em;
   display: table;
   position: relative;
   height: fit-content;
@@ -192,6 +192,7 @@
     height: 100%;
     left: 0;
     top: 0;
+    z-index: 2;
     background-color: rgba(28, 104, 170, 0.9); }
     #main-image .image-mask a {
       display: inline-block;
@@ -241,7 +242,7 @@
       height: auto; } }
 .tab_to_accordion {
   margin-bottom: 2em;
-  margin-top: 1%;
+  margin-top: 0.5em;
   /*    .tab_controls{
           display: block;
           margin: 0;
