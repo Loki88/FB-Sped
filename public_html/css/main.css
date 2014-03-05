@@ -399,6 +399,9 @@
     padding: 0;
     border: 0;
     float: right; }
+    .tab_to_accordion .tab_contents .decorator {
+      display: none;
+      visibility: hidden; }
     .tab_to_accordion .tab_contents .tab_pane {
       display: block;
       padding: 0;
@@ -426,31 +429,93 @@
       visibility: hidden; }
     .tab_to_accordion .tab_contents {
       margin: 0; }
-      .tab_to_accordion .tab_contents .tab_pane a {
+      .tab_to_accordion .tab_contents .tab_pane .accordion-button {
         display: table;
         visibility: visible;
         width: 100%;
         height: 2.3em;
         line-height: 1.15em;
         text-align-last: center;
-        padding: 0.35em auto;
+        padding: 0;
         padding-bottom: 0;
         text-align: center;
-        /*background-color: #1C68AA;*/
-        color: #1C68AA;
+        margin: 0;
         text-decoration: none;
-        /*                    margin-bottom: -0.7em;*/
         border: 0;
         border-bottom-width: 1pt;
         border-style: groove;
         border-color: #1C68AA;
-        margin: 0;
         float: none; }
-      .tab_to_accordion .tab_contents .tab_pane .close {
-        display: none; }
+        .tab_to_accordion .tab_contents .tab_pane .accordion-button a {
+          display: block;
+          visibility: visible;
+          position: relative;
+          width: 100%;
+          margin: auto 5%;
+          padding: 0;
+          height: 1.5em; }
+          .tab_to_accordion .tab_contents .tab_pane .accordion-button a div {
+            display: inline-block;
+            position: relative;
+            text-align: left;
+            width: 60%;
+            min-height: 1.5em;
+            bottom: 0;
+            padding: 0.15em 5%; }
+          .tab_to_accordion .tab_contents .tab_pane .accordion-button a .icon {
+            display: inline-block;
+            position: relative;
+            float: right;
+            margin: auto;
+            width: 20%;
+            height: 100%;
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-size: 1.5em 1.5em; }
+          .tab_to_accordion .tab_contents .tab_pane .accordion-button a:hover {
+            color: #FFA01A; }
+            .tab_to_accordion .tab_contents .tab_pane .accordion-button a:hover .icon {
+              background-image: url("../img/icons/icona-accordion-hover.png"); }
+        .tab_to_accordion .tab_contents .tab_pane .accordion-button .close {
+          display: none;
+          color: #8DBF3F; }
+          .tab_to_accordion .tab_contents .tab_pane .accordion-button .close .icon {
+            background-image: url("../img/icons/icona-accordion-green.png"); }
+        .tab_to_accordion .tab_contents .tab_pane .accordion-button .open {
+          display: block; }
+          .tab_to_accordion .tab_contents .tab_pane .accordion-button .open .icon {
+            background-image: url("../img/icons/icona-accordion-blue.png"); }
+      .tab_to_accordion .tab_contents .tab_pane .icon {
+        display: block;
+        visibility: visible;
+        position: relative;
+        float: left;
+        height: 1.5em;
+        width: 20%;
+        margin: 0.4em 5%;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: 1em; }
       .tab_to_accordion .tab_contents .tab_pane:not(.current) {
         display: block;
         visibility: visible; }
+        .tab_to_accordion .tab_contents .tab_pane:not(.current) .accordion-button .decorator {
+          display: block;
+          visibility: visible;
+          width: 100%;
+          margin: 0;
+          margin-top: 0.5em;
+          padding: 0;
+          height: 0.3em;
+          background: -webkit-linear-gradient(top, white, #1c68aa);
+          /* For Safari 5.1 to 6.0 */
+          background: -o-linear-gradient(bottom, white, #1c68aa);
+          /* For Opera 11.1 to 12.0 */
+          background: -moz-linear-gradient(bottom, white, #1c68aa);
+          /* For Firefox 3.6 to 15 */
+          background: linear-gradient(to bottom, white, #1c68aa);
+          /* Standard syntax */
+          z-index: 3; }
       .tab_to_accordion .tab_contents .tab_pane .tab_page {
         display: inline-block;
         position: relative;
@@ -465,9 +530,7 @@
           background-color: #FFFFFF; }
           .tab_to_accordion .tab_contents .tab_pane .content-box .header h4 {
             color: #1C68AA; }
-      .tab_to_accordion .tab_contents .current a:not(.close) {
-        display: none; }
-      .tab_to_accordion .tab_contents .current .close:not(.close) {
+      .tab_to_accordion .tab_contents .current .open {
         display: none; }
       .tab_to_accordion .tab_contents .current .close {
         display: block; }
