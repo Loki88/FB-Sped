@@ -610,6 +610,19 @@
         .tab_contents{
             margin: 0;
             
+            .decorator{
+                display: block;
+                visibility: visible;
+                width: 100%;
+                margin: 0;
+                padding: 0;
+                height: 0.3em;
+                background: -webkit-linear-gradient(top, #FFFFFF , #1C68AA); /* For Safari 5.1 to 6.0 */
+                background: -o-linear-gradient(bottom,  #FFFFFF , #1C68AA); /* For Opera 11.1 to 12.0 */
+                background: -moz-linear-gradient(bottom,  #FFFFFF , #1C68AA); /* For Firefox 3.6 to 15 */
+                background: linear-gradient(to bottom,  #FFFFFF , #1C68AA); /* Standard syntax */
+            }
+            
             .tab_pane{
                 .accordion-button{
                     display: table;
@@ -619,10 +632,8 @@
                     line-height: 1.15em;
                     text-align-last: center;
                     padding: 0;
-                    padding-bottom: 0;
                     text-align: center;
                     margin: 0;
-                    
                     text-decoration: none;
                     border:0;
                     border-bottom-width: 1pt;
@@ -630,20 +641,19 @@
                     border-color: #1C68AA;
                     float: none;
                     
-                   
-                    
                     a{
                         display: block;
                         visibility: visible;
                         position: relative;
                         width: 100%;
-                        margin: auto 5%;
+                        margin: auto 0;
                         padding: 0;
-                        height: 1.5em;
+                        min-height: 1.5em;
                         
                         div{
                             display: inline-block;
                             position: relative;
+                            float: left;
                             text-align: left;
                             width: 60%;
                             min-height: 1.5em;
@@ -654,8 +664,9 @@
                         .icon{
                             display: inline-block;
                             position: relative;
-                            float: right;
-                            margin: auto;
+                            float: left;
+                            padding: 0;
+                            margin: 0 5%;
                             width: 20%;
                             height: 100%;
                             background-position: center center;
@@ -686,46 +697,12 @@
                         .icon{
                             background-image: url('../img/icons/icona-accordion-blue.png');
                         }
-                        
-                        
                     }
-                    
-                    
                 }
                         
-                
-                .icon{
-                    display: block;
-                    visibility: visible;
-                    position: relative;
-                    float: left;
-                    height: 1.5em;
-                    width: 20%;
-                    margin: 0.4em 5%;
-                    background-repeat: no-repeat;
-                    background-position: center center;
-                    background-size: 1em;
-                }
-
                 &:not(.current){
                     display: block;
                     visibility: visible;
-                    
-                    .accordion-button .decorator{
-                        display: block;
-                        visibility: visible;
-                        width: 100%;
-                        margin: 0;
-                        margin-top: 0.5em;
-                        padding: 0;
-                        height: 0.3em;
-                        background: -webkit-linear-gradient(top, #FFFFFF , #1C68AA); /* For Safari 5.1 to 6.0 */
-                        background: -o-linear-gradient(bottom,  #FFFFFF , #1C68AA); /* For Opera 11.1 to 12.0 */
-                        background: -moz-linear-gradient(bottom,  #FFFFFF , #1C68AA); /* For Firefox 3.6 to 15 */
-                        background: linear-gradient(to bottom,  #FFFFFF , #1C68AA); /* Standard syntax */
-                        z-index: 3;
-                    }
-                    
                 }
                 
                 .tab_page{
@@ -755,7 +732,15 @@
                 }
 
                 .close{
-                    display: block;
+                    display: inline-block;
+                    visibility: visible;
+                }
+                
+                .decorator{
+                    background: -webkit-linear-gradient(bottom, #FFFFFF , #1C68AA); /* For Safari 5.1 to 6.0 */
+                    background: -o-linear-gradient(top,  #FFFFFF , #1C68AA); /* For Opera 11.1 to 12.0 */
+                    background: -moz-linear-gradient(top,  #FFFFFF , #1C68AA); /* For Firefox 3.6 to 15 */
+                    background: linear-gradient(to top,  #FFFFFF , #1C68AA); /* Standard syntax */
                 }
                 
                 .tab-image{
