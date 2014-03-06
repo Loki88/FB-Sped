@@ -15,9 +15,9 @@ h1, h2, h3, h4, h5, h6 {
     color: #1C68AA; }
   @media screen and (max-width: 480px) {
     #logo-text h4 {
-      font-size: 1.5em; }
+      font-size: 1em; }
     #logo-text h6 {
-      font-size: 0.8em; } }
+      font-size: 0.7em; } }
 
 #language {
   font-size: 1em; }

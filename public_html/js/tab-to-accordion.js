@@ -11,9 +11,14 @@ var TabToAccordion = {
         for(var i=0; i<accordion_links.length; i++)
         {
             var accordionLink = $(accordion_links[i]);
+            var panel = accordionLink.parents('.tab_pane:first');
+            accordionLink.prop('panel', panel);
+            console.log('open panel', panel);
             accordionLink.click(TabToAccordion.accordionOpenClick);
             var accordionClose = $(accordion_links_close[i]);
+            accordionClose.prop('panel', panel);
             accordionClose.click(TabToAccordion.accordionCloseClick);
+            
         }
         
         $(window).on('fluidGrid', function(){
@@ -30,6 +35,7 @@ var TabToAccordion = {
         var panel = $(this.current);
         panel.find('a').removeAttr('style');
         panel.find('.tab_page').removeAttr('style');
+        panel.addClass('current');
         var trigger = panel.data('trigger');
         $('.tab_right_col').find('.selected').removeClass('selected');
         $(trigger).addClass('selected');
@@ -41,10 +47,8 @@ var TabToAccordion = {
         event.preventDefault();
         console.log('accordion close  click');
         var link = $(this);
-        var panel = link.parent();
-        
-        link.prev('a').css('display', 'block');
-        link.hide();
+        var panel = link.prop('panel');
+        panel.removeClass('current');
         panel.children('.tab_page').slideUp(600);
         panel.prop('open', false);
     },
@@ -61,10 +65,7 @@ var TabToAccordion = {
         $(document.body).css('cursor', 'wait');
         link = $(link);
         var panel;
-        if(link.parent().hasClass('menu-button'))
-            panel = $(link.data('target'));
-        else
-            panel = link.parent();
+        panel = link.prop('panel');
         if(!panel.prop('setted'))
         {
             var dataUrl = link.attr('href');
@@ -109,7 +110,6 @@ var TabToAccordion = {
             link.parent().addClass('selected');
             panel.addClass('current');
             panel.children('.tab_page').slideDown(400);
-            
             panel.prop('open', true);
         }
         else{
@@ -118,6 +118,7 @@ var TabToAccordion = {
                 panel.children('.close').hide();
                 panel.children('a:not(.close)').show();
                 panel.children('.tab_page').slideUp(400);
+                panel.removeClass('current');
                 panel.prop('open', false);
             }   
             else
@@ -125,6 +126,7 @@ var TabToAccordion = {
                 panel.children('a:not(.close)').hide();
                 panel.children('.close').css('display', 'table');
                 panel.children('.tab_page').slideDown(400);
+                panel.addClass('current');
                 panel.prop('open', true);
             }
         }

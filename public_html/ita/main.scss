@@ -20,7 +20,6 @@
     background-color: #FFFFFF;
 
     padding-bottom: 0;
-    width: 100%;
     margin: 0;
     border: 0;
         
@@ -30,7 +29,7 @@
         height: 4em;
         padding: 0;
         border: 0;
-        
+        overflow-x: none;
         #logo-img{
             display: inline-block;
             position: relative;
@@ -102,17 +101,18 @@
 @media only screen and (max-width: 480px)
 {
     #page-header{
+
         #logo{
-            clear: both;
             height: auto;
             #logo-img{
-                width: 50%;
-                max-width: 50%;
+                position: relative;
+                width: 30%;
+                /*max-width: 40%;*/
                 height: auto;
-                margin: auto 25%;
+                margin: 0 35%;
                 float: none;
-                a{
                 
+                a{
                     margin: auto;
                     img{
                         float: none;
@@ -121,7 +121,6 @@
                         margin: 0 auto;
                     }
                 }
-                
             }
             #logo-text{
                 width: 80%;
@@ -218,9 +217,8 @@
 @media only screen and (max-width: 480px)
 {
     #language{
-        display: block;
-        position: relative;
-        right: 0;
+        clear: both;
+        float: left;
         left: 79%;
         width: 21%;
         margin: 0;
@@ -232,7 +230,6 @@
         z-index: 3;
         
         .controls{
-            clear: both;
             font-size: inherit;
             visibility: visible;
             display: block;
@@ -248,56 +245,65 @@
             border-top-width: 0.1em;
             border-top-style: outset;
             border-color: #1C68AA;
+            
             img{
                 display: block;
                 position: relative;
-                height: 100%;
-                margin: 0 auto;
+                max-height: 70%;
+                height: 70%;
+                /*max-width: 80%;*/
+                margin: 10% auto;
             }
         }
         
         #lang-close{
             display: none;
-            position: absolute;
-            left: -10000px;
         }
         
         a:not(.controls){
             left: -10000px;
             position: absolute;
-            width: 100%;
+            width: 80%;
             text-decoration: none;
-            padding: 0.1em -0.05em;
+            padding: 0.2em 10%;
             margin: 0;
+            height: auto;
+            border: 0;
+            border-left-width: 0.1pt;
+            border-style: groove;
+            
+            img{
+                display: block;
+                position: relative;
+                max-width: 40%;
+                height: auto;
+                margin: auto 5%;
+                float: left;
+                padding: 0;
+            }
+            
             span{
                 display: block;
                 position: relative;
                 float: left;
                 margin: 0;
                 padding: 0;
-                width: auto;
+                width: 50%;
             }
             
-            img{
-                float: left;
-                height: 90%;
-                margin: auto 5%;
-            }
-            
-            @media screen and (max-width: 280px){
+/*            @media screen and (max-width: 280px){
                 img{
-                    width: auto;
-                    height: 100%;
-                    margin-left: auto;
-                    margin-right: auto;
+                    min-width: 50%;
                     float: none;
                     padding: 0;
                 }
-
+                
                 span{
                     display: none;
+                    width: 0;
+                    float: none;
                 }
-            }
+            }*/
                 
             &:not(.selected){
                 background-color: #FFFFFF;
@@ -319,32 +325,23 @@
             
             #lang-open{
                 display: none;
-                position: absolute;
-                left: -10000px;
             }
 
             #lang-close{
                 display: block;
-                position: relative;
-                left: -0.1em;
             }
             
             a:not(.controls){
-                clear: both;
                 display: block;
                 position: relative;
                 line-height: auto;
-                width: 100%;
                 border-color: #000000;
-                border-width: 1pt;
-                border-right: 0;
-                border-bottom: 0;
-                border-style: groove;
-                border-color: #1C68AA;
-                left: -0.1em;
-
+                left: 0;
+                &:first-child{
+                    border-top-width: 0.1em;
+                }
                 &:last-child{
-                    border-bottom-width: 1pt;
+                    border-bottom-width: 0.1em;
                 }
             }
         }

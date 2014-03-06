@@ -70,19 +70,18 @@
     border: 0;
     width: 79%;
     background: none;
-    float: left; }
+    float: left;
+    /* Stile per i bottoni del menù di primo livello, quando sono visibili */ }
     .navigation .wrapper {
       display: block;
       position: relative;
       height: auto;
-      /* Stile di base per il menù chiuso */
-      /* Stile per i bottoni del menù di primo livello, quando sono visibili */ }
+      /* Stile di base per il menù chiuso */ }
       .navigation .wrapper a {
-        display: inline-block;
+        display: block;
         clear: both;
         width: 80%;
         text-align: center;
-        height: 2em;
         padding: 0.2em 10%;
         line-height: 2em;
         text-decoration: none; }
@@ -126,26 +125,28 @@
         z-index: 3;
         left: -10000px; }
         .navigation .wrapper ul li {
-          display: block;
+          display: inline-block;
           width: 100%;
           height: 0em;
           border: 0;
           float: left;
           margin: 0;
-          border-top: 0.05em groove;
-          border-bottom: 0.05em solid;
-          line-height: auto;
+          margin-left: -1pt;
           border-color: #000000;
+          border-width: 1pt;
+          border-left: 0;
+          border-bottom: 0;
+          border-style: groove;
+          border-color: #1C68AA;
+          line-height: auto;
           -webkit-transition: height 0.25;
           -moz-transition: height 0.25s;
           -o-transition: height 0.25s;
           transition: height 0.25s; }
-          .navigation .wrapper ul li:first-child {
-            margin-top: 2px;
-            border-top: none; }
           .navigation .wrapper ul li:last-child {
-            border-bottom: 0.1em groove; }
+            border-bottom-width: 1pt; }
           .navigation .wrapper ul li a {
+            position: relative;
             height: 100%;
             padding-left: 10%;
             padding-right: 10%;
@@ -156,15 +157,15 @@
         .navigation .wrapper ul .selected a {
           background-color: #8DBF3F;
           color: #000000; }
-      .navigation .wrapper:target #close {
-        display: inline-block; }
-      .navigation .wrapper:target #open {
-        display: none; }
-      .navigation .wrapper:target ul {
-        height: auto;
-        left: 0px; }
-        .navigation .wrapper:target ul li {
-          height: 2.4em; }
+    .navigation:target #close {
+      display: inline-block; }
+    .navigation:target #open {
+      display: none; }
+    .navigation:target ul {
+      height: auto;
+      left: 0px; }
+      .navigation:target ul li {
+        height: auto; }
 
   .menuMobileVisible #menu {
     height: auto;
@@ -221,13 +222,14 @@ html, body {
 
 @media screen and (max-width: 1280px) {
   body {
+    width: 100%;
     margin: 0;
     padding: 0; } }
 .wrapper {
   display: table;
   width: 100%; }
 
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 1281px) {
   .wrapper {
     width: 1140px;
     margin: 0 auto;
