@@ -240,22 +240,7 @@ $second-level-text: #FFFFFF;
             left: 0px;
             
             li {
-                display: block;
-                position: relative;
-                height: 2.8em;
-                margin: 0;
-                border-top: 1px groove;
-                border-bottom: 1px solid;
-                line-height: auto;
-                border-color: #000000;
-
-                &:first-child{
-                    border-top: 2px groove;
-                }
-
-                &:last-child{
-                    border-bottom: 2px groove;
-                }
+                height: auto;
             }
         }
     }

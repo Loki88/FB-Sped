@@ -171,18 +171,7 @@
     height: auto;
     left: 0px; }
     .menuMobileVisible #menu li {
-      display: block;
-      position: relative;
-      height: 2.8em;
-      margin: 0;
-      border-top: 1px groove;
-      border-bottom: 1px solid;
-      line-height: auto;
-      border-color: #000000; }
-      .menuMobileVisible #menu li:first-child {
-        border-top: 2px groove; }
-      .menuMobileVisible #menu li:last-child {
-        border-bottom: 2px groove; } }
+      height: auto; } }
 html, body {
   height: 100%; }
 

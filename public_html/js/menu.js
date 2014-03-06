@@ -41,21 +41,21 @@ var Menu = {
     init: function()
     {
         var menu = $('#menu');
-        var open = $('#open');
-        var close = $('#close');
+        var openMenu = $('#open');
+        var closeMenu = $('#close');
         
-        menu.prop('openButton', open);
-        menu.prop('closeButton', close);
+        menu.prop('openButton', openMenu);
+        menu.prop('closeButton', closeMenu);
         
-        open.prop('menu', menu);
-        close.prop('menu', menu);
+        openMenu.prop('menu', menu);
+        closeMenu.prop('menu', menu);
         
-        open.prop('closeButton', close);
-        close.prop('openButton', open);
+        openMenu.prop('closeButton', closeMenu);
+        closeMenu.prop('openButton', openMenu);
         
-        if(open.css('display') == 'block')
+        if(openMenu.css('display') == 'block')
             menu.prop('open', false);
-        else if(close.css('display') == 'block')
+        else if(closeMenu.css('display') == 'block')
             menu.prop('open', true);
         menu.prop('mobile', false);
         var windowWidth = $(document).width();
@@ -96,16 +96,12 @@ var Menu = {
         
         open.click(function(event){
             event.preventDefault();
-            
             menu.hide();
             menu.parent().addClass('menuMobileVisible');
             menu.slideDown(700);
             open.hide();
             close.css('display', 'block');
             close.show();
-            
-            
-
         });
         
         close.click(function(event){
