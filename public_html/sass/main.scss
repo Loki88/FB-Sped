@@ -144,7 +144,7 @@
 
 
 
-#language{
+.lang-menu{
     display: inline-block;
     position: relative;
     height: auto;
@@ -152,6 +152,15 @@
     .decorator{
         display: none;
         visibility: hidden;
+    }
+    
+    #lang-menu{
+        position: relative;
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        border: 0;
     }
     
     .controls{
@@ -216,7 +225,7 @@
 
 @media only screen and (max-width: 480px)
 {
-    #language{
+    .lang-menu{
         display: block;
         position: relative;
         right: 0;
@@ -239,7 +248,7 @@
             left: 0;
             width: 100%;
             height: 2.2em;
-            padding: 0.1em -0.05em;
+            padding: 0.1em -0.5em;
             border: 0;
             background-color: rgba(28, 104, 170, 0.7);
             border-left-width: 0.1em;
@@ -260,53 +269,74 @@
             position: absolute;
             left: -10000px;
         }
-        
-        a:not(.controls){
+        #lang-menu{
+            display: block;
             left: -10000px;
             position: absolute;
-            width: 100%;
-            text-decoration: none;
-            padding: 0.1em -0.05em;
-            margin: 0;
-            span{
+            height: 0;
+            
+            a{
+                
+                /*clear: both;*/
                 display: block;
                 position: relative;
-                float: left;
+                line-height: auto;
+                width: 100%;
+                border-color: #000000;
+                border-width: 1pt;
+                border-right: 0;
+                border-bottom: 0;
+                border-style: groove;
+                border-color: #1C68AA;
+                /*left: -0.1em;*/
+                text-decoration: none;
+                padding: 0.1em 0;
                 margin: 0;
-                padding: 0;
-                width: auto;
-            }
-            
-            img{
-                float: left;
-                height: 90%;
-                margin: auto 5%;
-            }
-            
-            @media screen and (max-width: 280px){
-                img{
-                    width: auto;
-                    height: 100%;
-                    margin-left: auto;
-                    margin-right: auto;
-                    float: none;
+                
+                &:last-child{
+                    border-bottom-width: 1pt;
+                }
+                
+                span{
+                    display: block;
+                    position: relative;
+                    float: left;
+                    margin: 0;
                     padding: 0;
+                    width: auto;
                 }
 
-                span{
-                    display: none;
+                img{
+                    float: left;
+                    height: 90%;
+                    margin: auto 5%;
+                }
+
+                @media screen and (max-width: 280px){
+                    img{
+                        width: auto;
+                        height: 100%;
+                        margin-left: auto;
+                        margin-right: auto;
+                        float: none;
+                        padding: 0;
+                    }
+
+                    span{
+                        display: none;
+                    }
+                }
+
+                &:not(.selected){
+                    background-color: #FFFFFF;
                 }
             }
-                
-            &:not(.selected){
-                background-color: #FFFFFF;
-            }
-        }
-        
-        .selected{
-            background-color: #8DBF3F;
-            span{
-                color: #000000;
+            
+            .selected{
+                background-color: #8DBF3F;
+                span{
+                    color: #000000;
+                }
             }
         }
         
@@ -315,6 +345,7 @@
             float: right;
             left: auto;
             right: 0;
+            height: auto;
             
             #lang-open{
                 display: none;
@@ -327,29 +358,54 @@
                 position: relative;
                 left: -0.1em;
             }
-            
-            a:not(.controls){
-                clear: both;
-                display: block;
-                position: relative;
-                line-height: auto;
-                width: 100%;
-                border-color: #000000;
-                border-width: 1pt;
-                border-right: 0;
-                border-bottom: 0;
-                border-style: groove;
-                border-color: #1C68AA;
-                left: -0.1em;
+            #lang-menu{
+                left: auto;
+                right: 0;
+                height: auto;
+                position:relative;
+/*                a:not(.controls){
+                    clear: both;
+                    display: block;
+                    position: relative;
+                    line-height: auto;
+                    width: 100%;
+                    border-color: #000000;
+                    border-width: 1pt;
+                    border-right: 0;
+                    border-bottom: 0;
+                    border-style: groove;
+                    border-color: #1C68AA;
+                    left: -0.1em;
 
-                &:last-child{
-                    border-bottom-width: 1pt;
-                }
+                    &:last-child{
+                        border-bottom-width: 1pt;
+                    }
+                }*/
             }
+            
+        }
+    }
+    .languageMobileVisible{
+        #lang-menu{
+            left: 0;
+
+            position:relative;
+            height: auto;
+        }
+
+        #lang-open{
+            display: none;
+
+        }
+        
+        #lang-close{
+            display: block;
+            position: relative;
+            left: 0;
         }
     }
 }
-
+/*
 .language-menu{
     #lang-open{
         display: none;
@@ -373,12 +429,12 @@
             border-bottom-width: 0.1em;
         }
     }
-}
+}*/
 
 
 @media only screen and (min-width: 481px) and (max-width: 768px)
 {
-    #language{
+    .lang-menu{
         a:not(.controls){
             float: none;
             width: 100%;
@@ -390,7 +446,7 @@
     margin-top: 1.2em;
     display: table;
     position: relative;
-    height: fit-content;
+    height: f       it-content;
     min-height: 15em;
     min-width: 100%;
     width: 100%;

@@ -37,91 +37,146 @@ $(window).on('noMobile', function(event, size) {
 });
 
 
-var Menu = {
+var Navigation = {
     init: function()
     {
         var menu = $('#menu');
         var openMenu = $('#open');
         var closeMenu = $('#close');
-        
+        Navigation.menu = menu;
         menu.prop('openButton', openMenu);
         menu.prop('closeButton', closeMenu);
+//        openMenu.prop('menu', menu);
+//        closeMenu.prop('menu', menu);
+        var lang = $('#lang-menu');
+        var openLang = $('#lang-open');
+        var closeLang = $('#lang-close');
+        Navigation.lang = lang;
+        lang.prop('openButton', openLang);
+        lang.prop('closeButton', closeLang);
         
-        openMenu.prop('menu', menu);
-        closeMenu.prop('menu', menu);
-        
-        openMenu.prop('closeButton', closeMenu);
-        closeMenu.prop('openButton', openMenu);
-        
-        if(openMenu.css('display') == 'block')
-            menu.prop('open', false);
-        else if(closeMenu.css('display') == 'block')
+        if(closeMenu.css('display') != 'none')
             menu.prop('open', true);
+        else
+            menu.prop('open', false);
+        if(closeLang.css('display') != 'none')
+            lang.prop('open', true);
+        else
+            lang.prop('open', false);
         menu.prop('mobile', false);
+        lang.prop('mobile', false);
         var windowWidth = $(document).width();
         if(windowWidth < 481)
         {
-            //menù mobile
-            Menu.prepareMenu(menu);
+            //barra di navigazione mobile
+            Navigation.prepareMenu();
             menu.prop('mobile', true);
+            Navigation.prepareLang();
+            lang.prop('mobile', true);
         }
-        else
-        {
-            menu.prop('mobile', false);
-        }
-        $(window).on('fluidGrid', Menu.menuDesktop);
-        $(window).on('oneColumn', Menu.menuMobile);
-        $(window).on('noMobile', Menu.menuDesktop);
+        $(window).on('fluidGrid', Navigation.menuDesktop);
+        $(window).on('oneColumn', Navigation.menuMobile);
+        $(window).on('noMobile', Navigation.menuDesktop);
     },
     
     menuMobile: function(event, size)
     {
-        
-        var menu = $('#menu');
-        Menu.prepareMenu(menu);
+        Navigation.prepareMenu();
+        Navigation.prepareLang();
     },
     
     menuDesktop: function(event, size)
     {
-        var menu = $('#menu');
-        Menu.rollbackMenu(menu);
+        Navigation.rollbackMenu();
+        Navigation.rollbackLang();
     },
     
-    prepareMenu: function(menu)
+    prepareLang: function()
     {
-        menu = $(menu);
-        menu.prop('mobile', false);
-        var open = menu.prop('openButton');
-        var close = menu.prop('closeButton');
+        var lang = $(Navigation.lang);
+        var open = $(lang.prop('openButton'));
+        var close = $(lang.prop('closeButton'));
+        lang.parent().addClass('languageMobileVisible');
+        lang.hide();
+        open.css('display', 'block');
+        open.show();
+        close.hide();
         
         open.click(function(event){
             event.preventDefault();
-            menu.hide();
+//            menu.hide();
+            
+            Navigation.closeMenu();
+            lang.slideDown(600);
+            open.hide();
+//            close.css('display', 'block');
+            close.show();
+            lang.prop('open', true);
+        });
+        
+        close.click(function(event){
+            event.preventDefault();
+            open.show();
+            close.hide();
+            lang.slideUp(600);
+            lang.prop('open', false);
+        });
+    },
+    
+    rollbackLang: function()
+    {
+        var lang = $(Navigation.lang);
+        lang.prop('mobile', false);
+        var open = $(lang.prop('openButton'));
+        var close = $(lang.prop('closeButton'));
+        
+        //Ripristina il menu per la versione desktop e tablet landscape
+        lang.removeClass('languageMobileVisible');
+//        lang.css('display', 'block');
+        
+        open.removeAttr('style');
+        close.removeAttr('style');
+        
+        lang.removeAttr('style');
+    },
+    
+    prepareMenu: function()
+    {
+        var menu = $(Navigation.menu);
+        var open = $(menu.prop('openButton'));
+        var close = $(menu.prop('closeButton'));
+        open.click(function(event){
+            event.preventDefault();
+//            menu.hide();
             menu.parent().addClass('menuMobileVisible');
+            menu.hide();
+            Navigation.closeLang();
             menu.slideDown(700);
             open.hide();
             close.css('display', 'block');
             close.show();
+            menu.prop('open', true);
         });
         
         close.click(function(event){
             event.preventDefault();
             close.hide();
+            open.css('display', 'block');
             open.show();
             
             menu.slideUp(800, function(){
                 menu.parent().removeClass('menuMobileVisible');
             });
-
+            menu.prop('open', false);
         });
     },
     
-    rollbackMenu: function(menu)
+    rollbackMenu: function()
     {
-        menu = $(menu);
+        var menu = $(Navigation.menu);
         menu.prop('mobile', false);
-        var open = menu.prop('openButton');
-        var close = menu.prop('closeButton');
+        var open = $(menu.prop('openButton'));
+        var close = $(menu.prop('closeButton'));
         
         //Ripristina il menu per la versione desktop e tablet landscape
         menu.parent().removeClass('menuMobileVisible');
@@ -131,7 +186,23 @@ var Menu = {
         close.removeAttr('style');
         
         menu.removeAttr('style');
+    },
+    
+    closeMenu: function()
+    {
+        var menu = $(Navigation.menu);
+        console.log('close menu', menu);
+        console.log('menu open', menu.prop('open'));
+        if(menu.prop('open'))
+            $(menu.prop('closeButton')).click();       
+    },
+    
+    closeLang: function()
+    {
+        var lang = $(Navigation.lang);
+        if(lang.prop('open'))
+            $(lang.prop('closeButton')).click();
     }
 };
 
-$(document).ready(Menu.init);
+$(document).ready(Navigation.init);

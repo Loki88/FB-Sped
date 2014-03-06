@@ -104,23 +104,30 @@
   height: auto;
   margin: auto; }
 
-#language {
+.lang-menu {
   display: inline-block;
   position: relative;
   height: auto; }
-  #language .decorator {
+  .lang-menu .decorator {
     display: none;
     visibility: hidden; }
-  #language .controls {
+  .lang-menu #lang-menu {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    border: 0; }
+  .lang-menu .controls {
     display: none;
     position: absolute;
     left: -10000px;
     visibility: hidden; }
-  #language .selected {
+  .lang-menu .selected {
     cursor: default; }
-    #language .selected span {
+    .lang-menu .selected span {
       text-decoration: underline; }
-  #language a:not(.controls) {
+  .lang-menu a:not(.controls) {
     display: block;
     position: relative;
     width: 50%;
@@ -128,14 +135,14 @@
     padding: 0;
     margin: 0.5em 0;
     float: left; }
-    #language a:not(.controls) img {
+    .lang-menu a:not(.controls) img {
       display: block;
       float: left;
       height: 1.5em;
       margin: 0.25em 0.2em;
       margin: auto 0;
       vertical-align: middle; }
-    #language a:not(.controls) span {
+    .lang-menu a:not(.controls) span {
       display: block;
       width: 40%;
       height: 1.5em;
@@ -144,13 +151,13 @@
       line-height: 1.5em;
       float: left;
       color: #000000; }
-    #language a:not(.controls):not(.selected) span {
+    .lang-menu a:not(.controls):not(.selected) span {
       color: #1C68AA; }
-    #language a:not(.controls):not(.selected):hover span {
+    .lang-menu a:not(.controls):not(.selected):hover span {
       color: #FBB820; }
 
 @media only screen and (max-width: 480px) {
-  #language {
+  .lang-menu {
     display: block;
     position: relative;
     right: 0;
@@ -163,7 +170,7 @@
     bottom: -0.4em;
     margin-bottom: 0.4em;
     z-index: 3; }
-    #language .controls {
+    .lang-menu .controls {
       clear: both;
       font-size: inherit;
       visibility: visible;
@@ -172,7 +179,7 @@
       left: 0;
       width: 100%;
       height: 2.2em;
-      padding: 0.1em -0.05em;
+      padding: 0.1em -0.5em;
       border: 0;
       background-color: rgba(28, 104, 170, 0.7);
       border-left-width: 0.1em;
@@ -180,54 +187,22 @@
       border-top-width: 0.1em;
       border-top-style: outset;
       border-color: #1C68AA; }
-      #language .controls img {
+      .lang-menu .controls img {
         display: block;
         position: relative;
         height: 100%;
         margin: 0 auto; }
-    #language #lang-close {
+    .lang-menu #lang-close {
       display: none;
       position: absolute;
       left: -10000px; }
-    #language a:not(.controls) {
+    .lang-menu #lang-menu {
+      display: block;
       left: -10000px;
       position: absolute;
-      width: 100%;
-      text-decoration: none;
-      padding: 0.1em -0.05em;
-      margin: 0; }
-      #language a:not(.controls) span {
-        display: block;
-        position: relative;
-        float: left;
-        margin: 0;
-        padding: 0;
-        width: auto; }
-      #language a:not(.controls) img {
-        float: left;
-        height: 90%;
-        margin: auto 5%; }
-      #language a:not(.controls):not(.selected) {
-        background-color: #FFFFFF; }
-    #language .selected {
-      background-color: #8DBF3F; }
-      #language .selected span {
-        color: #000000; }
-    #language:target {
-      clear: both;
-      float: right;
-      left: auto;
-      right: 0; }
-      #language:target #lang-open {
-        display: none;
-        position: absolute;
-        left: -10000px; }
-      #language:target #lang-close {
-        display: block;
-        position: relative;
-        left: -0.1em; }
-      #language:target a:not(.controls) {
-        clear: both;
+      height: 0; }
+      .lang-menu #lang-menu a {
+        /*clear: both;*/
         display: block;
         position: relative;
         line-height: auto;
@@ -238,44 +213,121 @@
         border-bottom: 0;
         border-style: groove;
         border-color: #1C68AA;
+        /*left: -0.1em;*/
+        text-decoration: none;
+        padding: 0.1em 0;
+        margin: 0; }
+        .lang-menu #lang-menu a:last-child {
+          border-bottom-width: 1pt; }
+        .lang-menu #lang-menu a span {
+          display: block;
+          position: relative;
+          float: left;
+          margin: 0;
+          padding: 0;
+          width: auto; }
+        .lang-menu #lang-menu a img {
+          float: left;
+          height: 90%;
+          margin: auto 5%; }
+        .lang-menu #lang-menu a:not(.selected) {
+          background-color: #FFFFFF; }
+      .lang-menu #lang-menu .selected {
+        background-color: #8DBF3F; }
+        .lang-menu #lang-menu .selected span {
+          color: #000000; }
+    .lang-menu:target {
+      clear: both;
+      float: right;
+      left: auto;
+      right: 0;
+      height: auto; }
+      .lang-menu:target #lang-open {
+        display: none;
+        position: absolute;
+        left: -10000px; }
+      .lang-menu:target #lang-close {
+        display: block;
+        position: relative;
         left: -0.1em; }
-        #language:target a:not(.controls):last-child {
-          border-bottom-width: 1pt; } }
-    @media only screen and (max-width: 480px) and (max-width: 280px) {
-      #language a:not(.controls) img {
-        width: auto;
-        height: 100%;
-        margin-left: auto;
-        margin-right: auto;
-        float: none;
-        padding: 0; }
-      #language a:not(.controls) span {
-        display: none; } }
-.language-menu #lang-open {
-  display: none; }
-.language-menu #lang-close {
-  display: block; }
-.language-menu a:not(.controls) {
-  display: inline-block;
-  position: relative;
-  border: 0.05em groove;
-  line-height: auto;
-  border-color: #000000;
-  left: 0; }
-  .language-menu a:not(.controls):first-child {
-    border-top-width: 0.1em; }
-  .language-menu a:not(.controls):last-child {
-    border-bottom-width: 0.1em; }
+      .lang-menu:target #lang-menu {
+        left: auto;
+        right: 0;
+        height: auto;
+        position: relative;
+        /*                a:not(.controls){
+                            clear: both;
+                            display: block;
+                            position: relative;
+                            line-height: auto;
+                            width: 100%;
+                            border-color: #000000;
+                            border-width: 1pt;
+                            border-right: 0;
+                            border-bottom: 0;
+                            border-style: groove;
+                            border-color: #1C68AA;
+                            left: -0.1em;
+        
+                            &:last-child{
+                                border-bottom-width: 1pt;
+                            }
+                        }*/ }
 
+  .languageMobileVisible #lang-menu {
+    left: 0;
+    position: relative;
+    height: auto; }
+  .languageMobileVisible #lang-open {
+    display: none; }
+  .languageMobileVisible #lang-close {
+    display: block;
+    position: relative;
+    left: 0; } }
+      @media only screen and (max-width: 480px) and (max-width: 280px) {
+        .lang-menu #lang-menu a img {
+          width: auto;
+          height: 100%;
+          margin-left: auto;
+          margin-right: auto;
+          float: none;
+          padding: 0; }
+        .lang-menu #lang-menu a span {
+          display: none; } }
+/*
+.language-menu{
+    #lang-open{
+        display: none;
+    }
+
+    #lang-close{
+        display: block;
+    }
+
+    a:not(.controls){
+        display: inline-block;
+        position: relative;
+        border: 0.05em groove;
+        line-height: auto;
+        border-color: #000000;
+        left: 0;
+        &:first-child{
+            border-top-width: 0.1em;
+        }
+        &:last-child{
+            border-bottom-width: 0.1em;
+        }
+    }
+}*/
 @media only screen and (min-width: 481px) and (max-width: 768px) {
-  #language a:not(.controls) {
+  .lang-menu a:not(.controls) {
     float: none;
     width: 100%; } }
 #main-image {
   margin-top: 1.2em;
   display: table;
   position: relative;
-  height: fit-content;
+  height: f       it-content;
   min-height: 15em;
   min-width: 100%;
   width: 100%;
