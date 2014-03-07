@@ -98,7 +98,7 @@
     float: right;
 }
 
-@media only screen and (max-width: 480px)
+@media only screen and (max-width: 600px)
 {
     #page-header{
         #logo{
@@ -226,7 +226,7 @@
     }
 }
 
-@media only screen and (max-width: 480px)
+@media only screen and (max-width: 600px)
 {
     .lang-menu{
         display: block;
@@ -253,7 +253,7 @@
             height: 2.2em;
             padding: 0.1em -0.5em;
             border: 0;
-            background-color: rgba(28, 104, 170, 0.7);
+            background-color: rgba(28, 104, 170, 0.9);
             border-left-width: 0.1em;
             border-left-style: groove;
             border-top-width: 0.1em;
@@ -390,7 +390,7 @@
     }
 }
 
-@media only screen and (min-width: 481px) and (max-width: 768px)
+@media only screen and (min-width: 601px) and (max-width: 768px)
 {
     .lang-menu{
         a:not(.controls){
@@ -404,7 +404,7 @@
     margin-top: 1.2em;
     display: table;
     position: relative;
-    height: f       it-content;
+    height: fit-content;
     min-height: 15em;
     min-width: 100%;
     width: 100%;
@@ -537,11 +537,18 @@
             /*margin-left: -0.2em;*/
             padding: 0;
             
+/*            .header{
+                width: 70%;
+                left: 0;
+            }*/
+            
             .menu-button{
-                display: block;
+                display: table;
                 position: relative;
                 padding: 0;
                 right: 0;
+                height: auto;
+                width: 100%;
 /*                border-width: 1pt 0;
                 border-style: outset;
                 border-color: #1c8abc;
@@ -553,30 +560,47 @@
                     border-bottom: none;
                 }*/
                 
+                .icon{
+                    display: block;
+                    float: left;
+                    height: 0.8em;
+                    width: 0.8em;
+                    background-repeat: no-repeat;
+                    background-image: url('../img/icons/arrow-right.png');
+                    background-size: 0.8em;
+                    margin: 0.35em 1%;
+                }
+
                 a {
                     display: block;
-                    width: 80%;
-                    padding: 0.3em 10%;
+                    float: left;
+                    /*width: 80%;*/
+                    padding: 0 5%;
                     line-height: 1.5em;
                     height: 1.5em;
                     text-decoration: none;
                     color: #1C68AA;
-                    @media screen and (max-width: 768px){
+/*                    @media screen and (max-width: 768px){
                         height: 3em;
-                    }
+                    }*/
                 }
                 
-                &:hover{
+                &:hover:not(.selected){
+                    .icon{
+                        background-image: url('../img/icons/arrow-right-hover.png');
+                    }
                     a{
                         color: #FFA01A;
                     }
                 }
             }
             .selected{
-                background-color: #1C68AA;
+                background-color: #8DBF3F;
 /*                border-color: #1C68AA;
                 border-style: inset;*/
-                
+                .icon{
+                    background-image: url('../img/icons/arrow-right-white.png');
+                }
                 a{
                     cursor: default;
                     color: #FFFFFF;
@@ -639,7 +663,7 @@
     }
 }
 
-@media screen and (max-width: 480px)
+@media screen and (max-width: 600px)
 {
     .tab_to_accordion{
         margin-top: 1em;
@@ -821,10 +845,12 @@
     }
 }
 
-#sol-trasporti {
+#sol-trasporti{
     display: table;
     margin-top: 1em;
-    
+}
+
+.trasporti-links {
      .content-box{
         display: block;
         position: relative;
@@ -851,8 +877,8 @@
             .header{
                 display: inline-block;
                 min-height: 5em;
-                height: 5em;
-                max-height: 5em;
+                height: 6em;
+                max-height: 8em;
                 margin: auto;
                 .icon{
                     display: table;
@@ -875,8 +901,6 @@
                     width: 80%;
                 }
             }
-            
-            
             
             p{
                 color: #000000;
@@ -964,12 +988,14 @@
     
 }
 
-@media only screen and (max-width: 480px)
+@media only screen and (max-width: 600px)
 {
     #sol-trasporti{
         margin: 0.5em auto;
         margin-bottom: 0;
-
+    }
+    
+    .trasporti-links{
         .content-box{
             display: block;
             position: relative;
@@ -977,7 +1003,7 @@
             height: 100%;
             padding: 0;
             
-            .decorator_bottom{
+/*            .decorator_bottom{
                 display: block;
                 position: relative;
                 margin: 0;
@@ -985,11 +1011,11 @@
                 bottom: 0;
                 top: auto;
                 background: none;
-                background: -webkit-linear-gradient(top, #FFFFFF , #8DBF3F); /* For Safari 5.1 to 6.0 */
-                background: -o-linear-gradient(bottom,  #FFFFFF , #8DBF3F); /* For Opera 11.1 to 12.0 */
-                background: -moz-linear-gradient(bottom,  #FFFFFF , #8DBF3F); /* For Firefox 3.6 to 15 */
-                background: linear-gradient(to bottom,  #FFFFFF , #8DBF3F); /* Standard syntax */
-            }
+                background: -webkit-linear-gradient(top, #FFFFFF , #8DBF3F);  For Safari 5.1 to 6.0 
+                background: -o-linear-gradient(bottom,  #FFFFFF , #8DBF3F);  For Opera 11.1 to 12.0 
+                background: -moz-linear-gradient(bottom,  #FFFFFF , #8DBF3F);  For Firefox 3.6 to 15 
+                background: linear-gradient(to bottom,  #FFFFFF , #8DBF3F);  Standard syntax 
+            }*/
             
             a{
                 display: block;
@@ -999,10 +1025,13 @@
                 width: 100%;
                 height: 100%;
                 .header{
+                    display: block;
                     min-height: 2em;
                     max-height: auto;
                     height: 2em;
                     border: 0;
+                    margin-bottom: 0;
+                    
                     .icon{
                         display: inline-block;
                         float: left;
@@ -1022,9 +1051,9 @@
                         bottom: 0;
                         padding: 0;
                         margin: 0;
-                        margin-top: 0.5em;
+                        /*margin-top: 0.25em;*/
                         margin-right: 20%;
-                        
+                        padding: 0;
                         text-align: center;
                         text-wrap: avoid;
                     }
@@ -1039,7 +1068,7 @@
                 }
             }
             
-            #truck{
+/*            #truck{
                 .icon{
                     background-image: url('../img/icons/icona-truck-blue.png');
                 }
@@ -1067,7 +1096,7 @@
                 .icon{
                     background-image: url('../img/icons/icona-combined-blue.png');
                 }
-            }
+            }*/
         }
     }
 }
@@ -1099,7 +1128,7 @@
 
 .content-box-shadow{
     box-shadow: 1pt 1pt 5pt #000000;
-    @media screen and (max-width: 480px){
+    @media screen and (max-width: 600px){
         box-shadow: 0 0 0 #000000;
     }
 }
@@ -1111,16 +1140,17 @@
     margin-bottom: 0.4em;
     padding-bottom: 0.5em;
     
-    .decorator{
+    .decorator, .decorator-bottom, .decorator-header{
         display: none;
         visibility: hidden;
     }
     
-    &:not(:first-child){
+/*    &:not(:first-child){
         margin-top: 1em;
-    }
+    }*/
     
     .header {
+        clear: both;
         z-index: 2;
         display: inline-table;
         width: 100%;
@@ -1146,6 +1176,7 @@
     }
     p{
         display: block;
+        clear: both;
     }
 }
 
@@ -1165,21 +1196,39 @@
 }
 
 
-@media only screen and (max-width: 480px)
+@media only screen and (max-width: 600px)
 {
     .content-box{
-        .decorator{
+        padding-bottom: 0;
+        .decorator, .decorator-bottom, .decorator-header{
             display: block;
             visibility: visible;
-            height: 0.6em;
+            height: 0.3em;
             width: 100%;
-            background: -webkit-linear-gradient(top, #8DBF3F , #FFFFFF); /* For Safari 5.1 to 6.0 */
-            background: -o-linear-gradient(bottom,  #8DBF3F , #FFFFFF); /* For Opera 11.1 to 12.0 */
-            background: -moz-linear-gradient(bottom,  #8DBF3F , #FFFFFF); /* For Firefox 3.6 to 15 */
-            background: linear-gradient(to bottom,  #8DBF3F , #FFFFFF); /* Standard syntax */
         }
         
-        .header {
+        .decorator{
+            background: -webkit-linear-gradient(top, #8DBF3F , #1C68AA);
+            background: -o-linear-gradient(bottom,  #8DBF3F , #1C68AA);
+            background: -moz-linear-gradient(bottom,  #8DBF3F , #1C68AA);
+            background: linear-gradient(to bottom,  #8DBF3F , #1C68AA); 
+        }
+        
+        .decorator-bottom{
+            background: -webkit-linear-gradient(top, #FFFFFF , #8DBF3F);
+            background: -o-linear-gradient(bottom,  #FFFFFF , #8DBF3F);
+            background: -moz-linear-gradient(bottom,  #FFFFFF , #8DBF3F);
+            background: linear-gradient(to bottom,  #FFFFFF , #8DBF3F); 
+        }
+        
+        .decorator-header{
+            background: -webkit-linear-gradient(top, #1C68AA , #FFFFFF);
+            background: -o-linear-gradient(bottom,  #1C68AA , #FFFFFF);
+            background: -moz-linear-gradient(bottom,  #1C68AA , #FFFFFF);
+            background: linear-gradient(to bottom,  #1C68AA , #FFFFFF); 
+        }
+        
+/*        .header {
             background: none;
             margin-bottom: 0;
             border-bottom-width: 0.1em;
@@ -1189,7 +1238,7 @@
                 background: none;
                 color: #1C68AA;
             }
-        }
+        }*/
     }
     
     
@@ -1208,7 +1257,7 @@
     overflow:hidden;
     height: 8em;
     width: 20em;
-    @media only screen and (max-width: 480px)
+    @media only screen and (max-width: 600px)
     { 
         width: 11em;
         height: 11em;
@@ -1290,18 +1339,138 @@
     }
 }
 
-@media only screen and (max-width: 480px)
+@media only screen and (max-width: 600px)
 {
-/*    .sticky-footer{
-        margin-bottom: -21.8em;
+    .sticky-footer{
+        margin: 0 auto 0;
     }
-    
-    .push{
-        height: 20.8em;
-    }*/
-    
+
+    .push {
+        height: 0em;
+    }
     #footer {
+        margin-top: 0;
         overflow-x: hidden;
         height: 23em;
     }
+}
+
+#links-trasporti{
+    /*margin-top: -0.5em;*/
+    .decorator-bottom{
+        background: -webkit-linear-gradient(top, #1C68AA , #8DBF3F);
+        background: -o-linear-gradient(bottom,  #1C68AA , #8DBF3F);
+        background: -moz-linear-gradient(bottom,  #1C68AA , #8DBF3F);
+        background: linear-gradient(to bottom,  #1C68AA , #8DBF3F);
+    }
+}
+@keyframes carousel{
+    0%    { left:0; }
+    11%   { left:0; }
+    12.5% { left:-100%; }
+    23.5% { left:-100%; }
+    25%   { left:-200%; }
+    36%   { left:-200%; }
+    37.5% { left:-300%; }
+    48.5% { left:-300%; }
+    50%   { left:-400%; }
+    61%   { left:-400%; }
+    62.5% { left:-300%; }
+    73.5% { left:-300%; }
+    75%   { left:-200%; }
+    86%   { left:-200%; }
+    87.5% { left:-100%; }
+    98.5% { left:-100%; }
+    100%  { left:0; }
+}
+
+@-webkit-keyframes carousel{
+    0%    { left:0; }
+    11%   { left:0; }
+    12.5% { left:-100%; }
+    23.5% { left:-100%; }
+    25%   { left:-200%; }
+    36%   { left:-200%; }
+    37.5% { left:-300%; }
+    48.5% { left:-300%; }
+    50%   { left:-400%; }
+    61%   { left:-400%; }
+    62.5% { left:-300%; }
+    73.5% { left:-300%; }
+    75%   { left:-200%; }
+    86%   { left:-200%; }
+    87.5% { left:-100%; }
+    98.5% { left:-100%; }
+    100%  { left:0; }
+}
+
+.carousel{
+    overflow:hidden;
+    width:100%;
+    margin-top: 0.2em;
+    margin-bottom: 0;
+    padding: 0;
+    .panes{
+        list-style:none;
+        position:relative;
+        width:500%; /* Number of panes * 100% */
+        height: 20em;
+        @media screen and (max-width: 767px)
+        {
+            height: 12em;
+        }
+        @media screen and (max-width: 480px)
+        {
+            height: 7em;
+        }
+        padding: 0;
+        overflow:hidden; /* This is used solely to clear floats, it does not add functionality. */
+
+        -moz-animation: carousel 45s infinite;
+        -webkit-animation: carousel 45s infinite;
+        animation: carousel 45s infinite;
+        
+        li{
+            margin: 0;
+            padding: 0;
+            position:relative;
+            float:left;
+            width: 20%; /* 100 / number of panes */
+            
+            a{
+                display: block;
+                width: 100%;
+                height: 100%;
+                color:#FFFFFF;
+                overflow: hidden;
+                &:hover{
+                    h2{
+                        color:#FFA01A;
+                    }
+                }
+            
+                img{
+                    display:block;
+                    position: relative;
+                    width:100%;
+                    max-width:100%;
+                    max-height: 100%;
+                    margin: 0 auto;
+                }
+                
+                h2{
+                    padding:0.5em;
+                    z-index: 1;
+                    position:absolute;
+                    right:0;
+                    top: 0;
+                    left: 0;
+                    text-align:right;
+                    background-color: rgba(28,104,170, 0.9);
+                }
+            }
+        }
+    }
+    
+    
 }

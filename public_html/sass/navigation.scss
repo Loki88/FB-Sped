@@ -46,7 +46,7 @@ $second-level-text: #FFFFFF;
         border-style: outset;
         border-color: #8DBF3F;
         a{
-            cursor: default;
+            /*cursor: default;*/
             color: #030320;
         }
     }
@@ -89,7 +89,7 @@ $second-level-text: #FFFFFF;
     }
 }
 
-@media screen and (max-width: 480px)
+@media screen and (max-width: 600px)
 { 
     .navigation {
         margin: 0;
@@ -124,7 +124,7 @@ $second-level-text: #FFFFFF;
                 margin-bottom: -0.01em;
                 padding: 0 1%;
                 /*margin-right: 4%;*/
-                background-color: rgba(28,104,170,0.7);
+                background-color: rgba(28,104,170,0.9);
                 /*border-radius: 0.1em;*/
                 border-width: 0.1em 0 0 0;
                 border-style: outset;
@@ -181,6 +181,7 @@ $second-level-text: #FFFFFF;
                   -moz-transition: height 0.25s;
                   -o-transition: height 0.25s;
                   transition: height 0.25s;
+                  z-index: inherit;
 
                   &:last-child{
                       border-bottom-width: 1pt;
@@ -193,6 +194,7 @@ $second-level-text: #FFFFFF;
                       padding-right: 10%;
                       background-color: #FFFFFF;
                       color: #327CCB;
+                      z-index: inherit;
                   }
 
                   &:hover:not(.selected){
@@ -261,21 +263,22 @@ html, body {
     background: -moz-linear-gradient(bottom,  #8DBF3F , #FFFFFF); /* For Firefox 3.6 to 15 */
     background: linear-gradient(to bottom,  #8DBF3F , #FFFFFF); /* Standard syntax */
     
-    @media screen and (max-width: 480px){
+    @media screen and (max-width: 600px){
         background: none;
+        background-color: #8DBF3F;
     }
     
     .decorator{
         display: none;
         visibility: hidden;
-        @media screen and (max-width: 480px){
+        @media screen and (max-width: 600px){
             display: block;
             visibility: visible;
             height: 0.5em;
-            background: -webkit-linear-gradient(top, #1C68AA , #FFFFFF); /* For Safari 5.1 to 6.0 */
-            background: -o-linear-gradient(bottom,  #1C68AA , #FFFFFF); /* For Opera 11.1 to 12.0 */
-            background: -moz-linear-gradient(bottom,  #1C68AA , #FFFFFF); /* For Firefox 3.6 to 15 */
-            background: linear-gradient(to bottom,  #1C68AA , #FFFFFF); /* Standard syntax */            
+            background: -webkit-linear-gradient(top, #1C68AA , #8DBF3F); /* For Safari 5.1 to 6.0 */
+            background: -o-linear-gradient(bottom,  #1C68AA , #8DBF3F); /* For Opera 11.1 to 12.0 */
+            background: -moz-linear-gradient(bottom,  #1C68AA , #8DBF3F); /* For Firefox 3.6 to 15 */
+            background: linear-gradient(to bottom,  #1C68AA , #8DBF3F); /* Standard syntax */            
         }
     }
 }

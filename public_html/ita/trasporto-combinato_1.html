@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="it">
     <head>
-        <title>Trasporto aereo - FB Sped</title>
+        <title>Trasporto combinato- FB Sped</title>
         <link href="../css/normalize.css" type="text/css" rel="stylesheet" />
         <!--[if lt IE 9]>
             <script src="../js/libs/html5shiv.js"></script>
@@ -40,7 +40,7 @@
                         </div>
                     </div>
                     <div class="col span_3_of_5" id="breadcrumb">
-                        Sei in <span>Trasporti - Trasporto aereo</span>
+                        Sei in <span>Trasporti - Trasporto combinato</span>
                     </div>
                     <div class="col span_2_of_5" id="breadcrumb">
                         <a href="#tab">Salta al contenuto</a>
@@ -72,14 +72,21 @@
                                 <div id="trasporto-gomma-link" class="menu-button"><div class="icon"></div><a data-target="#trasporto-gomma" href="./trasporto-su-gomma.html">Trasporto su gomma</a></div>
                                 <div id="trasporto-ferroviario-link" class="menu-button"><div class="icon"></div><a data-target="#trasporto-ferroviario" href="./trasporto-ferroviario.html">Trasporto ferroviario</a></div>
                                 <div id="trasporto-marittimo-link" class="menu-button"><div class="icon"></div><a data-target="#trasporto-marittimo" href="./trasporto-marittimo.html">Trasporto marittimo</a></div>
-                                <div id="trasporto-aereo-link" class="menu-button selected"><div class="icon"></div><a data-target="#trasporto-aereo" href="./trasporto-aereo.html">Trasporto aereo</a></div>
-                                <div id="trasporto-combinato-link" class="menu-button"><div class="icon"></div><a data-target="#trasporto-combinato" href="./trasporto-combinato.html">Trasporto combinato</a></div>
+                                <div id="trasporto-aereo-link" class="menu-button"><div class="icon"></div><a data-target="#trasporto-aereo" href="./trasporto-aereo.html">Trasporto aereo</a></div>
+                                <div id="trasporto-combinato-link" class="menu-button selected"><div class="icon"></div><a data-target="#trasporto-combinato" href="./trasporto-combinato.html">Trasporto combinato</a></div>
                             </div>
                             <div class="tab-image content-box-shadow">
-                                <img src="../img/aereo.png" />
+                                <img src="../img/combinato.png" />
                             </div>
                         </div>
                         <div class="span_3_of_5 tab_contents">
+                            <div data-trigger="#trasporti-link" data-title="Trasporti - FB Sped" class="tab_pane" id="trasporti">
+                                <div class="accordion-button">
+                                    <a class="open" href="./trasporti.html"><div>Trasporti</div><div class="icon"></div></a>
+                                    <a class="close" href="#tab"><div>Trasporti</div><div class="icon"></div></a>
+                                </div>
+                                <div class="decorator"></div>
+                            </div>
                             <div data-trigger="#trasporto-gomma-link" data-title="Trasporto su gomma - FB Sped" class="tab_pane" id="trasporto-gomma">
                                 <div class="accordion-button">
                                     <a class="open" href="./trasporto-su-gomma.html"><div>Trasporto su gomma</div><div class="icon"></div></a>
@@ -101,15 +108,22 @@
                                 </div>
                                 <div class="decorator"></div>
                             </div>
-                            <div data-trigger="#trasporto-aereo-link" data-title="Trasporto aereo - FB Sped" class="tab_pane current" id="trasporto-aereo">
+                            <div data-trigger="#trasporto-aereo-link" data-title="Trasporto aereo - FB Sped" class="tab_pane" id="trasporto-aereo">
                                 <div class="accordion-button">
                                     <a class="open" href="./trasporto-aereo.html"><div>Trasporto aereo</div><div class="icon"></div></a>
                                     <a class="close" href="#tab"><div>Trasporto aereo</div><div class="icon"></div></a>
                                 </div>
                                 <div class="decorator"></div>
+                            </div>
+                            <div data-trigger="#trasporto-combinato-link" data-title="Trasporto combinato - FB Sped" class="tab_pane current" id="trasporto-combinato">
+                                <div class="accordion-button">
+                                    <a class="open" href="./trasporto-combinato.html"><div>Trasporto combinato</div><div class="icon"></div></a>
+                                    <a class="close" href="#tab"><div>Trasporto combinato</div><div class="icon"></div></a>
+                                </div>
+                                <div class="decorator"></div>
                                 <div class="content-box tab_page">
                                     <div class="header">
-                                        <h4>I nostri servizi per il trasporto aereo</h4>
+                                        <h4>I nostri servizi per il trasporto combinato</h4>
                                     </div>
                                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
                                         Donec nec tempor diam. Donec at mi vitae ante tincidunt aliquam. 
@@ -137,16 +151,9 @@
                                         congue est ac malesuada tincidunt. Donec sit amet lectus auctor, tempus tellus id, fringilla nibh. 
                                     </p>
                                     <div class="tab-image">
-                                        <img src="../img/aereo.png" />
+                                        <img src="../img/combinato.png" />
                                     </div>
                                 </div>
-                            </div>
-                            <div data-trigger="#trasporto-combinato-link" data-title="Trasporto combinato - FB Sped" class="tab_pane" id="trasporto-combinato">
-                                <div class="accordion-button">
-                                    <a class="open" href="./trasporto-combinato.html"><div>Trasporto combinato</div><div class="icon"></div></a>
-                                    <a class="close" href="#tab"><div>Trasporto combinato</div><div class="icon"></div></a>
-                                </div>
-                                <div class="decorator"></div>
                             </div>
                         </div>
                     </div>
@@ -163,7 +170,7 @@
             </div>
             <div class="push"></div>
         </div>
-        <div id="footer">
+       <div id="footer">
             <div class="wrapper">
                 <div class="section group">
                     <p class="span_5_of_5"><a href="#menu">Torna al menù</a></p>

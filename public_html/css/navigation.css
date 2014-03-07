@@ -31,7 +31,7 @@
         padding-bottom: 3pt;
         margin-bottom: -2pt; } }
     .navigation .selected a {
-      cursor: default;
+      /*cursor: default;*/
       color: #030320; }
   .navigation ul {
     display: block;
@@ -62,7 +62,7 @@
         color: #FFFFFF;
         text-decoration: none; }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 600px) {
   .navigation {
     margin: 0;
     padding: 0;
@@ -93,7 +93,7 @@
         margin-bottom: -0.01em;
         padding: 0 1%;
         /*margin-right: 4%;*/
-        background-color: rgba(28, 104, 170, 0.7);
+        background-color: rgba(28, 104, 170, 0.9);
         /*border-radius: 0.1em;*/
         border-width: 0.1em 0 0 0;
         border-style: outset;
@@ -142,7 +142,8 @@
           -webkit-transition: height 0.25;
           -moz-transition: height 0.25s;
           -o-transition: height 0.25s;
-          transition: height 0.25s; }
+          transition: height 0.25s;
+          z-index: inherit; }
           .navigation .wrapper ul li:last-child {
             border-bottom-width: 1pt; }
           .navigation .wrapper ul li a {
@@ -151,7 +152,8 @@
             padding-left: 10%;
             padding-right: 10%;
             background-color: #FFFFFF;
-            color: #327CCB; }
+            color: #327CCB;
+            z-index: inherit; }
           .navigation .wrapper ul li:hover:not(.selected) a {
             color: #FFA01A; }
         .navigation .wrapper ul .selected a {
@@ -189,24 +191,25 @@ html, body {
   /* For Firefox 3.6 to 15 */
   background: linear-gradient(to bottom, #8dbf3f, white);
   /* Standard syntax */ }
-  @media screen and (max-width: 480px) {
+  @media screen and (max-width: 600px) {
     .body-background {
-      background: none; } }
+      background: none;
+      background-color: #8DBF3F; } }
   .body-background .decorator {
     display: none;
     visibility: hidden; }
-    @media screen and (max-width: 480px) {
+    @media screen and (max-width: 600px) {
       .body-background .decorator {
         display: block;
         visibility: visible;
         height: 0.5em;
-        background: -webkit-linear-gradient(top, #1c68aa, white);
+        background: -webkit-linear-gradient(top, #1c68aa, #8dbf3f);
         /* For Safari 5.1 to 6.0 */
-        background: -o-linear-gradient(bottom, #1c68aa, white);
+        background: -o-linear-gradient(bottom, #1c68aa, #8dbf3f);
         /* For Opera 11.1 to 12.0 */
-        background: -moz-linear-gradient(bottom, #1c68aa, white);
+        background: -moz-linear-gradient(bottom, #1c68aa, #8dbf3f);
         /* For Firefox 3.6 to 15 */
-        background: linear-gradient(to bottom, #1c68aa, white);
+        background: linear-gradient(to bottom, #1c68aa, #8dbf3f);
         /* Standard syntax */ } }
 
 @media screen and (max-width: 1280px) {

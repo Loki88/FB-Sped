@@ -20,7 +20,7 @@ h1, h2, h3, h4, h5, h6 {
         color: #1C68AA;
     }
     
-    @media screen and (max-width: 480px){
+    @media screen and (max-width: 600px){
         h4{
             font-size: 1em;
         }
@@ -28,78 +28,6 @@ h1, h2, h3, h4, h5, h6 {
         h6{
             font-size: 0.6em;
         }
-    }
-}
-
-#language{
-    font-size: 1em;
-    @media screen and (max-width: 480px){
-        font-size: 0.75em;
-    }
-}
-
-#sol-trasporti{
-    .content-box{
-        .header{
-            h1, h2, h3, h4, h5, h6 {
-                font-size: 1.2em;
-            }
-        }
-        @media screen and (max-width: 480px){
-            font-size: 0.7em;
-            .header{
-                h1, h2, h3, h4, h5, h6 {
-                    font-size: 1em;
-                }
-            }
-        }
-        
-    }
-}
-
-#navigation{
-    font-family: Arial, Verdana;
-    font-size: 1.1em;
-    @media screen and (max-width: 768px)
-    {
-        font-size: 0.75em;
-    }
-}
-
-.infoWindow{
-    font-family: Arial, Verdana;
-}
-
-#main-image{
-    .image-mask{
-        h5{
-            color: #FFFFFF;
-            font-family: Times New Roman, Boldoni;
-            line-height: 1.6em;
-            font-size: 1.6em;
-        }
-        
-        p{
-            color: #FFFFFF;
-            font-family: Arial, Verdana;
-            font-size: 1em;
-        }
-        @media screen and (max-width: 767px){
-            h5{
-                font-size: 1.2em;
-                line-height: 1.2em;
-            }
-            p{
-                font-size: 0.8em;
-            }           
-        }
-    }
-}
-
-#tab{
-    a{
-        font-family: Arial, Verdana;
-        font-size: 1.1em;
     }
 }
 
@@ -123,7 +51,7 @@ h1, h2, h3, h4, h5, h6 {
         line-height: 1.5em;
         margin: 0.6em 0.5em;
     }
-    @media screen and (max-width: 480px){
+    @media screen and (max-width: 600px){
         .header{
             h4{
                 line-height: 1.2em;
@@ -143,9 +71,93 @@ h1, h2, h3, h4, h5, h6 {
     }
 }
 
+#language{
+    font-size: 1em;
+    @media screen and (max-width: 600px){
+        font-size: 0.75em;
+    }
+}
+
+#sol-trasporti, #links-trasporti{
+    .content-box{
+        .header{
+            h1, h2, h3, h4, h5, h6 {
+                font-size: 1.2em;
+            }
+        }
+        @media screen and (max-width: 480px){
+            font-size: 0.7em;
+            .header{
+                h1, h2, h3, h4, h5, h6 {
+                    font-size: 1em;
+                }
+            }
+        }
+        
+    }
+}
+
+#navigation{
+    font-family: Arial, Verdana;
+    font-size: 1.1em;
+    @media screen and (max-width: 768px)
+    {
+        font-size: 0.95em;
+    }
+    @media screen and (max-width: 600px)
+    {
+        font-size: 0.75em;
+    }
+}
+
+.infoWindow{
+    font-family: Arial, Verdana;
+}
+
+#main-image{
+    .image-mask{
+        h5{
+            color: #FFFFFF;
+            font-family: Times New Roman, Boldoni;
+            line-height: 1.6em;
+            font-size: 1.6em;
+        }
+        
+        p{
+            color: #FFFFFF;
+            font-family: Arial, Verdana;
+            font-size: 1em;
+        }
+        @media screen and (max-width: 600px){
+            h5{
+                font-size: 1.2em;
+                line-height: 1.2em;
+            }
+            p{
+                font-size: 0.8em;
+            }           
+        }
+    }
+}
+
+#tab{
+    a{
+        font-family: Arial, Verdana;
+        font-size: 1.1em;
+    }
+    
+    @media screen and (max-width: 600px){
+        a{
+            font-size: 0.9em;
+        }
+    }
+}
+
+
+
 #footer{
     font-family: Arial, Verdana;
-    @media screen and (max-width: 480px){
+    @media screen and (max-width: 600px){
         font-size: 0.9em;
     }
 }

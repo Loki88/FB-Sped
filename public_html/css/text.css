@@ -13,30 +13,58 @@ h1, h2, h3, h4, h5, h6 {
   #logo-text h6 {
     font-size: 1em;
     color: #1C68AA; }
-  @media screen and (max-width: 480px) {
+  @media screen and (max-width: 600px) {
     #logo-text h4 {
       font-size: 1em; }
     #logo-text h6 {
       font-size: 0.6em; } }
 
+.content-box .header h4 {
+  font-size: 1.2em; }
+.content-box h1, .content-box h2, .content-box h3, .content-box h4, .content-box h5, .content-box h6 {
+  font-family: Times New Roman, Boldoni;
+  margin: 0.6em 0.5em; }
+.content-box h6 {
+  line-height: 2em;
+  font-size: 1em; }
+.content-box p {
+  font-family: Arial, Verdana;
+  line-height: 1.5em;
+  margin: 0.6em 0.5em; }
+@media screen and (max-width: 600px) {
+  .content-box .header h4 {
+    line-height: 1.2em;
+    font-size: 1em; }
+  .content-box h6 {
+    margin-top: 0.8em;
+    margin-bottom: 0.4em;
+    font-size: 0.9em;
+    line-height: 1.2em; }
+  .content-box p {
+    font-size: 0.8em;
+    line-height: 1.2em; } }
+
 #language {
   font-size: 1em; }
-  @media screen and (max-width: 480px) {
+  @media screen and (max-width: 600px) {
     #language {
       font-size: 0.75em; } }
 
-#sol-trasporti .content-box .header h1, #sol-trasporti .content-box .header h2, #sol-trasporti .content-box .header h3, #sol-trasporti .content-box .header h4, #sol-trasporti .content-box .header h5, #sol-trasporti .content-box .header h6 {
+#sol-trasporti .content-box .header h1, #sol-trasporti .content-box .header h2, #sol-trasporti .content-box .header h3, #sol-trasporti .content-box .header h4, #sol-trasporti .content-box .header h5, #sol-trasporti .content-box .header h6, #links-trasporti .content-box .header h1, #links-trasporti .content-box .header h2, #links-trasporti .content-box .header h3, #links-trasporti .content-box .header h4, #links-trasporti .content-box .header h5, #links-trasporti .content-box .header h6 {
   font-size: 1.2em; }
 @media screen and (max-width: 480px) {
-  #sol-trasporti .content-box {
+  #sol-trasporti .content-box, #links-trasporti .content-box {
     font-size: 0.7em; }
-    #sol-trasporti .content-box .header h1, #sol-trasporti .content-box .header h2, #sol-trasporti .content-box .header h3, #sol-trasporti .content-box .header h4, #sol-trasporti .content-box .header h5, #sol-trasporti .content-box .header h6 {
+    #sol-trasporti .content-box .header h1, #sol-trasporti .content-box .header h2, #sol-trasporti .content-box .header h3, #sol-trasporti .content-box .header h4, #sol-trasporti .content-box .header h5, #sol-trasporti .content-box .header h6, #links-trasporti .content-box .header h1, #links-trasporti .content-box .header h2, #links-trasporti .content-box .header h3, #links-trasporti .content-box .header h4, #links-trasporti .content-box .header h5, #links-trasporti .content-box .header h6 {
       font-size: 1em; } }
 
 #navigation {
   font-family: Arial, Verdana;
   font-size: 1.1em; }
   @media screen and (max-width: 768px) {
+    #navigation {
+      font-size: 0.95em; } }
+  @media screen and (max-width: 600px) {
     #navigation {
       font-size: 0.75em; } }
 
@@ -52,7 +80,7 @@ h1, h2, h3, h4, h5, h6 {
   color: #FFFFFF;
   font-family: Arial, Verdana;
   font-size: 1em; }
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 600px) {
   #main-image .image-mask h5 {
     font-size: 1.2em;
     line-height: 1.2em; }
@@ -62,34 +90,12 @@ h1, h2, h3, h4, h5, h6 {
 #tab a {
   font-family: Arial, Verdana;
   font-size: 1.1em; }
-
-.content-box .header h4 {
-  font-size: 1.2em; }
-.content-box h1, .content-box h2, .content-box h3, .content-box h4, .content-box h5, .content-box h6 {
-  font-family: Times New Roman, Boldoni;
-  margin: 0.6em 0.5em; }
-.content-box h6 {
-  line-height: 2em;
-  font-size: 1em; }
-.content-box p {
-  font-family: Arial, Verdana;
-  line-height: 1.5em;
-  margin: 0.6em 0.5em; }
-@media screen and (max-width: 480px) {
-  .content-box .header h4 {
-    line-height: 1.2em;
-    font-size: 1em; }
-  .content-box h6 {
-    margin-top: 0.8em;
-    margin-bottom: 0.4em;
-    font-size: 0.9em;
-    line-height: 1.2em; }
-  .content-box p {
-    font-size: 0.8em;
-    line-height: 1.2em; } }
+@media screen and (max-width: 600px) {
+  #tab a {
+    font-size: 0.9em; } }
 
 #footer {
   font-family: Arial, Verdana; }
-  @media screen and (max-width: 480px) {
+  @media screen and (max-width: 600px) {
     #footer {
       font-size: 0.9em; } }

@@ -6,7 +6,7 @@ $(window).resize(function() {
         height: $(document).height(),
         zoom: window.devicePixelRatio
     };
-    if(newSize.width <= 480)
+    if(newSize.width <= 600)
     {
         //La finestra è ridimensionata per gli smartphone portrait
         $(window).trigger('oneColumn', newSize);
@@ -38,6 +38,9 @@ $(window).on('noMobile', function(event, size) {
 
 
 var Navigation = {
+    
+    time: 600,
+    
     init: function()
     {
         var menu = $('#menu');
@@ -66,7 +69,7 @@ var Navigation = {
         menu.prop('mobile', false);
         lang.prop('mobile', false);
         var windowWidth = $(document).width();
-        if(windowWidth < 481)
+        if(windowWidth < 601)
         {
             //barra di navigazione mobile
             Navigation.prepareMenu();
@@ -107,7 +110,7 @@ var Navigation = {
 //            menu.hide();
             
             Navigation.closeMenu();
-            lang.slideDown(600);
+            lang.slideDown(Navigation.time);
             open.hide();
 //            close.css('display', 'block');
             close.show();
@@ -118,7 +121,7 @@ var Navigation = {
             event.preventDefault();
             open.show();
             close.hide();
-            lang.slideUp(600);
+            lang.slideUp(Navigation.time);
             lang.prop('open', false);
         });
     },
@@ -151,7 +154,7 @@ var Navigation = {
             menu.parent().addClass('menuMobileVisible');
             menu.hide();
             Navigation.closeLang();
-            menu.slideDown(700);
+            menu.slideDown(Navigation.time);
             open.hide();
             close.css('display', 'block');
             close.show();
@@ -164,7 +167,7 @@ var Navigation = {
             open.css('display', 'block');
             open.show();
             
-            menu.slideUp(800, function(){
+            menu.slideUp(Navigation.time, function(){
                 menu.parent().removeClass('menuMobileVisible');
             });
             menu.prop('open', false);
