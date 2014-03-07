@@ -4,7 +4,7 @@ var TabToAccordion = {
         TabToAccordion.current = $('.current');
         TabToAccordion.current.prop('setted', true);
         TabToAccordion.current.prop('open', true);
-        
+       
         var accordion_links = $('.tab_pane').find('a:not(.close)');
         var accordion_links_close = $('.tab_pane').find('.close');
         
@@ -18,9 +18,9 @@ var TabToAccordion = {
             var accordionClose = $(accordion_links_close[i]);
             accordionClose.prop('panel', panel);
             accordionClose.click(TabToAccordion.accordionCloseClick);
-            
+            panel.prop('link', accordionLink);
         }
-        
+        TabToAccordion.pushState(true);
         $(window).on('fluidGrid', function(){
             TabToAccordion.restoreTab();
         });
@@ -28,6 +28,22 @@ var TabToAccordion = {
         $(window).on('noMobile', function(){
             TabToAccordion.restoreTab();
         });
+        
+        History.Adapter.bind(window,'statechange',function(){ // Note: We are using statechange instead of popstate
+            var State = History.getState(); // Note: We are using History.getState() instead of event.state
+            History.log(State.data, State.title, State.url);
+            if(TabToAccordion.manualStateChange)
+            {
+                TabToAccordion.restoreState(State.data);
+            }
+            TabToAccordion.manualStateChange = true;
+	});
+    },
+    
+    restoreState: function(state){
+        console.log('href', state.href);
+        var link = $('.accordion-button>.open[href="'+state.href+'"]');//.find('[href="'+state.href+'"]:first');
+        TabToAccordion.loadPage(link);
     },
     
     restoreTab: function()
@@ -65,7 +81,7 @@ var TabToAccordion = {
         $(document.body).css('cursor', 'wait');
         link = $(link);
         var panel;
-        panel = link.prop('panel');
+        panel = $(link.prop('panel'));
         if(!panel.prop('setted'))
         {
             var dataUrl = link.attr('href');
@@ -93,7 +109,7 @@ var TabToAccordion = {
             TabToAccordion.changePage(panel);
         }
     },
-    
+
     changePage: function(panel)
     {
         panel = $(panel);
@@ -105,12 +121,14 @@ var TabToAccordion = {
             });
             current.prop('open', false);
             TabToAccordion.current = panel;
+            TabToAccordion.pushState();
             $('.tab_controls').children('.selected').removeClass('selected');
             var link = $(panel.prop('tabLink'));
             link.parent().addClass('selected');
             panel.addClass('current');
             panel.children('.tab_page').slideDown(400);
             panel.prop('open', true);
+            
         }
         else{
             if(panel.prop('open'))
@@ -133,6 +151,22 @@ var TabToAccordion = {
         $(document.body).css('cursor', 'auto');
     },
     
+    pushState: function(replace)
+    {
+        //semaforo per i cambiamenti di stato della pagina
+        TabToAccordion.manualStateChange = false;
+        var current = $(TabToAccordion.current);
+        console.log('current to state', current);
+        var link = $(current.prop('link'));
+        console.log('link to state', link);
+        var state = {
+            href: link.attr('href'),
+        };
+        if(replace != undefined && replace)
+            History.replaceState(state, current.data('title'), link.attr('href'));
+        else
+            History.pushState(state, current.data('title'), link.attr('href'));
+    }
 };
 
 $(document).ready(TabToAccordion.init());
