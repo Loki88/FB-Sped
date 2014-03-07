@@ -11,7 +11,7 @@
 
     body{
         overflow-y: auto;
-        /*overflow-x: hidden;*/
+        overflow-x: hidden;
     }
 }
 
@@ -105,11 +105,11 @@
             clear: both;
             height: auto;
             #logo-img{
-                width: 50%;
-                max-width: 50%;
+                width: 30%;
+                max-width: 30%;
                 height: auto;
-                margin: auto 25%;
-                float: none;
+                margin: auto 0;
+                float: left;
                 a{
                 
                     margin: auto;
@@ -123,10 +123,13 @@
                 
             }
             #logo-text{
-                width: 80%;
-                float: none;
-                margin: auto 10%;
-                text-align: center;
+                width: 66%;
+                float: left;
+                margin: auto 2%;
+                text-align: left;
+                h4, h6{
+                    text-align: left;
+                }
             }
             
         }
@@ -363,26 +366,7 @@
                 right: 0;
                 height: auto;
                 position:relative;
-/*                a:not(.controls){
-                    clear: both;
-                    display: block;
-                    position: relative;
-                    line-height: auto;
-                    width: 100%;
-                    border-color: #000000;
-                    border-width: 1pt;
-                    border-right: 0;
-                    border-bottom: 0;
-                    border-style: groove;
-                    border-color: #1C68AA;
-                    left: -0.1em;
-
-                    &:last-child{
-                        border-bottom-width: 1pt;
-                    }
-                }*/
             }
-            
         }
     }
     .languageMobileVisible{
@@ -405,32 +389,6 @@
         }
     }
 }
-/*
-.language-menu{
-    #lang-open{
-        display: none;
-    }
-
-    #lang-close{
-        display: block;
-    }
-
-    a:not(.controls){
-        display: inline-block;
-        position: relative;
-        border: 0.05em groove;
-        line-height: auto;
-        border-color: #000000;
-        left: 0;
-        &:first-child{
-            border-top-width: 0.1em;
-        }
-        &:last-child{
-            border-bottom-width: 0.1em;
-        }
-    }
-}*/
-
 
 @media only screen and (min-width: 481px) and (max-width: 768px)
 {
@@ -987,13 +945,30 @@
 @media only screen and (max-width: 480px)
 {
     #sol-trasporti{
-        margin-top: 0.6em;
+        margin: 0.5em auto;
+        margin-bottom: 0;
+
         .content-box{
             display: block;
             position: relative;
-            margin-top: 0;
+            margin: 0;
             height: 100%;
             padding: 0;
+            
+            .decorator_bottom{
+                display: block;
+                position: relative;
+                margin: 0;
+                padding: 0;
+                bottom: 0;
+                top: auto;
+                background: none;
+                background: -webkit-linear-gradient(top, #FFFFFF , #8DBF3F); /* For Safari 5.1 to 6.0 */
+                background: -o-linear-gradient(bottom,  #FFFFFF , #8DBF3F); /* For Opera 11.1 to 12.0 */
+                background: -moz-linear-gradient(bottom,  #FFFFFF , #8DBF3F); /* For Firefox 3.6 to 15 */
+                background: linear-gradient(to bottom,  #FFFFFF , #8DBF3F); /* Standard syntax */
+            }
+            
             a{
                 display: block;
                 position: relative;
@@ -1036,7 +1011,7 @@
 
                 p{
                     display: block;
-                    float: left;
+                    clear: right;
                     width: 90%;
                     margin: 0.5em 5%;
                 }

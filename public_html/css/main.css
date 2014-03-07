@@ -10,7 +10,7 @@
 
   body {
     overflow-y: auto;
-    /*overflow-x: hidden;*/ } }
+    overflow-x: hidden; } }
 #page-header {
   background-color: #FFFFFF;
   padding-bottom: 0;
@@ -79,11 +79,11 @@
     clear: both;
     height: auto; }
     #page-header #logo #logo-img {
-      width: 50%;
-      max-width: 50%;
+      width: 30%;
+      max-width: 30%;
       height: auto;
-      margin: auto 25%;
-      float: none; }
+      margin: auto 0;
+      float: left; }
       #page-header #logo #logo-img a {
         margin: auto; }
         #page-header #logo #logo-img a img {
@@ -92,10 +92,12 @@
           width: 100%;
           margin: 0 auto; }
     #page-header #logo #logo-text {
-      width: 80%;
-      float: none;
-      margin: auto 10%;
-      text-align: center; } }
+      width: 66%;
+      float: left;
+      margin: auto 2%;
+      text-align: left; }
+      #page-header #logo #logo-text h4, #page-header #logo #logo-text h6 {
+        text-align: left; } }
 .img {
   display: block;
   position: relative;
@@ -254,25 +256,7 @@
         left: auto;
         right: 0;
         height: auto;
-        position: relative;
-        /*                a:not(.controls){
-                            clear: both;
-                            display: block;
-                            position: relative;
-                            line-height: auto;
-                            width: 100%;
-                            border-color: #000000;
-                            border-width: 1pt;
-                            border-right: 0;
-                            border-bottom: 0;
-                            border-style: groove;
-                            border-color: #1C68AA;
-                            left: -0.1em;
-        
-                            &:last-child{
-                                border-bottom-width: 1pt;
-                            }
-                        }*/ }
+        position: relative; }
 
   .languageMobileVisible #lang-menu {
     left: 0;
@@ -294,31 +278,6 @@
           padding: 0; }
         .lang-menu #lang-menu a span {
           display: none; } }
-/*
-.language-menu{
-    #lang-open{
-        display: none;
-    }
-
-    #lang-close{
-        display: block;
-    }
-
-    a:not(.controls){
-        display: inline-block;
-        position: relative;
-        border: 0.05em groove;
-        line-height: auto;
-        border-color: #000000;
-        left: 0;
-        &:first-child{
-            border-top-width: 0.1em;
-        }
-        &:last-child{
-            border-bottom-width: 0.1em;
-        }
-    }
-}*/
 @media only screen and (min-width: 481px) and (max-width: 768px) {
   .lang-menu a:not(.controls) {
     float: none;
@@ -686,13 +645,30 @@
 
 @media only screen and (max-width: 480px) {
   #sol-trasporti {
-    margin-top: 0.6em; }
+    margin: 0.5em auto;
+    margin-bottom: 0; }
     #sol-trasporti .content-box {
       display: block;
       position: relative;
-      margin-top: 0;
+      margin: 0;
       height: 100%;
       padding: 0; }
+      #sol-trasporti .content-box .decorator_bottom {
+        display: block;
+        position: relative;
+        margin: 0;
+        padding: 0;
+        bottom: 0;
+        top: auto;
+        background: none;
+        background: -webkit-linear-gradient(top, white, #8dbf3f);
+        /* For Safari 5.1 to 6.0 */
+        background: -o-linear-gradient(bottom, white, #8dbf3f);
+        /* For Opera 11.1 to 12.0 */
+        background: -moz-linear-gradient(bottom, white, #8dbf3f);
+        /* For Firefox 3.6 to 15 */
+        background: linear-gradient(to bottom, white, #8dbf3f);
+        /* Standard syntax */ }
       #sol-trasporti .content-box a {
         display: block;
         position: relative;
@@ -727,7 +703,7 @@
             text-wrap: avoid; }
         #sol-trasporti .content-box a p {
           display: block;
-          float: left;
+          clear: right;
           width: 90%;
           margin: 0.5em 5%; }
       #sol-trasporti .content-box #truck .icon {
