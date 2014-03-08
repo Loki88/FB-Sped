@@ -338,16 +338,18 @@
         color: #F0F0D8; }
 
 @media only screen and (max-width: 768px) {
-  #main-image .image-mask {
-    width: 100%;
-    height: 65%;
-    top: 35%;
-    bottom: 0; }
-    #main-image .image-mask a h5 {
-      margin: 0.2em auto; }
-    #main-image .image-mask a p {
-      text-align: center;
-      margin: auto 2%; } }
+  #main-image {
+    margin-top: 0.4em; }
+    #main-image .image-mask {
+      width: 100%;
+      height: 65%;
+      top: 35%;
+      bottom: 0; }
+      #main-image .image-mask a h5 {
+        margin: 0.2em auto; }
+      #main-image .image-mask a p {
+        text-align: center;
+        margin: auto 2%; } }
 @media only screen and (max-width: 480px) {
   #main-image {
     min-height: 0; }
@@ -473,9 +475,8 @@
 @media screen and (max-width: 600px) {
   .tab_to_accordion {
     margin-top: 1em;
-    width: 98%;
-    margin-left: 1%;
-    margin-right: 1%; }
+    width: 100%;
+    margin-left: -1pt; }
     .tab_to_accordion .tab_right_col {
       display: none;
       visibility: hidden; }
@@ -483,32 +484,30 @@
       margin: 0; }
       .tab_to_accordion .tab_contents .decorator {
         display: block;
+        position: relative;
         visibility: visible;
         width: 100%;
-        margin: 0;
+        margin-left: 1pt;
         padding: 0;
-        height: 0.2em;
-        background: -webkit-linear-gradient(top, white, #1c68aa);
-        /* For Safari 5.1 to 6.0 */
-        background: -o-linear-gradient(bottom, white, #1c68aa);
-        /* For Opera 11.1 to 12.0 */
-        background: -moz-linear-gradient(bottom, white, #1c68aa);
-        /* For Firefox 3.6 to 15 */
-        background: linear-gradient(to bottom, white, #1c68aa);
-        /* Standard syntax */ }
+        height: 0;
+        background-color: #1C68AA;
+        border-width: 1pt 0;
+        border-style: groove;
+        border-color: #1C68AA; }
       .tab_to_accordion .tab_contents .tab_pane .accordion-button {
         display: table;
         visibility: visible;
         width: 100%;
-        height: 2.2em;
+        height: auto;
         line-height: 1.15em;
         text-align: center;
         padding: 0.15em 0;
         margin: 0 auto;
         margin-bottom: -0.2em;
         text-decoration: none;
-        border: 0;
-        border-top-width: 1pt;
+        border: 1pt;
+        background-color: #FFFFFF;
+        border-bottom-width: 0;
         border-style: groove;
         border-color: #1C68AA;
         float: none; }
@@ -519,14 +518,15 @@
           width: 100%;
           margin: auto 0;
           padding: 0;
-          height: 2.2em; }
+          height: auto;
+          color: #1C68AA; }
           .tab_to_accordion .tab_contents .tab_pane .accordion-button a div {
             display: inline-block;
             position: relative;
             float: left;
             text-align: left;
             width: 60%;
-            height: 2.2em;
+            height: auto;
             bottom: 0;
             padding: 0.15em 5%; }
           .tab_to_accordion .tab_contents .tab_pane .accordion-button a .icon {
@@ -577,14 +577,9 @@
             border: 0;
             color: #1C68AA; }
       .tab_to_accordion .tab_contents .current .decorator {
-        background: -webkit-linear-gradient(top, #8dbf3f, white);
-        /* For Safari 5.1 to 6.0 */
-        background: -o-linear-gradient(bottom, #8dbf3f, white);
-        /* For Opera 11.1 to 12.0 */
-        background: -moz-linear-gradient(bottom, #8dbf3f, white);
-        /* For Firefox 3.6 to 15 */
-        background: linear-gradient(to bottom, #8dbf3f, white);
-        /* Standard syntax */ }
+        border-style: groove;
+        border-color: #8DBF3F;
+        background-color: #8DBF3F; }
       .tab_to_accordion .tab_contents .current .open {
         display: none; }
       .tab_to_accordion .tab_contents .current .close {
@@ -693,6 +688,7 @@
     display: block;
     position: relative;
     margin: 0;
+    margin-bottom: 0.5em;
     height: 100%;
     padding: 0;
     /*            .decorator_bottom{
@@ -747,8 +743,7 @@
       .trasporti-links .content-box a .header {
         display: block;
         min-height: 2em;
-        max-height: auto;
-        height: 2em;
+        height: 2.4em;
         border: 0;
         margin-bottom: 0; }
         .trasporti-links .content-box a .header .icon {
@@ -759,11 +754,11 @@
           margin: 0.25em auto;
           background-size: 1.5em 1.5em; }
         .trasporti-links .content-box a .header h5 {
-          display: block;
+          display: inline-block;
           float: left;
           position: relative;
           width: 60%;
-          height: 1.5em;
+          height: auto;
           bottom: 0;
           padding: 0;
           margin: 0;
@@ -803,7 +798,7 @@
   box-shadow: 1pt 1pt 5pt #000000; }
   @media screen and (max-width: 600px) {
     .content-box-shadow {
-      box-shadow: 0 0 0 #000000; } }
+      box-shadow: 1pt 1pt 2pt #1C68AA; } }
 
 .content-box {
   background-color: #FFFFFF;
@@ -857,7 +852,34 @@
 
 @media only screen and (max-width: 600px) {
   .content-box {
-    padding-bottom: 0;
+    /*padding-bottom: 0;*/
+    /*        .decorator, .decorator-bottom, .decorator-header{
+                display: block;
+                visibility: visible;
+                height: 0.3em;
+                width: 100%;
+            }
+            
+            .decorator{
+                background: -webkit-linear-gradient(top, #8DBF3F , #1C68AA);
+                background: -o-linear-gradient(bottom,  #8DBF3F , #1C68AA);
+                background: -moz-linear-gradient(bottom,  #8DBF3F , #1C68AA);
+                background: linear-gradient(to bottom,  #8DBF3F , #1C68AA); 
+            }
+            
+            .decorator-bottom{
+                background: -webkit-linear-gradient(top, #FFFFFF , #8DBF3F);
+                background: -o-linear-gradient(bottom,  #FFFFFF , #8DBF3F);
+                background: -moz-linear-gradient(bottom,  #FFFFFF , #8DBF3F);
+                background: linear-gradient(to bottom,  #FFFFFF , #8DBF3F); 
+            }
+            
+            .decorator-header{
+                background: -webkit-linear-gradient(top, #1C68AA , #FFFFFF);
+                background: -o-linear-gradient(bottom,  #1C68AA , #FFFFFF);
+                background: -moz-linear-gradient(bottom,  #1C68AA , #FFFFFF);
+                background: linear-gradient(to bottom,  #1C68AA , #FFFFFF); 
+            }*/
     /*        .header {
                 background: none;
                 margin-bottom: 0;
@@ -869,26 +891,6 @@
                     color: #1C68AA;
                 }
             }*/ }
-    .content-box .decorator, .content-box .decorator-bottom, .content-box .decorator-header {
-      display: block;
-      visibility: visible;
-      height: 0.3em;
-      width: 100%; }
-    .content-box .decorator {
-      background: -webkit-linear-gradient(top, #8dbf3f, #1c68aa);
-      background: -o-linear-gradient(bottom, #8dbf3f, #1c68aa);
-      background: -moz-linear-gradient(bottom, #8dbf3f, #1c68aa);
-      background: linear-gradient(to bottom, #8dbf3f, #1c68aa); }
-    .content-box .decorator-bottom {
-      background: -webkit-linear-gradient(top, white, #8dbf3f);
-      background: -o-linear-gradient(bottom, white, #8dbf3f);
-      background: -moz-linear-gradient(bottom, white, #8dbf3f);
-      background: linear-gradient(to bottom, white, #8dbf3f); }
-    .content-box .decorator-header {
-      background: -webkit-linear-gradient(top, #1c68aa, white);
-      background: -o-linear-gradient(bottom, #1c68aa, white);
-      background: -moz-linear-gradient(bottom, #1c68aa, white);
-      background: linear-gradient(to bottom, #1c68aa, white); }
 
   #map-wrapper {
     display: block;
@@ -975,7 +977,7 @@
   #footer {
     margin-top: 0;
     overflow-x: hidden;
-    height: 23em; } }
+    height: auto; } }
 #links-trasporti {
   /*margin-top: -0.5em;*/ }
   #links-trasporti .decorator-bottom {
@@ -1099,19 +1101,21 @@
     position: relative;
     width: 500%;
     /* Number of panes * 100% */
-    height: 20em;
+    /*        height: 20em;
+            @media screen and (max-width: 767px)
+            {
+                height: 12em;
+            }
+            @media screen and (max-width: 480px)
+            {
+                height: 7em;
+            }*/
     padding: 0;
     overflow: hidden;
     /* This is used solely to clear floats, it does not add functionality. */
     -moz-animation: carousel 45s infinite;
     -webkit-animation: carousel 45s infinite;
     animation: carousel 45s infinite; }
-    @media screen and (max-width: 767px) {
-      .carousel .panes {
-        height: 12em; } }
-    @media screen and (max-width: 480px) {
-      .carousel .panes {
-        height: 7em; } }
     .carousel .panes li {
       margin: 0;
       padding: 0;
@@ -1131,8 +1135,8 @@
           display: block;
           position: relative;
           width: 100%;
-          max-width: 100%;
-          max-height: 100%;
+          /*                    max-width:100%;
+                              max-height: 100%;*/
           margin: 0 auto; }
         .carousel .panes li a h2 {
           padding: 0.5em;

@@ -52,11 +52,15 @@ h1, h2, h3, h4, h5, h6 {
 
 #sol-trasporti .content-box .header h1, #sol-trasporti .content-box .header h2, #sol-trasporti .content-box .header h3, #sol-trasporti .content-box .header h4, #sol-trasporti .content-box .header h5, #sol-trasporti .content-box .header h6, #links-trasporti .content-box .header h1, #links-trasporti .content-box .header h2, #links-trasporti .content-box .header h3, #links-trasporti .content-box .header h4, #links-trasporti .content-box .header h5, #links-trasporti .content-box .header h6 {
   font-size: 1.2em; }
-@media screen and (max-width: 480px) {
+#sol-trasporti .content-box span, #links-trasporti .content-box span {
+  font-size: 1em; }
+@media screen and (max-width: 600px) {
   #sol-trasporti .content-box, #links-trasporti .content-box {
-    font-size: 0.7em; }
+    font-size: 0.8em; }
     #sol-trasporti .content-box .header h1, #sol-trasporti .content-box .header h2, #sol-trasporti .content-box .header h3, #sol-trasporti .content-box .header h4, #sol-trasporti .content-box .header h5, #sol-trasporti .content-box .header h6, #links-trasporti .content-box .header h1, #links-trasporti .content-box .header h2, #links-trasporti .content-box .header h3, #links-trasporti .content-box .header h4, #links-trasporti .content-box .header h5, #links-trasporti .content-box .header h6 {
-      font-size: 1em; } }
+      font-size: 1em; }
+    #sol-trasporti .content-box span, #links-trasporti .content-box span {
+      font-size: 0.8em; } }
 
 #navigation {
   font-family: Arial, Verdana;
@@ -93,6 +97,12 @@ h1, h2, h3, h4, h5, h6 {
 @media screen and (max-width: 600px) {
   #tab a {
     font-size: 0.9em; } }
+
+.carousel h2 {
+  font-size: 1.2em; }
+  @media screen and (max-width: 600px) {
+    .carousel h2 {
+      font-size: 0.8em; } }
 
 #footer {
   font-family: Arial, Verdana; }
