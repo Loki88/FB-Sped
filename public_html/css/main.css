@@ -184,7 +184,7 @@
       height: 3em;
       padding: 0.1em -0.5em;
       border: 0;
-      background-color: rgba(28, 104, 170, 0.9);
+      background-color: #1c68aa;
       border-left-width: 0.1em;
       border-left-style: groove;
       border-top-width: 0.1em;
@@ -195,8 +195,8 @@
       .lang-menu .controls img {
         display: block;
         position: relative;
-        height: 100%;
-        margin: 0 auto; }
+        height: 90%;
+        margin: 5% auto; }
     .lang-menu #lang-close {
       display: none;
       position: absolute;
