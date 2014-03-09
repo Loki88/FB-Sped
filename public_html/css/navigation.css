@@ -68,14 +68,21 @@
     padding: 0;
     height: auto;
     border: 0;
+    padding-top: -2pt;
     width: 79%;
-    background: none;
     float: left;
+    border-top-width: 0.1em;
+    border-top-style: outset;
+    border-bottom-width: 0.1em;
+    border-bottom-style: outset;
+    border-color: #1C68AA;
     /* Stile per i bottoni del menù di primo livello, quando sono visibili */ }
     .navigation .wrapper {
       display: block;
       position: relative;
       height: auto;
+      width: 80%;
+      margin-left: 0;
       /* Stile di base per il menù chiuso */ }
       .navigation .wrapper a {
         display: block;
@@ -87,16 +94,20 @@
         text-decoration: none; }
       .navigation .wrapper .menu-link {
         display: inline-block;
-        height: 2.2em;
-        line-height: 2.2em;
+        height: 3em;
+        line-height: 3em;
         width: 98%;
         margin-bottom: -0.01em;
         padding: 0 1%;
         /*margin-right: 4%;*/
-        background-color: rgba(28, 104, 170, 0.9);
+        background-color: rgba(28, 104, 170, 0.8);
         /*border-radius: 0.1em;*/
-        border-width: 0.1em 0 0 0;
-        border-style: outset;
+        border-right-width: 0.1em;
+        border-right-style: groove;
+        /*                border-top-width: 0.1em;
+                        border-top-style: outset;
+                        border-bottom-width: 0.1em;
+                        border-bottom-style: outset;*/
         border-color: #1C68AA;
         background-image: url("../img/menu-white.png");
         background-repeat: no-repeat;
@@ -119,9 +130,12 @@
         margin: 0;
         padding: 0;
         border: 0;
+        border-right-width: 1pt;
+        border-style: groove;
+        border-color: #1C68AA;
         width: 100%;
         height: auto;
-        top: 2.3em;
+        top: 3.1em;
         z-index: 3;
         left: -10000px; }
         .navigation .wrapper ul li {
@@ -131,10 +145,8 @@
           border: 0;
           float: left;
           margin: 0;
-          margin-left: -1pt;
-          border-color: #000000;
-          border-width: 1pt;
-          border-left: 0;
+          /*margin-left: 0;*/
+          border-width: 1pt 0;
           border-bottom: 0;
           border-style: groove;
           border-color: #1C68AA;
@@ -148,7 +160,8 @@
             border-bottom-width: 1pt; }
           .navigation .wrapper ul li a {
             position: relative;
-            height: 100%;
+            height: 3em;
+            line-height: 3em;
             padding-left: 10%;
             padding-right: 10%;
             background-color: #FFFFFF;
@@ -168,6 +181,8 @@
       left: 0px; }
       .navigation:target ul li {
         height: auto; }
+        .navigation:target ul li a {
+          height: 3em; }
 
   .menuMobileVisible #menu {
     height: auto;
@@ -194,23 +209,20 @@ html, body {
   @media screen and (max-width: 600px) {
     .body-background {
       background: none;
-      background-color: #8DBF3F; } }
+      background-color: #8DBF3F;
+      border-top: 1pt inset #8DBF3F; } }
   .body-background .decorator {
     display: none;
-    visibility: hidden; }
-    @media screen and (max-width: 600px) {
-      .body-background .decorator {
-        display: block;
-        visibility: visible;
-        height: 0.5em;
-        background: -webkit-linear-gradient(top, #1c68aa, #8dbf3f);
-        /* For Safari 5.1 to 6.0 */
-        background: -o-linear-gradient(bottom, #1c68aa, #8dbf3f);
-        /* For Opera 11.1 to 12.0 */
-        background: -moz-linear-gradient(bottom, #1c68aa, #8dbf3f);
-        /* For Firefox 3.6 to 15 */
-        background: linear-gradient(to bottom, #1c68aa, #8dbf3f);
-        /* Standard syntax */ } }
+    visibility: hidden;
+    /*        @media screen and (max-width: 600px){
+                display: block;
+                visibility: visible;
+                height: 0.5em;
+                background: -webkit-linear-gradient(top, #1C68AA , #8DBF3F);  For Safari 5.1 to 6.0 
+                background: -o-linear-gradient(bottom,  #1C68AA , #8DBF3F);  For Opera 11.1 to 12.0 
+                background: -moz-linear-gradient(bottom,  #1C68AA , #8DBF3F);  For Firefox 3.6 to 15 
+                background: linear-gradient(to bottom,  #1C68AA , #8DBF3F);  Standard syntax             
+            }*/ }
 
 @media screen and (max-width: 1280px) {
   body {

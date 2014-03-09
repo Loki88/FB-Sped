@@ -231,9 +231,10 @@
     .lang-menu{
         display: block;
         position: relative;
-        right: 0;
-        left: 79%;
-        width: 21%;
+        right: -0.98%;
+        /*left: 79%;*/
+        float: right;
+        width: 21.98%;
         margin: 0;
         margin-left: -0.1em;
         height: 0;
@@ -250,7 +251,7 @@
             position: relative;
             left: 0;
             width: 100%;
-            height: 2.2em;
+            height: 3em;
             padding: 0.1em -0.5em;
             border: 0;
             background-color: rgba(28, 104, 170, 0.9);
@@ -258,6 +259,8 @@
             border-left-style: groove;
             border-top-width: 0.1em;
             border-top-style: outset;
+            border-bottom-width: 0.1em;
+            border-bottom-style: outset;
             border-color: #1C68AA;
             img{
                 display: block;
@@ -285,6 +288,7 @@
                 position: relative;
                 line-height: auto;
                 width: 100%;
+                height: 3em;
                 border-color: #000000;
                 border-width: 1pt;
                 border-right: 0;
@@ -372,14 +376,12 @@
     .languageMobileVisible{
         #lang-menu{
             left: 0;
-
             position:relative;
             height: auto;
         }
 
         #lang-open{
             display: none;
-
         }
         
         #lang-close{
