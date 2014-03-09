@@ -151,9 +151,10 @@ var Navigation = {
         open.click(function(event){
             event.preventDefault();
 //            menu.hide();
+            Navigation.closeLang();
             menu.parent().addClass('menuMobileVisible');
             menu.hide();
-            Navigation.closeLang();
+            
             menu.slideDown(Navigation.time);
             open.hide();
             close.css('display', 'block');
@@ -197,7 +198,7 @@ var Navigation = {
         console.log('close menu', menu);
         console.log('menu open', menu.prop('open'));
         if(menu.prop('open'))
-            $(menu.prop('closeButton')).click();       
+            $(menu.prop('closeButton')).click();
     },
     
     closeLang: function()

@@ -190,7 +190,7 @@
     .menuMobileVisible #menu li {
       height: auto; } }
 html, body {
-  height: 100%; }
+  min-height: 100%; }
 
 .body-background {
   z-index: -2;
@@ -209,7 +209,7 @@ html, body {
   @media screen and (max-width: 600px) {
     .body-background {
       background: none;
-      background-color: #8DBF3F;
+      /*background-color: #8DBF3F;*/
       border-top: 1pt inset #8DBF3F; } }
   .body-background .decorator {
     display: none;

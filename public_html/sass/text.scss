@@ -79,6 +79,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #sol-trasporti, #links-trasporti{
+    zoom: 1;
     .content-box{
         .header{
             h1, h2, h3, h4, h5, h6 {
@@ -105,10 +106,10 @@ h1, h2, h3, h4, h5, h6 {
 
 #navigation{
     font-family: Arial, Verdana;
-    font-size: 1.1em;
+    font-size: 1em;
     @media screen and (max-width: 768px)
     {
-        font-size: 0.95em;
+        font-size: 0.8em;
     }
     @media screen and (max-width: 600px)
     {
@@ -164,7 +165,7 @@ h1, h2, h3, h4, h5, h6 {
         font-size: 1.2em;
         @media screen and (max-width: 600px)
         {
-            font-size: 0.8em;
+            font-size: 0.7em;
         }
     }
 }

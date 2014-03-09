@@ -9,8 +9,14 @@
     height: 100%; }
 
   body {
+    height: 100%;
     overflow-y: auto;
-    overflow-x: hidden; } }
+    overflow-x: hidden;
+    background-color: #FFFFFF; } }
+  @media only screen and (max-width: 900px) and (max-width: 600px) {
+    body {
+      background-color: #8DBF3F; } }
+
 #page-header {
   background-color: #FFFFFF;
   padding-bottom: 0;
@@ -165,7 +171,7 @@
     right: -0.98%;
     /*left: 79%;*/
     float: right;
-    width: 21.98%;
+    width: 23.98%;
     margin: 0;
     margin-left: -0.1em;
     height: 0;
@@ -195,8 +201,8 @@
       .lang-menu .controls img {
         display: block;
         position: relative;
-        height: 90%;
-        margin: 5% auto; }
+        height: 100%;
+        margin: 0 auto; }
     .lang-menu #lang-close {
       display: none;
       position: absolute;
@@ -272,6 +278,11 @@
     display: block;
     position: relative;
     left: 0; } }
+      @media only screen and (max-width: 600px) and (max-width: 175px) {
+        .lang-menu .controls img {
+          height: auto;
+          width: 90%;
+          margin: auto 5%; } }
       @media only screen and (max-width: 600px) and (max-width: 280px) {
         .lang-menu #lang-menu a img {
           width: auto;
@@ -282,6 +293,11 @@
           padding: 0; }
         .lang-menu #lang-menu a span {
           display: none; } }
+        @media only screen and (max-width: 600px) and (max-width: 280px) and (max-width: 175px) {
+          .lang-menu #lang-menu a img {
+            height: auto;
+            width: 90%;
+            margin: auto 5%; } }
 @media only screen and (min-width: 601px) and (max-width: 768px) {
   .lang-menu a:not(.controls) {
     float: none;
@@ -347,7 +363,8 @@
     #main-image .image-mask {
       width: 100%;
       height: 65%;
-      top: 35%;
+      top: auto;
+      /*top: 35%;*/
       bottom: 0; }
       #main-image .image-mask a h5 {
         margin: 0.2em auto; }
@@ -497,33 +514,34 @@
         background-color: #1C68AA;
         border-width: 1pt 0;
         border-style: groove;
-        border-color: #1C68AA; }
+        border-color: #1C68AA;
+        bottom: -1pt;
+        z-index: 2; }
       .tab_to_accordion .tab_contents .tab_pane .accordion-button {
         display: table;
         visibility: visible;
         width: 100%;
         height: auto;
-        line-height: 1.15em;
         text-align: center;
-        padding: 0.15em 0;
         margin: 0 auto;
         margin-bottom: -0.2em;
         text-decoration: none;
         border: 1pt;
-        background-color: #FFFFFF;
+        background-color: #1C68AA;
         border-bottom-width: 0;
         border-style: groove;
         border-color: #1C68AA;
         float: none; }
         .tab_to_accordion .tab_contents .tab_pane .accordion-button a {
-          /*display: block;*/
+          display: block;
           visibility: visible;
           position: relative;
+          line-height: 1.5em;
           width: 100%;
-          margin: auto 0;
-          padding: 0;
-          height: auto;
-          color: #1C68AA; }
+          height: 3em;
+          margin: 0;
+          padding: 0.15em 0;
+          color: #FFFFFF; }
           .tab_to_accordion .tab_contents .tab_pane .accordion-button a div {
             display: inline-block;
             position: relative;
@@ -543,17 +561,14 @@
             height: 1em;
             background-position: center center;
             background-repeat: no-repeat;
-            background-size: 1em 1em; }
+            background-size: 1em 1em;
+            background-image: url("../img/icons/arrow-down-white.png"); }
           .tab_to_accordion .tab_contents .tab_pane .accordion-button a:hover {
             color: #FFA01A; }
             .tab_to_accordion .tab_contents .tab_pane .accordion-button a:hover .icon {
-              background-image: url("../img/icons/icona-accordion-hover.png"); }
+              background-image: url("../img/icons/arrow-down-hover.png"); }
         .tab_to_accordion .tab_contents .tab_pane .accordion-button .close {
-          color: #8DBF3F; }
-          .tab_to_accordion .tab_contents .tab_pane .accordion-button .close .icon {
-            background-image: url("../img/icons/icona-accordion-green.png"); }
-        .tab_to_accordion .tab_contents .tab_pane .accordion-button .open .icon {
-          background-image: url("../img/icons/icona-accordion-blue.png"); }
+          display: none; }
       .tab_to_accordion .tab_contents .tab_pane:not(.current) {
         display: block;
         visibility: visible; }
@@ -584,6 +599,8 @@
         border-style: groove;
         border-color: #8DBF3F;
         background-color: #8DBF3F; }
+      .tab_to_accordion .tab_contents .current .accordion-button {
+        background-color: rgba(28, 104, 170, 0.5); }
       .tab_to_accordion .tab_contents .current .open {
         display: none; }
       .tab_to_accordion .tab_contents .current .close {
@@ -610,78 +627,106 @@
   position: relative;
   margin-top: 0;
   height: 100%;
-  padding: 0; }
+  padding: 0;
+  /*        a{
+              display: block;
+              margin: 0;
+              padding: 0;
+              width: 100%;
+              height: 100%;
+              text-decoration: none;
+              
+              &:hover{
+                  h5{
+                      color: #FFA01A;
+                  }
+                  span{
+                      color: #FFA01A;
+                  }
+              }
+              */ }
+  .trasporti-links .content-box .header {
+    display: inline-block;
+    min-height: 5em;
+    height: 6em;
+    max-height: 8em;
+    margin: auto; }
+    .trasporti-links .content-box .header .icon {
+      display: table;
+      position: relative;
+      /*margin: 0 auto;*/
+      height: 2em;
+      margin: 0.3em auto;
+      padding: 0 auto;
+      width: 80%;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: 2em auto; }
+    .trasporti-links .content-box .header h5 {
+      margin: 0;
+      padding: 0 10%;
+      height: 3em;
+      font-size: 0.8em;
+      width: 80%; }
+  .trasporti-links .content-box p {
+    color: #000000; }
+    @media screen and (max-width: 600px) {
+      .trasporti-links .content-box p {
+        -webkit-hyphens: auto;
+        -moz-hyphens: auto;
+        -ms-hyphens: auto;
+        hyphens: auto; } }
   .trasporti-links .content-box a {
     display: block;
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    height: 100%;
-    text-decoration: none; }
-    .trasporti-links .content-box a:hover h5 {
+    position: relative;
+    width: 90%;
+    margin: 0.3em auto;
+    clear: both;
+    color: #1C68AA;
+    text-decoration: underline;
+    text-align: right; }
+    .trasporti-links .content-box a:hover {
       color: #FFA01A; }
-    .trasporti-links .content-box a:hover span {
-      color: #FFA01A; }
-    .trasporti-links .content-box a .header {
-      display: inline-block;
-      min-height: 5em;
-      height: 6em;
-      max-height: 8em;
-      margin: auto; }
-      .trasporti-links .content-box a .header .icon {
-        display: table;
-        position: relative;
-        /*margin: 0 auto;*/
-        height: 2em;
-        margin: 0.3em auto;
-        padding: 0 auto;
-        width: 80%;
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: 2em auto; }
-      .trasporti-links .content-box a .header h5 {
-        margin: 0;
-        padding: 0 10%;
-        height: 3em;
-        font-size: 0.8em;
-        width: 80%; }
-    .trasporti-links .content-box a p {
-      color: #000000; }
-      @media screen and (max-width: 600px) {
-        .trasporti-links .content-box a p {
-          -webkit-hyphens: auto;
-          -moz-hyphens: auto;
-          -ms-hyphens: auto;
-          hyphens: auto; } }
-    .trasporti-links .content-box a span {
-      display: block;
-      position: relative;
-      width: 90%;
-      margin: 0.3em auto;
-      clear: both;
-      color: #1C68AA;
-      text-decoration: underline;
-      text-align: right; }
-  .trasporti-links .content-box #truck .icon {
+.trasporti-links #truck {
+  /*            &:hover{
+              .icon{
+                  background-image: url('../img/icons/icona-truck-hover.png');
+              }
+          }*/ }
+  .trasporti-links #truck .icon {
     background-image: url("../img/icons/icona-truck.png"); }
-  .trasporti-links .content-box #truck:hover .icon {
-    background-image: url("../img/icons/icona-truck-hover.png"); }
-  .trasporti-links .content-box #train .icon {
+.trasporti-links #train {
+  /*            &:hover{
+              .icon{
+                  background-image: url('../img/icons/icona-train-hover.png');
+              }
+          }*/ }
+  .trasporti-links #train .icon {
     background-image: url("../img/icons/icona-train.png"); }
-  .trasporti-links .content-box #train:hover .icon {
-    background-image: url("../img/icons/icona-train-hover.png"); }
-  .trasporti-links .content-box #ship .icon {
+.trasporti-links #ship {
+  /*            &:hover{
+              .icon{
+                  background-image: url('../img/icons/icona-ship-hover.png');
+              }
+          }*/ }
+  .trasporti-links #ship .icon {
     background-image: url("../img/icons/icona-ship.png"); }
-  .trasporti-links .content-box #ship:hover .icon {
-    background-image: url("../img/icons/icona-ship-hover.png"); }
-  .trasporti-links .content-box #airplane .icon {
+.trasporti-links #airplane {
+  /*            &:hover{
+              .icon{
+                  background-image: url('../img/icons/icona-plane-hover.png');
+              }
+          }*/ }
+  .trasporti-links #airplane .icon {
     background-image: url("../img/icons/icona-plane.png"); }
-  .trasporti-links .content-box #airplane:hover .icon {
-    background-image: url("../img/icons/icona-plane-hover.png"); }
-  .trasporti-links .content-box #combined .icon {
+.trasporti-links #combined {
+  /*            &:hover{
+              .icon{
+                  background-image: url('../img/icons/icona-combined-hover.png');
+              }
+          }*/ }
+  .trasporti-links #combined .icon {
     background-image: url("../img/icons/icona-combined.png"); }
-  .trasporti-links .content-box #combined:hover .icon {
-    background-image: url("../img/icons/icona-combined-hover.png"); }
 
 @media only screen and (max-width: 600px) {
   #sol-trasporti {
@@ -708,74 +753,47 @@
                     background: -moz-linear-gradient(bottom,  #FFFFFF , #8DBF3F);  For Firefox 3.6 to 15 
                     background: linear-gradient(to bottom,  #FFFFFF , #8DBF3F);  Standard syntax 
                 }*/
-    /*            #truck{
-                    .icon{
-                        background-image: url('../img/icons/icona-truck-blue.png');
-                    }
-                }
-    
-                #train{
-                    .icon{
-                        background-image: url('../img/icons/icona-train-blue.png');
-                    }
-                }
-    
-                #ship{
-                    .icon{
-                        background-image: url('../img/icons/icona-ship-blue.png');
-                    }
-                }
-    
-                #airplane{
-                    .icon{
-                        background-image: url('../img/icons/icona-plane-blue.png');
-                    }
-                }
-    
-                #combined{
-                    .icon{
-                        background-image: url('../img/icons/icona-combined-blue.png');
-                    }
-                }*/ }
-    .trasporti-links .content-box a {
+    /*            a{
+                    display: block;
+                    position: relative;
+                    margin: 0;
+                    padding: 0;
+                    width: 100%;
+                    height: 100%;*/ }
+    .trasporti-links .content-box .header {
       display: block;
-      position: relative;
-      margin: 0;
-      padding: 0;
-      width: 100%;
-      height: 100%; }
-      .trasporti-links .content-box a .header {
-        display: block;
-        min-height: 2em;
-        height: 2.4em;
-        border: 0;
-        margin-bottom: 0; }
-        .trasporti-links .content-box a .header .icon {
-          display: inline-block;
-          float: left;
-          width: 20%;
-          height: 1.5em;
-          margin: 0.25em auto;
-          background-size: 1.5em 1.5em; }
-        .trasporti-links .content-box a .header h5 {
-          display: inline-block;
-          float: left;
-          position: relative;
-          width: 60%;
-          height: auto;
-          bottom: 0;
-          padding: 0;
-          margin: 0;
-          /*margin-top: 0.25em;*/
-          margin-right: 20%;
-          padding: 0;
-          text-align: center;
-          text-wrap: avoid; }
-      .trasporti-links .content-box a p {
-        display: block;
-        clear: right;
-        width: 90%;
-        margin: 0.5em 5%; } }
+      min-height: 2em;
+      height: 2.5em;
+      border: 0;
+      margin-bottom: 0; }
+      .trasporti-links .content-box .header .icon {
+        display: inline-block;
+        float: left;
+        width: 20%;
+        height: 1.5em;
+        margin: 0.25em auto;
+        background-size: 1.5em 1.5em; }
+      .trasporti-links .content-box .header h5 {
+        display: inline-block;
+        float: left;
+        position: relative;
+        width: 60%;
+        height: auto;
+        bottom: 0;
+        padding: 0;
+        margin: 0;
+        /*margin-top: 0.25em;*/
+        margin-right: 20%;
+        padding: 0;
+        text-align: center;
+        text-wrap: avoid; }
+    .trasporti-links .content-box p {
+      display: block;
+      clear: right;
+      width: 90%;
+      margin: 0.5em 5%; }
+
+  /*}*/ }
 .clear {
   display: block;
   height: border-box;
@@ -933,29 +951,34 @@
     height: 3em; }
 
 .sticky-footer {
-  position: relative;
-  clear: both;
   min-height: 100%;
-  margin: 0 auto -15.8em; }
+  margin-bottom: -16em; }
+  .sticky-footer:after {
+    content: "";
+    display: block;
+    height: 16em; }
 
 .push {
-  display: block;
-  clear: both;
-  height: 15.8em;
-  z-index: -10; }
+  display: none; }
 
+/*.push {
+    clear: both;
+    height: 0;
+    z-index: -10;
+}*/
 #footer {
-  display: block;
+  /*    display: block;*/
   position: relative;
   z-index: 3;
   max-width: 100%;
   bottom: 0;
-  margin-top: 1em;
+  /*    margin-top: 1em;*/
   border: 0;
   border-top: 2pt;
   border-color: #1C68AA;
   border-style: inset;
-  height: 16em;
+  bottom: 0;
+  height: 17em;
   color: #FFFFFF;
   background-color: #1C68AA; }
   #footer a {
@@ -972,12 +995,6 @@
     margin: auto 0.2em; }
 
 @media only screen and (max-width: 600px) {
-  .sticky-footer {
-    margin: 0 auto 0; }
-
-  .push {
-    height: 0em; }
-
   #footer {
     margin-top: 0;
     overflow-x: hidden;
@@ -1097,9 +1114,12 @@
 .carousel {
   overflow: hidden;
   width: 100%;
-  margin-top: 0.2em;
+  margin-top: 1.2em;
   margin-bottom: 0;
   padding: 0; }
+  @media screen and (max-width: 600px) {
+    .carousel {
+      margin-top: 0.6em; } }
   .carousel .panes {
     list-style: none;
     position: relative;
@@ -1117,6 +1137,7 @@
     padding: 0;
     overflow: hidden;
     /* This is used solely to clear floats, it does not add functionality. */
+    margin: 0;
     -moz-animation: carousel 45s infinite;
     -webkit-animation: carousel 45s infinite;
     animation: carousel 45s infinite; }
@@ -1132,7 +1153,8 @@
         width: 100%;
         height: 100%;
         color: #FFFFFF;
-        overflow: hidden; }
+        overflow: hidden;
+        text-decoration: none; }
         .carousel .panes li a:hover h2 {
           color: #FFA01A; }
         .carousel .panes li a img {
@@ -1151,3 +1173,9 @@
           left: 0;
           text-align: right;
           background-color: rgba(28, 104, 170, 0.9); }
+          @media screen and (max-width: 600px) {
+            .carousel .panes li a h2 {
+              padding: 0;
+              margin: 0;
+              position: relative;
+              text-decoration: none; } }

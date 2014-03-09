@@ -10,8 +10,13 @@
     }
 
     body{
+	height: 100%;
         overflow-y: auto;
         overflow-x: hidden;
+        background-color: #FFFFFF;
+        @media screen and (max-width: 600px){
+            background-color: #8DBF3F;
+        }
     }
 }
 
@@ -234,7 +239,7 @@
         right: -0.98%;
         /*left: 79%;*/
         float: right;
-        width: 21.98%;
+        width: 23.98%;
         margin: 0;
         margin-left: -0.1em;
         height: 0;
@@ -267,8 +272,13 @@
                 display: block;
 
                 position: relative;
-                height: 90%;
-                margin: 5% auto;
+                height: 100%; 
+                margin: 0 auto;
+                @media screen and (max-width: 175px){
+                    height: auto;
+                    width: 90%;
+                    margin: auto 5%;
+                }
             }
         }
 
@@ -332,6 +342,11 @@
                         margin-right: auto;
                         float: none;
                         padding: 0;
+                        @media screen and (max-width: 175px){
+                            height: auto;
+                            width: 90%;
+                            margin: auto 5%;
+                        }
                     }
 
                     span{
@@ -484,7 +499,8 @@
         .image-mask{
             width: 100%;
             height: 65%;
-            top: 35%;
+            top: auto;
+            /*top: 35%;*/
             bottom: 0;
             
             a{
@@ -696,6 +712,8 @@
                 border-width: 1pt 0;
                 border-style: groove;
                 border-color: #1C68AA;
+                bottom: -1pt;
+                z-index: 2;
             }
             
             .tab_pane{
@@ -704,28 +722,27 @@
                     visibility: visible;
                     width: 100%;
                     height: auto;
-                    line-height: 1.15em;
                     text-align: center;
-                    padding: 0.15em 0;
                     margin: 0 auto;
                     margin-bottom: -0.2em;
                     text-decoration: none;
                     border: 1pt;
-                    background-color: #FFFFFF;
+                    background-color: #1C68AA;
                     border-bottom-width: 0;
                     border-style: groove;
                     border-color: #1C68AA;
                     float: none;
                     
                     a{
-                        /*display: block;*/
+                        display: block;
                         visibility: visible;
                         position: relative;
+                        line-height: 1.5em;
                         width: 100%;
-                        margin: auto 0;
-                        padding: 0;
-                        height: auto;
-                        color: #1C68AA;
+                        height: 3em;
+                        margin: 0;
+                        padding: 0.15em 0;
+                        color: #FFFFFF;
                         
                         div{
                             display: inline-block;
@@ -749,29 +766,20 @@
                             background-position: center center;
                             background-repeat: no-repeat;
                             background-size: 1em 1em;
+                            background-image: url('../img/icons/arrow-down-white.png');
                         }
                         
                         &:hover{
                             color: #FFA01A;
 
                             .icon{
-                                background-image: url('../img/icons/icona-accordion-hover.png');
+                                background-image: url('../img/icons/arrow-down-hover.png');
                             }
                         }
                     }
-                    
+
                     .close{
-                        color: #8DBF3F;
-                        .icon{
-                            background-image: url('../img/icons/icona-accordion-green.png');
-                        }
-                        
-                    }
-                    
-                    .open{
-                        .icon{
-                            background-image: url('../img/icons/icona-accordion-blue.png');
-                        }
+                        display: none;
                     }
                 }
                         
@@ -817,6 +825,11 @@
                     border-color: #8DBF3F;
                     background-color: #8DBF3F;
                 }
+                
+                .accordion-button{
+                    background-color: rgba(28,104,170,0.5);
+                }
+                
                 .open{
                     display: none;
                 }
@@ -865,7 +878,7 @@
         margin-top: 0;
         height: 100%;
         padding: 0;
-        a{
+/*        a{
             display: block;
             margin: 0;
             padding: 0;
@@ -881,119 +894,120 @@
                     color: #FFA01A;
                 }
             }
-            
-            .header{
-                display: inline-block;
-                min-height: 5em;
-                height: 6em;
-                max-height: 8em;
-                margin: auto;
-                .icon{
-                    display: table;
-                    position: relative;
-                    /*margin: 0 auto;*/
-                    height: 2em;
-                    margin: 0.3em auto;
-                    padding: 0 auto;
-                    width: 80%;
-                    background-position: center;
-                    background-repeat: no-repeat;
-                    background-size: 2em auto;
-                }
-
-                h5{
-                    margin: 0;
-                    padding: 0 10%;
-                    height: 3em;
-                    font-size: 0.8em;
-                    width: 80%;
-                }
-            }
-            
-            p{
-                color: #000000;
-                @media screen and (max-width: 600px){
-                    -webkit-hyphens: auto;
-                    -moz-hyphens: auto;
-                    -ms-hyphens: auto;
-                    hyphens: auto;
-                }
-            }
-            
-            span{
-                display: block;
+            */
+        .header{
+            display: inline-block;
+            min-height: 5em;
+            height: 6em;
+            max-height: 8em;
+            margin: auto;
+            .icon{
+                display: table;
                 position: relative;
-                width: 90%;
+                /*margin: 0 auto;*/
+                height: 2em;
                 margin: 0.3em auto;
-                clear: both;
-                color: #1C68AA;
-                text-decoration: underline;
-                text-align: right;
-                
-            }
-        }
-        
-        #truck{
-            .icon{
-                background-image: url('../img/icons/icona-truck.png');
+                padding: 0 auto;
+                width: 80%;
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: 2em auto;
             }
 
-            &:hover{
-                .icon{
-                    background-image: url('../img/icons/icona-truck-hover.png');
-                }
+            h5{
+                margin: 0;
+                padding: 0 10%;
+                height: 3em;
+                font-size: 0.8em;
+                width: 80%;
             }
         }
 
-        #train{
-            .icon{
-                background-image: url('../img/icons/icona-train.png');
-            }
-
-            &:hover{
-                .icon{
-                    background-image: url('../img/icons/icona-train-hover.png');
-                }
+        p{
+            color: #000000;
+            @media screen and (max-width: 600px){
+                -webkit-hyphens: auto;
+                -moz-hyphens: auto;
+                -ms-hyphens: auto;
+                hyphens: auto;
             }
         }
 
-        #ship{
-            .icon{
-                background-image: url('../img/icons/icona-ship.png');
-            }
+        a{
+            display: block;
+            position: relative;
+            width: 90%;
+            margin: 0.3em auto;
+            clear: both;
+            color: #1C68AA;
+            text-decoration: underline;
+            text-align: right;
 
             &:hover{
-                .icon{
-                    background-image: url('../img/icons/icona-ship-hover.png');
-                }
-            }
-        }
-
-        #airplane{
-            .icon{
-                background-image: url('../img/icons/icona-plane.png');
-            }
-
-            &:hover{
-                .icon{
-                    background-image: url('../img/icons/icona-plane-hover.png');
-                }
-            }
-        }
-
-        #combined{
-            .icon{
-                background-image: url('../img/icons/icona-combined.png');
-            }
-
-            &:hover{
-                .icon{
-                    background-image: url('../img/icons/icona-combined-hover.png');
-                }
+                color:#FFA01A;
             }
         }
     }
-    
+        
+    #truck{
+        .icon{
+            background-image: url('../img/icons/icona-truck.png');
+        }
+
+/*            &:hover{
+            .icon{
+                background-image: url('../img/icons/icona-truck-hover.png');
+            }
+        }*/
+    }
+
+    #train{
+        .icon{
+            background-image: url('../img/icons/icona-train.png');
+        }
+
+/*            &:hover{
+            .icon{
+                background-image: url('../img/icons/icona-train-hover.png');
+            }
+        }*/
+    }
+
+    #ship{
+        .icon{
+            background-image: url('../img/icons/icona-ship.png');
+        }
+
+/*            &:hover{
+            .icon{
+                background-image: url('../img/icons/icona-ship-hover.png');
+            }
+        }*/
+    }
+
+    #airplane{
+        .icon{
+            background-image: url('../img/icons/icona-plane.png');
+        }
+
+/*            &:hover{
+            .icon{
+                background-image: url('../img/icons/icona-plane-hover.png');
+            }
+        }*/
+    }
+
+    #combined{
+        .icon{
+            background-image: url('../img/icons/icona-combined.png');
+        }
+
+/*            &:hover{
+            .icon{
+                background-image: url('../img/icons/icona-combined-hover.png');
+            }
+        }*/
+    }
 }
 
 @media only screen and (max-width: 600px)
@@ -1026,17 +1040,17 @@
                 background: linear-gradient(to bottom,  #FFFFFF , #8DBF3F);  Standard syntax 
             }*/
             
-            a{
+/*            a{
                 display: block;
                 position: relative;
                 margin: 0;
                 padding: 0;
                 width: 100%;
-                height: 100%;
+                height: 100%;*/
                 .header{
                     display: block;
                     min-height: 2em;
-                    height: 2.4em;
+                    height: 2.5em;
                     border: 0;
                     margin-bottom: 0;
                     
@@ -1075,38 +1089,8 @@
                     margin: 0.5em 5%;
                 }
             }
-            
-/*            #truck{
-                .icon{
-                    background-image: url('../img/icons/icona-truck-blue.png');
-                }
-            }
-
-            #train{
-                .icon{
-                    background-image: url('../img/icons/icona-train-blue.png');
-                }
-            }
-
-            #ship{
-                .icon{
-                    background-image: url('../img/icons/icona-ship-blue.png');
-                }
-            }
-
-            #airplane{
-                .icon{
-                    background-image: url('../img/icons/icona-plane-blue.png');
-                }
-            }
-
-            #combined{
-                .icon{
-                    background-image: url('../img/icons/icona-combined-blue.png');
-                }
-            }*/
         }
-    }
+    /*}*/
 }
 
 .clear{
@@ -1297,31 +1281,40 @@
 }
 
 .sticky-footer{
-    position: relative;
-    clear: both;
     min-height: 100%;
-    margin: 0 auto -15.8em;
+    margin-bottom: -16em;
+    
+    &:after {
+        content: "";
+        display: block;
+        height: 16em;
+    }
 }
 
-.push {
-    display: block;
-    clear: both;
-    height: 15.8em;
-    z-index: -10;
+.push{
+    display: none;
 }
+
+/*.push {
+    clear: both;
+    height: 0;
+    z-index: -10;
+}*/
+
 
 #footer{
-    display: block;
+/*    display: block;*/
     position: relative;
     z-index: 3;
     max-width: 100%;
     bottom: 0;
-    margin-top: 1em;
+/*    margin-top: 1em;*/
     border: 0;
     border-top: 2pt;
     border-color: #1C68AA;
     border-style: inset;
-    height: 16em;
+    bottom: 0;
+    height: 17em;
     color: #FFFFFF;
     background-color: #1C68AA;
     
@@ -1347,15 +1340,7 @@
     }
 }
 
-@media only screen and (max-width: 600px)
-{
-    .sticky-footer{
-        margin: 0 auto 0;
-    }
-
-    .push {
-        height: 0em;
-    }
+@media only screen and (max-width: 600px){
     #footer {
         margin-top: 0;
         overflow-x: hidden;
@@ -1415,9 +1400,13 @@
 .carousel{
     overflow:hidden;
     width:100%;
-    margin-top: 0.2em;
+    margin-top: 1.2em;
     margin-bottom: 0;
     padding: 0;
+    @media screen and (max-width: 600px)
+    {
+        margin-top: 0.6em;
+    }
     .panes{
         list-style:none;
         position:relative;
@@ -1433,7 +1422,7 @@
         }*/
         padding: 0;
         overflow:hidden; /* This is used solely to clear floats, it does not add functionality. */
-
+        margin: 0;
         -moz-animation: carousel 45s infinite;
         -webkit-animation: carousel 45s infinite;
         animation: carousel 45s infinite;
@@ -1451,6 +1440,7 @@
                 height: 100%;
                 color:#FFFFFF;
                 overflow: hidden;
+                text-decoration: none;
                 &:hover{
                     h2{
                         color:#FFA01A;
@@ -1475,10 +1465,15 @@
                     left: 0;
                     text-align:right;
                     background-color: rgba(28,104,170, 0.9);
+                    @media screen and (max-width: 600px)
+                    {
+                        padding: 0;
+                        margin: 0;
+                        position: relative;
+                        text-decoration: none;
+                    }
                 }
             }
         }
     }
-    
-    
 }
