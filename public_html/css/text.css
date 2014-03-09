@@ -56,6 +56,11 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 1.2em; }
   #sol-trasporti .content-box span, #links-trasporti .content-box span {
     font-size: 1em; }
+  @media screen and (max-width: 768px) {
+    #sol-trasporti .content-box, #links-trasporti .content-box {
+      font-size: 0.9em; }
+      #sol-trasporti .content-box .header h1, #sol-trasporti .content-box .header h2, #sol-trasporti .content-box .header h3, #sol-trasporti .content-box .header h4, #sol-trasporti .content-box .header h5, #sol-trasporti .content-box .header h6, #links-trasporti .content-box .header h1, #links-trasporti .content-box .header h2, #links-trasporti .content-box .header h3, #links-trasporti .content-box .header h4, #links-trasporti .content-box .header h5, #links-trasporti .content-box .header h6 {
+        font-size: 1em; } }
   @media screen and (max-width: 600px) {
     #sol-trasporti .content-box, #links-trasporti .content-box {
       font-size: 0.8em; }

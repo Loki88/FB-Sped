@@ -94,6 +94,7 @@ var TabToAccordion = {
                     {
                         var content = $(data).find('.tab_page');
                         panel.append(content);
+                        content.slideUp(0);
                         panel.prop('setted', true);
                         link.prop('panel', panel);
                     }
