@@ -2,7 +2,7 @@
     Created on : 9-feb-2014, 18.15.20
     Author     : Lorenzo Di Giuseppe <lorenzo.digiuseppe88@gmail.com>
 */
-@media only screen and (max-width: 900px) {
+@media screen and (max-width: 900px) {
   html {
     overflow-y: hidden;
     width: 100%;
@@ -13,7 +13,7 @@
     overflow-y: auto;
     overflow-x: hidden;
     background-color: #FFFFFF; } }
-  @media only screen and (max-width: 900px) and (max-width: 600px) {
+  @media screen and (max-width: 900px) and (max-width: 600px) {
     body {
       background-color: #8DBF3F; } }
 
@@ -80,7 +80,7 @@
 .inverse {
   float: right; }
 
-@media only screen and (max-width: 600px) {
+@media screen and (max-width: 600px) {
   #page-header #logo {
     clear: both;
     height: auto; }
@@ -115,17 +115,20 @@
 .lang-menu {
   display: inline-block;
   position: relative;
-  height: auto; }
+  height: auto;
+  float: left; }
   .lang-menu .decorator {
     display: none;
     visibility: hidden; }
   .lang-menu #lang-menu {
+    display: block;
     position: relative;
     width: 100%;
     height: 100%;
     margin: 0;
     padding: 0;
-    border: 0; }
+    border: 0;
+    left: 0; }
   .lang-menu .controls {
     display: none;
     position: absolute;
@@ -137,6 +140,7 @@
       text-decoration: underline; }
   .lang-menu a:not(.controls) {
     display: block;
+    visibility: visible;
     position: relative;
     width: 50%;
     height: 2em;
@@ -164,7 +168,7 @@
     .lang-menu a:not(.controls):not(.selected):hover span {
       color: #FBB820; }
 
-@media only screen and (max-width: 600px) {
+@media screen and (max-width: 600px) {
   .lang-menu {
     display: block;
     position: relative;
@@ -213,7 +217,6 @@
       position: absolute;
       height: 0; }
       .lang-menu #lang-menu a {
-        /*clear: both;*/
         display: block;
         position: relative;
         line-height: auto;
@@ -278,12 +281,12 @@
     display: block;
     position: relative;
     left: 0; } }
-      @media only screen and (max-width: 600px) and (max-width: 175px) {
+      @media screen and (max-width: 600px) and (max-width: 175px) {
         .lang-menu .controls img {
           height: auto;
           width: 90%;
           margin: auto 5%; } }
-      @media only screen and (max-width: 600px) and (max-width: 280px) {
+      @media screen and (max-width: 600px) and (max-width: 280px) {
         .lang-menu #lang-menu a img {
           width: auto;
           height: 100%;
@@ -293,15 +296,20 @@
           padding: 0; }
         .lang-menu #lang-menu a span {
           display: none; } }
-        @media only screen and (max-width: 600px) and (max-width: 280px) and (max-width: 175px) {
+        @media screen and (max-width: 600px) and (max-width: 280px) and (max-width: 175px) {
           .lang-menu #lang-menu a img {
             height: auto;
             width: 90%;
             margin: auto 5%; } }
-@media only screen and (min-width: 601px) and (max-width: 768px) {
-  .lang-menu a:not(.controls) {
-    float: none;
-    width: 100%; } }
+/*@media  screen and (min-width: 601px) and (max-width: 768px)
+{
+    .lang-menu{
+        a:not(.controls){
+            float: none;
+            width: 100%;
+        }
+    }
+}*/
 #main-image {
   margin-top: 1.2em;
   display: table;
@@ -357,7 +365,7 @@
         height: 60%;
         color: #F0F0D8; }
 
-@media only screen and (max-width: 768px) {
+@media screen and (max-width: 768px) {
   #main-image {
     margin-top: 0.4em; }
     #main-image .image-mask {
@@ -371,7 +379,7 @@
       #main-image .image-mask a p {
         text-align: center;
         margin: auto 2%; } }
-@media only screen and (max-width: 480px) {
+@media screen and (max-width: 480px) {
   #main-image {
     min-height: 0; }
     #main-image .image-mask {
@@ -728,7 +736,7 @@
   .trasporti-links #combined .icon {
     background-image: url("../img/icons/icona-combined.png"); }
 
-@media only screen and (max-width: 600px) {
+@media screen and (max-width: 600px) {
   #sol-trasporti {
     margin: 0.5em auto;
     margin-bottom: 0; }
@@ -872,7 +880,7 @@
     background-image: url("../img/mappa.png");
     background-repeat: no-repeat; }
 
-@media only screen and (max-width: 600px) {
+@media screen and (max-width: 600px) {
   .content-box {
     /*padding-bottom: 0;*/
     /*        .decorator, .decorator-bottom, .decorator-header{
@@ -926,7 +934,7 @@
   overflow: hidden;
   height: 8em;
   width: 20em; }
-  @media only screen and (max-width: 600px) {
+  @media screen and (max-width: 600px) {
     .infoWindow {
       width: 11em;
       height: 11em; } }
@@ -951,12 +959,13 @@
     height: 3em; }
 
 .sticky-footer {
+  position: relative;
   min-height: 100%;
-  margin-bottom: -16em; }
+  margin-bottom: -17em; }
   .sticky-footer:after {
     content: "";
-    display: block;
-    height: 16em; }
+    display: table;
+    height: 17em; }
 
 .push {
   display: none; }
@@ -967,11 +976,10 @@
     z-index: -10;
 }*/
 #footer {
-  /*    display: block;*/
+  display: block;
   position: relative;
   z-index: 3;
-  max-width: 100%;
-  bottom: 0;
+  width: 100%;
   /*    margin-top: 1em;*/
   border: 0;
   border-top: 2pt;
@@ -994,7 +1002,7 @@
     display: block;
     margin: auto 0.2em; }
 
-@media only screen and (max-width: 600px) {
+@media screen and (max-width: 600px) {
   #footer {
     margin-top: 0;
     overflow-x: hidden;

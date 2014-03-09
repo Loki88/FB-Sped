@@ -2,7 +2,7 @@
     Created on : 9-feb-2014, 18.15.20
     Author     : Lorenzo Di Giuseppe <lorenzo.digiuseppe88@gmail.com>
 */
-@media only screen and (max-width: 900px){
+@media screen and (max-width: 900px){
     html {
         overflow-y: hidden;
         width: 100%;
@@ -103,7 +103,7 @@
     float: right;
 }
 
-@media only screen and (max-width: 600px)
+@media screen and (max-width: 600px)
 {
     #page-header{
         #logo{
@@ -156,6 +156,7 @@
     display: inline-block;
     position: relative;
     height: auto;
+    float: left;
     
     .decorator{
         display: none;
@@ -163,12 +164,14 @@
     }
     
     #lang-menu{
+        display: block;
         position: relative;
         width: 100%;
         height: 100%;
         margin: 0;
         padding: 0;
         border: 0;
+        left: 0;
     }
     
     .controls{
@@ -188,6 +191,7 @@
     
     a:not(.controls){
         display: block;
+        visibility: visible;
         position: relative;
         width: 50%;
         height: 2em;
@@ -231,7 +235,7 @@
     }
 }
 
-@media only screen and (max-width: 600px)
+@media screen and (max-width: 600px)
 {
     .lang-menu{
         display: block;
@@ -297,8 +301,6 @@
             height: 0;
             
             a{
-                
-                /*clear: both;*/
                 display: block;
                 position: relative;
                 line-height: auto;
@@ -412,7 +414,7 @@
     }
 }
 
-@media only screen and (min-width: 601px) and (max-width: 768px)
+/*@media  screen and (min-width: 601px) and (max-width: 768px)
 {
     .lang-menu{
         a:not(.controls){
@@ -420,7 +422,7 @@
             width: 100%;
         }
     }
-}
+}*/
 
 #main-image{
     margin-top: 1.2em;
@@ -492,7 +494,7 @@
     }
 }
 
-@media only screen and (max-width: 768px)
+@media  screen and (max-width: 768px)
 {
     #main-image {
         margin-top: 0.4em;
@@ -516,7 +518,7 @@
     }
 }
 
-@media only screen and (max-width: 480px)
+@media  screen and (max-width: 480px)
 {
     #main-image{
         min-height: 0;
@@ -1010,7 +1012,7 @@
     }
 }
 
-@media only screen and (max-width: 600px)
+@media  screen and (max-width: 600px)
 {
     #sol-trasporti{
         margin: 0.5em auto;
@@ -1188,7 +1190,7 @@
 }
 
 
-@media only screen and (max-width: 600px)
+@media  screen and (max-width: 600px)
 {
     .content-box{
         /*padding-bottom: 0;*/
@@ -1249,7 +1251,7 @@
     overflow:hidden;
     height: 8em;
     width: 20em;
-    @media only screen and (max-width: 600px)
+    @media  screen and (max-width: 600px)
     { 
         width: 11em;
         height: 11em;
@@ -1281,13 +1283,14 @@
 }
 
 .sticky-footer{
+    position: relative;
     min-height: 100%;
-    margin-bottom: -16em;
+    margin-bottom: -17em;
     
     &:after {
         content: "";
-        display: block;
-        height: 16em;
+        display: table;
+        height: 17em;
     }
 }
 
@@ -1303,11 +1306,10 @@
 
 
 #footer{
-/*    display: block;*/
+    display: block;
     position: relative;
     z-index: 3;
-    max-width: 100%;
-    bottom: 0;
+    width: 100%;
 /*    margin-top: 1em;*/
     border: 0;
     border-top: 2pt;
@@ -1340,7 +1342,7 @@
     }
 }
 
-@media only screen and (max-width: 600px){
+@media  screen and (max-width: 600px){
     #footer {
         margin-top: 0;
         overflow-x: hidden;

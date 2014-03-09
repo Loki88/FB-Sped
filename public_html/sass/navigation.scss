@@ -38,7 +38,7 @@ $second-level-text: #FFFFFF;
         border-width: 1pt 1pt 0 1pt;
         padding-bottom: 2pt;
         margin-bottom: -1pt;
-        @media only screen and (min-width: 2500px)
+        @media screen and (min-width: 2500px)
         {
             padding-bottom: 3pt;
             margin-bottom: -2pt;
