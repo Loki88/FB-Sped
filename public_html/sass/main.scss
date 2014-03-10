@@ -30,35 +30,38 @@
     width: 100%;
     margin: 0;
     border: 0;
-        
+    height: auto;
+    
     #logo {
         display: block;
-        position: relative;
-        height: 4em;
+        /*position: relative;*/
+        height: 6em;
         padding: 0;
         border: 0;
         
         #logo-img{
-            display: inline-block;
+            display: block;
             position: relative;
             float: left;
             height: 100%;
-            max-width: 40%;
+            width: 40%;
             margin: auto 5%;
             margin-left: 0;
             
             a {
                 z-index: 2;
+                position: relative;
                 display: block;
                 width: 100%;
                 height: 100%;
                 float: left;
-                position: relative;
+                
                 
                 img{
                     display: block;
                     position: relative;
                     height: 100%;
+                    max-width: 100%;
                     float: left;
                     margin: auto 0;
                 }
@@ -68,11 +71,14 @@
     
         #logo-text{
             display: block;
-            position: relative;
+            position: absolute;
             padding: 0;
-            margin-left: 1.6%;
-            width: 50%;
-            float: left;
+            left: 20%;
+            right: 20%;
+            top: 2em;
+            bottom: auto;
+            width: 60%;
+            text-align: center;
             
             h4{
                 display: block;
@@ -113,31 +119,53 @@
             clear: both;
             height: auto;
             #logo-img{
-                width: 30%;
-                max-width: 30%;
-                height: auto;
-                margin: auto 0;
+                height: 100%;
+                width: 40%;
+                margin: 0.2em 0;
+                height: 3.6em;
                 float: left;
                 a{
-                
                     margin: auto;
                     img{
                         float: none;
-                        height: auto;
-                        width: 100%;
+                        max-width: 100%;
+                        height: 100%;
                         margin: 0 auto;
                     }
                 }
                 
             }
             #logo-text{
-                width: 66%;
+                position: relative;
+                left: auto;
+                right: auto;
+                top: auto;
+                width: 50%;
                 float: left;
-                margin: auto 2%;
-                text-align: left;
-                h4, h6{
-                    text-align: left;
-                }
+                margin: auto 0;
+                text-align: right;
+            }
+            
+        }
+    }
+}
+
+@media screen and (max-width: 200px)
+{
+    #page-header{
+        #logo{
+            #logo-img{
+                height: 100%;
+                width: 60%;
+                margin: 0.2em 20%;
+                height: 3.6em;
+                float: none;               
+            }
+            #logo-text{
+                width: 80%;
+                float: none;
+                margin: auto 10%;
+                text-align: center;
             }
             
         }
@@ -152,8 +180,6 @@
     height: auto;
     margin: auto;
 }
-
-
 
 .lang-menu{
     display: inline-block;
@@ -428,11 +454,12 @@
 }*/
 
 #main-image{
+    box-sizing: border-box;
     margin-top: 1.2em;
     display: table;
     position: relative;
     height: fit-content;
-    min-height: 15em;
+    /*min-height: 15em;*/
     min-width: 100%;
     width: 100%;
     max-width: 100%;
@@ -512,7 +539,9 @@
         .image-mask{
             width: 100%;
             height: 65%;
-            
+            bottom: 0%;
+            left: 0;
+            right: 0;
             top: 35%;
             /*bottom: 0;*/
             

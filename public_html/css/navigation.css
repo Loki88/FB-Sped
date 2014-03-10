@@ -78,7 +78,7 @@
     border-color: #1C68AA;
     /* Stile per i bottoni del menù di primo livello, quando sono visibili */ }
     .navigation .wrapper {
-      display: block;
+      /*display: block;*/
       position: relative;
       height: auto;
       width: 80%;
@@ -133,7 +133,7 @@
         border-right-width: 1pt;
         border-style: groove;
         border-color: #1C68AA;
-        width: 125%;
+        width: 120%;
         height: auto;
         top: 3.1em;
         z-index: 3;
@@ -194,6 +194,7 @@ html, body {
   min-height: 100%; }
 
 .body-background {
+  display: table;
   z-index: -2;
   margin: 0;
   padding: 0;
@@ -231,7 +232,7 @@ html, body {
     margin: 0;
     padding: 0; } }
 .wrapper {
-  display: table;
+  display: block;
   width: 98%;
   margin: 0 1%; }
   @media screen and (min-width: 600px) {
