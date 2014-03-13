@@ -4,6 +4,30 @@
 */
 
 
+.color_green{
+    background-color: #8DBF3F;
+    color: #030320;
+}
+
+.color_blue{
+    background-color: #1C68AA;
+    color: #FFFFFF;
+}
+
+.color_white{
+    background-color: #FFFFFF;
+    color: #030320;
+    h1, h2, h3, h4, h5, h6{
+        color: #1C68AA;
+    }
+}
+
+.color_hover{
+    &:hover{
+        color: #FFA01A;
+    }
+}
+
 @media screen and (max-width: 900px){
     html {
         overflow-y: hidden;
@@ -1169,8 +1193,9 @@
 }
 
 .content-box {
-    background-color: #FFFFFF;
-    color: #000000;
+    box-sizing: border-box;
+    /*background-color: #FFFFFF;*/
+    /*color: #000000;*/
     margin-top: 0.7em;
     margin-bottom: 0.4em;
     padding-bottom: 0.5em;
@@ -1192,7 +1217,7 @@
         top: 0;
         margin: 0;
         padding: 0;
-        background-color: #1C68AA;
+        /*background-color: #1C68AA;*/
         h1, h2, h3, h4, h5, h6 {
             display: inline-block;
             position: relative;
@@ -1202,16 +1227,19 @@
             height: auto;
             text-decoration: none;
             text-align: center;
-            color: #F0F1F7;
+            /*color: #F0F1F7;*/
+            color: inherit;
         }
     }
     
     h1, h2, h3, h4, h5, h6 {
-        color: #1693A5;
+        /*color: #1693A5;*/
+        color: inherit;
     }
     p{
         display: block;
         clear: both;
+        color: inherit;
     }
 }
 
@@ -1354,21 +1382,21 @@
     border-style: inset;
     bottom: 0;
     height: 17em;
-    color: #FFFFFF;
-    background-color: #1C68AA;
+    /*color: #FFFFFF;*/
+    /*background-color: #1C68AA;*/
     
     a{
         z-index: 3;
-        color: #FFFFFF;
-        &:hover{
-            /*color: #94BA65;*/
+/*        color: inherit;*/
+/*        &:hover{
             color: #FFA01A;
-        }
+        }*/
     }
     
     div{
         p{
             text-align: center;
+            color: inherit;
         }
     }
     
@@ -1376,6 +1404,7 @@
         width: fit-content;
         display: block;
         margin: auto 0.2em;
+        color: inherit;
     }
 }
 

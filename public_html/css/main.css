@@ -2,6 +2,23 @@
     Created on : 9-feb-2014, 18.15.20
     Author     : Lorenzo Di Giuseppe <lorenzo.digiuseppe88@gmail.com>
 */
+.color_green {
+  background-color: #8DBF3F;
+  color: #030320; }
+
+.color_blue {
+  background-color: #1C68AA;
+  color: #FFFFFF; }
+
+.color_white {
+  background-color: #FFFFFF;
+  color: #030320; }
+  .color_white h1, .color_white h2, .color_white h3, .color_white h4, .color_white h5, .color_white h6 {
+    color: #1C68AA; }
+
+.color_hover:hover {
+  color: #FFA01A; }
+
 @media screen and (max-width: 900px) {
   html {
     overflow-y: hidden;
@@ -859,8 +876,9 @@
       box-shadow: 1pt 1pt 2pt #1C68AA; } }
 
 .content-box {
-  background-color: #FFFFFF;
-  color: #000000;
+  box-sizing: border-box;
+  /*background-color: #FFFFFF;*/
+  /*color: #000000;*/
   margin-top: 0.7em;
   margin-bottom: 0.4em;
   padding-bottom: 0.5em;
@@ -878,7 +896,7 @@
     top: 0;
     margin: 0;
     padding: 0;
-    background-color: #1C68AA; }
+    /*background-color: #1C68AA;*/ }
     .content-box .header h1, .content-box .header h2, .content-box .header h3, .content-box .header h4, .content-box .header h5, .content-box .header h6 {
       display: inline-block;
       position: relative;
@@ -888,12 +906,15 @@
       height: auto;
       text-decoration: none;
       text-align: center;
-      color: #F0F1F7; }
+      /*color: #F0F1F7;*/
+      color: inherit; }
   .content-box h1, .content-box h2, .content-box h3, .content-box h4, .content-box h5, .content-box h6 {
-    color: #1693A5; }
+    /*color: #1693A5;*/
+    color: inherit; }
   .content-box p {
     display: block;
-    clear: both; }
+    clear: both;
+    color: inherit; }
 
 #map-wrapper {
   display: block;
@@ -1012,20 +1033,22 @@
   border-style: inset;
   bottom: 0;
   height: 17em;
-  color: #FFFFFF;
-  background-color: #1C68AA; }
+  /*color: #FFFFFF;*/
+  /*background-color: #1C68AA;*/ }
   #footer a {
     z-index: 3;
-    color: #FFFFFF; }
-    #footer a:hover {
-      /*color: #94BA65;*/
-      color: #FFA01A; }
+    /*        color: inherit;*/
+    /*        &:hover{
+                color: #FFA01A;
+            }*/ }
   #footer div p {
-    text-align: center; }
+    text-align: center;
+    color: inherit; }
   #footer span {
     width: fit-content;
     display: block;
-    margin: auto 0.2em; }
+    margin: auto 0.2em;
+    color: inherit; }
 
 @media screen and (max-width: 600px) {
   #footer {

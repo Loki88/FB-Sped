@@ -14,7 +14,7 @@ $second-level-text: #FFFFFF;
     padding: 0;
     margin: 0;
     margin-top: 0.2em;
-    background-color: #1C68AA;
+    /*background-color: #1C68AA;*/
     border-bottom: 1pt inset #1C68AA;
     
     .decorator{
@@ -34,7 +34,7 @@ $second-level-text: #FFFFFF;
     }
 
     .selected{
-        background-color: #8DBF3F;
+        /*background-color: #8DBF3F;*/
         border-width: 1pt 1pt 0 1pt;
         padding-bottom: 2pt;
         margin-bottom: -1pt;
@@ -47,7 +47,8 @@ $second-level-text: #FFFFFF;
         border-color: #8DBF3F;
         a{
             /*cursor: default;*/
-            color: #030320;
+            /*color: #030320;*/
+            
         }
     }
 
@@ -70,7 +71,7 @@ $second-level-text: #FFFFFF;
             border: 0;
             &:hover:not(.selected){
                 a{
-                    color: #FFA01A;
+                    /*color: #FFA01A;*/
                 }
             }
 
@@ -82,7 +83,8 @@ $second-level-text: #FFFFFF;
                 margin: 0;
                 line-height: 1.8em;
                 text-align: center;
-                color: #FFFFFF;
+                /*color: #FFFFFF;*/
+                color: inherit;
                 text-decoration: none;
             }
         }

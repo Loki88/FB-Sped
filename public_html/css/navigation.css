@@ -6,7 +6,7 @@
   padding: 0;
   margin: 0;
   margin-top: 0.2em;
-  background-color: #1C68AA;
+  /*background-color: #1C68AA;*/
   border-bottom: 1pt inset #1C68AA; }
   .navigation .decorator {
     display: none;
@@ -20,7 +20,7 @@
   .navigation .menu-link {
     display: none; }
   .navigation .selected {
-    background-color: #8DBF3F;
+    /*background-color: #8DBF3F;*/
     border-width: 1pt 1pt 0 1pt;
     padding-bottom: 2pt;
     margin-bottom: -1pt;
@@ -32,7 +32,7 @@
         margin-bottom: -2pt; } }
     .navigation .selected a {
       /*cursor: default;*/
-      color: #030320; }
+      /*color: #030320;*/ }
   .navigation ul {
     display: block;
     position: relative;
@@ -50,7 +50,7 @@
       padding: auto 0.4em;
       border: 0; }
       .navigation ul li:hover:not(.selected) a {
-        color: #FFA01A; }
+        /*color: #FFA01A;*/ }
       .navigation ul li a {
         display: inline-block;
         position: relative;
@@ -59,7 +59,8 @@
         margin: 0;
         line-height: 1.8em;
         text-align: center;
-        color: #FFFFFF;
+        /*color: #FFFFFF;*/
+        color: inherit;
         text-decoration: none; }
 
 @media screen and (max-width: 600px) {
