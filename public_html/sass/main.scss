@@ -2,7 +2,13 @@
     Created on : 9-feb-2014, 18.15.20
     Author     : Lorenzo Di Giuseppe <lorenzo.digiuseppe88@gmail.com>
 */
+body{
+    background-color: #FFFFFF;
+}
 
+@media screen and (max-width: 600px){
+    background-color: #8DBF3F;
+}
 
 .color_green{
     background-color: #8DBF3F;
@@ -28,6 +34,7 @@
     }
 }
 
+//Bug-fix per i browser che calcolano la scrollbar aggiunta alla finestra come parte della pagina nelle media-query min-width
 @media screen and (max-width: 900px){
     html {
         overflow-y: hidden;
@@ -37,16 +44,10 @@
 
     body{
         min-height: 100%;
-	
         overflow-y: auto;
         overflow-x: hidden;
-        background-color: #FFFFFF;
-        @media screen and (max-width: 600px){
-            background-color: #8DBF3F;
-        }
     }
 }
-
 
 #page-header{
     background-color: #FFFFFF;
@@ -58,7 +59,6 @@
     
     #logo {
         display: block;
-        /*position: relative;*/
         height: 6em;
         padding: 0;
         border: 0;
@@ -80,7 +80,6 @@
                 height: 100%;
                 float: left;
                 
-                
                 img{
                     display: block;
                     position: relative;
@@ -91,7 +90,6 @@
                 }
             }
         }
-        
     
         #logo-text{
             display: block;
@@ -142,6 +140,7 @@
         #logo{
             clear: both;
             height: auto;
+            
             #logo-img{
                 height: 100%;
                 width: 40%;
@@ -157,8 +156,8 @@
                         margin: 0 auto;
                     }
                 }
-                
             }
+            
             #logo-text{
                 position: relative;
                 left: auto;
@@ -169,7 +168,6 @@
                 margin: auto 0;
                 text-align: right;
             }
-            
         }
     }
 }
@@ -191,7 +189,6 @@
                 margin: auto 10%;
                 text-align: center;
             }
-            
         }
     }
 }
@@ -271,8 +268,7 @@
             float: left;
             color: #000000;
         }
-        
-                    
+               
         &:not(.selected){
             span{
                 color: #1C68AA;
@@ -283,8 +279,6 @@
                 }
             }
         }
-            
-            
     }
 }
 
@@ -294,7 +288,6 @@
         display: block;
         position: relative;
         right: -0.98%;
-        /*left: 79%;*/
         float: right;
         width: 23.98%;
         margin: 0;
@@ -339,14 +332,12 @@
             }
         }
 
-        
         #lang-close{
             display: none;
             position: absolute;
             left: -10000px;
-            
-            
         }
+        
         #lang-menu{
             display: block;
             left: -10000px;
@@ -365,7 +356,6 @@
                 border-bottom: 0;
                 border-style: groove;
                 border-color: #1C68AA;
-                /*left: -0.1em;*/
                 text-decoration: none;
                 padding: 0.1em 0;
                 margin: 0;
@@ -448,6 +438,7 @@
             }
         }
     }
+    
     .languageMobileVisible{
         #lang-menu{
             left: 0;
@@ -467,23 +458,12 @@
     }
 }
 
-/*@media  screen and (min-width: 601px) and (max-width: 768px)
-{
-    .lang-menu{
-        a:not(.controls){
-            float: none;
-            width: 100%;
-        }
-    }
-}*/
-
 #main-image{
     box-sizing: border-box;
     margin-top: 1.2em;
     display: table;
     position: relative;
     height: fit-content;
-    /*min-height: 15em;*/
     min-width: 100%;
     width: 100%;
     max-width: 100%;
@@ -522,7 +502,6 @@
             
             &:hover{
                 h5{
-                    /*color: #FBB820;*/
                     color: #FFA01A;
                 }
             }
@@ -530,7 +509,6 @@
                 display: block;
                 position: relative;
                 text-align: center;
-                /*text-decoration: underline;*/
                 margin: 0.4em auto;
                 padding: 0 0.4em;
                 
@@ -539,7 +517,6 @@
             p{
                 display: inline-block;
                 width: 90%;
-/*                font-size: 10pt;*/
                 margin: 5% 5%;
                 overflow:hidden;
                 text-overflow: ellipsis-word;
@@ -567,7 +544,6 @@
             left: 0;
             right: 0;
             top: 35%;
-            /*bottom: 0;*/
             
             a{
                 h5 {
@@ -620,19 +596,10 @@
         
         .tab_menu{
             background-color: #FFFFFF;
-/*            border-width: 0.1em;
-            border-style: ridge;
-            border-color: #1C68AA;*/
             width: 100%;
             margin: 0;
-            /*margin-left: -0.2em;*/
             padding: 0;
-            
-/*            .header{
-                width: 70%;
-                left: 0;
-            }*/
-            
+
             .menu-button{
                 display: table;
                 position: relative;
@@ -640,17 +607,7 @@
                 right: 0;
                 height: auto;
                 width: 100%;
-/*                border-width: 1pt 0;
-                border-style: outset;
-                border-color: #1c8abc;
-                &:first-child{
-                    border-top: none;
-                }
-                
-                &:last-child{
-                    border-bottom: none;
-                }*/
-                
+
                 .icon{
                     display: block;
                     float: left;
@@ -665,15 +622,11 @@
                 a {
                     display: block;
                     float: left;
-                    /*width: 80%;*/
                     padding: 0 5%;
                     line-height: 1.5em;
                     height: 1.5em;
                     text-decoration: none;
                     color: #1C68AA;
-/*                    @media screen and (max-width: 768px){
-                        height: 3em;
-                    }*/
                 }
                 
                 &:hover:not(.selected){
@@ -685,22 +638,16 @@
                     }
                 }
             }
+            
             .selected{
                 background-color: #8DBF3F;
-/*                border-color: #1C68AA;
-                border-style: inset;*/
+                
                 .icon{
                     background-image: url('../img/icons/arrow-right-white.png');
                 }
                 a{
                     cursor: default;
                     color: #FFFFFF;
-                    
-                }
-                &:hover{
-                    a{
-                        /*color: #FFFFFF;*/
-                    }
                 }
             }
         }
@@ -945,23 +892,7 @@
         margin-top: 0;
         height: 100%;
         padding: 0;
-/*        a{
-            display: block;
-            margin: 0;
-            padding: 0;
-            width: 100%;
-            height: 100%;
-            text-decoration: none;
-            
-            &:hover{
-                h5{
-                    color: #FFA01A;
-                }
-                span{
-                    color: #FFA01A;
-                }
-            }
-            */
+
         .header{
             display: inline-block;
             min-height: 5em;
@@ -971,7 +902,6 @@
             .icon{
                 display: table;
                 position: relative;
-                /*margin: 0 auto;*/
                 height: 2em;
                 margin: 0.3em auto;
                 padding: 0 auto;
@@ -1020,60 +950,30 @@
         .icon{
             background-image: url('../img/icons/icona-truck.png');
         }
-
-/*            &:hover{
-            .icon{
-                background-image: url('../img/icons/icona-truck-hover.png');
-            }
-        }*/
     }
 
     #train{
         .icon{
             background-image: url('../img/icons/icona-train.png');
         }
-
-/*            &:hover{
-            .icon{
-                background-image: url('../img/icons/icona-train-hover.png');
-            }
-        }*/
     }
 
     #ship{
         .icon{
             background-image: url('../img/icons/icona-ship.png');
         }
-
-/*            &:hover{
-            .icon{
-                background-image: url('../img/icons/icona-ship-hover.png');
-            }
-        }*/
     }
 
     #airplane{
         .icon{
             background-image: url('../img/icons/icona-plane.png');
         }
-
-/*            &:hover{
-            .icon{
-                background-image: url('../img/icons/icona-plane-hover.png');
-            }
-        }*/
     }
 
     #combined{
         .icon{
             background-image: url('../img/icons/icona-combined.png');
         }
-
-/*            &:hover{
-            .icon{
-                background-image: url('../img/icons/icona-combined-hover.png');
-            }
-        }*/
     }
 }
 
@@ -1093,71 +993,47 @@
             height: 100%;
             padding: 0;
             
-/*            .decorator_bottom{
+            .header{
                 display: block;
-                position: relative;
-                margin: 0;
-                padding: 0;
-                bottom: 0;
-                top: auto;
-                background: none;
-                background: -webkit-linear-gradient(top, #FFFFFF , #8DBF3F);  For Safari 5.1 to 6.0 
-                background: -o-linear-gradient(bottom,  #FFFFFF , #8DBF3F);  For Opera 11.1 to 12.0 
-                background: -moz-linear-gradient(bottom,  #FFFFFF , #8DBF3F);  For Firefox 3.6 to 15 
-                background: linear-gradient(to bottom,  #FFFFFF , #8DBF3F);  Standard syntax 
-            }*/
-            
-/*            a{
+                min-height: 2em;
+                height: 2.5em;
+                border: 0;
+                margin-bottom: 0;
+
+                .icon{
+                    display: inline-block;
+                    float: left;
+                    width: 20%;
+                    height: 1.5em;
+                    margin: 0.25em auto;
+                    background-size: 1.5em 1.5em;
+                }
+
+
+                h5{
+                    display: inline-block;
+                    float: left;
+                    position: relative;
+                    width: 60%;
+                    height: auto;
+                    bottom: 0;
+                    padding: 0;
+                    margin: 0;
+                    margin-right: 20%;
+                    padding: 0;
+                    text-align: center;
+                    text-wrap: avoid;
+                }
+            } 
+
+            p{
                 display: block;
-                position: relative;
-                margin: 0;
-                padding: 0;
-                width: 100%;
-                height: 100%;*/
-                .header{
-                    display: block;
-                    min-height: 2em;
-                    height: 2.5em;
-                    border: 0;
-                    margin-bottom: 0;
-                    
-                    .icon{
-                        display: inline-block;
-                        float: left;
-                        width: 20%;
-                        height: 1.5em;
-                        margin: 0.25em auto;
-                        background-size: 1.5em 1.5em;
-                    }
-
-
-                    h5{
-                        display: inline-block;
-                        float: left;
-                        position: relative;
-                        width: 60%;
-                        height: auto;
-                        bottom: 0;
-                        padding: 0;
-                        margin: 0;
-                        /*margin-top: 0.25em;*/
-                        margin-right: 20%;
-                        padding: 0;
-                        text-align: center;
-                        text-wrap: avoid;
-                    }
-                }
-                
-
-                p{
-                    display: block;
-                    clear: right;
-                    width: 90%;
-                    margin: 0.5em 5%;
-                }
+                clear: right;
+                width: 90%;
+                margin: 0.5em 5%;
             }
         }
-    /*}*/
+    }
 }
 
 .clear{
@@ -1194,8 +1070,6 @@
 
 .content-box {
     box-sizing: border-box;
-    /*background-color: #FFFFFF;*/
-    /*color: #000000;*/
     margin-top: 0.7em;
     margin-bottom: 0.4em;
     padding-bottom: 0.5em;
@@ -1205,10 +1079,6 @@
         visibility: hidden;
     }
     
-/*    &:not(:first-child){
-        margin-top: 1em;
-    }*/
-    
     .header {
         clear: both;
         z-index: 2;
@@ -1217,7 +1087,7 @@
         top: 0;
         margin: 0;
         padding: 0;
-        /*background-color: #1C68AA;*/
+        
         h1, h2, h3, h4, h5, h6 {
             display: inline-block;
             position: relative;
@@ -1227,13 +1097,11 @@
             height: auto;
             text-decoration: none;
             text-align: center;
-            /*color: #F0F1F7;*/
             color: inherit;
         }
     }
     
     h1, h2, h3, h4, h5, h6 {
-        /*color: #1693A5;*/
         color: inherit;
     }
     p{
@@ -1261,50 +1129,6 @@
 
 @media  screen and (max-width: 600px)
 {
-    .content-box{
-        /*padding-bottom: 0;*/
-/*        .decorator, .decorator-bottom, .decorator-header{
-            display: block;
-            visibility: visible;
-            height: 0.3em;
-            width: 100%;
-        }
-        
-        .decorator{
-            background: -webkit-linear-gradient(top, #8DBF3F , #1C68AA);
-            background: -o-linear-gradient(bottom,  #8DBF3F , #1C68AA);
-            background: -moz-linear-gradient(bottom,  #8DBF3F , #1C68AA);
-            background: linear-gradient(to bottom,  #8DBF3F , #1C68AA); 
-        }
-        
-        .decorator-bottom{
-            background: -webkit-linear-gradient(top, #FFFFFF , #8DBF3F);
-            background: -o-linear-gradient(bottom,  #FFFFFF , #8DBF3F);
-            background: -moz-linear-gradient(bottom,  #FFFFFF , #8DBF3F);
-            background: linear-gradient(to bottom,  #FFFFFF , #8DBF3F); 
-        }
-        
-        .decorator-header{
-            background: -webkit-linear-gradient(top, #1C68AA , #FFFFFF);
-            background: -o-linear-gradient(bottom,  #1C68AA , #FFFFFF);
-            background: -moz-linear-gradient(bottom,  #1C68AA , #FFFFFF);
-            background: linear-gradient(to bottom,  #1C68AA , #FFFFFF); 
-        }*/
-        
-/*        .header {
-            background: none;
-            margin-bottom: 0;
-            border-bottom-width: 0.1em;
-            border-bottom-style: solid;
-            border-bottom-color: #8DBF3F;
-            h1, h2, h3, h4, h5, h6 {
-                background: none;
-                color: #1C68AA;
-            }
-        }*/
-    }
-    
-    
     #map-wrapper{
         display: block;
         width: 70%;
@@ -1325,7 +1149,6 @@
         width: 11em;
         height: 11em;
     }
-    
     
     .header{
         display: block;
@@ -1363,34 +1186,19 @@
     }
 }
 
-/*.push {
-    clear: both;
-    height: 0;
-    z-index: -10;
-}*/
-
-
 #footer{
-    /*display: block;*/
     position: relative;
     z-index: 3;
     width: 100%;
-/*    margin-top: 1em;*/
     border: 0;
     border-top: 2pt;
     border-color: #1C68AA;
     border-style: inset;
     bottom: 0;
     height: 17em;
-    /*color: #FFFFFF;*/
-    /*background-color: #1C68AA;*/
     
     a{
         z-index: 3;
-/*        color: inherit;*/
-/*        &:hover{
-            color: #FFA01A;
-        }*/
     }
     
     div{
@@ -1416,15 +1224,7 @@
     }
 }
 
-#links-trasporti{
-    /*margin-top: -0.5em;*/
-    .decorator-bottom{
-        background: -webkit-linear-gradient(top, #1C68AA , #8DBF3F);
-        background: -o-linear-gradient(bottom,  #1C68AA , #8DBF3F);
-        background: -moz-linear-gradient(bottom,  #1C68AA , #8DBF3F);
-        background: linear-gradient(to bottom,  #1C68AA , #8DBF3F);
-    }
-}
+//Animazioni per il carousel css
 @keyframes carousel{
     0%    { left:0; }
     11%   { left:0; }
@@ -1466,6 +1266,7 @@
 }
 
 .carousel{
+    box-sizing: border-box;
     overflow:hidden;
     width:100%;
     margin-top: 1.2em;
@@ -1479,15 +1280,6 @@
         list-style:none;
         position:relative;
         width:500%; /* Number of panes * 100% */
-/*        height: 20em;
-        @media screen and (max-width: 767px)
-        {
-            height: 12em;
-        }
-        @media screen and (max-width: 480px)
-        {
-            height: 7em;
-        }*/
         padding: 0;
         overflow:hidden; /* This is used solely to clear floats, it does not add functionality. */
         margin: 0;
@@ -1519,8 +1311,6 @@
                     display:block;
                     position: relative;
                     width:100%;
-/*                    max-width:100%;
-                    max-height: 100%;*/
                     margin: 0 auto;
                 }
                 
@@ -1529,6 +1319,7 @@
                     z-index: 1;
                     position:absolute;
                     right:0;
+                    margin: 0;
                     top: 0;
                     left: 0;
                     text-align:right;
