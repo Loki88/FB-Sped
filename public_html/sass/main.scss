@@ -471,14 +471,7 @@ body{
     max-width: 100%;
     background-color: #FFFFFF;
     
-    .lazy-image{
-        box-sizing: border-box;
-        position: relative;
-        width: 100%;
-        background-image: url('../img/main-image.png');
-        background-repeat: none;
-        background-size: 100% 100%;
-        
+    .lazy-image{        
         img {
             display: table;
             top: 0;
@@ -541,7 +534,7 @@ body{
 @media  screen and (max-width: 768px)
 {
     #main-image {
-        margin-top: 0.4em;
+        margin-top: 0.5em;
         
         img {
             display: block;
@@ -570,9 +563,11 @@ body{
     }
 }
 
+
 @media  screen and (max-width: 480px)
 {
     #main-image{
+        margin-top: 0.5em;
         min-height: 0;
         .image-mask{
             background-color: #1C68AA;
@@ -1392,69 +1387,209 @@ body{
 }
 
 //IMMAGINI CON RISOLUZIONI ADATTATE AI DISPOSITIVI PER RIDURRE I TEMPI DI CARICAMENTO
-
-#chi-siamo-image{
-    .lazy-image{
-        background-image: url('../img/chisiamo.png');
+@media screen and (min-width: 769px){
+    #main-image{
+        .lazy-image{
+            background-image: url('../img/main-image.png');
+        }
     }
-}
 
-#cosa-facciamo-image{
-    .lazy-image{
-        background-image: url('../img/slide4.jpg');
-    }
-}
-
-#contatti-image{
-    .lazy-image{
-        background-image: url('../img/ufficio.png');
-    }
-}
-
-.carousel{
-    li{
-        &:first-child{
-            .lazy-image{
-                background-image: url('../img/carousel/carousel-1.png');
+    .carousel{
+        li{
+            &:first-child{
+                .lazy-image{
+                    background-image: url('../img/carousel/carousel-1.png');
+                }
             }
-        }
-        &:nth-child(2){
-            .lazy-image{
-                background-image: url('../img/carousel/carousel-2.png');
+            &:nth-child(2){
+                .lazy-image{
+                    background-image: url('../img/carousel/carousel-2.png');
+                }
             }
-        }
-        &:nth-child(3){
-            .lazy-image{
-                background-image: url('../img/carousel/carousel-3.png');
+            &:nth-child(3){
+                .lazy-image{
+                    background-image: url('../img/carousel/carousel-3.png');
+                }
             }
-        }
-        &:nth-child(4){
-            .lazy-image{
-                background-image: url('../img/carousel/carousel-4.png');
+            &:nth-child(4){
+                .lazy-image{
+                    background-image: url('../img/carousel/carousel-4.png');
+                }
             }
-        }
-        &:nth-child(5){
-            .lazy-image{
-                background-image: url('../img/carousel/carousel-5.png');
+            &:nth-child(5){
+                .lazy-image{
+                    background-image: url('../img/carousel/carousel-5.png');
+                }
             }
         }
     }
 }
 
-.tab_to_accordion{
-    #image-ferroviario{
-        background-image: url('../img/treno.png');
+@media screen and (min-width: 481px){
+    #chi-siamo-image{
+        .lazy-image{
+            background-image: url('../img/chisiamo.png');
+        }
     }
-    #image-marittimo{
-        background-image: url('../img/nave.png');
+
+    #cosa-facciamo-image{
+        .lazy-image{
+            background-image: url('../img/cosa.png');
+        }
     }
-    #image-aereo{
-        background-image: url('../img/aereo.png');
+
+    #contatti-image{
+        .lazy-image{
+            background-image: url('../img/ufficio.png');
+        }
     }
-    #image-gomma{
-        background-image: url('../img/camion.png');
+    
+    .tab_to_accordion{
+        #image-ferroviario{
+            background-image: url('../img/768/treno.png');
+        }
+        #image-marittimo{
+            background-image: url('../img/768/nave.png');
+        }
+        #image-aereo{
+            background-image: url('../img/768/aereo.png');
+        }
+        #image-gomma{
+            background-image: url('../img/768/camion.png');
+        }
+        #image-combinato{
+            background-image: url('../img/768/combinato.png');
+        }
     }
-    #image-combinato{
-        background-image: url('../img/combinato.png');
+}
+
+@media screen and (min-width: 481px) and (max-width: 768px){
+    #main-image{
+        .lazy-image{
+            background-image: url('../img/768/main-image.png');
+        }
+    }
+
+    .carousel{
+        li{
+            &:first-child{
+                .lazy-image{
+                    background-image: url('../img/carousel/768/carousel-1.png');
+                }
+            }
+            &:nth-child(2){
+                .lazy-image{
+                    background-image: url('../img/carousel/768/carousel-2.png');
+                }
+            }
+            &:nth-child(3){
+                .lazy-image{
+                    background-image: url('../img/carousel/768/carousel-3.png');
+                }
+            }
+            &:nth-child(4){
+                .lazy-image{
+                    background-image: url('../img/carousel/768/carousel-4.png');
+                }
+            }
+            &:nth-child(5){
+                .lazy-image{
+                    background-image: url('../img/carousel/768/carousel-5.png');
+                }
+            }
+        }
+    }
+
+    
+}
+
+@media screen and (max-width: 480px){
+    #main-image{
+        .lazy-image{
+            background-image: url('../img/480/main-image.png');
+        }
+    }
+}
+
+@media screen and (min-width: 301px) and (max-width: 480px){
+    #main-image{
+        .lazy-image{
+            background-image: url('../img/480/main-image.png');
+        }
+    }
+
+    #chi-siamo-image{
+        .lazy-image{
+            background-image: url('../img/480/chisiamo.png');
+        }
+    }
+
+    #cosa-facciamo-image{
+        .lazy-image{
+            background-image: url('../img/480/cosa.png');
+        }
+    }
+
+    #contatti-image{
+        .lazy-image{
+            background-image: url('../img/480/ufficio.png');
+        }
+    }
+
+    .tab_to_accordion{
+        #image-ferroviario{
+            background-image: url('../img/480/treno.png');
+        }
+        #image-marittimo{
+            background-image: url('../img/480/nave.png');
+        }
+        #image-aereo{
+            background-image: url('../img/480/aereo.png');
+        }
+        #image-gomma{
+            background-image: url('../img/480/camion.png');
+        }
+        #image-combinato{
+            background-image: url('../img/480/combinato.png');
+        }
+    }
+}
+
+@media screen and (max-width: 300px){
+
+    #chi-siamo-image{
+        .lazy-image{
+            background-image: url('../img/300/chisiamo.png');
+        }
+    }
+
+    #cosa-facciamo-image{
+        .lazy-image{
+            background-image: url('../img/300/cosa.png');
+        }
+    }
+
+    #contatti-image{
+        .lazy-image{
+            background-image: url('../img/300/ufficio.png');
+        }
+    }
+
+    .tab_to_accordion{
+        #image-ferroviario{
+            background-image: url('../img/300/treno.png');
+        }
+        #image-marittimo{
+            background-image: url('../img/300/nave.png');
+        }
+        #image-aereo{
+            background-image: url('../img/300/aereo.png');
+        }
+        #image-gomma{
+            background-image: url('../img/300/camion.png');
+        }
+        #image-combinato{
+            background-image: url('../img/300/combinato.png');
+        }
     }
 }
