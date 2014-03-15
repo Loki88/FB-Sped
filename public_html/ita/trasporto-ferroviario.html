@@ -54,7 +54,7 @@
                             <li class="color_blue color_hover"><a href="./home.html">Home</a></li>
                             <li class="color_blue color_hover"><a href="./chi-siamo.html">Chi siamo</a></li>
                             <li class="color_blue color_hover"><a href="./cosa-facciamo.html">Cosa facciamo</a></li>
-                            <li class="selected color_green"><a href="./trasporti.html">Trasporti</a></li>
+                            <li class="selected color_green"><a id="trasporti-main" href="./trasporti.html">Trasporti</a></li>
                             <li class="color_blue color_hover"><a href="./dove-siamo.html">Dove siamo</a></li>
                             <li class="color_blue color_hover"><a href="./contatti.html">Contatti</a></li>
                         </ul>
@@ -62,12 +62,11 @@
                 </div>
             </div>
             <div class="body-background">
-                <div class="decorator"></div>
-                <div class="content_wrapper wrapper">
+                <div class="content_wrapper wrapper" id="trasporti-tab">
                     <div class="section group tab_to_accordion"  id="tab">
                         <div class="span_2_of_5 tab_right_col">
-                            <div class="tab_menu content-box content-box-shadow">
-                                <div class="header"><h4>Trasporti</h4></div>
+                            <div class="tab_menu content-box content-box-shadow color_white">
+                                <div class="header color_blue"><h4>Trasporti</h4></div>
                                 <!--<div id="trasporti-link" class="menu-button"><a data-target="#trasporti" href="./trasporti.html">Trasporti</a></div>-->
                                 <div id="trasporto-gomma-link" class="menu-button"><div class="icon"></div><a data-target="#trasporto-gomma" href="./trasporto-su-gomma.html">Trasporto su gomma</a></div>
                                 <div id="trasporto-ferroviario-link" class="menu-button selected"><div class="icon"></div><a data-target="#trasporto-ferroviario" href="./trasporto-ferroviario.html">Trasporto ferroviario</a></div>
@@ -76,7 +75,9 @@
                                 <div id="trasporto-combinato-link" class="menu-button"><div class="icon"></div><a data-target="#trasporto-combinato" href="./trasporto-combinato.html">Trasporto combinato</a></div>
                             </div>
                             <div class="tab-image content-box-shadow">
-                                <img src="../img/treno.png" />
+                                <div class="lazy-image" id="image-ferroviario">
+                                    <img class="img" src="../img/blank_small.png" />
+                                </div>
                             </div>
                         </div>
                         <div class="span_3_of_5 tab_contents">
@@ -123,7 +124,9 @@
                                         congue est ac malesuada tincidunt. Donec sit amet lectus auctor, tempus tellus id, fringilla nibh. 
                                     </p>
                                     <div class="tab-image">
-                                        <img src="../img/treno.png" />
+                                        <div class="lazy-image" id="image-ferroviario">
+                                            <img class="img" src="../img/blank_small.png" />
+                                        </div>
                                     </div>
                                 </div>
                             </div>

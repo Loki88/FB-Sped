@@ -43,7 +43,7 @@
                         Sei in <span>Trasporti</span>
                     </div>
                     <div class="col span_2_of_5" id="breadcrumb">
-                        <a href="#links-trasporti">Salta al contenuto</a>
+                        <a href="#content">Salta al contenuto</a>
                     </div>
                 </div>
                 <div class="span_5_of_5 color_blue navigation" id="navigation">
@@ -54,47 +54,56 @@
                             <li class="color_blue color_hover"><a href="./home.html">Home</a></li>
                             <li class="color_blue color_hover"><a href="./chi-siamo.html">Chi siamo</a></li>
                             <li class="color_blue color_hover"><a href="./cosa-facciamo.html">Cosa facciamo</a></li>
-                            <li class="selected color_green"><a href="./trasporti.html">Trasporti</a></li>
+                            <li class="selected color_green"><a id="trasporti-main" href="./trasporti.html">Trasporti</a></li>
                             <li class="color_blue color_hover"><a href="./dove-siamo.html">Dove siamo</a></li>
                             <li class="color_blue color_hover"><a href="./contatti.html">Contatti</a></li>
                         </ul>
                     </div>  
                 </div>
             </div>
-            <div class="body-background">
-                <div class="decorator"></div>
-                <div class="wrapper">
+            <div class="body-background" id="content">
+                <div class="wrapper desktop_content"  id="trasporti-desktop">
                     <div class="section" id="trasporti">
-                        <div class="carousel">
+                        <div class="carousel content-box-shadow">
                             <ul class="panes">
-                                <li class="content-box-shadow">
+                                <li>
                                     <a href="trasporto-su-gomma.html">
                                         <h2>Trasporto su gomma</h2>
-                                        <img src="../img/carousel/carousel-1.png" alt="">
+                                        <div class="lazy-image">
+                                            <img class="img" src="../img/blank.png" />
+                                        </div>
                                     </a>
                                 </li>
-                                <li class="content-box-shadow">
+                                <li>
                                     <a href="trasporto-ferroviario.html">
                                         <h2>Trasporto ferroviario</h2>
-                                        <img src="../img/carousel/carousel-2.png" alt="">
+                                        <div class="lazy-image">
+                                            <img class="img" src="../img/blank.png" />
+                                        </div>
                                     </a>
                                 </li>
-                                <li class="content-box-shadow">
+                                <li>
                                     <a href="trasporto-marittimo.html">
                                         <h2>Trasporto marittimo</h2>
-                                        <img src="../img/carousel/carousel-3.png" alt="">
+                                        <div class="lazy-image">
+                                            <img class="img" src="../img/blank.png" />
+                                        </div>
                                     </a>
                                 </li>
-                                <li class="content-box-shadow">
+                                <li>
                                     <a href="trasporto-aereo.html">
                                         <h2>Trasporto aereo</h2>
-                                        <img src="../img/carousel/carousel-4.png" alt="">
+                                        <div class="lazy-image">
+                                            <img class="img" src="../img/blank.png" />
+                                        </div>
                                     </a>
                                 </li>
-                                <li class="content-box-shadow">
+                                <li>
                                     <a href="trasporto-combinato.html">
                                         <h2>Trasporto combinato</h2>
-                                        <img src="../img/carousel/carousel-5.png" alt="">
+                                        <div class="lazy-image">
+                                            <img class="img" src="../img/blank.png" />
+                                        </div>
                                     </a>
                                 </li>
                             </ul>
@@ -153,9 +162,68 @@
                         </div>
                     </div>
                 </div>
+                <div class="content_wrapper wrapper mobile_content" id="trasporti-tab">
+                    <div class="section group tab_to_accordion"  id="tab">
+                        <div class="span_2_of_5 tab_right_col">
+                            <div class="tab_menu content-box content-box-shadow color_white">
+                                <div class="header color_blue"><h4>Trasporti</h4></div>
+                                <!--<div id="trasporti-link" class="menu-button"><a data-target="#trasporti" href="./trasporti.html">Trasporti</a></div>-->
+                                <div id="trasporto-gomma-link" class="menu-button"><div class="icon"></div><a data-target="#trasporto-gomma" href="./trasporto-su-gomma.html">Trasporto su gomma</a></div>
+                                <div id="trasporto-ferroviario-link" class="menu-button"><div class="icon"></div><a data-target="#trasporto-ferroviario" href="./trasporto-ferroviario.html">Trasporto ferroviario</a></div>
+                                <div id="trasporto-marittimo-link" class="menu-button"><div class="icon"></div><a data-target="#trasporto-marittimo" href="./trasporto-marittimo.html">Trasporto marittimo</a></div>
+                                <div id="trasporto-aereo-link" class="menu-button selected"><div class="icon"></div><a data-target="#trasporto-aereo" href="./trasporto-aereo.html">Trasporto aereo</a></div>
+                                <div id="trasporto-combinato-link" class="menu-button"><div class="icon"></div><a data-target="#trasporto-combinato" href="./trasporto-combinato.html">Trasporto combinato</a></div>
+                            </div>
+                            <div class="tab-image content-box-shadow">
+                                <div class="lazy-image" id="image-aereo">
+                                    <img class="img" src="../img/blank_small.png" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="span_3_of_5 tab_contents">
+                            <div data-trigger="#trasporto-gomma-link" data-title="Trasporto su gomma - FB Sped" class="tab_pane" id="trasporto-gomma">
+                                <div class="accordion-button">
+                                    <a class="open" href="./trasporto-su-gomma.html"><div>Trasporto su gomma</div><div class="icon"></div></a>
+                                    <a class="close" href="#tab"><div>Trasporto su gomma</div><div class="icon"></div></a>
+                                </div>
+                                <div class="decorator"></div>
+                            </div>
+                            <div data-trigger="#trasporto-ferroviario-link" data-title="Trasporto ferroviario - FB Sped" class="tab_pane" id="trasporto-ferroviario">
+                                <div class="accordion-button">
+                                    <a class="open" href="./trasporto-ferroviario.html"><div>Trasporto ferroviario</div><div class="icon"></div></a>
+                                    <a class="close" href="#tab"><div>Trasporto ferroviario</div><div class="icon"></div></a>
+                                </div>
+                                <div class="decorator"></div>
+                            </div>
+                            <div data-trigger="#trasporto-marittimo-link" data-title="Trasporto marittimo - FB Sped" class="tab_pane" id="trasporto-marittimo">
+                                <div class="accordion-button">
+                                    <a class="open" href="./trasporto-marittimo.html"><div>Trasporto marittimo</div><div class="icon"></div></a>
+                                    <a class="close" href="#tab"><div>Trasporto marittimo</div><div class="icon"></div></a>
+                                </div>
+                                <div class="decorator"></div>
+                            </div>
+                            <div data-trigger="#trasporto-aereo-link" data-title="Trasporto aereo - FB Sped" class="tab_pane" id="trasporto-aereo">
+                                <div class="accordion-button">
+                                    <a class="open" href="./trasporto-aereo.html"><div>Trasporto aereo</div><div class="icon"></div></a>
+                                    <a class="close" href="#tab"><div>Trasporto aereo</div><div class="icon"></div></a>
+                                </div>
+                                <div class="decorator"></div>
+                            </div>
+                            <div data-trigger="#trasporto-combinato-link" data-title="Trasporto combinato - FB Sped" class="tab_pane" id="trasporto-combinato">
+                                <div class="accordion-button">
+                                    <a class="open" href="./trasporto-combinato.html"><div>Trasporto combinato</div><div class="icon"></div></a>
+                                    <a class="close" href="#tab"><div>Trasporto combinato</div><div class="icon"></div></a>
+                                </div>
+                                <div class="decorator"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <script src="../js/libs/ui/jquery/jquery.js"></script>
+                    <script src="../js/menu.js"></script>
+                    <script src="../js/libs/jquery.history.js"></script>
+                    <script src="../js/tab-to-accordion.js"></script>
             </div>
-            <script src="../js/libs/ui/jquery/jquery.js"></script>
-            <script src="../js/menu.js"></script>
+            </div>
         </div>
         
         <div id="footer" class="color_blue">

@@ -1,4 +1,6 @@
 var TabToAccordion = {
+    time: 800,
+    
     init: function()
     {
         TabToAccordion.current = $('.current');
@@ -7,7 +9,25 @@ var TabToAccordion = {
        
         var accordion_links = $('.tab_pane').find('a:not(.close)');
         var accordion_links_close = $('.tab_pane').find('.close');
-        
+        var trasportiDesktop = $('#trasporti-desktop');
+        console.log('trasporti desktop', trasportiDesktop);
+        if(trasportiDesktop.length == 0)
+        {
+            TabToAccordion.home = false;
+             $.ajax({
+                type: "GET",
+                url: $('#trasporti-main').attr('href'),
+                dataType: 'html',
+                success: function(data, status, jqXHR){
+                    if(data !== undefined)
+                    {
+                        var content = $(data).find('#trasporti-desktop');
+                        content.css('display', 'none');
+                        $('.body-background').append(content);
+                    }
+                }
+            });
+        }
         for(var i=0; i<accordion_links.length; i++)
         {
             var accordionLink = $(accordion_links[i]);
@@ -21,11 +41,22 @@ var TabToAccordion = {
             panel.prop('link', accordionLink);
         }
         TabToAccordion.pushState(true);
-        $(window).on('fluidGrid', function(){
-            TabToAccordion.restoreTab();
+        
+        if($(window).width() < 601)
+            TabToAccordion.mobile = true;
+        else
+            TabToAccordion.mobile = false;
+        
+        console.log('mobile', TabToAccordion.mobile);
+        
+        $(window).on('oneColumn', function(){
+            TabToAccordion.mobile = true;
+            $('#trasporti-desktop').css('display', 'none');
+            $('#trasporti-tab').css('display', 'block');
         });
         
         $(window).on('noMobile', function(){
+            TabToAccordion.mobile = false;
             TabToAccordion.restoreTab();
         });
         
@@ -41,31 +72,42 @@ var TabToAccordion = {
     },
     
     restoreState: function(state){
-        console.log('href', state.href);
         var link = $('.accordion-button>.open[href="'+state.href+'"]');//.find('[href="'+state.href+'"]:first');
         TabToAccordion.loadPage(link);
     },
     
     restoreTab: function()
     {
-        var panel = $(this.current);
-        panel.find('a').removeAttr('style');
-        panel.find('.tab_page').removeAttr('style');
-        panel.addClass('current');
-        var trigger = panel.data('trigger');
-        $('.tab_right_col').find('.selected').removeClass('selected');
-        $(trigger).addClass('selected');
+        if(this.current != null){
+            var panel = $(this.current);
+
+            panel.find('a').removeAttr('style');
+            panel.find('.tab_page').removeAttr('style');
+            panel.addClass('current');
+        }
+        else{
+            $('#trasporti-desktop').css('display', 'block');
+            $('#trasporti-tab').css('display', 'none');
+        }
+//        if(TabToAccordion.home)
+//        {
+//            $('#trasporti-desktop').removeAttr('style');
+//            $('#trasporti-tab').removeAttr('style');
+//        }
+//        else{
+//            $('#trasporti-desktop').css('display', 'none');
+//            $('#trasporti-tab').css('display', 'block');
+//        }
     },
 
-    
     accordionCloseClick: function(event)
     {
         event.preventDefault();
-        console.log('accordion close  click');
+        TabToAccordion.current = null;
         var link = $(this);
         var panel = link.prop('panel');
         panel.removeClass('current');
-        panel.children('.tab_page').slideUp(600);
+        TabToAccordion.hide(panel.children('.tab_page'));
         panel.prop('open', false);
     },
     
@@ -117,7 +159,8 @@ var TabToAccordion = {
         var current = $(TabToAccordion.current);
         if(!panel.is(current))
         {
-            current.children('.tab_page').slideUp(400, function(){
+            TabToAccordion.home = false;
+            TabToAccordion.hide(current.children('.tab_page'), function(){
                 current.removeClass('current');
             });
             current.prop('open', false);
@@ -127,24 +170,26 @@ var TabToAccordion = {
             var link = $(panel.prop('tabLink'));
             link.parent().addClass('selected');
             panel.addClass('current');
-            panel.children('.tab_page').slideDown(400);
+            TabToAccordion.show(panel.children('.tab_page'));
             panel.prop('open', true);
-            
+            var trigger = panel.data('trigger');
+            $('.tab_right_col').find('.selected').removeClass('selected');
+            $(trigger).addClass('selected');
         }
         else{
             if(panel.prop('open'))
             {
+                TabToAccordion.current = null;
                 panel.children('.close').hide();
-                panel.children('a:not(.close)').show();
-                panel.children('.tab_page').slideUp(400);
+                TabToAccordion.hide(panel.children('.tab_page'));
                 panel.removeClass('current');
                 panel.prop('open', false);
             }   
             else
             {
-                panel.children('a:not(.close)').hide();
+                TabToAccordion.home = false;
                 panel.children('.close').css('display', 'table');
-                panel.children('.tab_page').slideDown(400);
+                TabToAccordion.show(panel.children('.tab_page'));
                 panel.addClass('current');
                 panel.prop('open', true);
             }
@@ -157,9 +202,7 @@ var TabToAccordion = {
         //semaforo per i cambiamenti di stato della pagina
         TabToAccordion.manualStateChange = false;
         var current = $(TabToAccordion.current);
-        console.log('current to state', current);
         var link = $(current.prop('link'));
-        console.log('link to state', link);
         var state = {
             href: link.attr('href'),
         };
@@ -167,6 +210,26 @@ var TabToAccordion = {
             History.replaceState(state, current.data('title'), link.attr('href'));
         else
             History.pushState(state, current.data('title'), link.attr('href'));
+    },
+    
+    show: function(page, f){
+        if(TabToAccordion.mobile)
+        {
+            page.slideDown(TabToAccordion.time, f);
+        }
+        else{
+            page.fadeIn(0, f);
+        }
+    },
+    
+    hide: function(page, f){
+        if(TabToAccordion.mobile)
+        {
+            page.slideUp(TabToAccordion.time, f);
+        }
+        else{
+            page.fadeOut(0, f)
+        }
     }
 };
 

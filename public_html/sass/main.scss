@@ -7,7 +7,9 @@ body{
 }
 
 @media screen and (max-width: 600px){
-    background-color: #8DBF3F;
+    body{
+        background-color: #8DBF3F;
+    }
 }
 
 .color_green{
@@ -469,15 +471,25 @@ body{
     max-width: 100%;
     background-color: #FFFFFF;
     
-    img {
-        display: table;
-        top: 0;
-        min-width: 100%;
+    .lazy-image{
+        box-sizing: border-box;
+        position: relative;
         width: 100%;
-        max-width: 100%;
-        height: auto;
-        margin: auto;
-        left: 0;
+        background-image: url('../img/main-image.png');
+        background-repeat: none;
+        background-size: 100% 100%;
+        
+        img {
+            display: table;
+            top: 0;
+            min-width: 100%;
+            width: 100%;
+            max-width: 100%;
+            height: auto;
+            margin: auto;
+            left: 0;
+            z-index: -1;
+        }
     }
     
     .image-mask{
@@ -656,7 +668,11 @@ body{
     .tab-image{
         width: 100%;
         margin-top: 1em;
-        margin-left: -0.15em;
+        /*margin-left: -0.15em;*/
+        .lazy-image{
+            position: relative;
+            width: 100%;
+        }
     }
     
     .tab_contents{
@@ -694,8 +710,10 @@ body{
             
             .tab-image{
                 display: none;
+                position: relative;
                 visibility: hidden;
                 width: 100%;
+                
             }
         }
     }
@@ -842,16 +860,17 @@ body{
                 
                 .accordion-button{
                     background-color: rgba(28,104,170,0.5);
+                    .open{
+                        display: none;
+                    }
+
+                    .close{
+                        display: block;
+                        visibility: visible;
+                    }
                 }
                 
-                .open{
-                    display: none;
-                }
-
-                .close{
-                    display: block;
-                    visibility: visible;
-                }
+                
                 
                 .tab-image{
                     display: block;
@@ -977,8 +996,25 @@ body{
     }
 }
 
+.desktop_content{
+    display: block;
+}
+
+.mobile_content{
+    display: none;
+}
+
 @media  screen and (max-width: 600px)
 {
+    
+    .desktop_content{
+        display: none;
+    }
+
+    .mobile_content{
+        display: block;
+    }
+    
     #sol-trasporti{
         margin: 0.5em auto;
         margin-bottom: 0;
@@ -1059,6 +1095,21 @@ body{
     margin-bottom: 0.5em;
     float: left;
     height: fit-content;
+    
+}
+
+.lazy-image{
+    box-sizing: border-box;
+    position: relative;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    padding: 0;
+    margin: 0;
+    border: 0;
+    img{
+        z-index: -1;
+    }
 }
 
 .content-box-shadow{
@@ -1267,7 +1318,7 @@ body{
 
 .carousel{
     box-sizing: border-box;
-    overflow:hidden;
+    overflow: hidden;
     width:100%;
     margin-top: 1.2em;
     margin-bottom: 0;
@@ -1276,6 +1327,7 @@ body{
     {
         margin-top: 0.6em;
     }
+    
     .panes{
         list-style:none;
         position:relative;
@@ -1306,13 +1358,15 @@ body{
                         color:#FFA01A;
                     }
                 }
-            
-                img{
-                    display:block;
-                    position: relative;
-                    width:100%;
-                    margin: 0 auto;
+                .lazy-image{
+                    img{
+                        display:block;
+                        position: relative;
+                        width:100%;
+                        margin: 0 auto;
+                    }
                 }
+                
                 
                 h2{
                     padding:0.5em;
@@ -1334,5 +1388,73 @@ body{
                 }
             }
         }
+    }
+}
+
+//IMMAGINI CON RISOLUZIONI ADATTATE AI DISPOSITIVI PER RIDURRE I TEMPI DI CARICAMENTO
+
+#chi-siamo-image{
+    .lazy-image{
+        background-image: url('../img/chisiamo.png');
+    }
+}
+
+#cosa-facciamo-image{
+    .lazy-image{
+        background-image: url('../img/slide4.jpg');
+    }
+}
+
+#contatti-image{
+    .lazy-image{
+        background-image: url('../img/ufficio.png');
+    }
+}
+
+.carousel{
+    li{
+        &:first-child{
+            .lazy-image{
+                background-image: url('../img/carousel/carousel-1.png');
+            }
+        }
+        &:nth-child(2){
+            .lazy-image{
+                background-image: url('../img/carousel/carousel-2.png');
+            }
+        }
+        &:nth-child(3){
+            .lazy-image{
+                background-image: url('../img/carousel/carousel-3.png');
+            }
+        }
+        &:nth-child(4){
+            .lazy-image{
+                background-image: url('../img/carousel/carousel-4.png');
+            }
+        }
+        &:nth-child(5){
+            .lazy-image{
+                background-image: url('../img/carousel/carousel-5.png');
+            }
+        }
+    }
+}
+
+.tab_to_accordion{
+    #image-ferroviario{
+        background-image: url('../img/treno.png');
+    }
+    #image-marittimo{
+        background-image: url('../img/nave.png');
+    }
+    #image-aereo{
+        background-image: url('../img/aereo.png');
+    }
+    #image-gomma{
+        background-image: url('../img/camion.png');
+    }
+    #image-combinato{
+        background-image: url('../img/combinato.png');
     }
 }
