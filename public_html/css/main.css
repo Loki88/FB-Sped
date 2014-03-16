@@ -42,6 +42,11 @@ body {
   margin: 0;
   border: 0;
   height: auto; }
+  #page-header .wrapper {
+    margin-left: auto;
+    margin-right: auto;
+    height: auto;
+    margin-bottom: 0; }
   #page-header #logo {
     display: block;
     height: 6em;
@@ -75,7 +80,7 @@ body {
       padding: 0;
       left: 20%;
       right: 20%;
-      top: 2em;
+      top: 1.5em;
       bottom: auto;
       width: 60%;
       text-align: center; }
@@ -103,6 +108,11 @@ body {
   float: right; }
 
 @media screen and (max-width: 600px) {
+  #page-header .wrapper {
+    display: inline-block;
+    position: relative; }
+  #page-header .nav-wrapper {
+    display: block; }
   #page-header #logo {
     clear: both;
     height: auto; }
@@ -123,7 +133,7 @@ body {
       position: relative;
       left: auto;
       right: auto;
-      top: auto;
+      top: 0.5em;
       width: 50%;
       float: left;
       margin: auto 0;
@@ -139,6 +149,7 @@ body {
     width: 80%;
     float: none;
     margin: auto 10%;
+    margin-bottom: 0.4em;
     text-align: center; } }
 .img {
   display: block;
@@ -207,27 +218,29 @@ body {
 @media screen and (max-width: 600px) {
   .lang-menu {
     display: block;
-    position: relative;
-    right: -0.98%;
-    float: right;
-    width: 23.98%;
+    position: absolute;
+    right: -1.98%;
+    left: auto;
+    top: 100%;
+    float: none;
+    width: 23%;
     margin: 0;
-    margin-left: -0.1em;
-    height: 0;
+    margin-top: 0.35em;
+    height: auto;
     border: 0;
-    bottom: -0.4em;
-    margin-bottom: 0.4em;
+    /*bottom: -0.4em;*/
+    /*margin-bottom: 0.4em;*/
     z-index: 3; }
     .lang-menu .controls {
       clear: both;
       font-size: inherit;
       visibility: visible;
-      display: block;
+      display: inline-block;
       position: relative;
       left: 0;
       width: 100%;
       height: 3em;
-      padding: 0.1em -0.5em;
+      padding: 0.08em -0.5em;
       border: 0;
       background-color: #1c68aa;
       border-left-width: 0.1em;
@@ -250,14 +263,16 @@ body {
       display: block;
       left: -10000px;
       position: absolute;
-      height: 0; }
+      margin: 0;
+      height: 0;
+      box-sizing: border-box; }
       .lang-menu #lang-menu a {
         display: block;
+        box-sizing: border-box;
         position: relative;
         line-height: auto;
         width: 100%;
         height: 3em;
-        border-color: #000000;
         border-width: 1pt;
         border-right: 0;
         border-bottom: 0;
@@ -289,7 +304,6 @@ body {
       clear: both;
       float: right;
       left: auto;
-      right: 0;
       height: auto; }
       .lang-menu:target #lang-open {
         display: none;
@@ -298,43 +312,49 @@ body {
       .lang-menu:target #lang-close {
         display: block;
         position: relative;
-        left: -0.1em; }
+        left: auto; }
       .lang-menu:target #lang-menu {
-        left: auto;
+        position: relative;
+        left: 0;
         right: 0;
-        height: auto;
-        position: relative; }
+        height: auto; }
 
   .languageMobileVisible #lang-menu {
-    left: 0;
     position: relative;
+    left: 0;
+    right: 0;
     height: auto; }
   .languageMobileVisible #lang-open {
     display: none; }
   .languageMobileVisible #lang-close {
     display: block;
     position: relative;
-    left: 0; } }
-      @media screen and (max-width: 600px) and (max-width: 175px) {
-        .lang-menu .controls img {
-          height: auto;
-          width: 90%;
-          margin: auto 5%; } }
+    left: auto; } }
       @media screen and (max-width: 600px) and (max-width: 280px) {
         .lang-menu #lang-menu a img {
           width: auto;
-          height: 100%;
+          height: 90%;
           margin-left: auto;
           margin-right: auto;
           float: none;
-          padding: 0; }
+          padding: 0;
+          /*                        @media screen and (max-width: 175px){
+                                      height: auto;
+                                      width: 90%;
+                                      margin: auto 5%;
+                                  }*/ }
         .lang-menu #lang-menu a span {
           display: none; } }
-        @media screen and (max-width: 600px) and (max-width: 280px) and (max-width: 175px) {
-          .lang-menu #lang-menu a img {
-            height: auto;
-            width: 90%;
-            margin: auto 5%; } }
+@media screen and (max-width: 200px) {
+  .lang-menu {
+    right: 0;
+    width: 30%; }
+    .lang-menu .controls img {
+      width: 90%;
+      margin: auto; }
+    .lang-menu #lang-menu a img {
+      width: 90%;
+      margin: auto; } }
 #main-image {
   box-sizing: border-box;
   margin-top: 1.2em;

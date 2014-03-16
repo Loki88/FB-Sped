@@ -34,20 +34,15 @@ $second-level-text: #FFFFFF;
 
     .selected{
         border-width: 1pt 1pt 0 1pt;
-        padding-bottom: 2pt;
+        padding-bottom: 1pt;
         margin-bottom: -1pt;
         @media screen and (min-width: 2500px)
         {
-            padding-bottom: 3pt;
+            padding-bottom: 2pt;
             margin-bottom: -2pt;
         }
         border-style: outset;
         border-color: #8DBF3F;
-        a{
-            /*cursor: default;*/
-            /*color: #030320;*/
-            
-        }
     }
 
     ul{
@@ -84,26 +79,28 @@ $second-level-text: #FFFFFF;
 }
 
 @media screen and (max-width: 600px)
-{ 
+{     
     .navigation {
         margin: 0;
         padding: 0;
         height: auto;
         border: 0;
         padding-top: -2pt;
-        width: 79%;
+        width: 80%;
         float: left;
         border-top-width: 0.1em;
         border-top-style: outset;
         border-bottom-width: 0.1em;
         border-bottom-style: outset;
         border-color: #1C68AA;
+        box-sizing: border-box;
         
         .wrapper{
-            position: relative;
             height: auto;
+            float: left;
+            margin: 0;
             width: 80%;
-            margin-left: 0;
+            position: relative;
             
             a {
                 display: block;
@@ -118,6 +115,7 @@ $second-level-text: #FFFFFF;
             /* Stile di base per il menù chiuso */
             .menu-link {
                 display: inline-block;
+                box-sizing: border-box;
                 height: 3em;
                 line-height: 3em;
                 width: 98%;
@@ -127,14 +125,34 @@ $second-level-text: #FFFFFF;
                 border-right-width: 0.1em;
                 border-right-style: groove;
                 border-color: #1C68AA;
-                background-image: url('../img/menu-white.png');
-                background-repeat: no-repeat;
-                background-position: right center;
-                background-size: 1.3em;
-                color: #F4F0E6;
                 z-index: 5;
+                
+                span{
+                    display: inline-block;
+                    position: relative;
+                    float: left;
+                    width: 60%;
+                    margin: 0 5%;
+                    height: 2.8em;
+                    color: inherit;
+                }
+                
+                .icon{
+                    display: inline-block;
+                    float: left;
+                    width: 1.5em;
+                    height: 1.5em;
+                    margin: 0.75em 0.1em;
+                    background-image: url('../img/icons/menu-white.png');
+                    background-repeat: no-repeat;
+                    background-position: right center;
+                    background-size: 100% 100%;
+                }
+                
                 &:hover{
-                    text-decoration: underline;
+                    .icon{
+                        background-image: url('../img/icons/menu-hover.png');
+                    }
                 }
             }
             #open{
@@ -143,7 +161,6 @@ $second-level-text: #FFFFFF;
             
             #close {
                 display: none;
-                background-image: url('../img/menu-white.png');
             }
 
             ul {
@@ -157,7 +174,7 @@ $second-level-text: #FFFFFF;
                 border-right-width: 1pt;
                 border-style: groove;
                 border-color: #1C68AA;
-                width: 120%;
+                width: 122%;
                 height: auto;
                 top: 3.1em;
                 z-index: 3;
@@ -213,6 +230,26 @@ $second-level-text: #FFFFFF;
 
             
         }
+        
+        @media screen and (max-width: 200px){
+            .wrapper{
+                width: 40%;
+                .menu-link{
+                    span{
+                        display: none;
+                    }
+                    .icon{
+                        float: none;
+                        margin-left: auto;
+                        margin-right: auto;
+                    }
+                }
+                ul{
+                    width: 272%;
+                }
+            }
+        }
+        
         /* Stile per i bottoni del menù di primo livello, quando sono visibili */
         &:target{
             #close {
