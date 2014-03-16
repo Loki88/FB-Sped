@@ -252,7 +252,7 @@ body{
     .selected{
         cursor: default;
         span{
-            text-decoration: underline;
+            text-decoration: none;
         }
     }
     
@@ -283,12 +283,13 @@ body{
             padding: 0.25em auto;
             line-height: 1.5em;
             float: left;
-            color: #000000;
+            color: #030320;
         }
                
         &:not(.selected){
             span{
                 color: #1C68AA;
+                text-decoration: underline;
             }
             &:hover{
                 span{
@@ -313,8 +314,6 @@ body{
         margin-top: 0.35em;
         height: auto;
         border: 0;
-        /*bottom: -0.4em;*/
-        /*margin-bottom: 0.4em;*/
         z-index: 3;
         
         .controls{
@@ -383,9 +382,10 @@ body{
                     display: block;
                     position: relative;
                     float: left;
-                    margin: 0;
+                    margin: 0.75em 0;
                     padding: 0;
                     width: auto;
+                    height: 1.5em;
                 }
 
                 img{
@@ -475,7 +475,7 @@ body{
 
 @media screen and (max-width: 200px){
     .lang-menu{
-        right: 0;
+        /*right: 0;*/
         width: 30%;
         
         .controls{

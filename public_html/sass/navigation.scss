@@ -165,6 +165,7 @@ $second-level-text: #FFFFFF;
 
             ul {
                 font-size: inherit;
+                box-sizing: content-box;
                 display: block;
                 position: absolute;
                 list-style: none;
@@ -174,7 +175,7 @@ $second-level-text: #FFFFFF;
                 border-right-width: 1pt;
                 border-style: groove;
                 border-color: #1C68AA;
-                width: 122%;
+                width: auto;
                 height: auto;
                 top: 3.1em;
                 z-index: 3;

@@ -184,7 +184,7 @@ body {
   .lang-menu .selected {
     cursor: default; }
     .lang-menu .selected span {
-      text-decoration: underline; }
+      text-decoration: none; }
   .lang-menu a:not(.controls) {
     display: block;
     visibility: visible;
@@ -209,9 +209,10 @@ body {
       padding: 0.25em auto;
       line-height: 1.5em;
       float: left;
-      color: #000000; }
+      color: #030320; }
     .lang-menu a:not(.controls):not(.selected) span {
-      color: #1C68AA; }
+      color: #1C68AA;
+      text-decoration: underline; }
     .lang-menu a:not(.controls):not(.selected):hover span {
       color: #FBB820; }
 
@@ -228,8 +229,6 @@ body {
     margin-top: 0.35em;
     height: auto;
     border: 0;
-    /*bottom: -0.4em;*/
-    /*margin-bottom: 0.4em;*/
     z-index: 3; }
     .lang-menu .controls {
       clear: both;
@@ -287,9 +286,10 @@ body {
           display: block;
           position: relative;
           float: left;
-          margin: 0;
+          margin: 0.75em 0;
           padding: 0;
-          width: auto; }
+          width: auto;
+          height: 1.5em; }
         .lang-menu #lang-menu a img {
           float: left;
           height: 90%;
@@ -347,7 +347,7 @@ body {
           display: none; } }
 @media screen and (max-width: 200px) {
   .lang-menu {
-    right: 0;
+    /*right: 0;*/
     width: 30%; }
     .lang-menu .controls img {
       width: 90%;
