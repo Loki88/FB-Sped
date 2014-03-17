@@ -1,4 +1,4 @@
-@charset "UTF-8";
+@charset "CP850";
 .navigation {
   display: table;
   position: relative;
@@ -212,6 +212,7 @@ html, body {
   padding: 0;
   border: 0;
   width: 100%;
+  padding-bottom: 1em;
   background: -webkit-linear-gradient(top, #8dbf3f, white);
   /* For Safari 5.1 to 6.0 */
   background: -o-linear-gradient(bottom, #8dbf3f, white);

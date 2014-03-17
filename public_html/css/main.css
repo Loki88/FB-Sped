@@ -409,9 +409,12 @@ body {
         text-overflow: ellipsis-word;
         height: 60%; }
 
+@media screen and (max-width: 600px) {
+  #main-image {
+    margin-top: 1em; } }
 @media screen and (max-width: 768px) {
   #main-image {
-    margin-top: 0.5em; }
+    /*margin-top: 0.5em;*/ }
     #main-image img {
       display: block;
       top: 0;
@@ -430,7 +433,7 @@ body {
         margin: auto 2%; } }
 @media screen and (max-width: 480px) {
   #main-image {
-    margin-top: 0.5em;
+    /*margin-top: 0.5em;*/
     min-height: 0; }
     #main-image .image-mask {
       background-color: #1C68AA;

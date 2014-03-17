@@ -565,11 +565,18 @@ body{
         }
     }
 }
+@media screen and (max-width: 600px)
+{
+    #main-image{
+        margin-top: 1em;
+    }
+}
 
 @media  screen and (max-width: 768px)
 {
     #main-image {
-        margin-top: 0.5em;
+        /*margin-top: 0.5em;*/
+        
         
         img {
             display: block;
@@ -602,7 +609,7 @@ body{
 @media  screen and (max-width: 480px)
 {
     #main-image{
-        margin-top: 0.5em;
+        /*margin-top: 0.5em;*/
         min-height: 0;
         .image-mask{
             background-color: #1C68AA;
@@ -1036,7 +1043,6 @@ body{
 
 @media  screen and (max-width: 600px)
 {
-    
     .desktop_content{
         display: none;
     }
@@ -1125,7 +1131,6 @@ body{
     margin-bottom: 0.5em;
     float: left;
     height: fit-content;
-    
 }
 
 .lazy-image{
