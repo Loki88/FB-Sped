@@ -3,7 +3,8 @@
     Author     : Lorenzo Di Giuseppe <lorenzo.digiuseppe88@gmail.com>
 */
 body {
-  background-color: #FFFFFF; }
+  background-color: #FFFFFF;
+  position: relative; }
 
 @media screen and (max-width: 600px) {
   body {
@@ -41,10 +42,9 @@ body {
   width: 100%;
   margin: 0;
   border: 0;
-  height: auto; }
+  height: auto;
+  position: relative; }
   #page-header .wrapper {
-    margin-left: auto;
-    margin-right: auto;
     height: auto;
     margin-bottom: 0; }
   #page-header #logo {
@@ -108,36 +108,39 @@ body {
   float: right; }
 
 @media screen and (max-width: 600px) {
-  #page-header .wrapper {
-    display: inline-block;
-    position: relative; }
-  #page-header .nav-wrapper {
-    display: block; }
-  #page-header #logo {
-    clear: both;
-    height: auto; }
-    #page-header #logo #logo-img {
-      height: 100%;
-      width: 40%;
-      margin: 0.2em 0;
-      height: 3.6em;
-      float: left; }
-      #page-header #logo #logo-img a {
-        margin: auto; }
-        #page-header #logo #logo-img a img {
-          float: none;
-          max-width: 100%;
-          height: 100%;
-          margin: 0 auto; }
-    #page-header #logo #logo-text {
-      position: relative;
-      left: auto;
-      right: auto;
-      top: 0.5em;
-      width: 50%;
-      float: left;
-      margin: auto 0;
-      text-align: right; } }
+  #page-header {
+    position: relative;
+    /*        .wrapper{
+                display: inline-block;
+                position: relative;
+            }*/ }
+    #page-header .nav-wrapper {
+      display: block; }
+    #page-header #logo {
+      clear: both;
+      height: auto; }
+      #page-header #logo #logo-img {
+        height: 100%;
+        width: 40%;
+        margin: 0.2em 0;
+        height: 3.6em;
+        float: left; }
+        #page-header #logo #logo-img a {
+          margin: auto; }
+          #page-header #logo #logo-img a img {
+            float: none;
+            max-width: 100%;
+            height: 100%;
+            margin: 0 auto; }
+      #page-header #logo #logo-text {
+        position: relative;
+        left: auto;
+        right: auto;
+        top: 0.5em;
+        width: 50%;
+        float: left;
+        margin: auto 0;
+        text-align: right; } }
 @media screen and (max-width: 200px) {
   #page-header #logo #logo-img {
     height: 100%;
@@ -158,6 +161,12 @@ body {
   top: 0;
   height: auto;
   margin: auto; }
+
+.container {
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: relative; }
 
 .lang-menu {
   display: inline-block;
@@ -216,13 +225,18 @@ body {
     .lang-menu a:not(.controls):not(.selected):hover span {
       color: #FBB820; }
 
+@media screen and (min-width: 601px) and (max-width: 768px) {
+  .lang-menu a:not(.controls) {
+    box-sizing: border-box;
+    width: 100%;
+    clear: both; } }
 @media screen and (max-width: 600px) {
   .lang-menu {
     display: block;
     position: absolute;
-    right: -1.98%;
+    right: 0;
     left: auto;
-    top: 100%;
+    bottom: 0;
     float: none;
     width: 23%;
     margin: 0;
@@ -254,6 +268,11 @@ body {
         position: relative;
         height: 100%;
         margin: 0 auto; }
+      .lang-menu .controls:hover {
+        /*                background: -webkit-linear-gradient(top, #1C68AA , #FFA01A);  For Safari 5.1 to 6.0 
+                        background: -o-linear-gradient(bottom,  #1C68AA , #FFA01A);  For Opera 11.1 to 12.0 
+                        background: -moz-linear-gradient(bottom,  #1C68AA , #FFA01A);  For Firefox 3.6 to 15 
+                        background: linear-gradient(to bottom,  #1C68AA , #FFA01A);  Standard syntax */ }
     .lang-menu #lang-close {
       display: none;
       position: absolute;
@@ -264,6 +283,7 @@ body {
       position: absolute;
       margin: 0;
       height: 0;
+      top: 3.20em;
       box-sizing: border-box; }
       .lang-menu #lang-menu a {
         display: block;
@@ -314,13 +334,11 @@ body {
         position: relative;
         left: auto; }
       .lang-menu:target #lang-menu {
-        position: relative;
         left: 0;
         right: 0;
         height: auto; }
 
   .languageMobileVisible #lang-menu {
-    position: relative;
     left: 0;
     right: 0;
     height: auto; }
@@ -740,8 +758,8 @@ body {
   .trasporti-links .content-box {
     display: block;
     position: relative;
-    margin: 0;
-    margin-bottom: 0.5em;
+    /*margin: 0;*/
+    /*margin-bottom: 0.5em;*/
     height: 100%;
     padding: 0; }
     .trasporti-links .content-box .header {
@@ -792,8 +810,8 @@ body {
 
 .page-img {
   background-color: #FFFFFF;
-  margin-top: 0.7em;
-  margin-bottom: 0.5em;
+  /*margin-top: 0.7em;*/
+  /*margin-bottom: 0.5em;*/
   float: left;
   height: fit-content; }
 
@@ -815,10 +833,16 @@ body {
     .content-box-shadow {
       box-shadow: 1pt 1pt 2pt #1C68AA; } }
 
+.column .content-box:not(:last-child) {
+  margin-bottom: 1.6em; }
+@media screen and (max-width: 600px) {
+  .column .content-box {
+    margin-bottom: 1em; }
+    .column .content-box:not(:last-child) {
+      margin-bottom: 1em; } }
+
 .content-box {
-  box-sizing: border-box;
-  margin-top: 0.7em;
-  margin-bottom: 0.4em;
+  box-sizing: initial;
   padding-bottom: 0.5em; }
   .content-box .decorator, .content-box .decorator-bottom, .content-box .decorator-header {
     display: none;
@@ -901,13 +925,15 @@ body {
 .sticky-footer {
   position: relative;
   min-height: 100%;
-  margin-bottom: -16em; }
+  margin-bottom: -17em; }
   .sticky-footer:after {
-    display: block;
+    display: table;
+    clear: both;
     content: "";
-    height: 16em; }
+    height: 17em; }
 
 #footer {
+  display: inline-block;
   position: relative;
   z-index: 3;
   width: 100%;
@@ -916,7 +942,10 @@ body {
   border-color: #1C68AA;
   border-style: inset;
   bottom: 0;
-  height: 17em; }
+  height: 17em;
+  margin-bottom: 0; }
+  #footer .section {
+    margin: 0; }
   #footer a {
     z-index: 3; }
   #footer div p {
@@ -927,11 +956,19 @@ body {
     display: block;
     margin: auto 0.2em;
     color: inherit; }
+  #footer:before {
+    content: "";
+    clear: both;
+    display: table; }
 
 @media screen and (max-width: 600px) {
+  .sticky-footer {
+    margin-bottom: -3em; }
+    .sticky-footer:after {
+      height: 3em; }
+
   #footer {
     margin-top: 0;
-    overflow-x: hidden;
     height: auto; } }
 @keyframes carousel {
   0% {

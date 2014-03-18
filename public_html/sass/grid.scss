@@ -3,4 +3,109 @@
     Author     : Lorenzo Di Giuseppe
 */
 
+$orizontal-margin: 1.6%;
+
 //colonne
+.column{
+    display: block;
+    float:left;
+    margin: 0.5em 0 0.5em $orizontal-margin;
+    &:first-child{
+        margin-left: 0;
+    }
+}
+
+.column-right{
+    display: block;
+    float: right;
+    margin: 0.5em $orizontal-margin 0.5em 0;
+    &:first-child{
+        margin-right: 0;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .column:first-child
+    {
+        margin: 0;
+    }
+    .column {
+        margin: 0.5em 0 0 0;
+    }
+    .column-right:first-child
+    {
+        margin: 0;
+    }
+    .column-right {
+        margin: 0 0 0.5em 0;
+    }
+}
+
+.section{
+    clear: both;
+    padding: 0px;
+    margin: 0px;
+    margin-bottom: 1.6em;
+    &:first-child{
+        margin-top: 1.6em;
+    }
+}
+
+.group:before,
+.group:after {
+    content:"";
+    display:table;
+}
+.group:after {
+    clear:both;
+}
+.group {
+    zoom:1; /* Per IE 7 */
+    &:before,  &:after {
+        content: ""; //Assicura la separazione dei contenuti
+        display: table;
+    }
+    
+    &:after{
+        clear: both; //Previene il floating degli elementi che seguono il gruppo
+    }
+}
+
+//GRIGLIA
+
+.col_1_5{
+    width: (100% - 4 * $orizontal-margin) / 5;
+}
+
+.col_2_5{
+    width: 2*(100% - 4 * $orizontal-margin) / 5 + $orizontal-margin;
+}
+
+.col_3_5{
+    width: 3*(100% - 4 * $orizontal-margin) / 5 + 2 * $orizontal-margin;
+}
+
+.col_4_5{
+    width: 4*(100% - 4 * $orizontal-margin) / 5 + 3 * $orizontal-margin;
+}
+
+.col_5_5{
+    width: 100%;
+}
+
+@media screen and (max-width: 600px)
+{
+    .section{
+        clear: both;
+        padding: 0px;
+        margin: 0px;
+        margin-bottom: 0.7em;
+        &:first-child{
+            margin-top: 0.7em;
+        }
+    }
+    
+    .col_1_5, .col_2_5, .col_3_5, .col_4_5, .col_5_5{
+        width: 100%;
+    }
+}

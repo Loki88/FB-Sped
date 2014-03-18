@@ -7,20 +7,19 @@
             <script src="../js/libs/html5shiv.js"></script>
         <![endif]-->
         <link href="../img/icons/logo.png" type="image/gif" rel="icon">
-        <link href="../css/col.min.css" type="text/css" rel="stylesheet" />
-        <link href="../css/5cols.min.css" type="text/css" rel="stylesheet" />
-        <link href="../css/text.min.css" type="text/css" rel="stylesheet" />
-        <link href="../css/navigation.min.css" type="text/css" rel="stylesheet" />
-        <link href="../css/main.min.css" type="text/css" rel="stylesheet" />
+        <link href="../css/grid.css" type="text/css" rel="stylesheet" />
+        <link href="../css/text.css" type="text/css" rel="stylesheet" />
+        <link href="../css/navigation.css" type="text/css" rel="stylesheet" />
+        <link href="../css/main.css" type="text/css" rel="stylesheet" />
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatibility" content="IE=Edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/> <!--320-->
     </head>
     <body>
         <div class="sticky-footer">
-            <div id="page-header" class="section group">
+            <div id="page-header" class="group">
                 <div class="wrapper">
-                    <div id="logo" class="col span_4_of_5 section group">
+                    <div id="logo" class="column col_4_5 group">
                         <div id="logo-img">
                             <a href="./home.html">
                                 <img src="../img/logo.png" alt="Logo della società" />
@@ -31,22 +30,24 @@
                             <h6>spedizioniere multimodale</h6>
                         </div>
                     </div>
-                    <div class="col span_1_of_5 lang-menu" id="language">
-                        <a href="#language" class="controls" id="lang-open"><img src="../img/Italy-Flag.png" /></a>
-                        <a href="#" class="controls" id="lang-close"><img src="../img/Italy-Flag.png" /></a>
-                        <div id="lang-menu">
-                            <a class="selected" href="#"><img src="../img/Italy-Flag.png" /><span>Ita</span></a>
-                            <a href="../eng/home.html"><img src="../img/united_kingdom_flag_256.png" /><span>Eng</span></a>
+                    <div class="column col_1_5 lang-menu" id="language">
+                        <div class="container">
+                            <a href="#language" class="controls" id="lang-open"><img src="../img/Italy-Flag.png" /></a>
+                            <a href="#" class="controls" id="lang-close"><img src="../img/Italy-Flag.png" /></a>
+                            <div id="lang-menu">
+                                <a class="selected" href="#"><img src="../img/Italy-Flag.png" /><span>Ita</span></a>
+                                <a href="../eng/home.html"><img src="../img/united_kingdom_flag_256.png" /><span>Eng</span></a>
+                            </div>
                         </div>
                     </div>
-                    <div class="col span_3_of_5" id="breadcrumb">
+                    <div class="column col_3_5" id="breadcrumb">
                         Sei in <span><a href="./home.html">Home</a></span>
                     </div>
-                    <div class="col span_2_of_5" id="breadcrumb">
+                    <div class="column col_2_5" id="breadcrumb">
                         <a href="#main-image">Salta al contenuto</a>
                     </div>
                 </div>
-                <div class="span_5_of_5 color_blue navigation" id="navigation">
+                <div class="col_5_5 color_blue navigation" id="navigation">
                     <div class="wrapper nav-wrapper">
                         <a id="open" class="color_blue color_hover menu-link" href="#navigation" alt="Apri menù"><span>Menu</span><div class="icon"></div></a>
                         <a id="close" class="color_blue color_hover menu-link" href="#" alt="Chiudi menù"><span>Chiudi</span><div class="icon"></div></a>
@@ -77,7 +78,7 @@
                     </div>
 
                     <div class="section group trasporti-links" id="sol-trasporti">
-                        <div class="col span_1_of_5 content-box content-box-shadow color_white" id="truck">
+                        <div class="column col_1_5 content-box content-box-shadow color_white" id="truck">
                             <div class="header color_blue">
                                 <div class="icon"></div>
                                 <h5>Trasporto su gomma</h5>
@@ -87,7 +88,7 @@
                             </p>
                             <a class="color_hover" href="./trasporto-su-gomma.html" alt="Leggi di più sul trasporto su gomma">Vai alla pagina</a>
                         </div>
-                        <div class="col span_1_of_5 content-box content-box-shadow color_white"  id="train">
+                        <div class="column col_1_5 content-box content-box-shadow color_white"  id="train">
                             <div class="header color_blue">
                                 <div class="icon"></div>
                                 <h5>Trasporto ferroviario</h5>
@@ -97,7 +98,7 @@
                             </p>
                             <a href="./trasporto-ferroviario.html" alt="Leggi di più sul trasporto ferroviario">Vai alla pagina</a>
                         </div>
-                        <div class="col span_1_of_5 content-box content-box-shadow color_white" id="ship">
+                        <div class="column col_1_5 content-box content-box-shadow color_white" id="ship">
                             <div class="header color_blue">
                                 <div class="icon"></div>
                                 <h5>Trasporto marittimo</h5>
@@ -107,7 +108,7 @@
                             </p>
                             <a href="./trasporto-marittimo.html" alt="Leggi di più sul trasporto marittimo">Vai alla pagina</a>
                         </div>
-                        <div class="col span_1_of_5 content-box content-box-shadow color_white" id="airplane">
+                        <div class="column col_1_5 content-box content-box-shadow color_white" id="airplane">
                             <div class="header color_blue">
                                 <div class="icon"></div>
                                 <h5>Trasporto aereo</h5>
@@ -117,7 +118,7 @@
                             </p>
                             <a href="./trasporto-aereo.html" alt="Leggi di più sul trasporto aereo">Vai alla pagina</a>
                         </div>
-                        <div class="col span_1_of_5 content-box content-box-shadow color_white" id="combined">
+                        <div class="column col_1_5 content-box content-box-shadow color_white" id="combined">
                             <div class="header color_blue">
                                 <div class="icon"></div>
                                 <h5>Trasporto combinato</h5>
@@ -131,20 +132,19 @@
                 </div>
             </div>
         </div>
-        
         <div id="footer" class="color_blue">
             <div class="wrapper">
-                <div class="section group">
-                    <p class="span_5_of_5"><a class="color_blue color_hover" href="#menu">Torna al menù</a></p>
-                    <p class="span_5_of_5"><span>via V. Pilotti - 64100 Teramo (Te) - c/o Centro Commerciale</span><span>P.iva IT 01881060675</span></p>
-                    <p class="group span_5_of_5">
-                        <b class="col span_3_of_5"><span>tel. +39 0861 221349</span><span>fax. +39 0861 1850749</span></b>
-                        <a class="col span_2_of_5 color_blue color_hover" href="mailto:info@fbsped.it">info@fbsped.it</a></p>
-                    <p class="span_5_of_5">Per informazioni e suggerimenti su come migliorare questo sito contattatemi a: questaemail@prova.it</p>
+                <div class="group">
+                    <p class="col_5_5"><a class="color_blue color_hover" href="#menu">Torna al menù</a></p>
+                    <p class="col_5_5"><span>via V. Pilotti - 64100 Teramo (Te) - c/o Centro Commerciale</span><span>P.iva IT 01881060675</span></p>
+                    <p class="group col_5_5">
+                        <b class="column col_3_5"><span>tel. +39 0861 221349</span><span>fax. +39 0861 1850749</span></b>
+                        <a class="column col_2_5 color_blue color_hover" href="mailto:info@fbsped.it">info@fbsped.it</a></p>
+                    <p class="col_5_5">Per informazioni e suggerimenti su come migliorare questo sito contattatemi a: questaemail@prova.it</p>
                     <p><span>&copy; Copyright 2014-2015</span></p>
                 </div>
             </div>
-        </div>     
+        </div>    
         <script src="../min/js/libs/ui/jquery/jquery.min.js"></script>
         <script src="../min/js/menu.min.js"></script>
     </body>

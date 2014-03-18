@@ -139,10 +139,10 @@ $second-level-text: #FFFFFF;
                 
                 .icon{
                     display: inline-block;
-                    float: left;
+                    float: right;
                     width: 1.5em;
                     height: 1.5em;
-                    margin: 0.75em 0.1em;
+                    margin: 0.75em 0.3em;
                     background-image: url('../img/icons/menu-white.png');
                     background-repeat: no-repeat;
                     background-position: right center;
@@ -150,6 +150,11 @@ $second-level-text: #FFFFFF;
                 }
                 
                 &:hover{
+/*                    background: -webkit-linear-gradient(top, #1C68AA , #FFA01A);  For Safari 5.1 to 6.0 
+                    background: -o-linear-gradient(bottom,  #1C68AA , #FFA01A);  For Opera 11.1 to 12.0 
+                    background: -moz-linear-gradient(bottom,  #1C68AA , #FFA01A);  For Firefox 3.6 to 15 
+                    background: linear-gradient(to bottom,  #1C68AA , #FFA01A);  Standard syntax 
+                    color: #FFFFFF;*/
                     .icon{
                         background-image: url('../img/icons/menu-hover.png');
                     }
@@ -174,7 +179,7 @@ $second-level-text: #FFFFFF;
                 border: 0;
                 border-right-width: 1pt;
                 border-style: groove;
-                border-color: #1C68AA;
+                border-color: #030320;
                 width: auto;
                 height: auto;
                 top: 3.1em;
@@ -299,7 +304,6 @@ html, body {
     padding: 0;
     border: 0;
     width: 100%;
-    padding-bottom: 1em;
     background: -webkit-linear-gradient(top, #8DBF3F , #FFFFFF); /* For Safari 5.1 to 6.0 */
     background: -o-linear-gradient(bottom,  #8DBF3F , #FFFFFF); /* For Opera 11.1 to 12.0 */
     background: -moz-linear-gradient(bottom,  #8DBF3F , #FFFFFF); /* For Firefox 3.6 to 15 */
@@ -328,6 +332,7 @@ html, body {
 
 .wrapper{
     display: block;
+    float: none;
     width: 98%;
     margin: 0 1%;
     @media screen and (min-width: 600px){
