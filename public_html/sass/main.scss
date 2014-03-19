@@ -148,13 +148,11 @@ body{
 {
     #page-header{
         position: relative;
-/*        .wrapper{
-            display: inline-block;
-            position: relative;
-        }*/
+
         .nav-wrapper{
             display: block;
         }
+        
         #logo{
             clear: both;
             height: auto;
@@ -371,13 +369,6 @@ body{
                 height: 100%; 
                 margin: 0 auto;
             }
-            
-            &:hover{
-/*                background: -webkit-linear-gradient(top, #1C68AA , #FFA01A);  For Safari 5.1 to 6.0 
-                background: -o-linear-gradient(bottom,  #1C68AA , #FFA01A);  For Opera 11.1 to 12.0 
-                background: -moz-linear-gradient(bottom,  #1C68AA , #FFA01A);  For Firefox 3.6 to 15 
-                background: linear-gradient(to bottom,  #1C68AA , #FFA01A);  Standard syntax */
-            }
         }
 
         #lang-close{
@@ -392,7 +383,7 @@ body{
             position: absolute;
             margin: 0;
             height: 0;
-            top: 3.20em;
+            top: 3.10em;
             box-sizing: border-box;
             
             a{
@@ -439,11 +430,6 @@ body{
                         margin-right: auto;
                         float: none;
                         padding: 0;
-/*                        @media screen and (max-width: 175px){
-                            height: auto;
-                            width: 90%;
-                            margin: auto 5%;
-                        }*/
                     }
 
                     span{
@@ -510,7 +496,6 @@ body{
 
 @media screen and (max-width: 200px){
     .lang-menu{
-        /*right: 0;*/
         width: 30%;
         
         .controls{
@@ -532,7 +517,6 @@ body{
 
 #main-image{
     box-sizing: border-box;
-    /*margin-top: 1.2em;*/
     display: table;
     position: relative;
     height: fit-content;
@@ -600,19 +584,10 @@ body{
         }
     }
 }
-/*@media screen and (max-width: 600px)
-{
-    #main-image{
-        margin-top: 1em;
-    }
-}*/
 
 @media  screen and (max-width: 768px)
 {
     #main-image {
-        /*margin-top: 0.5em;*/
-        
-        
         img {
             display: block;
             top: 0;
@@ -644,7 +619,6 @@ body{
 @media  screen and (max-width: 480px)
 {
     #main-image{
-        /*margin-top: 0.5em;*/
         min-height: 0;
         .image-mask{
             background-color: #1C68AA;
@@ -672,11 +646,8 @@ body{
         
     .tab_right_col{
         display: block;
-        margin: 0;
-        margin-top: 0.7em;
         padding: 0;
         border: 0;
-        float: right;
         
         .tab_menu{
             background-color: #FFFFFF;
@@ -740,7 +711,6 @@ body{
     .tab-image{
         width: 100%;
         margin-top: 1em;
-        /*margin-left: -0.15em;*/
         .lazy-image{
             position: relative;
             width: 100%;
@@ -749,11 +719,8 @@ body{
     
     .tab_contents{
         display: block;
-        margin: 0;
-        margin-right: 1.6%;
         padding: 0;
         border: 0;
-        float: right;
         
         .decorator{
             display: none;
@@ -767,7 +734,6 @@ body{
             border: 0;
             
             .tab_page{
-                margin-top: 0.7em;
                 box-shadow: 1pt 1pt 5pt #000000;
             }
             &:not(.current){
@@ -952,8 +918,6 @@ body{
                 }
             }
         }
-        
-        
     }
     #tab:target{
         .current{
@@ -966,30 +930,17 @@ body{
             .tab_page{
                 display: none;
             }
-
         }
     }
 }
 
-#sol-trasporti{
-    display: table;
-    margin-top: 1em;
-}
-
 .trasporti-links {
      .content-box{
-        display: block;
-        position: relative;
-        /*margin-top: 0;*/
-        height: 100%;
-        padding: 0;
-
         .header{
-            display: inline-block;
             min-height: 5em;
             height: 6em;
             max-height: 8em;
-            margin: auto;
+
             .icon{
                 display: table;
                 position: relative;
@@ -1095,8 +1046,6 @@ body{
         .content-box{
             display: block;
             position: relative;
-            /*margin: 0;*/
-            /*margin-bottom: 0.5em;*/
             height: 100%;
             padding: 0;
             
@@ -1115,7 +1064,6 @@ body{
                     margin: 0.25em auto;
                     background-size: 1.5em 1.5em;
                 }
-
 
                 h5{
                     display: inline-block;
@@ -1143,27 +1091,8 @@ body{
     }
 }
 
-.clear{
-    display: block;
-    height: border-box;
-    clear: both;
-}
-
-#map-canvas {
-    display: inline-block;
-    position: relative;
-    width: 100%;
-    height: 25em;
-    background-size: 100% 100%;
-    background-image: url('../img/map.png');
-    background-repeat: no-repeat;
-    z-index: 1;
-}
-
 .page-img{
     background-color: #FFFFFF;
-    /*margin-top: 0.7em;*/
-    /*margin-bottom: 0.5em;*/
     float: left;
     height: fit-content;
 }
@@ -1223,6 +1152,7 @@ body{
     h1, h2, h3, h4, h5, h6 {
         color: inherit;
     }
+    
     p{
         display: block;
         clear: both;
@@ -1250,46 +1180,9 @@ body{
 {
     #map-wrapper{
         display: block;
-        width: 70%;
-        margin: auto 15%;
+        width: 80%;
+        margin: auto 10%;
         height: 10em;
-    }
-}
-
-.infoWindow {
-    position: relative;
-    line-height: 1.35em;
-    text-align: center;
-    overflow:hidden;
-    height: 8em;
-    width: 20em;
-    @media  screen and (max-width: 600px)
-    { 
-        width: 11em;
-        height: 11em;
-    }
-    
-    .header{
-        display: block;
-        position: absolute;
-        background-color: #1C68AA;
-        color: #FFFFFF;
-        top: 0;
-        width: 100%;
-        height: 3em;
-        h4{
-            display: block;
-            position: relative;
-            width: 100%;
-            height: 100%;
-            line-height: 100%;
-        }
-    }
-    p{
-        display: block;
-        position: relative;
-        top: 3em;
-        height: 3em;
     }
 }
 
@@ -1406,7 +1299,6 @@ body{
     box-sizing: border-box;
     overflow: hidden;
     width:100%;
-    /*margin-top: 1.2em;*/
     margin-bottom: 0;
     padding: 0;
     @media screen and (max-width: 600px)
@@ -1417,9 +1309,9 @@ body{
     .panes{
         list-style:none;
         position:relative;
-        width:500%; /* Number of panes * 100% */
+        width:500%; /* Numero di pannelli * 100% */
         padding: 0;
-        overflow:hidden; /* This is used solely to clear floats, it does not add functionality. */
+        overflow:hidden; /* Usato per eliminare i floats */
         margin: 0;
         -moz-animation: carousel 45s infinite;
         -webkit-animation: carousel 45s infinite;
@@ -1430,7 +1322,7 @@ body{
             padding: 0;
             position:relative;
             float:left;
-            width: 20%; /* 100 / number of panes */
+            width: 20%; /* 100 / numero di pannelli */
             
             a{
                 display: block;
@@ -1560,38 +1452,37 @@ body{
             background-image: url('../img/768/main-image.png');
         }
     }
-
-    .carousel{
-        li{
-            &:first-child{
-                .lazy-image{
-                    background-image: url('../img/carousel/768/carousel-1.png');
+    @media screen and (min-width: 601px){
+        .carousel{
+            li{
+                &:first-child{
+                    .lazy-image{
+                        background-image: url('../img/carousel/768/carousel-1.png');
+                    }
                 }
-            }
-            &:nth-child(2){
-                .lazy-image{
-                    background-image: url('../img/carousel/768/carousel-2.png');
+                &:nth-child(2){
+                    .lazy-image{
+                        background-image: url('../img/carousel/768/carousel-2.png');
+                    }
                 }
-            }
-            &:nth-child(3){
-                .lazy-image{
-                    background-image: url('../img/carousel/768/carousel-3.png');
+                &:nth-child(3){
+                    .lazy-image{
+                        background-image: url('../img/carousel/768/carousel-3.png');
+                    }
                 }
-            }
-            &:nth-child(4){
-                .lazy-image{
-                    background-image: url('../img/carousel/768/carousel-4.png');
+                &:nth-child(4){
+                    .lazy-image{
+                        background-image: url('../img/carousel/768/carousel-4.png');
+                    }
                 }
-            }
-            &:nth-child(5){
-                .lazy-image{
-                    background-image: url('../img/carousel/768/carousel-5.png');
+                &:nth-child(5){
+                    .lazy-image{
+                        background-image: url('../img/carousel/768/carousel-5.png');
+                    }
                 }
             }
         }
     }
-
-    
 }
 
 @media screen and (max-width: 480px){

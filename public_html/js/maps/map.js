@@ -47,29 +47,31 @@ function initialize() {
 
 	map.setOptions({styles: styleArray});
 
-	var infowindow = new google.maps.InfoWindow({
-	    content: contentString,
-	    position: fbSpedLatLng,
-	    maxWidth: '300px',
-	    disableAutoPan: true,
-	});
-	infowindow.open(map);
+//	var infowindow = new google.maps.InfoWindow({
+//	    content: contentString,
+//	    position: fbSpedLatLng,
+//	    maxWidth: '300px',
+//	    disableAutoPan: true,
+//	});
+//	infowindow.open(map);
 
 	var marker = new google.maps.Marker({
 		title: 'FB Sped S.r.l. - Uffici',
 		map: map,
+                position: fbSpedLatLng,
 	});
-	marker.setVisible(false);
-
-	google.maps.event.addListener(infowindow, 'click', function() {
-	    map.setZoom(26);
-	    map.setCenter(infowindow.getPosition());
-	});
-
-	google.maps.event.addListener(infowindow, 'closeclick', function() {
-		marker.setPosition(this.getPosition());
-		marker.setVisible(true);
-	});
+	marker.setVisible(true);
+//        marker.open(map);
+        map.setCenter(marker.getPosition());
+//	google.maps.event.addListener(infowindow, 'click', function() {
+//	    map.setZoom(26);
+//	    map.setCenter(infowindow.getPosition());
+//	});
+//
+//	google.maps.event.addListener(infowindow, 'closeclick', function() {
+//		marker.setPosition(fbSpedLatLng);
+//		marker.setVisible(true);
+//	});
 
 	google.maps.event.addListener(marker, 'click', function(){
 		this.setVisible(false);

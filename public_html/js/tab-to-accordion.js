@@ -4,13 +4,17 @@ var TabToAccordion = {
     init: function()
     {
         TabToAccordion.current = $('.current');
-        TabToAccordion.current.prop('setted', true);
-        TabToAccordion.current.prop('open', true);
+        if(TabToAccordion.current.length > 0)
+        {
+            TabToAccordion.current.prop('setted', true);
+            TabToAccordion.current.prop('open', true);
+        }
+        else
+            TabToAccordion.current = null;
        
         var accordion_links = $('.tab_pane').find('a:not(.close)');
         var accordion_links_close = $('.tab_pane').find('.close');
         var trasportiDesktop = $('#trasporti-desktop');
-        console.log('trasporti desktop', trasportiDesktop);
         if(trasportiDesktop.length == 0)
         {
             TabToAccordion.home = false;

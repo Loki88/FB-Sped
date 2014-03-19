@@ -67,12 +67,6 @@ $second-level-text: #FFFFFF;
             }
             padding: auto 0.4em;
             border: 0;
-/*            &:hover {
-                border-width: 0 1pt 0 1pt;
-                
-                border-style: outset;
-                border-color: #FFA01A;
-            }*/
             
             a{
                 display: inline-block;
@@ -162,11 +156,6 @@ $second-level-text: #FFFFFF;
                 }
                 
                 &:hover{
-/*                    background: -webkit-linear-gradient(top, #1C68AA , #FFA01A);  For Safari 5.1 to 6.0 
-                    background: -o-linear-gradient(bottom,  #1C68AA , #FFA01A);  For Opera 11.1 to 12.0 
-                    background: -moz-linear-gradient(bottom,  #1C68AA , #FFA01A);  For Firefox 3.6 to 15 
-                    background: linear-gradient(to bottom,  #1C68AA , #FFA01A);  Standard syntax 
-                    color: #FFFFFF;*/
                     .icon{
                         background-image: url('../img/icons/menu-hover.png');
                     }
@@ -192,9 +181,9 @@ $second-level-text: #FFFFFF;
                 border-right-width: 1pt;
                 border-style: groove;
                 border-color: #030320;
-                width: auto;
+                width: 100%;
                 height: auto;
-                top: 3.1em;
+                top: 3.05em;
                 z-index: 3;
                 left: -10000px;
 
@@ -263,7 +252,7 @@ $second-level-text: #FFFFFF;
                     }
                 }
                 ul{
-                    width: 272%;
+                    width: 220%;
                 }
             }
         }
