@@ -3,18 +3,24 @@
     Author     : Lorenzo Di Giuseppe
 */
 .column {
-  display: block;
   float: left;
   margin: 0.5em 0 0.5em 1.6%; }
   .column:first-child {
     margin-left: 0; }
 
 .column-right {
-  display: block;
   float: right;
   margin: 0.5em 1.6% 0.5em 0; }
   .column-right:first-child {
     margin-right: 0; }
+
+.column, .column-right {
+  display: block;
+  font-size: inherit; }
+  .column .col_1_5, .column .col_2_5, .column .col_3_5, .column .col_4_5, .column .col_5_5, .column-right .col_1_5, .column-right .col_2_5, .column-right .col_3_5, .column-right .col_4_5, .column-right .col_5_5 {
+    margin-top: 0.5em; }
+    .column .col_1_5:first-child, .column .col_2_5:first-child, .column .col_3_5:first-child, .column .col_4_5:first-child, .column .col_5_5:first-child, .column-right .col_1_5:first-child, .column-right .col_2_5:first-child, .column-right .col_3_5:first-child, .column-right .col_4_5:first-child, .column-right .col_5_5:first-child {
+      margin-top: 0; }
 
 @media only screen and (max-width: 600px) {
   .column:first-child {
@@ -27,8 +33,15 @@
     margin: 0; }
 
   .column-right {
-    margin: 0 0 0.5em 0; } }
+    margin: 0 0 0.5em 0; }
+
+  .column .col_1_5, .column .col_2_5, .column .col_3_5, .column .col_4_5, .column .col_5_5, .column-right .col_1_5, .column-right .col_2_5, .column-right .col_3_5, .column-right .col_4_5, .column-right .col_5_5 {
+    font-size: inherit;
+    margin-top: 0.5em; }
+    .column .col_1_5:first-child, .column .col_2_5:first-child, .column .col_3_5:first-child, .column .col_4_5:first-child, .column .col_5_5:first-child, .column-right .col_1_5:first-child, .column-right .col_2_5:first-child, .column-right .col_3_5:first-child, .column-right .col_4_5:first-child, .column-right .col_5_5:first-child {
+      margin-top: 0; } }
 .section {
+  font-size: inherit;
   clear: both;
   padding: 0px;
   margin: 0px;
@@ -45,6 +58,7 @@
   clear: both; }
 
 .group {
+  font-size: inherit;
   zoom: 1;
   /* Per IE 7 */ }
   .group:before, .group:after {
@@ -72,10 +86,9 @@
   .section {
     clear: both;
     padding: 0px;
-    margin: 0px;
-    margin-bottom: 0.7em; }
+    margin: 0.5em 0px; }
     .section:first-child {
-      margin-top: 0.7em; }
+      margin-top: 0.5em; }
 
   .col_1_5, .col_2_5, .col_3_5, .col_4_5, .col_5_5 {
     width: 100%; } }

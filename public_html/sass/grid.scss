@@ -4,23 +4,36 @@
 */
 
 $orizontal-margin: 1.6%;
+$horizontal-margin: 1.6%;
+$vertical-margin: 0.5em;
+$vertical-margin-mobile: 0.5em;
 
-//colonne
+
+//COLONNE
 .column{
-    display: block;
     float:left;
-    margin: 0.5em 0 0.5em $orizontal-margin;
+    margin: 0.5em 0 0.5em $horizontal-margin;
     &:first-child{
         margin-left: 0;
     }
 }
 
 .column-right{
-    display: block;
     float: right;
-    margin: 0.5em $orizontal-margin 0.5em 0;
+    margin: 0.5em $horizontal-margin 0.5em 0;
     &:first-child{
         margin-right: 0;
+    }
+}
+
+.column, .column-right{
+    display: block;
+    font-size: inherit;
+    .col_1_5, .col_2_5, .col_3_5, .col_4_5, .col_5_5{
+        margin-top: $vertical-margin;
+        &:first-child{
+            margin-top: 0;
+        }
     }
 }
 
@@ -39,9 +52,22 @@ $orizontal-margin: 1.6%;
     .column-right {
         margin: 0 0 0.5em 0;
     }
+    .column, .column-right{
+        .col_1_5, .col_2_5, .col_3_5, .col_4_5, .col_5_5{
+            font-size: inherit;
+            margin-top: $vertical-margin-mobile;
+            &:first-child{
+                margin-top: 0;
+            }
+        }
+    }
 }
 
+//Raggruppatori di elementi
+
+//Section imposta i margini di sezione e previene il floating degli elementi a destra e sinistra
 .section{
+    font-size: inherit;
     clear: both;
     padding: 0px;
     margin: 0px;
@@ -60,6 +86,7 @@ $orizontal-margin: 1.6%;
     clear:both;
 }
 .group {
+    font-size: inherit;
     zoom:1; /* Per IE 7 */
     &:before,  &:after {
         content: ""; //Assicura la separazione dei contenuti
@@ -98,10 +125,9 @@ $orizontal-margin: 1.6%;
     .section{
         clear: both;
         padding: 0px;
-        margin: 0px;
-        margin-bottom: 0.7em;
+        margin: $vertical-margin-mobile 0px;
         &:first-child{
-            margin-top: 0.7em;
+            margin-top: $vertical-margin-mobile;
         }
     }
     

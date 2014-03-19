@@ -48,6 +48,7 @@ body {
     height: auto;
     margin-bottom: 0; }
   #page-header #logo {
+    box-sizing: border-box;
     display: block;
     height: 6em;
     padding: 0;
@@ -118,7 +119,8 @@ body {
       display: block; }
     #page-header #logo {
       clear: both;
-      height: auto; }
+      height: auto;
+      margin-bottom: 0.5em; }
       #page-header #logo #logo-img {
         height: 100%;
         width: 40%;
@@ -140,7 +142,11 @@ body {
         width: 50%;
         float: left;
         margin: auto 0;
-        text-align: right; } }
+        text-align: right; }
+      #page-header #logo:after {
+        content: "";
+        display: table;
+        clear: both; } }
 @media screen and (max-width: 200px) {
   #page-header #logo #logo-img {
     height: 100%;
@@ -833,14 +839,19 @@ body {
     .content-box-shadow {
       box-shadow: 1pt 1pt 2pt #1C68AA; } }
 
-.column .content-box:not(:last-child) {
-  margin-bottom: 1.6em; }
-@media screen and (max-width: 600px) {
-  .column .content-box {
-    margin-bottom: 1em; }
-    .column .content-box:not(:last-child) {
-      margin-bottom: 1em; } }
-
+/*.column{
+    .content-box{
+        &:not(:last-child){
+            margin-bottom: 1.6em; 
+        }
+        @media screen and (max-width: 600px){
+            margin-bottom: 1em;
+            &:not(:last-child){
+                margin-bottom: 1em;
+            }
+        }
+    }
+}*/
 .content-box {
   box-sizing: initial;
   padding-bottom: 0.5em; }
