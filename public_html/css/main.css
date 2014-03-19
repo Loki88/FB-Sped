@@ -81,7 +81,7 @@ body {
       padding: 0;
       left: 20%;
       right: 20%;
-      top: 1.5em;
+      top: 0.8em;
       bottom: auto;
       width: 60%;
       text-align: center; }
@@ -120,7 +120,7 @@ body {
     #page-header #logo {
       clear: both;
       height: auto;
-      margin-bottom: 0.5em; }
+      margin-bottom: 0.1em; }
       #page-header #logo #logo-img {
         height: 100%;
         width: 40%;
@@ -178,7 +178,8 @@ body {
   display: inline-block;
   position: relative;
   height: auto;
-  float: left; }
+  float: left;
+  margin-top: 0.8em; }
   .lang-menu .decorator {
     display: none;
     visibility: hidden; }
@@ -235,7 +236,8 @@ body {
   .lang-menu a:not(.controls) {
     box-sizing: border-box;
     width: 100%;
-    clear: both; } }
+    clear: both;
+    margin: 0.1em 0; } }
 @media screen and (max-width: 600px) {
   .lang-menu {
     display: block;
@@ -381,7 +383,7 @@ body {
       margin: auto; } }
 #main-image {
   box-sizing: border-box;
-  margin-top: 1.2em;
+  /*margin-top: 1.2em;*/
   display: table;
   position: relative;
   height: fit-content;
@@ -433,9 +435,12 @@ body {
         text-overflow: ellipsis-word;
         height: 60%; }
 
-@media screen and (max-width: 600px) {
-  #main-image {
-    margin-top: 1em; } }
+/*@media screen and (max-width: 600px)
+{
+    #main-image{
+        margin-top: 1em;
+    }
+}*/
 @media screen and (max-width: 768px) {
   #main-image {
     /*margin-top: 0.5em;*/ }
@@ -1076,7 +1081,7 @@ body {
   box-sizing: border-box;
   overflow: hidden;
   width: 100%;
-  margin-top: 1.2em;
+  /*margin-top: 1.2em;*/
   margin-bottom: 0;
   padding: 0; }
   @media screen and (max-width: 600px) {
