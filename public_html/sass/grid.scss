@@ -12,7 +12,7 @@ $vertical-margin-mobile: 0.5em;
 //COLONNE
 .column{
     float:left;
-    margin: 0.5em 0 0.5em $horizontal-margin;
+    margin: 0 0 0 $horizontal-margin;
     &:first-child{
         margin-left: 0;
     }
@@ -20,7 +20,7 @@ $vertical-margin-mobile: 0.5em;
 
 .column-right{
     float: right;
-    margin: 0.5em $horizontal-margin 0.5em 0;
+    margin: 0 $horizontal-margin 0 0;
     &:first-child{
         margin-right: 0;
     }
@@ -38,19 +38,17 @@ $vertical-margin-mobile: 0.5em;
 }
 
 @media only screen and (max-width: 600px) {
-    .column:first-child
-    {
-        margin: 0;
-    }
     .column {
         margin: 0.5em 0 0 0;
-    }
-    .column-right:first-child
-    {
-        margin: 0;
+        &:first-child{
+            margin: 0;
+        }
     }
     .column-right {
         margin: 0 0 0.5em 0;
+        &:first-child{
+            margin: 0;
+        }
     }
     .column, .column-right{
         .col_1_5, .col_2_5, .col_3_5, .col_4_5, .col_5_5{
