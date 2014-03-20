@@ -2,9 +2,86 @@
     Created on : 9-feb-2014, 18.15.20
     Author     : Lorenzo Di Giuseppe <lorenzo.digiuseppe88@gmail.com>
 */
+
+@mixin border-box(){
+    -webkit-box-sizing: border-box; /* Android ≤ 2.3, iOS ≤ 4 */
+     -moz-box-sizing: border-box; /* Firefox 1+ */
+          box-sizing: border-box; /* Chrome, IE 8+, Opera, Safari 5.1 */
+}
+
+@mixin content-box(){
+    -webkit-box-sizing: content-box; /* Android ≤ 2.3, iOS ≤ 4 */
+     -moz-box-sizing: content-box; /* Firefox 1+ */
+          box-sizing: content-box; /* Chrome, IE 8+, Opera, Safari 5.1 */
+}
+
+@mixin border-radius($topleft, $topright, $bottomright, $bottomleft) {
+  -webkit-border-radius: $topleft $topright $bottomright $bottomleft;
+     -moz-border-radius: $topleft $topright $bottomright $bottomleft;
+      -ms-border-radius: $topleft $topright $bottomright $bottomleft;
+          border-radius: $topleft $topright $bottomright $bottomleft;
+}
+
 body{
     background-color: #FFFFFF;
     position: relative;
+}
+
+html, body {
+    height: 100%;
+    min-height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.body-background {
+    display: table;
+    z-index: -2;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    width: 100%;
+    background: -webkit-linear-gradient(top, #8DBF3F , #FFFFFF); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(bottom,  #8DBF3F , #FFFFFF); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(bottom,  #8DBF3F , #FFFFFF); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(to bottom,  #8DBF3F , #FFFFFF); /* Standard syntax */
+    
+    @media screen and (max-width: 600px){
+        background: none;
+        border-top: 1pt inset #8DBF3F;
+    }
+    
+    .decorator{
+        display: none;
+        visibility: hidden;
+    }
+}
+
+.wrapper{
+    display: block;
+    float: none;
+    width: 98%;
+    margin: 0 1%;
+    @media screen and (min-width: 600px){
+        width: 100%;
+        margin: 0;
+    }
+    
+}
+
+@media screen and (min-width: 1281px)
+{
+    .wrapper{
+        width: 1140px;
+        margin: 0 auto;
+        padding: 0;
+        header{
+            width: 100%;
+            padding: 0;
+            margin: 0;
+        }
+    }
 }
 
 @media screen and (max-width: 600px){
@@ -67,7 +144,7 @@ body{
     }
 
     #logo {
-        box-sizing: border-box;
+        @include border-box;
         display: block;
         height: 6em;
         padding: 0;
@@ -129,19 +206,12 @@ body{
             }
         }
     }
-    
-    #breadcrumb {
-        display: block;
+    .jump{
         position: absolute;
-        left: -10000px;
-        height: 0;
-        padding: 0.2em 0;
-        line-height: 2em;
+        width: 30%;
+        left: -9999px;
+        text-align: center;
     }
-}
-
-.inverse{
-    float: right;
 }
 
 @media screen and (max-width: 600px)
@@ -156,7 +226,7 @@ body{
         #logo{
             clear: both;
             height: auto;
-            margin-bottom: 0.1em;
+            margin-bottom: 0.5em;
             
             #logo-img{
                 height: 100%;
@@ -179,10 +249,10 @@ body{
                 position: relative;
                 left: auto;
                 right: auto;
-                top: 0.5em;
-                width: 50%;
-                float: left;
-                margin: auto 0;
+                top: 0;
+                width: 60%;
+                float: right;
+                margin: 0.5em 0;
                 text-align: right;
             }
             
@@ -195,7 +265,7 @@ body{
     }
 }
 
-@media screen and (max-width: 200px)
+@media screen and (max-width: 260px)
 {
     #page-header{
         #logo{
@@ -207,9 +277,9 @@ body{
                 float: none;               
             }
             #logo-text{
-                width: 80%;
+                width: 90%;
                 float: none;
-                margin: auto 10%;
+                margin: auto 5%;
                 margin-bottom: 0.4em;
                 text-align: center;
             }
@@ -315,11 +385,11 @@ body{
     }
 }
 
-@media screen and (min-width: 601px) and (max-width: 768px)
+@media screen and (max-width: 768px)
 {
     .lang-menu{
         a:not(.controls){
-            box-sizing: border-box;
+            @include border-box;
             width: 100%;
             clear: both;
             margin: 0.1em 0;
@@ -366,7 +436,7 @@ body{
             img{
                 display: block;
                 position: relative;
-                height: 100%; 
+                height: 90%; 
                 margin: 0 auto;
             }
         }
@@ -384,11 +454,11 @@ body{
             margin: 0;
             height: 0;
             top: 3.10em;
-            box-sizing: border-box;
+            @include border-box;
             
             a{
                 display: block;
-                box-sizing: border-box;
+                @include border-box;
                 position: relative;
                 line-height: auto;
                 width: 100%;
@@ -409,11 +479,12 @@ body{
                 span{
                     display: block;
                     position: relative;
-                    float: left;
-                    margin: 0.75em 0;
+                    float: right;
+                    margin: auto 0.2em;
                     padding: 0;
                     width: auto;
-                    height: 1.5em;
+                    height: 100%;
+                    line-height: 1.8em;
                 }
 
                 img{
@@ -422,10 +493,10 @@ body{
                     margin: auto 5%;
                 }
 
-                @media screen and (max-width: 280px){
+                @media screen and (max-width: 320px){
                     img{
-                        width: auto;
-                        height: 90%;
+/*                        width: auto;
+                        height: 90%;*/
                         margin-left: auto;
                         margin-right: auto;
                         float: none;
@@ -515,8 +586,52 @@ body{
     }
 }
 
+.breadcrumb{
+    display: none;
+    position: absolute;
+    left: -99999px;
+    height: 0;
+    width: 100%;
+    margin: 0.5em auto;
+    
+    @media screen and (max-width: 600px){
+        display: block;
+        position: relative;
+        left: 0;
+        height: auto;
+    }
+    
+    .wrapper{
+        margin: auto;
+        div{
+            @include border-radius(0.2em, 0.2em, 0.2em, 0.2em); 
+            display: inline-block;
+            @include border-box;
+            border-style: solid;
+            border-width: 1pt;
+            border-color: #f6eded;
+            padding: 0.2em 0.5em;
+            
+            a{
+                color: #1C68AA;
+                &:hover{
+                    color: #FFA01A;
+                }
+            }
+            
+            .hidden{
+                position: absolute;
+                left: -99999px;
+            }
+        }
+        
+    }
+
+    
+}
+
 #main-image{
-    box-sizing: border-box;
+    @include content-box;
     display: table;
     position: relative;
     height: fit-content;
@@ -760,16 +875,17 @@ body{
 @media screen and (max-width: 600px)
 {
     .tab_to_accordion{
+        @include content-box;
         margin-top: 1em;
         width: 100%;
-        margin-left: -1pt;
+        /*margin-left: -1pt;*/
         .tab_right_col{
             display: none;
             visibility: hidden;
         }
         .tab_contents{
             margin: 0;
-            
+            @include border-box;
             .decorator{
                 display: block;
                 position: relative;
@@ -787,8 +903,9 @@ body{
             }
             
             .tab_pane{
+                @include content-box;
                 .accordion-button{
-                    display: table;
+                    display: block;
                     visibility: visible;
                     width: 100%;
                     height: auto;
@@ -1098,7 +1215,7 @@ body{
 }
 
 .lazy-image{
-    box-sizing: border-box;
+    @include border-box;
     position: relative;
     width: 100%;
     background-repeat: no-repeat;
@@ -1119,7 +1236,7 @@ body{
 }
 
 .content-box {
-    box-sizing: border-box;
+    @include border-box;
     padding-bottom: 0.5em;
 
     .decorator, .decorator-bottom, .decorator-header{
@@ -1296,7 +1413,7 @@ body{
 }
 
 .carousel{
-    box-sizing: border-box;
+    @include border-box;
     overflow: hidden;
     width:100%;
     margin-bottom: 0;

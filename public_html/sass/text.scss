@@ -71,12 +71,24 @@ h1, h2, h3, h4, h5, h6 {
     }
 }
 
+.breadcrumb{
+    font-size: 0.8em;
+}
+
 .lang-menu, #navigation{
     font-size: 1em;
     @media screen and (max-width: 600px){
         font-size: 0.75em;
     }
 }
+
+/*@media screen and (min-width: 320px) and (max-width: 600px){
+    .lang-menu {
+        span{
+            font-size: 1.2em;
+        }
+    }
+}*/
 
 #sol-trasporti, #links-trasporti{
     zoom: 1;

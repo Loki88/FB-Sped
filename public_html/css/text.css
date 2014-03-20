@@ -44,12 +44,22 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 0.8em;
     line-height: 1.2em; } }
 
+.breadcrumb {
+  font-size: 0.8em; }
+
 .lang-menu, #navigation {
   font-size: 1em; }
   @media screen and (max-width: 600px) {
     .lang-menu, #navigation {
       font-size: 0.75em; } }
 
+/*@media screen and (min-width: 320px) and (max-width: 600px){
+    .lang-menu {
+        span{
+            font-size: 1.2em;
+        }
+    }
+}*/
 #sol-trasporti, #links-trasporti {
   zoom: 1; }
   #sol-trasporti .content-box .header h1, #sol-trasporti .content-box .header h2, #sol-trasporti .content-box .header h3, #sol-trasporti .content-box .header h4, #sol-trasporti .content-box .header h5, #sol-trasporti .content-box .header h6, #links-trasporti .content-box .header h1, #links-trasporti .content-box .header h2, #links-trasporti .content-box .header h3, #links-trasporti .content-box .header h4, #links-trasporti .content-box .header h5, #links-trasporti .content-box .header h6 {

@@ -7,6 +7,25 @@ $first-level-text: #FFFFFF;
 $second-level-color: #70AB4B;
 $second-level-text: #FFFFFF;
 
+@mixin border-box(){
+    -webkit-box-sizing: border-box; /* Android ≤ 2.3, iOS ≤ 4 */
+     -moz-box-sizing: border-box; /* Firefox 1+ */
+          box-sizing: border-box; /* Chrome, IE 8+, Opera, Safari 5.1 */
+}
+
+@mixin content-box(){
+    -webkit-box-sizing: content-box; /* Android ≤ 2.3, iOS ≤ 4 */
+     -moz-box-sizing: content-box; /* Firefox 1+ */
+          box-sizing: content-box; /* Chrome, IE 8+, Opera, Safari 5.1 */
+}
+
+@mixin border-radius($topleft, $topright, $bottomright, $bottomleft) {
+  -webkit-border-radius: $topleft $topright $bottomright $bottomleft;
+     -moz-border-radius: $topleft $topright $bottomright $bottomleft;
+      -ms-border-radius: $topleft $topright $bottomright $bottomleft;
+          border-radius: $topleft $topright $bottomright $bottomleft;
+}
+
 .navigation{
     display: table;
     position: relative;
@@ -15,6 +34,14 @@ $second-level-text: #FFFFFF;
     margin: 0;
     margin-top: 0.6em;
     border-bottom: 1pt inset #1C68AA;
+    
+    .breadcrumb{
+        display: block;
+        box-sizing: content-box;
+        text-align: center;
+        position: absolute;
+        left: -99999px;
+    }
     
     .decorator{
         display: none;
@@ -58,7 +85,7 @@ $second-level-text: #FFFFFF;
             display: inline-block;
             height: 1.8em;
             position: relative;
-            box-sizing: border-box;
+            @include content-box;
             float: left;
             margin: 0;
             margin-left: 0.2em;
@@ -99,7 +126,7 @@ $second-level-text: #FFFFFF;
         border-bottom-width: 0.1em;
         border-bottom-style: outset;
         border-color: #1C68AA;
-        box-sizing: border-box;
+        @include border-box;
         
         .wrapper{
             height: auto;
@@ -117,14 +144,37 @@ $second-level-text: #FFFFFF;
                 line-height: 2em;
                 text-decoration: none;
             }
-
+            
+/*            .breadcrumb{
+                left: 6.5%;
+                top: 3.05em;
+                width: 80%;
+                height: 1.6em;
+                line-height: 1.6em;
+                @include border-radius(0, 0, 0.2em, 0.2em); 
+                padding: 0.3em 0.5em;
+                margin-left: auto;
+                margin-right: auto;
+                background-color: #8DBF3F;
+                border-style: ridge;
+                border-width: 0pt 1pt 1pt 1pt;
+                border-color: #1C68AA;
+                text-overflow: ellipsis;
+                
+                .hidden{
+                    position: absolute;
+                    left: -99999px;
+                }
+            }*/
+            
             /* Stile di base per il menù chiuso */
             .menu-link {
                 display: inline-block;
-                box-sizing: border-box;
+                position: relative;
+                @include border-box;
                 height: 3em;
                 line-height: 3em;
-                width: 98%;
+                width: 100%;
                 margin-bottom: -0.01em;
                 padding: 0 1%;
                 background-color: rgba(28,104,170,0.8);
@@ -134,11 +184,12 @@ $second-level-text: #FFFFFF;
                 z-index: 5;
                 
                 span{
-                    display: inline-block;
-                    position: relative;
+                    display: block;
+                    position: absolute;
                     float: left;
-                    width: 60%;
-                    margin: 0 5%;
+                    width: 80%;
+                    left: 10%;
+                    right: 10%;
                     height: 2.8em;
                     color: inherit;
                 }
@@ -171,7 +222,7 @@ $second-level-text: #FFFFFF;
 
             ul {
                 font-size: inherit;
-                box-sizing: content-box;
+                @include border-box;
                 display: block;
                 position: absolute;
                 list-style: none;
@@ -189,6 +240,7 @@ $second-level-text: #FFFFFF;
 
                 li {
                   display: inline-block;
+                  @include border-box;
                   width: 100%;
                   height: 0em;
                   border: 0;
@@ -252,7 +304,12 @@ $second-level-text: #FFFFFF;
                     }
                 }
                 ul{
-                    width: 220%;
+                    width: 221%;
+                }
+                .breadcrumb{
+                    width: 180%;
+                    left: 0;
+                    margin: 0;
                 }
             }
         }
@@ -278,6 +335,10 @@ $second-level-text: #FFFFFF;
                     }
                 }
             }
+            
+            .breadcrumb{
+                left: -99999px;
+            }
         }
     }
 
@@ -290,69 +351,9 @@ $second-level-text: #FFFFFF;
                 height: auto;
             }
         }
-    }
-}
-
-html, body {
-    height: 100%;
-    min-height: 100%;
-}
-
-.body-background {
-    display: table;
-    z-index: -2;
-    margin: 0;
-    padding: 0;
-    border: 0;
-    width: 100%;
-    background: -webkit-linear-gradient(top, #8DBF3F , #FFFFFF); /* For Safari 5.1 to 6.0 */
-    background: -o-linear-gradient(bottom,  #8DBF3F , #FFFFFF); /* For Opera 11.1 to 12.0 */
-    background: -moz-linear-gradient(bottom,  #8DBF3F , #FFFFFF); /* For Firefox 3.6 to 15 */
-    background: linear-gradient(to bottom,  #8DBF3F , #FFFFFF); /* Standard syntax */
-    
-    @media screen and (max-width: 600px){
-        background: none;
-        border-top: 1pt inset #8DBF3F;
-    }
-    
-    .decorator{
-        display: none;
-        visibility: hidden;
-    }
-}
-
-
-@media screen and (max-width: 1280px)
-{
-    body{
-        width: 100%;
-        margin: 0;
-        padding: 0;
-    }
-}
-
-.wrapper{
-    display: block;
-    float: none;
-    width: 98%;
-    margin: 0 1%;
-    @media screen and (min-width: 600px){
-        width: 100%;
-        margin: 0;
-    }
-    
-}
-
-@media screen and (min-width: 1281px)
-{
-    .wrapper{
-        width: 1140px;
-        margin: 0 auto;
-        padding: 0;
-        header{
-            width: 100%;
-            padding: 0;
-            margin: 0;
+        #breadcrumb{
+            left: -99999px;
         }
     }
 }
+
