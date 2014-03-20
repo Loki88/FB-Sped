@@ -1052,62 +1052,82 @@ html, body {
 }
 
 .trasporti-links {
+    
      .content-box{
-        .header{
-            min-height: 5em;
-            height: 6em;
-            max-height: 8em;
-
-            .icon{
-                display: table;
-                position: relative;
-                height: 2em;
-                margin: 0.3em auto;
-                padding: 0 auto;
-                width: 80%;
-                background-position: center;
-                background-repeat: no-repeat;
-                background-size: 2em auto;
-            }
-
-            h5{
-                margin: 0;
-                padding: 0 10%;
-                height: 3em;
-                font-size: 0.8em;
-                width: 80%;
-            }
-        }
-
-        p{
-            color: #000000;
-            @media screen and (max-width: 600px){
-                -webkit-hyphens: auto;
-                -moz-hyphens: auto;
-                -ms-hyphens: auto;
-                hyphens: auto;
-            }
-        }
-
-        a{
+         a{
             display: block;
-            position: relative;
-            width: 90%;
-            margin: 0.3em auto;
-            clear: both;
-            color: #1C68AA;
-            text-decoration: underline;
-            text-align: right;
+            padding: 0;
+            margin: 0;
+            width: 100%;
+            height: 100%;
+            text-decoration: none;
+            @include content-box;
+            .header{
+                min-height: 5em;
+                height: 6em;
+                max-height: 8em;
 
-            &:hover{
-                color:#FFA01A;
+                .icon{
+                    display: table;
+                    position: relative;
+                    height: 2em;
+                    margin: 0.3em auto;
+                    padding: 0 auto;
+                    width: 80%;
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    background-size: 2em auto;
+                }
+
+                h5{
+                    margin: 0;
+                    padding: 0 10%;
+                    height: 3em;
+                    font-size: 0.8em;
+                    width: 80%;
+                }
+            }
+
+            p{
+                color: #000000;
+                text-decoration: none;
+                @media screen and (max-width: 600px){
+                    -webkit-hyphens: auto;
+                    -moz-hyphens: auto;
+                    -ms-hyphens: auto;
+                    hyphens: auto;
+                }
+            }
+
+            span{
+                display: block;
+                position: relative;
+                width: 90%;
+                margin: 0.3em auto;
+                clear: both;
+                color: #1C68AA;
+                text-decoration: underline;
+                text-align: right;
+            }
+        }
+        &:hover{
+            .header{
+                color: #FFA01A;
+            }
+
+            span {
+                color: #FFA01A;
             }
         }
     }
-        
     #truck{
         .icon{
             background-image: url('../img/icons/icona-truck.png');
+        }
+        &:hover{
+            .icon{
+                background-image: url('../img/icons/icona-truck-hover.png');
+            }
         }
     }
 
@@ -1115,11 +1135,21 @@ html, body {
         .icon{
             background-image: url('../img/icons/icona-train.png');
         }
+        &:hover{
+            .icon{
+                background-image: url('../img/icons/icona-train-hover.png');
+            }
+        }
     }
 
     #ship{
         .icon{
             background-image: url('../img/icons/icona-ship.png');
+        }
+        &:hover{
+            .icon{
+                background-image: url('../img/icons/icona-ship-hover.png');
+            }
         }
     }
 
@@ -1127,11 +1157,21 @@ html, body {
         .icon{
             background-image: url('../img/icons/icona-plane.png');
         }
+        &:hover{
+            .icon{
+                background-image: url('../img/icons/icona-plane-hover.png');
+            }
+        }
     }
 
     #combined{
         .icon{
             background-image: url('../img/icons/icona-combined.png');
+        }
+        &:hover{
+            .icon{
+                background-image: url('../img/icons/icona-combined-hover.png');
+            }
         }
     }
 }
@@ -1153,11 +1193,11 @@ html, body {
     .mobile_content{
         display: block;
     }
-    
+/*    
     #sol-trasporti{
         margin: 0.5em auto;
         margin-bottom: 0;
-    }
+    }*/
     
     .trasporti-links{
         .content-box{
@@ -1165,44 +1205,45 @@ html, body {
             position: relative;
             height: 100%;
             padding: 0;
-            
-            .header{
-                display: block;
-                min-height: 2em;
-                height: 2.5em;
-                border: 0;
-                margin-bottom: 0;
+            a{
+                .header{
+                    display: block;
+                    min-height: 2em;
+                    height: 2.5em;
+                    border: 0;
+                    margin-bottom: 0;
 
-                .icon{
-                    display: inline-block;
-                    float: left;
-                    width: 20%;
-                    height: 1.5em;
-                    margin: 0.25em auto;
-                    background-size: 1.5em 1.5em;
+                    .icon{
+                        display: inline-block;
+                        float: left;
+                        width: 20%;
+                        height: 1.5em;
+                        margin: 0.25em auto;
+                        background-size: 1.5em 1.5em;
+                    }
+
+                    h5{
+                        display: inline-block;
+                        float: left;
+                        position: relative;
+                        width: 60%;
+                        height: auto;
+                        bottom: 0;
+                        padding: 0;
+                        margin: 0;
+                        margin-right: 20%;
+                        padding: 0;
+                        text-align: center;
+                        text-wrap: avoid;
+                    }
+                } 
+
+                p{
+                    display: block;
+                    clear: right;
+                    width: 90%;
+                    margin: 0.5em 5%;
                 }
-
-                h5{
-                    display: inline-block;
-                    float: left;
-                    position: relative;
-                    width: 60%;
-                    height: auto;
-                    bottom: 0;
-                    padding: 0;
-                    margin: 0;
-                    margin-right: 20%;
-                    padding: 0;
-                    text-align: center;
-                    text-wrap: avoid;
-                }
-            } 
-
-            p{
-                display: block;
-                clear: right;
-                width: 90%;
-                margin: 0.5em 5%;
             }
         }
     }
