@@ -16,31 +16,38 @@
 }
 
 $number_of_page: 5;
-$controls_to_top: 39%;
+$controls_to_top: 35%;
 
 .gallery{
     overflow: hidden;
     position: relative;
-    height: 15em;
-    padding-bottom: 2em;
     
     ul{
         list-style: none;
         margin: 0;
         padding: 0;
-    }
-    
-    input {
-        display: none;
+        li{
+            display: none;
+            position: relative;
+            width: 100%;
+            height: 100%;
+            float: left;
+            label{
+                display: block;
+                width: 100%;
+                height: 100%;
+                cursor: pointer;
+            }
+        }
     }
     
     .carousel{
         clear: both;
         display: block;
         position: relative;
-        width: 90%;
-        height: 80%;
-        margin: 0 auto;
+        width: 85%;
+        height: 13em;
+        margin: 0.5em auto;
         overflow: hidden; //usato per eliminare i floats
         
         .panes{
@@ -88,26 +95,40 @@ $controls_to_top: 39%;
         display: block;
         position: absolute;
         top: $controls_to_top;
-        width: 5%;
+        width: 3em;
         height: 3em;
         background-repeat: no-repeat;
         background-position: center center;
+        background-size: 100% 100%;
+        cursor: pointer;
+        
+        ul{
+            display: block;
+            width: 100%;
+            height: 100%;
+        }
+        li{
+            display: none;
+            float: left;
+        }
     }
     
     .left{
-        left: 0;
+        left: 1%;
+        background-image: url('../img/icons/slider-left.png');
     }
     
     .right{
-        right: 0;
+        right: 1%;
+        background-image: url('../img/icons/slider-right.png');
     }
     
     .bottom{
         display: block;
         position: relative;
-        height: 1.5em;
-        width: 9.5em;
-        margin: auto;
+        height: 1em;
+        width: 7em;
+        margin: 0.5em auto;
         
         ul{
             display: block;
@@ -117,17 +138,40 @@ $controls_to_top: 39%;
             
             li{
                 display: block;
-                width: 1.5em;
-                height: 1.5em;
+                @include border-box;
+                width: 1em;
+                height: 1em;
+                cursor: pointer;
                 margin: auto;
                 margin-left: 0.5em;
                 padding: 0;
                 float: left;
+                border-radius: 50%;
+                border-width: 1pt;
+                border-color: #1C68AA;
+                border-style: inset;
+                background-color: #327CCB;
                 
                 &:first-child{
                     margin-left: 0;
                 }
             }
         }
+    }
+    
+    input {
+        display: none;
+        
+        &:nth-child(1):checked ~ .controls li:nth-child(1){display: block;}
+        &:nth-child(2):checked ~ .controls li:nth-child(2){display: block;}
+        &:nth-child(3):checked ~ .controls li:nth-child(3){display: block;}
+        &:nth-child(4):checked ~ .controls li:nth-child(4){display: block;}
+        &:nth-child(5):checked ~ .controls li:nth-child(5){display: block;}
+        
+        &:nth-child(1):checked ~ .bottom li:nth-child(1){background-color: #000;}
+        &:nth-child(2):checked ~ .bottom li:nth-child(2){background-color: #000;}
+        &:nth-child(3):checked ~ .bottom li:nth-child(3){background-color: #000;}
+        &:nth-child(4):checked ~ .bottom li:nth-child(4){background-color: #000;}
+        &:nth-child(5):checked ~ .bottom li:nth-child(5){background-color: #000;}
     }
 }
