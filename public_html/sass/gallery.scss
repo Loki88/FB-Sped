@@ -1,0 +1,133 @@
+/* 
+    Created on : 21-mar-2014, 22.42.51
+    Author     : Lorenzo Di Giuseppe
+*/
+
+@mixin border-box(){
+    -webkit-box-sizing: border-box; /* Android ≤ 2.3, iOS ≤ 4 */
+     -moz-box-sizing: border-box; /* Firefox 1+ */
+          box-sizing: border-box; /* Chrome, IE 8+, Opera, Safari 5.1 */
+}
+
+@mixin content-box(){
+    -webkit-box-sizing: content-box; /* Android ≤ 2.3, iOS ≤ 4 */
+     -moz-box-sizing: content-box; /* Firefox 1+ */
+          box-sizing: content-box; /* Chrome, IE 8+, Opera, Safari 5.1 */
+}
+
+$number_of_page: 5;
+$controls_to_top: 39%;
+
+.gallery{
+    overflow: hidden;
+    position: relative;
+    height: 15em;
+    padding-bottom: 2em;
+    
+    ul{
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+    
+    input {
+        display: none;
+    }
+    
+    .carousel{
+        clear: both;
+        display: block;
+        position: relative;
+        width: 90%;
+        height: 80%;
+        margin: 0 auto;
+        overflow: hidden; //usato per eliminare i floats
+        
+        .panes{
+            display: block;
+            width: $number_of_page * 100%;
+            @include border-box;
+            border-width: 1pt;
+            border-style: inset;
+            border-color: #1C68AA;
+            height: 100%;
+            padding: 0;
+            margin: 0;
+            
+            li{
+                display: block;
+                position: relative;
+                list-style: none;
+                padding: 0;
+                float: left;
+                margin: 0;
+                height: 100%;
+                width: 20%;
+                
+                h5{
+                    display: block;
+                    position: absolute;
+                    height: 1.5em;
+                    width: 100%;
+                    top: 0;
+                    left: 0;
+                    background-color: #1C68AA;
+                    color: #FFFFFF;
+                    text-align: center;
+                }
+                
+                img{
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+        }
+    }
+    
+    .controls{
+        display: block;
+        position: absolute;
+        top: $controls_to_top;
+        width: 5%;
+        height: 3em;
+        background-repeat: no-repeat;
+        background-position: center center;
+    }
+    
+    .left{
+        left: 0;
+    }
+    
+    .right{
+        right: 0;
+    }
+    
+    .bottom{
+        display: block;
+        position: relative;
+        height: 1.5em;
+        width: 9.5em;
+        margin: auto;
+        
+        ul{
+            display: block;
+            margin: auto;
+            height: 100%;
+            width: 100%;
+            
+            li{
+                display: block;
+                width: 1.5em;
+                height: 1.5em;
+                margin: auto;
+                margin-left: 0.5em;
+                padding: 0;
+                float: left;
+                
+                &:first-child{
+                    margin-left: 0;
+                }
+            }
+        }
+    }
+}

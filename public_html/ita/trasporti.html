@@ -11,6 +11,7 @@
         <link href="../css/text.css" type="text/css" rel="stylesheet" />
         <link href="../css/navigation.css" type="text/css" rel="stylesheet" />
         <link href="../css/main.css" type="text/css" rel="stylesheet" />
+        <link href="../css/gallery.css" type="text/css" rel="stylesheet" />
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatibility" content="IE=Edge" />
         <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0">
@@ -68,49 +69,56 @@
                     </div>
                 </div>
                 <div class="wrapper desktop_content"  id="trasporti-desktop">
-                    <div class="section" id="trasporti">
-                        <div class="carousel content-box-shadow">
+                    <div class="section gallery content-box-shadow color_white">
+                        <input type="radio" id="img-1" name="img-1" />
+                        <input type="radio" id="img-2" name="img-2" />
+                        <input type="radio" id="img-3" name="img-3" />
+                        <input type="radio" id="img-4" name="img-4" />
+                        <input type="radio" id="img-5" name="img-5" />
+                        <div class="carousel ">
                             <ul class="panes">
                                 <li>
-                                    <a href="trasporto-su-gomma.html">
-                                        <h2>Trasporto su gomma</h2>
-                                        <div class="lazy-image">
-                                            <img class="img" src="../img/blank.png" />
-                                        </div>
-                                    </a>
+                                    <h5>1</h5>
                                 </li>
                                 <li>
-                                    <a href="trasporto-ferroviario.html">
-                                        <h2>Trasporto ferroviario</h2>
-                                        <div class="lazy-image">
-                                            <img class="img" src="../img/blank.png" />
-                                        </div>
-                                    </a>
+                                    <h5>2</h5>
                                 </li>
                                 <li>
-                                    <a href="trasporto-marittimo.html">
-                                        <h2>Trasporto marittimo</h2>
-                                        <div class="lazy-image">
-                                            <img class="img" src="../img/blank.png" />
-                                        </div>
-                                    </a>
+                                    <h5>3</h5>
                                 </li>
                                 <li>
-                                    <a href="trasporto-aereo.html">
-                                        <h2>Trasporto aereo</h2>
-                                        <div class="lazy-image">
-                                            <img class="img" src="../img/blank.png" />
-                                        </div>
-                                    </a>
+                                    <h5>4</h5>
                                 </li>
                                 <li>
-                                    <a href="trasporto-combinato.html">
-                                        <h2>Trasporto combinato</h2>
-                                        <div class="lazy-image">
-                                            <img class="img" src="../img/blank.png" />
-                                        </div>
-                                    </a>
+                                    <h5>5</h5>
                                 </li>
+                            </ul>
+                        </div>
+                        <div class="controls left">
+                            <ul>
+                                <li><label for="img-5"/></li>
+                                <li><label for="img-1"/></li>
+                                <li><label for="img-2"/></li>
+                                <li><label for="img-3"/></li>
+                                <li><label for="img-4"/></li>
+                            </ul>
+                        </div>
+                        <div class="controls right">
+                            <ul>
+                                <li><label for="img-2"/></li>
+                                <li><label for="img-3"/></li>
+                                <li><label for="img-4"/></li>
+                                <li><label for="img-5"/></li>
+                                <li><label for="img-1"/></li>
+                            </ul>
+                        </div>
+                        <div class="bottom">
+                            <ul>
+                                <li><label for="img-1"/></li>
+                                <li><label for="img-2"/></li>
+                                <li><label for="img-3"/></li>
+                                <li><label for="img-4"/></li>
+                                <li><label for="img-5"/></li>
                             </ul>
                         </div>
                     </div>
@@ -250,7 +258,7 @@
             </div>
         </div>
         <script src="../min/js/libs/ui/jquery/jquery.min.js"></script>
-        <script src="../min/js/menu.min.js"></script>
+        <script src="../js/menu.js"></script>
         <script src="../min/js/libs/jquery.history.min.js"></script>
         <script src="../min/js/tab-to-accordion.min.js"></script>
     </body>

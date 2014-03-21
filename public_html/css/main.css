@@ -1,4 +1,4 @@
-@charset "UTF-8";
+@charset "CP850";
 /* 
     Created on : 9-feb-2014, 18.15.20
     Author     : Lorenzo Di Giuseppe <lorenzo.digiuseppe88@gmail.com>
@@ -1044,174 +1044,119 @@ html, body {
   #footer {
     margin-top: 0;
     height: auto; } }
-@keyframes carousel {
-  0% {
-    left: 0; }
+/*@keyframes carousel{
+    0%    { left:0; }
+    11%   { left:0; }
+    12.5% { left:-100%; }
+    23.5% { left:-100%; }
+    25%   { left:-200%; }
+    36%   { left:-200%; }
+    37.5% { left:-300%; }
+    48.5% { left:-300%; }
+    50%   { left:-400%; }
+    61%   { left:-400%; }
+    62.5% { left:-300%; }
+    73.5% { left:-300%; }
+    75%   { left:-200%; }
+    86%   { left:-200%; }
+    87.5% { left:-100%; }
+    98.5% { left:-100%; }
+    100%  { left:0; }
+}
 
-  11% {
-    left: 0; }
+@-webkit-keyframes carousel{
+    0%    { left:0; }
+    11%   { left:0; }
+    12.5% { left:-100%; }
+    23.5% { left:-100%; }
+    25%   { left:-200%; }
+    36%   { left:-200%; }
+    37.5% { left:-300%; }
+    48.5% { left:-300%; }
+    50%   { left:-400%; }
+    61%   { left:-400%; }
+    62.5% { left:-300%; }
+    73.5% { left:-300%; }
+    75%   { left:-200%; }
+    86%   { left:-200%; }
+    87.5% { left:-100%; }
+    98.5% { left:-100%; }
+    100%  { left:0; }
+}
 
-  12.5% {
-    left: -100%; }
-
-  23.5% {
-    left: -100%; }
-
-  25% {
-    left: -200%; }
-
-  36% {
-    left: -200%; }
-
-  37.5% {
-    left: -300%; }
-
-  48.5% {
-    left: -300%; }
-
-  50% {
-    left: -400%; }
-
-  61% {
-    left: -400%; }
-
-  62.5% {
-    left: -300%; }
-
-  73.5% {
-    left: -300%; }
-
-  75% {
-    left: -200%; }
-
-  86% {
-    left: -200%; }
-
-  87.5% {
-    left: -100%; }
-
-  98.5% {
-    left: -100%; }
-
-  100% {
-    left: 0; } }
-
-@-webkit-keyframes carousel {
-  0% {
-    left: 0; }
-
-  11% {
-    left: 0; }
-
-  12.5% {
-    left: -100%; }
-
-  23.5% {
-    left: -100%; }
-
-  25% {
-    left: -200%; }
-
-  36% {
-    left: -200%; }
-
-  37.5% {
-    left: -300%; }
-
-  48.5% {
-    left: -300%; }
-
-  50% {
-    left: -400%; }
-
-  61% {
-    left: -400%; }
-
-  62.5% {
-    left: -300%; }
-
-  73.5% {
-    left: -300%; }
-
-  75% {
-    left: -200%; }
-
-  86% {
-    left: -200%; }
-
-  87.5% {
-    left: -100%; }
-
-  98.5% {
-    left: -100%; }
-
-  100% {
-    left: 0; } }
-
-.carousel {
-  -webkit-box-sizing: border-box;
-  /* Android ≤ 2.3, iOS ≤ 4 */
-  -moz-box-sizing: border-box;
-  /* Firefox 1+ */
-  box-sizing: border-box;
-  /* Chrome, IE 8+, Opera, Safari 5.1 */
-  overflow: hidden;
-  width: 100%;
-  margin-bottom: 0;
-  padding: 0; }
-  @media screen and (max-width: 600px) {
-    .carousel {
-      margin-top: 0.6em; } }
-  .carousel .panes {
-    list-style: none;
-    position: relative;
-    width: 500%;
-    /* Numero di pannelli * 100% */
-    padding: 0;
+.carousel{
+    @include border-box;
     overflow: hidden;
-    /* Usato per eliminare i floats */
-    margin: 0;
-    -moz-animation: carousel 45s infinite;
-    -webkit-animation: carousel 45s infinite;
-    animation: carousel 45s infinite; }
-    .carousel .panes li {
-      margin: 0;
-      padding: 0;
-      position: relative;
-      float: left;
-      width: 20%;
-      /* 100 / numero di pannelli */ }
-      .carousel .panes li a {
-        display: block;
-        width: 100%;
-        height: 100%;
-        color: #FFFFFF;
-        overflow: hidden;
-        text-decoration: none; }
-        .carousel .panes li a:hover h2 {
-          color: #FFA01A; }
-        .carousel .panes li a .lazy-image img {
-          display: block;
-          position: relative;
-          width: 100%;
-          margin: 0 auto; }
-        .carousel .panes li a h2 {
-          padding: 0.5em;
-          z-index: 1;
-          position: absolute;
-          right: 0;
-          margin: 0;
-          top: 0;
-          left: 0;
-          text-align: right;
-          background-color: rgba(28, 104, 170, 0.9); }
-          @media screen and (max-width: 600px) {
-            .carousel .panes li a h2 {
-              padding: 0;
-              margin: 0;
-              position: relative;
-              text-decoration: none; } }
-
+    width:100%;
+    margin-bottom: 0;
+    padding: 0;
+    @media screen and (max-width: 600px)
+    {
+        margin-top: 0.6em;
+    }
+    
+    .panes{
+        list-style:none;
+        position:relative;
+        width:500%;  Numero di pannelli * 100% 
+        padding: 0;
+        overflow:hidden;  Usato per eliminare i floats 
+        margin: 0;
+        -moz-animation: carousel 45s infinite;
+        -webkit-animation: carousel 45s infinite;
+        animation: carousel 45s infinite;
+        
+        li{
+            margin: 0;
+            padding: 0;
+            position:relative;
+            float:left;
+            width: 20%;  100 / numero di pannelli 
+            
+            a{
+                display: block;
+                width: 100%;
+                height: 100%;
+                color:#FFFFFF;
+                overflow: hidden;
+                text-decoration: none;
+                &:hover{
+                    h2{
+                        color:#FFA01A;
+                    }
+                }
+                .lazy-image{
+                    img{
+                        display:block;
+                        position: relative;
+                        width:100%;
+                        margin: 0 auto;
+                    }
+                }
+                
+                
+                h2{
+                    padding:0.5em;
+                    z-index: 1;
+                    position:absolute;
+                    right:0;
+                    margin: 0;
+                    top: 0;
+                    left: 0;
+                    text-align:right;
+                    background-color: rgba(28,104,170, 0.9);
+                    @media screen and (max-width: 600px)
+                    {
+                        padding: 0;
+                        margin: 0;
+                        position: relative;
+                        text-decoration: none;
+                    }
+                }
+            }
+        }
+    }
+}*/
 @media screen and (min-width: 769px) {
   #main-image .lazy-image {
     background-image: url("../img/main-image.png"); }

@@ -1413,7 +1413,7 @@ html, body {
 }
 
 //Animazioni per il carousel css
-@keyframes carousel{
+/*@keyframes carousel{
     0%    { left:0; }
     11%   { left:0; }
     12.5% { left:-100%; }
@@ -1467,9 +1467,9 @@ html, body {
     .panes{
         list-style:none;
         position:relative;
-        width:500%; /* Numero di pannelli * 100% */
+        width:500%;  Numero di pannelli * 100% 
         padding: 0;
-        overflow:hidden; /* Usato per eliminare i floats */
+        overflow:hidden;  Usato per eliminare i floats 
         margin: 0;
         -moz-animation: carousel 45s infinite;
         -webkit-animation: carousel 45s infinite;
@@ -1480,7 +1480,7 @@ html, body {
             padding: 0;
             position:relative;
             float:left;
-            width: 20%; /* 100 / numero di pannelli */
+            width: 20%;  100 / numero di pannelli 
             
             a{
                 display: block;
@@ -1525,7 +1525,7 @@ html, body {
             }
         }
     }
-}
+}*/
 
 //IMMAGINI CON RISOLUZIONI ADATTATE AI DISPOSITIVI PER RIDURRE I TEMPI DI CARICAMENTO
 @media screen and (min-width: 769px){
