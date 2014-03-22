@@ -307,7 +307,7 @@ html, body {
       clear: both;
       font-size: inherit;
       visibility: visible;
-      display: inline-block;
+      display: block;
       position: relative;
       left: 0;
       width: 100%;
@@ -326,6 +326,7 @@ html, body {
         display: block;
         position: relative;
         height: 90%;
+        float: none;
         margin: 0 auto; }
     .lang-menu #lang-close {
       display: none;
@@ -647,7 +648,7 @@ html, body {
     /* Firefox 1+ */
     box-sizing: content-box;
     /* Chrome, IE 8+, Opera, Safari 5.1 */
-    margin-top: 1em;
+    /*margin-top: 1em;*/
     width: 100%;
     /*margin-left: -1pt;*/ }
     .tab_to_accordion .tab_right_col {
@@ -684,6 +685,12 @@ html, body {
         /* Chrome, IE 8+, Opera, Safari 5.1 */ }
         .tab_to_accordion .tab_contents .tab_pane .accordion-button {
           display: block;
+          -webkit-box-sizing: border-box;
+          /* Android ≤ 2.3, iOS ≤ 4 */
+          -moz-box-sizing: border-box;
+          /* Firefox 1+ */
+          box-sizing: border-box;
+          /* Chrome, IE 8+, Opera, Safari 5.1 */
           visibility: visible;
           width: 100%;
           height: auto;
@@ -742,13 +749,19 @@ html, body {
         .tab_to_accordion .tab_contents .tab_pane .tab_page {
           display: inline-block;
           position: relative;
+          -webkit-box-sizing: border-box;
+          /* Android ≤ 2.3, iOS ≤ 4 */
+          -moz-box-sizing: border-box;
+          /* Firefox 1+ */
+          box-sizing: border-box;
+          /* Chrome, IE 8+, Opera, Safari 5.1 */
           width: 98%;
           border-width: 1pt;
           border-top-width: 0;
           border-style: groove;
           border-color: #8DBF3F;
-          margin: 0 0.7%;
-          margin-top: -0.7em;
+          margin: 0 1%;
+          margin-top: -0.6em;
           box-shadow: 0pt 0pt 0pt #000000; }
         .tab_to_accordion .tab_contents .tab_pane .content-box {
           padding-top: 0;
