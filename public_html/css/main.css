@@ -1,4 +1,4 @@
-@charset "UTF-8";
+@charset "CP850";
 /* 
     Created on : 9-feb-2014, 18.15.20
     Author     : Lorenzo Di Giuseppe <lorenzo.digiuseppe88@gmail.com>
@@ -783,81 +783,83 @@ html, body {
     display: none; }
   #tab:target .current .tab_page {
     display: none; } }
-.trasporti-links .content-box a {
-  display: block;
-  padding: 0;
-  margin: 0;
-  width: 100%;
-  height: 100%;
-  text-decoration: none;
-  -webkit-box-sizing: content-box;
-  /* Android ≤ 2.3, iOS ≤ 4 */
-  -moz-box-sizing: content-box;
-  /* Firefox 1+ */
-  box-sizing: content-box;
-  /* Chrome, IE 8+, Opera, Safari 5.1 */ }
-  .trasporti-links .content-box a .header {
-    min-height: 5em;
-    height: 6em;
-    max-height: 8em; }
-    .trasporti-links .content-box a .header .icon {
-      display: table;
-      position: relative;
-      height: 2em;
-      margin: 0.3em auto;
-      padding: 0 auto;
-      width: 80%;
-      background-position: center;
-      background-repeat: no-repeat;
-      background-size: 2em auto; }
-    .trasporti-links .content-box a .header h5 {
-      margin: 0;
-      padding: 0 10%;
-      height: 3em;
-      font-size: 0.8em;
-      width: 80%; }
-  .trasporti-links .content-box a p {
-    color: #000000;
-    text-decoration: none; }
-    @media screen and (max-width: 600px) {
-      .trasporti-links .content-box a p {
-        -webkit-hyphens: auto;
-        -moz-hyphens: auto;
-        -ms-hyphens: auto;
-        hyphens: auto; } }
-  .trasporti-links .content-box a span {
+.trasporti-links {
+  display: inline-block; }
+  .trasporti-links .content-box a {
     display: block;
-    position: relative;
-    width: 90%;
-    margin: 0.3em auto;
-    clear: both;
-    color: #1C68AA;
-    text-decoration: underline;
-    text-align: right; }
-.trasporti-links .content-box:hover .header {
-  color: #FFA01A; }
-.trasporti-links .content-box:hover span {
-  color: #FFA01A; }
-.trasporti-links #truck .icon {
-  background-image: url("../img/icons/icona-truck.png"); }
-.trasporti-links #truck:hover .icon {
-  background-image: url("../img/icons/icona-truck-hover.png"); }
-.trasporti-links #train .icon {
-  background-image: url("../img/icons/icona-train.png"); }
-.trasporti-links #train:hover .icon {
-  background-image: url("../img/icons/icona-train-hover.png"); }
-.trasporti-links #ship .icon {
-  background-image: url("../img/icons/icona-ship.png"); }
-.trasporti-links #ship:hover .icon {
-  background-image: url("../img/icons/icona-ship-hover.png"); }
-.trasporti-links #airplane .icon {
-  background-image: url("../img/icons/icona-plane.png"); }
-.trasporti-links #airplane:hover .icon {
-  background-image: url("../img/icons/icona-plane-hover.png"); }
-.trasporti-links #combined .icon {
-  background-image: url("../img/icons/icona-combined.png"); }
-.trasporti-links #combined:hover .icon {
-  background-image: url("../img/icons/icona-combined-hover.png"); }
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+    -webkit-box-sizing: content-box;
+    /* Android ≤ 2.3, iOS ≤ 4 */
+    -moz-box-sizing: content-box;
+    /* Firefox 1+ */
+    box-sizing: content-box;
+    /* Chrome, IE 8+, Opera, Safari 5.1 */ }
+    .trasporti-links .content-box a .header {
+      min-height: 5em;
+      height: 6em;
+      max-height: 8em; }
+      .trasporti-links .content-box a .header .icon {
+        display: table;
+        position: relative;
+        height: 2em;
+        margin: 0.3em auto;
+        padding: 0 auto;
+        width: 80%;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 2em auto; }
+      .trasporti-links .content-box a .header h5 {
+        margin: 0;
+        padding: 0 10%;
+        height: 3em;
+        font-size: 0.8em;
+        width: 80%; }
+    .trasporti-links .content-box a p {
+      color: #000000;
+      text-decoration: none; }
+      @media screen and (max-width: 600px) {
+        .trasporti-links .content-box a p {
+          -webkit-hyphens: auto;
+          -moz-hyphens: auto;
+          -ms-hyphens: auto;
+          hyphens: auto; } }
+    .trasporti-links .content-box a span {
+      display: block;
+      position: relative;
+      width: 90%;
+      margin: 0.3em auto;
+      clear: both;
+      color: #1C68AA;
+      text-decoration: underline;
+      text-align: right; }
+  .trasporti-links .content-box:hover .header {
+    color: #FFA01A; }
+  .trasporti-links .content-box:hover span {
+    color: #FFA01A; }
+  .trasporti-links #truck .icon {
+    background-image: url("../img/icons/icona-truck.png"); }
+  .trasporti-links #truck:hover .icon {
+    background-image: url("../img/icons/icona-truck-hover.png"); }
+  .trasporti-links #train .icon {
+    background-image: url("../img/icons/icona-train.png"); }
+  .trasporti-links #train:hover .icon {
+    background-image: url("../img/icons/icona-train-hover.png"); }
+  .trasporti-links #ship .icon {
+    background-image: url("../img/icons/icona-ship.png"); }
+  .trasporti-links #ship:hover .icon {
+    background-image: url("../img/icons/icona-ship-hover.png"); }
+  .trasporti-links #airplane .icon {
+    background-image: url("../img/icons/icona-plane.png"); }
+  .trasporti-links #airplane:hover .icon {
+    background-image: url("../img/icons/icona-plane-hover.png"); }
+  .trasporti-links #combined .icon {
+    background-image: url("../img/icons/icona-combined.png"); }
+  .trasporti-links #combined:hover .icon {
+    background-image: url("../img/icons/icona-combined-hover.png"); }
 
 .desktop_content {
   display: block; }
@@ -1161,15 +1163,15 @@ html, body {
   #main-image .lazy-image {
     background-image: url("../img/main-image.png"); }
 
-  .carousel li:first-child .lazy-image {
+  .carousel .panes .img_1 {
     background-image: url("../img/carousel/carousel-1.png"); }
-  .carousel li:nth-child(2) .lazy-image {
+  .carousel .panes .img_2 {
     background-image: url("../img/carousel/carousel-2.png"); }
-  .carousel li:nth-child(3) .lazy-image {
+  .carousel .panes .img_3 {
     background-image: url("../img/carousel/carousel-3.png"); }
-  .carousel li:nth-child(4) .lazy-image {
+  .carousel .panes .img_4 {
     background-image: url("../img/carousel/carousel-4.png"); }
-  .carousel li:nth-child(5) .lazy-image {
+  .carousel .panes .img_5 {
     background-image: url("../img/carousel/carousel-5.png"); } }
 @media screen and (min-width: 481px) {
   #chi-siamo-image .lazy-image {
@@ -1195,15 +1197,15 @@ html, body {
   #main-image .lazy-image {
     background-image: url("../img/768/main-image.png"); } }
 @media screen and (min-width: 481px) and (max-width: 768px) and (min-width: 601px) {
-  .carousel li:first-child .lazy-image {
+  .carousel .panes .img_1 {
     background-image: url("../img/carousel/768/carousel-1.png"); }
-  .carousel li:nth-child(2) .lazy-image {
+  .carousel .panes .img_2 {
     background-image: url("../img/carousel/768/carousel-2.png"); }
-  .carousel li:nth-child(3) .lazy-image {
+  .carousel .panes .img_3 {
     background-image: url("../img/carousel/768/carousel-3.png"); }
-  .carousel li:nth-child(4) .lazy-image {
+  .carousel .panes .img_4 {
     background-image: url("../img/carousel/768/carousel-4.png"); }
-  .carousel li:nth-child(5) .lazy-image {
+  .carousel .panes .img_5 {
     background-image: url("../img/carousel/768/carousel-5.png"); } }
 @media screen and (max-width: 480px) {
   #main-image .lazy-image {

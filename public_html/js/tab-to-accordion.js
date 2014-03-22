@@ -66,7 +66,6 @@ var TabToAccordion = {
         
         History.Adapter.bind(window,'statechange',function(){ // Note: We are using statechange instead of popstate
             var State = History.getState(); // Note: We are using History.getState() instead of event.state
-            History.log(State.data, State.title, State.url);
             if(TabToAccordion.manualStateChange)
             {
                 TabToAccordion.restoreState(State.data);
@@ -77,7 +76,10 @@ var TabToAccordion = {
     
     restoreState: function(state){
         var link = $('.accordion-button>.open[href="'+state.href+'"]');//.find('[href="'+state.href+'"]:first');
-        TabToAccordion.loadPage(link);
+        if(link.length > 0 && $(document).width() < 601)
+            TabToAccordion.loadPage(link);
+        else
+            window.location.href = state.href;
     },
     
     restoreTab: function()
@@ -92,6 +94,13 @@ var TabToAccordion = {
         else{
             $('#trasporti-desktop').css('display', 'block');
             $('#trasporti-tab').css('display', 'none');
+            var trasporti = $('#trasporti-header');
+            var state = {
+                href: trasporti.data('href'),
+            };
+            var s = History.getState();
+            if(s.href != state.href)
+                History.pushState(state, trasporti.data('title'), state.href);
         }
 //        if(TabToAccordion.home)
 //        {

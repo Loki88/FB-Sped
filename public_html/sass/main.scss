@@ -1052,7 +1052,7 @@ html, body {
 }
 
 .trasporti-links {
-    
+     display: inline-block;
      .content-box{
          a{
             display: block;
@@ -1536,31 +1536,21 @@ html, body {
     }
 
     .carousel{
-        li{
-            &:first-child{
-                .lazy-image{
-                    background-image: url('../img/carousel/carousel-1.png');
-                }
+        .panes{
+            .img_1{
+                background-image: url('../img/carousel/carousel-1.png');
             }
-            &:nth-child(2){
-                .lazy-image{
-                    background-image: url('../img/carousel/carousel-2.png');
-                }
+            .img_2{
+                background-image: url('../img/carousel/carousel-2.png');
             }
-            &:nth-child(3){
-                .lazy-image{
-                    background-image: url('../img/carousel/carousel-3.png');
-                }
+            .img_3{
+                background-image: url('../img/carousel/carousel-3.png');
             }
-            &:nth-child(4){
-                .lazy-image{
-                    background-image: url('../img/carousel/carousel-4.png');
-                }
+            .img_4{
+                background-image: url('../img/carousel/carousel-4.png');
             }
-            &:nth-child(5){
-                .lazy-image{
-                    background-image: url('../img/carousel/carousel-5.png');
-                }
+            .img_5{
+                background-image: url('../img/carousel/carousel-5.png');
             }
         }
     }
@@ -1612,31 +1602,21 @@ html, body {
     }
     @media screen and (min-width: 601px){
         .carousel{
-            li{
-                &:first-child{
-                    .lazy-image{
-                        background-image: url('../img/carousel/768/carousel-1.png');
-                    }
+            .panes{
+                .img_1{
+                    background-image: url('../img/carousel/768/carousel-1.png');
                 }
-                &:nth-child(2){
-                    .lazy-image{
-                        background-image: url('../img/carousel/768/carousel-2.png');
-                    }
+                .img_2{
+                    background-image: url('../img/carousel/768/carousel-2.png');
                 }
-                &:nth-child(3){
-                    .lazy-image{
-                        background-image: url('../img/carousel/768/carousel-3.png');
-                    }
+                .img_3{
+                    background-image: url('../img/carousel/768/carousel-3.png');
                 }
-                &:nth-child(4){
-                    .lazy-image{
-                        background-image: url('../img/carousel/768/carousel-4.png');
-                    }
+                .img_4{
+                    background-image: url('../img/carousel/768/carousel-4.png');
                 }
-                &:nth-child(5){
-                    .lazy-image{
-                        background-image: url('../img/carousel/768/carousel-5.png');
-                    }
+                .img_5{
+                    background-image: url('../img/carousel/768/carousel-5.png');
                 }
             }
         }

@@ -70,56 +70,55 @@
                 </div>
                 <div class="wrapper desktop_content"  id="trasporti-desktop">
                     <div class="section gallery content-box-shadow color_white">
-                        <input type="radio" id="img_1" name="img_1" checked />
-                        <input type="radio" id="img_2" name="img_2" />
-                        <input type="radio" id="img_3" name="img_3" />
-                        <input type="radio" id="img_4" name="img_4" />
-                        <input type="radio" id="img_5" name="img_5" />
-                        <div class="carousel ">
+                        <input type="radio" id="img_1" class="a" name="gal_1" checked />
+                        <input type="radio" id="img_2" class="b" name="gal_1" />
+                        <input type="radio" id="img_3" class="c" name="gal_1" />
+                        <input type="radio" id="img_4" class="d" name="gal_1" />
+                        <input type="radio" id="img_5" class="e" name="gal_1" />
+                        <div class="carousel">
                             <ul class="panes">
-                                <li>
-                                    <h5>1</h5>
+                                <li class="lazy-image img_1">
+                                    <h5>Trasporto su gomma</h5>
+                                    <img src="../img/blank.png" />
                                 </li>
-                                <li>
-                                    <h5>2</h5>
+                                <li class="lazy-image img_2">
+                                    <h5>Trasporto ferroviario</h5>
+                                    <img src="../img/blank.png" />
                                 </li>
-                                <li>
-                                    <h5>3</h5>
+                                <li class="lazy-image img_3">
+                                    <h5>Trasporto marittimo</h5>
+                                    <img src="../img/blank.png" />
                                 </li>
-                                <li>
-                                    <h5>4</h5>
+                                <li class="lazy-image img_4">
+                                    <h5>Trasporto aereo</h5>
+                                    <img src="../img/blank.png" />
                                 </li>
-                                <li>
-                                    <h5>5</h5>
+                                <li class="lazy-image img_5">
+                                    <h5>Trasporto combinato</h5>
+                                    <img src="../img/blank.png" />
                                 </li>
                             </ul>
                         </div>
                         <div class="controls left">
-                            <ul>
-                                <li><label class="img_1" for="img_5"/></li>
-                                <li><label class="img_2" for="img_1"/></li>
-                                <li><label class="img_3" for="img_2"/></li>
-                                <li><label class="img_4" for="img_3"/></li>
-                                <li><label class="img_5" for="img_4"/></li>
-                            </ul>
+                            <label class="a" for="img_5">«</label>
+                            <label class="b" for="img_1">«</label>
+                            <label class="c" for="img_2">«</label>
+                            <label class="d" for="img_3">«</label>
+                            <label class="e" for="img_4">«</label>
                         </div>
                         <div class="controls right">
-                            <ul>
-                                <li><label class="img_1" for="img_2"/></li>
-                                <li><label class="img_2" for="img_3"/></li>
-                                <li><label class="img_3" for="img_4"/></li>
-                                <li><label class="img_4" for="img_5"/></li>
-                                <li><label class="img_5" for="img_1"/></li>
-                            </ul>
+                            <label class="a" for="img_2">»</label>
+                            <label class="b" for="img_3">»</label>
+                            <label class="c" for="img_4">»</label>
+                            <label class="d" for="img_5">»</label>
+                            <label class="e" for="img_1">»</label>
                         </div>
                         <div class="bottom">
-                            <ul>
-                                <li><label class="img_1" for="img_1"/></li>
-                                <li><label class="img_2" for="img_2"/></li>
-                                <li><label class="img_3" for="img_3"/></li>
-                                <li><label class="img_4" for="img_4"/></li>
-                                <li><label class="img_5" for="img_5"/></li>
-                            </ul>
+                            <label class="img_1" for="img_1"></label>
+                            <label class="img_2" for="img_2"></label>
+                            <label class="img_3" for="img_3"></label>
+                            <label class="img_4" for="img_4"></label>
+                            <label class="img_5" for="img_5"></label>
                         </div>
                     </div>
                     <div class="section trasporti-links" id="sol-trasporti">
@@ -185,12 +184,11 @@
                         </div>
                     </div>
                 </div>
-                <div class="content_wrapper wrapper" id="trasporti-tab">
+                <div class="content_wrapper wrapper mobile_content" id="trasporti-tab">
                     <div class="section group tab_to_accordion"  id="tab">
                         <div class="col_2_5 tab_right_col column-right">
                             <div class="tab_menu content-box content-box-shadow color_white">
-                                <div class="header color_blue"><h4>Trasporti</h4></div>
-                                <!--<div id="trasporti-link" class="menu-button"><a data-target="#trasporti" href="./trasporti.html">Trasporti</a></div>-->
+                                <div class="header color_blue" id="trasporti-header" data-href="./trasporti.html" data-title="Trasporti - FB Sped"><h4>Trasporti</h4></div>
                                 <div id="trasporto-gomma-link" class="menu-button"><div class="icon"></div><a data-target="#trasporto-gomma" href="./trasporto-su-gomma.html">Trasporto su gomma</a></div>
                                 <div id="trasporto-ferroviario-link" class="menu-button"><div class="icon"></div><a data-target="#trasporto-ferroviario" href="./trasporto-ferroviario.html">Trasporto ferroviario</a></div>
                                 <div id="trasporto-marittimo-link" class="menu-button"><div class="icon"></div><a data-target="#trasporto-marittimo" href="./trasporto-marittimo.html">Trasporto marittimo</a></div>

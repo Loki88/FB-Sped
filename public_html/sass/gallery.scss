@@ -16,76 +16,64 @@
 }
 
 $number_of_page: 5;
-$controls_to_top: 35%;
+$controls_to_top: 40%;
 
 .gallery{
     overflow: hidden;
     position: relative;
     
-    ul{
-        list-style: none;
-        margin: 0;
-        padding: 0;
-        li{
-            display: none;
-            position: relative;
-            width: 100%;
-            height: 100%;
-            float: left;
-            label{
-                display: block;
-                width: 100%;
-                height: 100%;
-                cursor: pointer;
-            }
-        }
-    }
-    
     .carousel{
-        clear: both;
         display: block;
         position: relative;
-        width: 85%;
-        height: 13em;
-        margin: 0.5em auto;
+        @include border-box;
+        width: 100%;
+        height: auto;
+        margin: 0 auto;
         overflow: hidden; //usato per eliminare i floats
         
         .panes{
+            transition: left 0.8s ease-in-out 0s;
+            -webkit-transition: left 0.8s ease-in-out 0s;
             display: block;
+            position: relative;
+            height: auto;
             width: $number_of_page * 100%;
-            @include border-box;
-            border-width: 1pt;
-            border-style: inset;
-            border-color: #1C68AA;
-            height: 100%;
+            list-style: none;
             padding: 0;
             margin: 0;
+            overflow: hidden;
+            border-bottom: 2pt #1C68AA groove;
             
             li{
-                display: block;
                 position: relative;
-                list-style: none;
                 padding: 0;
                 float: left;
                 margin: 0;
-                height: 100%;
-                width: 20%;
+                width: 100% / $number_of_page;
                 
                 h5{
                     display: block;
                     position: absolute;
-                    height: 1.5em;
+                    height: 1.2em;
+                    padding: 0.4em;
+                    font-size: 1.2em;
+                    line-height: 1.2em;
                     width: 100%;
+                    margin: 0;
                     top: 0;
                     left: 0;
                     background-color: #1C68AA;
                     color: #FFFFFF;
                     text-align: center;
                 }
-                
+
                 img{
-                    width: 100%;
-                    height: 100%;
+                    display:block;
+                    position: relative;
+                    width:100%;
+                    height: auto;
+                    margin: 0 auto;
+                    z-index: -1;
                 }
             }
         }
@@ -95,83 +83,119 @@ $controls_to_top: 35%;
         display: block;
         position: absolute;
         top: $controls_to_top;
-        width: 3em;
-        height: 3em;
-        background-repeat: no-repeat;
-        background-position: center center;
-        background-size: 100% 100%;
+        font-size: 1.5em;
+        width: 2em;
+        height: 2em;
+        border-radius: 50%;
+        background-color: #1C68AA;
+        opacity: .5;
         cursor: pointer;
+        color: #FFFFFF;
         
-        ul{
-            display: block;
+        &:hover{
+            opacity: 1;
+            color: #FFA01A;
+        }
+        
+        label{
+            display: none;
+            position: relative;
+            padding: 0;
+            float: left;
             width: 100%;
             height: 100%;
-        }
-        li{
-            display: none;
-            float: left;
+            line-height: 2em;
+            text-align: center;
+            border-radius: 50%;
+            cursor: pointer;
+            color: inherit;
         }
     }
     
     .left{
         left: 1%;
-        background-image: url('../img/icons/slider-left.png');
     }
     
     .right{
         right: 1%;
-        background-image: url('../img/icons/slider-right.png');
     }
     
     .bottom{
         display: block;
         position: relative;
-        height: 1em;
-        width: 7em;
+        height: 1.2em;
+        width: 12em;
         margin: 0.5em auto;
         
-        ul{
-            display: block;
+       label{
+            display: inline-block;
+            @include border-box;
+            width: 1.2em;
+            height: 1.2em;
+            cursor: pointer;
             margin: auto;
-            height: 100%;
-            width: 100%;
+            margin-left: 1.5em;
+            padding: 0;
+            float: left;
+            border-radius: 50%;
+            border-width: 1pt;
+            border-color: #030320;
+            border-style: groove;
+            background-color: #1C68AA;
+             
+            &:first-child{
+                margin-left: 0;
+            }
             
-            li{
-                display: block;
-                @include border-box;
-                width: 1em;
-                height: 1em;
-                cursor: pointer;
-                margin: auto;
-                margin-left: 0.5em;
-                padding: 0;
-                float: left;
-                border-radius: 50%;
-                border-width: 1pt;
-                border-color: #1C68AA;
-                border-style: inset;
-                background-color: #327CCB;
-                
-                &:first-child{
-                    margin-left: 0;
-                }
+            &:hover{
+                background-color: #FFA01A;
             }
         }
     }
     
     input {
         display: none;
-        
-        &:nth-child(1):checked ~ .controls li:nth-child(1){display: block;}
-        &:nth-child(2):checked ~ .controls li:nth-child(2){display: block;}
-        &:nth-child(3):checked ~ .controls li:nth-child(3){display: block;}
-        &:nth-child(4):checked ~ .controls li:nth-child(4){display: block;}
-        &:nth-child(5):checked ~ .controls li:nth-child(5){display: block;}
-        
-        &:nth-child(1):checked ~ .bottom li:nth-child(1){background-color: #000;}
-        &:nth-child(2):checked ~ .bottom li:nth-child(2){background-color: #000;}
-        &:nth-child(3):checked ~ .bottom li:nth-child(3){background-color: #000;}
-        &:nth-child(4):checked ~ .bottom li:nth-child(4){background-color: #000;}
-        &:nth-child(5):checked ~ .bottom li:nth-child(5){background-color: #000;}
+    }
+    
+    //Scorrimento immagini
+    #img_1:checked ~ .carousel {
+        .panes{
+            left: 0;
+        }
+    }
+    
+    #img_2:checked ~ .carousel {
+        .panes{
+            left: -100%;
+        }
+    }
+    
+    #img_3:checked ~ .carousel {
+        .panes{
+            left: -200%;
+        }
+    }
+    
+    #img_4:checked ~ .carousel {
+        .panes{
+            left: -300%;
+        }
+    }
+    
+    #img_5:checked ~ .carousel {
+        .panes{
+            left: -400%;
+        }
+    }
+    
+    //Cambio bottoni laterali per lo scorrimento ciclico delle immagini
+    #img_1:checked ~ .controls .a, #img_2:checked ~ .controls .b, #img_3:checked ~ .controls .c, #img_4:checked ~ .controls .d, #img_5:checked ~ .controls .e{
+        display: block;
+/*        pointer-events: none;*/
+    }
+    
+    //Stile controlli in basso quando selezionati
+    #img_1:checked ~ .bottom .img_1, #img_2:checked ~ .bottom .img_2, #img_3:checked ~ .bottom .img_3, #img_4:checked ~ .bottom .img_4, #img_5:checked ~ .bottom .img_5{
+        background-color: #8DBF3F;
     }
 }
