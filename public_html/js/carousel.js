@@ -2,8 +2,8 @@ function isMobile(){return ('ontouchstart' in document.documentElement);}
 
 var Carousel = {
     init: function(){
-//        if(isMobile())
-//        {
+        if(isMobile())
+        {
             var gallery = $('.gallery');
             var controls = $('.gallery .controls');
             controls.detach();
@@ -18,7 +18,7 @@ var Carousel = {
             });
 //            Carousel.carousel.swipeleft(Carousel.forward);
 //            Carousel.carousel.swiperight(Carousel.backward);
-              
+        }
     },
     
     forward: function(event){
