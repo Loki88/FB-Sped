@@ -30,6 +30,7 @@ $controls_to_top: 40%;
         height: auto;
         margin: 0 auto;
         overflow: hidden; //usato per eliminare i floats
+        background: none;
         
         .panes{
             transition: left 0.8s ease-in-out 0s;
@@ -91,6 +92,7 @@ $controls_to_top: 40%;
         opacity: .5;
         cursor: pointer;
         color: #FFFFFF;
+        z-index: 3;
         
         &:hover{
             opacity: 1;

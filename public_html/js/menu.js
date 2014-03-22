@@ -21,20 +21,20 @@ $(window).resize(function() {
     }
 });
 
-$(window).on('oneColumn', function(event, size) {
-    console.log('one column layout');
-    console.log('width', size.width);
-});
-    
-$(window).on('fluidGrid', function(event, size) {
-    console.log('Fluid grid layout');
-    console.log('width', size.width);
-});
-    
-$(window).on('noMobile', function(event, size) {
-    console.log('Desktop layout');
-    console.log('width', size.width);
-});
+//$(window).on('oneColumn', function(event, size) {
+//    console.log('one column layout');
+//    console.log('width', size.width);
+//});
+//    
+//$(window).on('fluidGrid', function(event, size) {
+//    console.log('Fluid grid layout');
+//    console.log('width', size.width);
+//});
+//    
+//$(window).on('noMobile', function(event, size) {
+//    console.log('Desktop layout');
+//    console.log('width', size.width);
+//});
 
 
 var Navigation = {
