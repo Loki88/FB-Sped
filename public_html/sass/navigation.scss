@@ -145,28 +145,6 @@ $second-level-text: #FFFFFF;
                 text-decoration: none;
             }
             
-/*            .breadcrumb{
-                left: 6.5%;
-                top: 3.05em;
-                width: 80%;
-                height: 1.6em;
-                line-height: 1.6em;
-                @include border-radius(0, 0, 0.2em, 0.2em); 
-                padding: 0.3em 0.5em;
-                margin-left: auto;
-                margin-right: auto;
-                background-color: #8DBF3F;
-                border-style: ridge;
-                border-width: 0pt 1pt 1pt 1pt;
-                border-color: #1C68AA;
-                text-overflow: ellipsis;
-                
-                .hidden{
-                    position: absolute;
-                    left: -99999px;
-                }
-            }*/
-            
             /* Stile di base per il menù chiuso */
             .menu-link {
                 display: inline-block;

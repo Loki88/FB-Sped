@@ -1,12 +1,113 @@
 @charset "CP850";
 /* 
-    Created on : 9-feb-2014, 18.15.20
-    Author     : Lorenzo Di Giuseppe <lorenzo.digiuseppe88@gmail.com>
+    Created on : 23-mar-2014, 12.08.24
+    Author     : Lorenzo Di Giuseppe
 */
+.column {
+  float: left;
+  margin: 0 0 0 1.6%; }
+  .column:first-child {
+    margin-left: 0; }
+
+.column-right {
+  float: right;
+  margin: 0 1.6% 0 0; }
+  .column-right:first-child {
+    margin-right: 0; }
+
+.column, .column-right {
+  display: block;
+  font-size: inherit; }
+  .column .col_1_5, .column .col_2_5, .column .col_3_5, .column .col_4_5, .column .col_5_5, .column-right .col_1_5, .column-right .col_2_5, .column-right .col_3_5, .column-right .col_4_5, .column-right .col_5_5 {
+    margin-top: 1em; }
+    .column .col_1_5:first-child, .column .col_2_5:first-child, .column .col_3_5:first-child, .column .col_4_5:first-child, .column .col_5_5:first-child, .column-right .col_1_5:first-child, .column-right .col_2_5:first-child, .column-right .col_3_5:first-child, .column-right .col_4_5:first-child, .column-right .col_5_5:first-child {
+      margin-top: 0; }
+
+@media only screen and (max-width: 600px) {
+  .column {
+    margin: 0.5em 0 0 0; }
+    .column:first-child {
+      margin: 0; }
+
+  .column-right {
+    margin: 0 0 0.5em 0; }
+    .column-right:first-child {
+      margin: 0; }
+
+  .column .col_1_5, .column .col_2_5, .column .col_3_5, .column .col_4_5, .column .col_5_5, .column-right .col_1_5, .column-right .col_2_5, .column-right .col_3_5, .column-right .col_4_5, .column-right .col_5_5 {
+    font-size: inherit;
+    margin-top: 0.7em; }
+    .column .col_1_5:first-child, .column .col_2_5:first-child, .column .col_3_5:first-child, .column .col_4_5:first-child, .column .col_5_5:first-child, .column-right .col_1_5:first-child, .column-right .col_2_5:first-child, .column-right .col_3_5:first-child, .column-right .col_4_5:first-child, .column-right .col_5_5:first-child {
+      margin-top: 0; } }
+.section {
+  font-size: inherit;
+  clear: both;
+  padding: 0px;
+  margin: 0px;
+  margin-bottom: 1.6em; }
+  .section:first-child {
+    margin-top: 1.6em; }
+
+.group:before,
+.group:after {
+  content: "";
+  display: table; }
+
+.group:after {
+  clear: both; }
+
+.group {
+  font-size: inherit;
+  zoom: 1;
+  /* Per IE 7 */ }
+  .group:before, .group:after {
+    content: "";
+    display: table; }
+  .group:after {
+    clear: both; }
+
+.col_1_5 {
+  width: 18.72%; }
+
+.col_2_5 {
+  width: 39.04%; }
+
+.col_3_5 {
+  width: 59.36%; }
+
+.col_4_5 {
+  width: 79.68%; }
+
+.col_5_5 {
+  width: 100%; }
+
+@media screen and (max-width: 600px) {
+  .section {
+    clear: both;
+    padding: 0px;
+    margin-bottom: 0.7em; }
+    .section:first-child {
+      margin-top: 0.7em; }
+
+  .col_1_5, .col_2_5, .col_3_5, .col_4_5, .col_5_5 {
+    width: 100%; } }
 body {
   background-color: #FFFFFF;
   position: relative; }
 
+@media screen and (max-width: 600px) {
+  body {
+    background-color: #8DBF3F; } }
+@media screen and (max-width: 900px) {
+  html {
+    overflow-y: hidden;
+    width: 100%;
+    height: 100%; }
+
+  body {
+    min-height: 100%;
+    overflow-y: auto;
+    overflow-x: hidden; } }
 html, body {
   height: 100%;
   min-height: 100%;
@@ -56,9 +157,18 @@ html, body {
       width: 100%;
       padding: 0;
       margin: 0; } }
+.desktop_content {
+  display: block; }
+
+.mobile_content {
+  display: none; }
+
 @media screen and (max-width: 600px) {
-  body {
-    background-color: #8DBF3F; } }
+  .desktop_content {
+    display: none; }
+
+  .mobile_content {
+    display: block; } }
 .color_green {
   background-color: #8DBF3F;
   color: #030320; }
@@ -76,16 +186,255 @@ html, body {
 .color_hover:hover {
   color: #FFA01A; }
 
-@media screen and (max-width: 900px) {
-  html {
-    overflow-y: hidden;
-    width: 100%;
-    height: 100%; }
+.navigation {
+  display: table;
+  position: relative;
+  height: 1.8em;
+  padding: 0;
+  margin: 0;
+  margin-top: 0.6em;
+  border-bottom: 1pt inset #1C68AA; }
+  .navigation .breadcrumb {
+    display: block;
+    box-sizing: content-box;
+    text-align: center;
+    position: absolute;
+    left: -99999px; }
+  .navigation .decorator {
+    display: none;
+    visibility: hidden; }
+  .navigation .wrapper {
+    height: 1.8em;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding: 0;
+    border: 0; }
+  .navigation .menu-link {
+    display: none; }
+  .navigation .selected {
+    border-width: 1pt 1pt 0 1pt;
+    padding-bottom: 1pt;
+    margin-bottom: -1pt;
+    border-style: outset;
+    border-color: #8DBF3F; }
+    @media screen and (min-width: 2500px) {
+      .navigation .selected {
+        padding-bottom: 2pt;
+        margin-bottom: -2pt; } }
+  .navigation ul {
+    display: block;
+    position: relative;
+    list-style: none;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    border: 0; }
+    .navigation ul li {
+      display: inline-block;
+      height: 1.8em;
+      position: relative;
+      -webkit-box-sizing: content-box;
+      /* Android ≤ 2.3, iOS ≤ 4 */
+      -moz-box-sizing: content-box;
+      /* Firefox 1+ */
+      box-sizing: content-box;
+      /* Chrome, IE 8+, Opera, Safari 5.1 */
+      float: left;
+      margin: 0;
+      margin-left: 0.2em;
+      padding: auto 0.4em;
+      border: 0; }
+      .navigation ul li:first-child {
+        margin-left: 0; }
+      .navigation ul li a {
+        display: inline-block;
+        position: relative;
+        height: 100%;
+        padding: 0 1em;
+        margin: 0;
+        line-height: 1.8em;
+        text-align: center;
+        color: inherit;
+        text-decoration: none; }
 
-  body {
-    min-height: 100%;
-    overflow-y: auto;
-    overflow-x: hidden; } }
+@media screen and (max-width: 600px) {
+  .navigation {
+    margin: 0;
+    padding: 0;
+    height: auto;
+    border: 0;
+    padding-top: -2pt;
+    margin-top: 0.3em;
+    width: 80%;
+    float: left;
+    border-top-width: 0.1em;
+    border-top-style: outset;
+    border-bottom-width: 0.1em;
+    border-bottom-style: outset;
+    border-color: #1C68AA;
+    -webkit-box-sizing: border-box;
+    /* Android ≤ 2.3, iOS ≤ 4 */
+    -moz-box-sizing: border-box;
+    /* Firefox 1+ */
+    box-sizing: border-box;
+    /* Chrome, IE 8+, Opera, Safari 5.1 */
+    /* Stile per i bottoni del menù di primo livello, quando sono visibili */ }
+    .navigation .wrapper {
+      height: auto;
+      float: left;
+      margin: 0;
+      width: 80%;
+      position: relative;
+      /* Stile di base per il menù chiuso */ }
+      .navigation .wrapper a {
+        display: block;
+        clear: both;
+        width: 80%;
+        text-align: center;
+        padding: 0.2em 10%;
+        line-height: 2em;
+        text-decoration: none; }
+      .navigation .wrapper .menu-link {
+        display: inline-block;
+        position: relative;
+        -webkit-box-sizing: border-box;
+        /* Android ≤ 2.3, iOS ≤ 4 */
+        -moz-box-sizing: border-box;
+        /* Firefox 1+ */
+        box-sizing: border-box;
+        /* Chrome, IE 8+, Opera, Safari 5.1 */
+        height: 3em;
+        line-height: 3em;
+        width: 100%;
+        margin-bottom: -0.01em;
+        padding: 0 1%;
+        background-color: rgba(28, 104, 170, 0.8);
+        border-right-width: 0.1em;
+        border-right-style: groove;
+        border-color: #1C68AA;
+        z-index: 5; }
+        .navigation .wrapper .menu-link span {
+          display: block;
+          position: absolute;
+          float: left;
+          width: 80%;
+          left: 10%;
+          right: 10%;
+          height: 2.8em;
+          color: inherit; }
+        .navigation .wrapper .menu-link .icon {
+          display: inline-block;
+          float: right;
+          width: 1.5em;
+          height: 1.5em;
+          margin: 0.75em 0.3em;
+          background-image: url("../img/icons/menu-white.png");
+          background-repeat: no-repeat;
+          background-position: right center;
+          background-size: 100% 100%; }
+        .navigation .wrapper .menu-link:hover .icon {
+          background-image: url("../img/icons/menu-hover.png"); }
+      .navigation .wrapper #open {
+        display: block; }
+      .navigation .wrapper #close {
+        display: none; }
+      .navigation .wrapper ul {
+        font-size: inherit;
+        -webkit-box-sizing: border-box;
+        /* Android ≤ 2.3, iOS ≤ 4 */
+        -moz-box-sizing: border-box;
+        /* Firefox 1+ */
+        box-sizing: border-box;
+        /* Chrome, IE 8+, Opera, Safari 5.1 */
+        display: block;
+        position: absolute;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        border: 0;
+        border-right-width: 1pt;
+        border-style: groove;
+        border-color: #030320;
+        width: 100%;
+        height: auto;
+        top: 3.05em;
+        z-index: 3;
+        left: -10000px; }
+        .navigation .wrapper ul li {
+          display: inline-block;
+          -webkit-box-sizing: border-box;
+          /* Android ≤ 2.3, iOS ≤ 4 */
+          -moz-box-sizing: border-box;
+          /* Firefox 1+ */
+          box-sizing: border-box;
+          /* Chrome, IE 8+, Opera, Safari 5.1 */
+          width: 100%;
+          height: 0em;
+          border: 0;
+          float: left;
+          margin: 0;
+          border-width: 1pt 0;
+          border-bottom: 0;
+          border-style: groove;
+          border-color: #1C68AA;
+          line-height: auto;
+          -webkit-transition: height 0.25;
+          -moz-transition: height 0.25s;
+          -o-transition: height 0.25s;
+          transition: height 0.25s;
+          z-index: inherit; }
+          .navigation .wrapper ul li:last-child {
+            border-bottom-width: 1pt; }
+          .navigation .wrapper ul li a {
+            position: relative;
+            height: 3em;
+            line-height: 3em;
+            padding-left: 10%;
+            padding-right: 10%;
+            background-color: #FFFFFF;
+            color: #327CCB;
+            z-index: inherit; }
+          .navigation .wrapper ul li:hover:not(.selected) a {
+            color: #FFA01A; }
+        .navigation .wrapper ul .selected a {
+          background-color: #8DBF3F;
+          color: #000000; }
+    .navigation:target #close {
+      display: inline-block; }
+    .navigation:target #open {
+      display: none; }
+    .navigation:target ul {
+      height: auto;
+      left: 0px; }
+      .navigation:target ul li {
+        height: auto; }
+        .navigation:target ul li a {
+          height: 3em; }
+    .navigation:target .breadcrumb {
+      left: -99999px; }
+
+  .menuMobileVisible #menu {
+    height: auto;
+    left: 0px; }
+    .menuMobileVisible #menu li {
+      height: auto; }
+  .menuMobileVisible #breadcrumb {
+    left: -99999px; } }
+  @media screen and (max-width: 600px) and (max-width: 200px) {
+    .navigation .wrapper {
+      width: 40%; }
+      .navigation .wrapper .menu-link span {
+        display: none; }
+      .navigation .wrapper .menu-link .icon {
+        float: none;
+        margin-left: auto;
+        margin-right: auto; }
+      .navigation .wrapper ul {
+        width: 221%; }
+      .navigation .wrapper .breadcrumb {
+        width: 180%;
+        left: 0;
+        margin: 0; } }
 #page-header {
   background-color: #FFFFFF;
   padding-bottom: 0;
@@ -867,49 +1216,7 @@ html, body {
   .trasporti-links .content-box:hover span {
     color: #FFA01A; }
 
-#truck .icon {
-  background-image: url("../img/icons/icona-truck.png"); }
-#truck:hover .icon {
-  background-image: url("../img/icons/icona-truck-hover.png"); }
-
-#train .icon {
-  background-image: url("../img/icons/icona-train.png"); }
-#train:hover .icon {
-  background-image: url("../img/icons/icona-train-hover.png"); }
-
-#ship .icon {
-  background-image: url("../img/icons/icona-ship.png"); }
-#ship:hover .icon {
-  background-image: url("../img/icons/icona-ship-hover.png"); }
-
-#airplane .icon {
-  background-image: url("../img/icons/icona-plane.png"); }
-#airplane:hover .icon {
-  background-image: url("../img/icons/icona-plane-hover.png"); }
-
-#combined .icon {
-  background-image: url("../img/icons/icona-combined.png"); }
-#combined:hover .icon {
-  background-image: url("../img/icons/icona-combined-hover.png"); }
-
-.desktop_content {
-  display: block; }
-
-.mobile_content {
-  display: none; }
-
 @media screen and (max-width: 600px) {
-  .desktop_content {
-    display: none; }
-
-  .mobile_content {
-    display: block; }
-
-  /*    
-      #sol-trasporti{
-          margin: 0.5em auto;
-          margin-bottom: 0;
-      }*/
   .trasporti-links .content-box {
     display: block;
     position: relative;
@@ -1029,6 +1336,147 @@ html, body {
     width: 80%;
     margin: auto 10%;
     height: 10em; } }
+.gallery {
+  overflow: hidden;
+  position: relative; }
+  .gallery .carousel {
+    display: block;
+    position: relative;
+    -webkit-box-sizing: border-box;
+    /* Android ≤ 2.3, iOS ≤ 4 */
+    -moz-box-sizing: border-box;
+    /* Firefox 1+ */
+    box-sizing: border-box;
+    /* Chrome, IE 8+, Opera, Safari 5.1 */
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+    overflow: hidden;
+    background: none; }
+    .gallery .carousel .panes {
+      transition: left 0.8s ease-in-out 0s;
+      -webkit-transition: left 0.8s ease-in-out 0s;
+      display: block;
+      position: relative;
+      height: auto;
+      width: 500%;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      overflow: hidden; }
+      .gallery .carousel .panes li {
+        position: relative;
+        padding: 0;
+        float: left;
+        margin: 0;
+        width: 20%; }
+        .gallery .carousel .panes li h5 {
+          display: block;
+          position: absolute;
+          height: 1.2em;
+          padding: 0.4em;
+          font-size: 1.2em;
+          line-height: 1.2em;
+          width: 100%;
+          margin: 0;
+          top: 0;
+          left: 0;
+          background-color: #1C68AA;
+          color: #FFFFFF;
+          text-align: center; }
+        .gallery .carousel .panes li img {
+          display: block;
+          position: relative;
+          width: 100%;
+          height: auto;
+          margin: 0 auto;
+          z-index: -1; }
+  .gallery .controls {
+    display: block;
+    position: absolute;
+    top: 40%;
+    font-size: 1.5em;
+    width: 2em;
+    height: 2em;
+    border-radius: 50%;
+    background-color: #1C68AA;
+    opacity: .5;
+    cursor: pointer;
+    color: #FFFFFF;
+    z-index: 3; }
+    .gallery .controls:hover {
+      opacity: 1;
+      color: #FFA01A; }
+    .gallery .controls label {
+      display: none;
+      position: relative;
+      padding: 0;
+      float: left;
+      width: 100%;
+      height: 100%;
+      line-height: 1.8em;
+      text-align: center;
+      border-radius: 50%;
+      cursor: pointer;
+      color: inherit; }
+  .gallery .left {
+    left: 1%; }
+  .gallery .right {
+    right: 1%; }
+  .gallery .bottom {
+    display: block;
+    position: absolute;
+    bottom: 0;
+    background-color: #FFFFFF;
+    width: 100%;
+    opacity: .7; }
+    .gallery .bottom:hover {
+      opacity: 1; }
+    .gallery .bottom .container {
+      height: 1.2em;
+      width: 12em;
+      margin: 0.3em auto; }
+    .gallery .bottom label {
+      display: inline-block;
+      -webkit-box-sizing: border-box;
+      /* Android ≤ 2.3, iOS ≤ 4 */
+      -moz-box-sizing: border-box;
+      /* Firefox 1+ */
+      box-sizing: border-box;
+      /* Chrome, IE 8+, Opera, Safari 5.1 */
+      width: 1.2em;
+      height: 1.2em;
+      cursor: pointer;
+      margin: auto;
+      margin-left: 1.5em;
+      padding: 0;
+      float: left;
+      border-radius: 50%;
+      border-width: 1pt;
+      border-color: #030320;
+      border-style: groove;
+      background-color: #1C68AA; }
+      .gallery .bottom label:first-child {
+        margin-left: 0; }
+      .gallery .bottom label:hover {
+        background-color: #FFA01A; }
+  .gallery input {
+    display: none; }
+  .gallery #img_1:checked ~ .carousel .panes {
+    left: 0; }
+  .gallery #img_2:checked ~ .carousel .panes {
+    left: -100%; }
+  .gallery #img_3:checked ~ .carousel .panes {
+    left: -200%; }
+  .gallery #img_4:checked ~ .carousel .panes {
+    left: -300%; }
+  .gallery #img_5:checked ~ .carousel .panes {
+    left: -400%; }
+  .gallery #img_1:checked ~ .controls .a, .gallery #img_2:checked ~ .controls .b, .gallery #img_3:checked ~ .controls .c, .gallery #img_4:checked ~ .controls .d, .gallery #img_5:checked ~ .controls .e {
+    display: block; }
+  .gallery #img_1:checked ~ .bottom .img_1, .gallery #img_2:checked ~ .bottom .img_2, .gallery #img_3:checked ~ .bottom .img_3, .gallery #img_4:checked ~ .bottom .img_4, .gallery #img_5:checked ~ .bottom .img_5 {
+    background-color: #8DBF3F; }
+
 .sticky-footer {
   position: relative;
   min-height: 100%;
@@ -1077,119 +1525,31 @@ html, body {
   #footer {
     margin-top: 0;
     height: auto; } }
-/*@keyframes carousel{
-    0%    { left:0; }
-    11%   { left:0; }
-    12.5% { left:-100%; }
-    23.5% { left:-100%; }
-    25%   { left:-200%; }
-    36%   { left:-200%; }
-    37.5% { left:-300%; }
-    48.5% { left:-300%; }
-    50%   { left:-400%; }
-    61%   { left:-400%; }
-    62.5% { left:-300%; }
-    73.5% { left:-300%; }
-    75%   { left:-200%; }
-    86%   { left:-200%; }
-    87.5% { left:-100%; }
-    98.5% { left:-100%; }
-    100%  { left:0; }
-}
+#truck .icon {
+  background-image: url("../img/icons/icona-truck.png"); }
+#truck:hover .icon {
+  background-image: url("../img/icons/icona-truck-hover.png"); }
 
-@-webkit-keyframes carousel{
-    0%    { left:0; }
-    11%   { left:0; }
-    12.5% { left:-100%; }
-    23.5% { left:-100%; }
-    25%   { left:-200%; }
-    36%   { left:-200%; }
-    37.5% { left:-300%; }
-    48.5% { left:-300%; }
-    50%   { left:-400%; }
-    61%   { left:-400%; }
-    62.5% { left:-300%; }
-    73.5% { left:-300%; }
-    75%   { left:-200%; }
-    86%   { left:-200%; }
-    87.5% { left:-100%; }
-    98.5% { left:-100%; }
-    100%  { left:0; }
-}
+#train .icon {
+  background-image: url("../img/icons/icona-train.png"); }
+#train:hover .icon {
+  background-image: url("../img/icons/icona-train-hover.png"); }
 
-.carousel{
-    @include border-box;
-    overflow: hidden;
-    width:100%;
-    margin-bottom: 0;
-    padding: 0;
-    @media screen and (max-width: 600px)
-    {
-        margin-top: 0.6em;
-    }
-    
-    .panes{
-        list-style:none;
-        position:relative;
-        width:500%;  Numero di pannelli * 100% 
-        padding: 0;
-        overflow:hidden;  Usato per eliminare i floats 
-        margin: 0;
-        -moz-animation: carousel 45s infinite;
-        -webkit-animation: carousel 45s infinite;
-        animation: carousel 45s infinite;
-        
-        li{
-            margin: 0;
-            padding: 0;
-            position:relative;
-            float:left;
-            width: 20%;  100 / numero di pannelli 
-            
-            a{
-                display: block;
-                width: 100%;
-                height: 100%;
-                color:#FFFFFF;
-                overflow: hidden;
-                text-decoration: none;
-                &:hover{
-                    h2{
-                        color:#FFA01A;
-                    }
-                }
-                .lazy-image{
-                    img{
-                        display:block;
-                        position: relative;
-                        width:100%;
-                        margin: 0 auto;
-                    }
-                }
-                
-                
-                h2{
-                    padding:0.5em;
-                    z-index: 1;
-                    position:absolute;
-                    right:0;
-                    margin: 0;
-                    top: 0;
-                    left: 0;
-                    text-align:right;
-                    background-color: rgba(28,104,170, 0.9);
-                    @media screen and (max-width: 600px)
-                    {
-                        padding: 0;
-                        margin: 0;
-                        position: relative;
-                        text-decoration: none;
-                    }
-                }
-            }
-        }
-    }
-}*/
+#ship .icon {
+  background-image: url("../img/icons/icona-ship.png"); }
+#ship:hover .icon {
+  background-image: url("../img/icons/icona-ship-hover.png"); }
+
+#airplane .icon {
+  background-image: url("../img/icons/icona-plane.png"); }
+#airplane:hover .icon {
+  background-image: url("../img/icons/icona-plane-hover.png"); }
+
+#combined .icon {
+  background-image: url("../img/icons/icona-combined.png"); }
+#combined:hover .icon {
+  background-image: url("../img/icons/icona-combined-hover.png"); }
+
 @media screen and (min-width: 769px) {
   #main-image .lazy-image {
     background-image: url("../img/main-image.png"); }
@@ -1284,3 +1644,117 @@ html, body {
     background-image: url("../img/300/camion.png"); }
   .tab_to_accordion #image-combinato {
     background-image: url("../img/300/combinato.png"); } }
+h1, h2, h3, h4, h5, h6 {
+  color: #E2E5DF; }
+
+#logo-text {
+  font-family: Times New Roman, Boldoni; }
+  #logo-text h4 {
+    font-size: 2.2em;
+    color: #1C68AA; }
+  #logo-text h6 {
+    font-size: 1.2em;
+    color: #1C68AA; }
+  @media screen and (max-width: 600px) {
+    #logo-text h4 {
+      font-size: 1.5em; }
+    #logo-text h6 {
+      font-size: 0.8em; } }
+
+.content-box .header h4 {
+  font-size: 1.2em; }
+.content-box h1, .content-box h2, .content-box h3, .content-box h4, .content-box h5, .content-box h6 {
+  font-family: Times New Roman, Boldoni;
+  margin: 0.6em 0.5em; }
+.content-box h6 {
+  line-height: 2em;
+  font-size: 1em; }
+.content-box p {
+  font-family: Arial, Verdana;
+  line-height: 1.5em;
+  margin: 0.6em 0.5em; }
+@media screen and (max-width: 600px) {
+  .content-box .header h4 {
+    line-height: 1.2em;
+    font-size: 1em; }
+  .content-box h6 {
+    margin-top: 0.8em;
+    margin-bottom: 0.4em;
+    font-size: 0.9em;
+    line-height: 1.2em; }
+  .content-box p {
+    font-size: 0.8em;
+    line-height: 1.2em; } }
+
+.breadcrumb {
+  font-size: 0.8em; }
+
+.lang-menu, #navigation {
+  font-size: 1em; }
+  @media screen and (max-width: 600px) {
+    .lang-menu, #navigation {
+      font-size: 0.75em; } }
+
+#sol-trasporti, #links-trasporti {
+  zoom: 1; }
+  #sol-trasporti .content-box .header h1, #sol-trasporti .content-box .header h2, #sol-trasporti .content-box .header h3, #sol-trasporti .content-box .header h4, #sol-trasporti .content-box .header h5, #sol-trasporti .content-box .header h6, #links-trasporti .content-box .header h1, #links-trasporti .content-box .header h2, #links-trasporti .content-box .header h3, #links-trasporti .content-box .header h4, #links-trasporti .content-box .header h5, #links-trasporti .content-box .header h6 {
+    font-size: 1.2em; }
+  #sol-trasporti .content-box span, #links-trasporti .content-box span {
+    font-size: 1em; }
+  @media screen and (max-width: 768px) {
+    #sol-trasporti .content-box, #links-trasporti .content-box {
+      font-size: 0.9em; }
+      #sol-trasporti .content-box .header h1, #sol-trasporti .content-box .header h2, #sol-trasporti .content-box .header h3, #sol-trasporti .content-box .header h4, #sol-trasporti .content-box .header h5, #sol-trasporti .content-box .header h6, #links-trasporti .content-box .header h1, #links-trasporti .content-box .header h2, #links-trasporti .content-box .header h3, #links-trasporti .content-box .header h4, #links-trasporti .content-box .header h5, #links-trasporti .content-box .header h6 {
+        font-size: 1em; } }
+  @media screen and (max-width: 600px) {
+    #sol-trasporti .content-box, #links-trasporti .content-box {
+      font-size: 0.8em; }
+      #sol-trasporti .content-box .header h1, #sol-trasporti .content-box .header h2, #sol-trasporti .content-box .header h3, #sol-trasporti .content-box .header h4, #sol-trasporti .content-box .header h5, #sol-trasporti .content-box .header h6, #links-trasporti .content-box .header h1, #links-trasporti .content-box .header h2, #links-trasporti .content-box .header h3, #links-trasporti .content-box .header h4, #links-trasporti .content-box .header h5, #links-trasporti .content-box .header h6 {
+        font-size: 1em; }
+      #sol-trasporti .content-box span, #links-trasporti .content-box span {
+        font-size: 0.8em; } }
+
+#navigation {
+  font-family: Arial, Verdana;
+  font-size: 1em; }
+  @media screen and (max-width: 768px) {
+    #navigation {
+      font-size: 0.8em; } }
+  @media screen and (max-width: 600px) {
+    #navigation {
+      font-size: 0.75em; } }
+
+#main-image .image-mask h5 {
+  color: #FFFFFF;
+  font-family: Times New Roman, Boldoni;
+  line-height: 1.6em;
+  font-size: 1.6em; }
+#main-image .image-mask p {
+  color: #FFFFFF;
+  font-family: Arial, Verdana;
+  font-size: 1em; }
+@media screen and (max-width: 600px) {
+  #main-image .image-mask h5 {
+    font-size: 1.2em;
+    line-height: 1.2em; }
+  #main-image .image-mask p {
+    font-size: 0.8em; } }
+
+#tab a {
+  font-family: Arial, Verdana;
+  font-size: 1.1em; }
+@media screen and (max-width: 600px) {
+  #tab a {
+    font-size: 0.9em; } }
+
+.carousel h2 {
+  font-size: 1.2em; }
+  @media screen and (max-width: 600px) {
+    .carousel h2 {
+      font-size: 0.7em; } }
+
+#footer {
+  font-family: Arial, Verdana; }
+  @media screen and (max-width: 600px) {
+    #footer {
+      font-size: 0.9em; } }
