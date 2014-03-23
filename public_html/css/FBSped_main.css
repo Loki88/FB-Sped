@@ -1,4 +1,4 @@
-@charset "CP850";
+@charset "UTF-8";
 /* 
     Created on : 23-mar-2014, 12.08.24
     Author     : Lorenzo Di Giuseppe
@@ -193,6 +193,7 @@ html, body {
   padding: 0;
   margin: 0;
   margin-top: 0.6em;
+  padding-bottom: -1pt;
   border-bottom: 1pt inset #1C68AA; }
   .navigation .breadcrumb {
     display: block;
@@ -213,14 +214,15 @@ html, body {
     display: none; }
   .navigation .selected {
     border-width: 1pt 1pt 0 1pt;
-    padding-bottom: 1pt;
-    margin-bottom: -1pt;
+    /*        padding-bottom: 1pt;
+            margin-bottom: -1pt;*/
+    /*        @media screen and (min-width: 2500px)
+            {
+                padding-bottom: 2pt;
+                margin-bottom: -2pt;
+            }*/
     border-style: outset;
     border-color: #8DBF3F; }
-    @media screen and (min-width: 2500px) {
-      .navigation .selected {
-        padding-bottom: 2pt;
-        margin-bottom: -2pt; } }
   .navigation ul {
     display: block;
     position: relative;
@@ -1059,7 +1061,8 @@ html, body {
           border-bottom-width: 0;
           border-style: groove;
           border-color: #1C68AA;
-          float: none; }
+          float: none;
+          overflow: hidden; }
           .tab_to_accordion .tab_contents .tab_pane .accordion-button a {
             display: block;
             visibility: visible;
@@ -1095,7 +1098,7 @@ html, body {
               height: 2em;
               background-position: center center;
               background-repeat: no-repeat;
-              background-size: 2em 2em;
+              background-size: 1.7em 1.7em;
               background-image: url("../img/icons/arrow-down-white.png"); }
             .tab_to_accordion .tab_contents .tab_pane .accordion-button a:hover {
               color: #FFA01A; }

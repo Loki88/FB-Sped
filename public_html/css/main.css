@@ -1,11 +1,12 @@
-@charset "CP850";
+@charset "UTF-8";
 /* 
     Created on : 9-feb-2014, 18.15.20
     Author     : Lorenzo Di Giuseppe <lorenzo.digiuseppe88@gmail.com>
 */
 body {
   background-color: #FFFFFF;
-  position: relative; }
+  position: relative;
+  font-size-adjust: none; }
 
 html, body {
   height: 100%;
@@ -14,6 +15,9 @@ html, body {
   margin: 0;
   padding: 0; }
 
+@media screen and (max-width: 480px) {
+  html {
+    -webkit-text-size-adjust: none; } }
 .body-background {
   display: table;
   z-index: -2;
@@ -93,7 +97,8 @@ html, body {
   margin: 0;
   border: 0;
   height: auto;
-  position: relative; }
+  position: relative;
+  text-align: center; }
   #page-header .wrapper {
     height: auto;
     margin-bottom: 0; }
@@ -131,14 +136,12 @@ html, body {
           float: left;
           margin: auto 0; }
     #page-header #logo #logo-text {
-      display: block;
-      position: absolute;
+      display: inline-block;
+      position: relative;
+      float: left;
       padding: 0;
-      left: 20%;
-      right: 20%;
       top: 0.8em;
-      bottom: auto;
-      width: 60%;
+      width: 50%;
       text-align: center; }
       #page-header #logo #logo-text h4 {
         display: block;
@@ -439,7 +442,7 @@ html, body {
   left: -99999px;
   height: 0;
   width: 100%;
-  margin: 0.5em auto; }
+  /*margin: 0.5em auto;*/ }
   @media screen and (max-width: 600px) {
     .breadcrumb {
       display: block;
@@ -710,7 +713,8 @@ html, body {
           border-bottom-width: 0;
           border-style: groove;
           border-color: #1C68AA;
-          float: none; }
+          float: none;
+          overflow: hidden; }
           .tab_to_accordion .tab_contents .tab_pane .accordion-button a {
             display: block;
             visibility: visible;
@@ -746,7 +750,7 @@ html, body {
               height: 2em;
               background-position: center center;
               background-repeat: no-repeat;
-              background-size: 2em 2em;
+              background-size: 1.7em 1.7em;
               background-image: url("../img/icons/arrow-down-white.png"); }
             .tab_to_accordion .tab_contents .tab_pane .accordion-button a:hover {
               color: #FFA01A; }
@@ -812,7 +816,8 @@ html, body {
 .trasporti-links {
   display: inline-block; }
   .trasporti-links .content-box a {
-    display: block;
+    display: inline-block;
+    position: relative;
     padding: 0;
     margin: 0;
     width: 100%;
@@ -825,9 +830,10 @@ html, body {
     box-sizing: content-box;
     /* Chrome, IE 8+, Opera, Safari 5.1 */ }
     .trasporti-links .content-box a .header {
-      min-height: 5em;
-      height: 6em;
-      max-height: 8em; }
+      /*                min-height: 5em;
+                      height: 6em;
+                      max-height: 8em;*/
+      min-height: 7em; }
       .trasporti-links .content-box a .header .icon {
         display: table;
         position: relative;
@@ -839,11 +845,11 @@ html, body {
         background-repeat: no-repeat;
         background-size: 2em auto; }
       .trasporti-links .content-box a .header h5 {
-        margin: 0;
-        padding: 0 10%;
-        height: 3em;
-        font-size: 0.8em;
-        width: 80%; }
+        /*                    margin: 0;
+                            padding: 0 10%;
+                            height: 3em;
+                            font-size: 0.8em;
+                            width: 80%;*/ }
     .trasporti-links .content-box a p {
       color: #000000;
       text-decoration: none; }
@@ -916,11 +922,7 @@ html, body {
     height: 100%;
     padding: 0; }
     .trasporti-links .content-box a .header {
-      display: block;
-      min-height: 2em;
-      height: 2.5em;
-      border: 0;
-      margin-bottom: 0; }
+      min-height: 2em; }
       .trasporti-links .content-box a .header .icon {
         display: inline-block;
         float: left;
@@ -988,10 +990,11 @@ html, body {
   .content-box .header {
     clear: both;
     z-index: 2;
-    display: inline-table;
+    display: inline-block;
     width: 100%;
     top: 0;
     margin: 0;
+    text-wrap: normal;
     padding: 0; }
     .content-box .header h1, .content-box .header h2, .content-box .header h3, .content-box .header h4, .content-box .header h5, .content-box .header h6 {
       display: inline-block;

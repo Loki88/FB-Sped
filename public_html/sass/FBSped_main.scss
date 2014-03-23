@@ -289,6 +289,7 @@ html, body {
     padding: 0;
     margin: 0;
     margin-top: 0.6em;
+    padding-bottom: -1pt;
     border-bottom: 1pt inset #1C68AA;
     
     .breadcrumb{
@@ -317,13 +318,13 @@ html, body {
 
     .selected{
         border-width: 1pt 1pt 0 1pt;
-        padding-bottom: 1pt;
-        margin-bottom: -1pt;
-        @media screen and (min-width: 2500px)
+/*        padding-bottom: 1pt;
+        margin-bottom: -1pt;*/
+/*        @media screen and (min-width: 2500px)
         {
             padding-bottom: 2pt;
             margin-bottom: -2pt;
-        }
+        }*/
         border-style: outset;
         border-color: #8DBF3F;
     }
@@ -1394,6 +1395,7 @@ html, body {
                     border-style: groove;
                     border-color: #1C68AA;
                     float: none;
+                    overflow: hidden;
                     
                     a{
                         display: block;
@@ -1428,7 +1430,7 @@ html, body {
                             height: 2em;
                             background-position: center center;
                             background-repeat: no-repeat;
-                            background-size: 2em 2em;
+                            background-size: 1.7em 1.7em;
                             background-image: url('../img/icons/arrow-down-white.png');
                         }
                         

@@ -33,7 +33,8 @@ $second-level-text: #FFFFFF;
     padding: 0;
     margin: 0;
     margin-top: 0.6em;
-    border-bottom: 1pt inset #1C68AA;
+    /*border-bottom: 1pt inset #1C68AA;*/
+    margin-bottom: -2pt;
     
     .breadcrumb{
         display: block;
@@ -61,8 +62,8 @@ $second-level-text: #FFFFFF;
 
     .selected{
         border-width: 1pt 1pt 0 1pt;
-        padding-bottom: 1pt;
-        margin-bottom: -1pt;
+/*        padding-bottom: 1pt;
+        margin-bottom: -1pt;*/
         @media screen and (min-width: 2500px)
         {
             padding-bottom: 2pt;
@@ -80,13 +81,15 @@ $second-level-text: #FFFFFF;
         margin: 0;
         padding: 0;
         border: 0;
+        text-align: center;
+        /*margin-bottom: -1pt;*/
 
         li {
             display: inline-block;
             height: 1.8em;
             position: relative;
             @include content-box;
-            float: left;
+            /*float: left;*/
             margin: 0;
             margin-left: 0.2em;
             &:first-child{

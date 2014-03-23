@@ -25,6 +25,7 @@
 body{
     background-color: #FFFFFF;
     position: relative;
+    font-size-adjust: none;
 }
 
 html, body {
@@ -33,6 +34,13 @@ html, body {
     width: 100%;
     margin: 0;
     padding: 0;
+}
+
+@media screen and (max-width: 480px) {
+
+	html {
+		-webkit-text-size-adjust: none;
+	}
 }
 
 .body-background {
@@ -137,6 +145,7 @@ html, body {
     border: 0;
     height: auto;
     position: relative;
+    text-align: center;
     
     .wrapper{
         height: auto;
@@ -179,14 +188,12 @@ html, body {
         }
     
         #logo-text{
-            display: block;
-            position: absolute;
+            display: inline-block;
+            position: relative;
+            float: left;
             padding: 0;
-            left: 20%;
-            right: 20%;
             top: 0.8em;
-            bottom: auto;
-            width: 60%;
+            width: 50%;
             text-align: center;
             
             h4{
@@ -595,7 +602,7 @@ html, body {
     left: -99999px;
     height: 0;
     width: 100%;
-    margin: 0.5em auto;
+    /*margin: 0.5em auto;*/
     
     @media screen and (max-width: 600px){
         display: block;
@@ -925,6 +932,7 @@ html, body {
                     border-style: groove;
                     border-color: #1C68AA;
                     float: none;
+                    overflow: hidden;
                     
                     a{
                         display: block;
@@ -959,7 +967,7 @@ html, body {
                             height: 2em;
                             background-position: center center;
                             background-repeat: no-repeat;
-                            background-size: 2em 2em;
+                            background-size: 1.7em 1.7em;
                             background-image: url('../img/icons/arrow-down-white.png');
                         }
                         
@@ -1064,7 +1072,8 @@ html, body {
      display: inline-block;
      .content-box{
          a{
-            display: block;
+            display: inline-block;
+            position: relative;
             padding: 0;
             margin: 0;
             width: 100%;
@@ -1072,9 +1081,10 @@ html, body {
             text-decoration: none;
             @include content-box;
             .header{
-                min-height: 5em;
+/*                min-height: 5em;
                 height: 6em;
-                max-height: 8em;
+                max-height: 8em;*/
+                min-height: 7em;
 
                 .icon{
                     display: table;
@@ -1089,11 +1099,11 @@ html, body {
                 }
 
                 h5{
-                    margin: 0;
+/*                    margin: 0;
                     padding: 0 10%;
                     height: 3em;
                     font-size: 0.8em;
-                    width: 80%;
+                    width: 80%;*/
                 }
             }
 
@@ -1217,11 +1227,7 @@ html, body {
             padding: 0;
             a{
                 .header{
-                    display: block;
                     min-height: 2em;
-                    height: 2.5em;
-                    border: 0;
-                    margin-bottom: 0;
 
                     .icon{
                         display: inline-block;
@@ -1298,10 +1304,11 @@ html, body {
     .header {
         clear: both;
         z-index: 2;
-        display: inline-table;
+        display: inline-block;
         width: 100%;
         top: 0;
         margin: 0;
+        text-wrap: normal;
         padding: 0;
         
         h1, h2, h3, h4, h5, h6 {

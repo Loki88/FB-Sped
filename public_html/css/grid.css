@@ -84,7 +84,7 @@
   .section {
     clear: both;
     padding: 0px;
-    margin: 0.7em 0px; }
+    margin-bottom: 0.7em; }
     .section:first-child {
       margin-top: 0.7em; }
 
