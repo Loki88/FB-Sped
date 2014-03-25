@@ -6,15 +6,15 @@ $(window).resize(function() {
         height: $(document).height(),
         zoom: window.devicePixelRatio
     };
-    if(newSize.width <= 600)
+    if(newSize.width <= 480)
     {
         //La finestra è ridimensionata per gli smartphone portrait
         $(window).trigger('oneColumn', newSize);
     }
-//    else if(newSize.width > 480 && newSize.width < 768) {
-//        //La finestra è ridimensionata per i tablet portrait e gli smartphone landscape
-//        $(window).trigger('fluidGrid', newSize);
-//    }
+    else if(newSize.width > 480 && newSize.width <= 768) {
+        //La finestra è ridimensionata per i tablet portrait e gli smartphone landscape
+        $(window).trigger('fluidGrid', newSize);
+    }
     else{
         //La finestra è ridimensionata per ogni altro dispositivo
         $(window).trigger('noMobile', newSize);
@@ -69,7 +69,7 @@ var Navigation = {
         menu.prop('mobile', false);
         lang.prop('mobile', false);
         var windowWidth = $(document).width();
-        if(windowWidth < 601)
+        if(windowWidth <= 768)
         {
             //barra di navigazione mobile
             Navigation.prepareMenu();
@@ -77,7 +77,7 @@ var Navigation = {
             Navigation.prepareLang();
             lang.prop('mobile', true);
         }
-        $(window).on('fluidGrid', Navigation.menuDesktop);
+        $(window).on('fluidGrid', Navigation.menuMobile);
         $(window).on('oneColumn', Navigation.menuMobile);
         $(window).on('noMobile', Navigation.menuDesktop);
     },

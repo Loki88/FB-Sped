@@ -46,12 +46,10 @@ var TabToAccordion = {
         }
         TabToAccordion.pushState(true);
         
-        if($(window).width() < 601)
+        if($(window).width() < 481)
             TabToAccordion.mobile = true;
         else
             TabToAccordion.mobile = false;
-        
-        console.log('mobile', TabToAccordion.mobile);
         
         $(window).on('oneColumn', function(){
             TabToAccordion.mobile = true;
@@ -59,13 +57,18 @@ var TabToAccordion = {
             $('#trasporti-tab').css('display', 'block');
         });
         
+        $(window).on('fluidGrid', function(){
+            TabToAccordion.mobile = false;
+            TabToAccordion.restoreTab();
+        });
+        
         $(window).on('noMobile', function(){
             TabToAccordion.mobile = false;
             TabToAccordion.restoreTab();
         });
         
-        History.Adapter.bind(window,'statechange',function(){ // Note: We are using statechange instead of popstate
-            var State = History.getState(); // Note: We are using History.getState() instead of event.state
+        History.Adapter.bind(window,'statechange',function(){
+            var State = History.getState();
             if(TabToAccordion.manualStateChange)
             {
                 TabToAccordion.restoreState(State.data);
@@ -75,8 +78,8 @@ var TabToAccordion = {
     },
     
     restoreState: function(state){
-        var link = $('.accordion-button>.open[href="'+state.href+'"]');//.find('[href="'+state.href+'"]:first');
-        if(link.length > 0 && $(document).width() < 601)
+        var link = $('.accordion-button>.open[href="'+state.href+'"]');
+        if(link.length > 0 && $(document).width() < 481)
             TabToAccordion.loadPage(link);
         else
             window.location.href = state.href;
@@ -84,7 +87,8 @@ var TabToAccordion = {
     
     restoreTab: function()
     {
-        if(this.current != null){
+        console.log('While restoring, tab to accordion... ', TabToAccordion.current)
+        if(TabToAccordion.current != null){
             var panel = $(this.current);
 
             panel.find('a').removeAttr('style');
@@ -92,6 +96,7 @@ var TabToAccordion = {
             panel.addClass('current');
         }
         else{
+            console.log('no current entry');
             $('#trasporti-desktop').css('display', 'block');
             $('#trasporti-tab').css('display', 'none');
             var trasporti = $('#trasporti-header');
@@ -117,6 +122,7 @@ var TabToAccordion = {
     {
         event.preventDefault();
         TabToAccordion.current = null;
+        TabToAccordion.home = true;
         var link = $(this);
         var panel = link.prop('panel');
         panel.removeClass('current');
@@ -127,7 +133,6 @@ var TabToAccordion = {
     accordionOpenClick: function(event)
     {
         event.preventDefault();
-        console.log('accordion open click');
         TabToAccordion.loadPage($(this));
     },
     
@@ -193,6 +198,7 @@ var TabToAccordion = {
             if(panel.prop('open'))
             {
                 TabToAccordion.current = null;
+                TabToAccordion.home = true;
                 panel.children('.close').hide();
                 TabToAccordion.hide(panel.children('.tab_page'));
                 panel.removeClass('current');
@@ -201,6 +207,7 @@ var TabToAccordion = {
             else
             {
                 TabToAccordion.home = false;
+                TabToAccordion.current = panel;
                 panel.children('.close').css('display', 'table');
                 TabToAccordion.show(panel.children('.tab_page'));
                 panel.addClass('current');

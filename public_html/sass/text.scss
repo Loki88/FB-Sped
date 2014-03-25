@@ -3,6 +3,10 @@
     Author     : Lorenzo Di Giuseppe <lorenzo.digiuseppe88@gmail.com>
 */
 
+html, body{
+    font-size: 16px;
+}
+
 h1, h2, h3, h4, h5, h6 {
     color: #E2E5DF;
 }
@@ -20,9 +24,9 @@ h1, h2, h3, h4, h5, h6 {
         color: #1C68AA;
     }
     
-    @media screen and (max-width: 600px){
+    @media screen and (max-width: 480px){
         h4{
-            font-size: 1.5em;
+            font-size: 1.1em;
         }
     
         h6{
@@ -37,6 +41,7 @@ h1, h2, h3, h4, h5, h6 {
             font-size: 1.2em;
         }
     }
+    
     h1, h2, h3, h4, h5, h6{
         font-family: Times New Roman, Boldoni;
         margin: 0.6em 0.5em;
@@ -46,18 +51,21 @@ h1, h2, h3, h4, h5, h6 {
         line-height: 2em;
         font-size: 1em;
     }
+    
     p{
         font-family: Arial, Verdana;
         line-height: 1.5em;
         margin: 0.6em 0.5em;
     }
-    @media screen and (max-width: 600px){
+    
+    @media screen and (max-width: 768px){
         .header{
             h4{
                 line-height: 1.2em;
-                font-size: 1em;
+                font-size: 1.1em;
             }
         }
+        
         h6{
             margin-top: 0.8em;
             margin-bottom: 0.4em;
@@ -72,23 +80,13 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .breadcrumb{
-    font-size: 0.8em;
-}
-
-.lang-menu, #navigation{
-    font-size: 1em;
-    @media screen and (max-width: 600px){
-        font-size: 0.75em;
+    @media screen and (max-width: 768px){
+        font-size: 1em;
+    }
+    @media screen and (max-width: 480px){
+        font-size: 0.8em;
     }
 }
-
-/*@media screen and (min-width: 320px) and (max-width: 600px){
-    .lang-menu {
-        span{
-            font-size: 1.2em;
-        }
-    }
-}*/
 
 #sol-trasporti, #links-trasporti{
     zoom: 1;
@@ -125,16 +123,32 @@ h1, h2, h3, h4, h5, h6 {
     }
 }
 
-#navigation{
+#navigation, .lang-menu{
     font-family: Arial, Verdana;
-    font-size: 1em;
+    font-size: 1.2em;
+/*    @media screen and (max-width: 768px)
+    {
+        font-size: 1em;
+    }
+    @media screen and (max-width: 320px){
+        font-size: 0.7em;
+    }
+    @media screen and (max-width: 150px){
+        font-size: 0.6em;
+    }*/
+}
+
+#navigation ul li, .lang-menu ul li
+{
     @media screen and (max-width: 768px)
     {
-        font-size: 0.8em;
+        font-size: 0.9em;
     }
-    @media screen and (max-width: 600px)
-    {
-        font-size: 0.75em;
+    @media screen and (max-width: 320px){
+        font-size: 0.6em;
+    }
+    @media screen and (max-width: 150px){
+        font-size: 0.5em;
     }
 }
 
@@ -169,12 +183,20 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #tab{
-    a{
+    .tab_menu{
+        a{
+            font-size: 1.2em;
+            @media screen and (max-width: 768px){
+                font-size: 1em;
+            }
+        }
+    }
+/*    a{
         font-family: Arial, Verdana;
         font-size: 1.1em;
-    }
+    }*/
     
-    @media screen and (max-width: 600px){
+    @media screen and (max-width: 480px){
         a{
             font-size: 0.9em;
         }

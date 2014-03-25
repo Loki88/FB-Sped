@@ -43,7 +43,7 @@ $controls_to_top: 40%;
             padding: 0;
             margin: 0;
             overflow: hidden;
-            /*border-bottom: 2pt #1C68AA groove;*/
+            z-index: 1;
             
             li{
                 position: relative;
@@ -53,7 +53,7 @@ $controls_to_top: 40%;
                 width: 100% / $number_of_page;
                 
                 h5{
-                    display: block;
+                    display: none;
                     position: absolute;
                     height: 1.2em;
                     padding: 0.4em;
@@ -92,7 +92,7 @@ $controls_to_top: 40%;
         opacity: .5;
         cursor: pointer;
         color: #FFFFFF;
-        z-index: 3;
+        z-index: 2;
         
         &:hover{
             opacity: 1;
@@ -129,6 +129,7 @@ $controls_to_top: 40%;
         background-color: #FFFFFF;
         width: 100%;
         opacity: .7;
+        z-index: 2;
         &:hover{
             opacity: 1;
         }

@@ -31,7 +31,7 @@
       padding: 0;
       margin: 0;
       overflow: hidden;
-      /*border-bottom: 2pt #1C68AA groove;*/ }
+      z-index: 1; }
       .gallery .carousel .panes li {
         position: relative;
         padding: 0;
@@ -39,7 +39,7 @@
         margin: 0;
         width: 20%; }
         .gallery .carousel .panes li h5 {
-          display: block;
+          display: none;
           position: absolute;
           height: 1.2em;
           padding: 0.4em;
@@ -71,7 +71,7 @@
     opacity: .5;
     cursor: pointer;
     color: #FFFFFF;
-    z-index: 3; }
+    z-index: 2; }
     .gallery .controls:hover {
       opacity: 1;
       color: #FFA01A; }
@@ -97,7 +97,8 @@
     bottom: 0;
     background-color: #FFFFFF;
     width: 100%;
-    opacity: .7; }
+    opacity: .7;
+    z-index: 2; }
     .gallery .bottom:hover {
       opacity: 1; }
     .gallery .bottom .container {

@@ -2,6 +2,9 @@
     Created on : 18-feb-2014, 23.02.43
     Author     : Lorenzo Di Giuseppe <lorenzo.digiuseppe88@gmail.com>
 */
+html, body {
+  font-size: 16px; }
+
 h1, h2, h3, h4, h5, h6 {
   color: #E2E5DF; }
 
@@ -13,9 +16,9 @@ h1, h2, h3, h4, h5, h6 {
   #logo-text h6 {
     font-size: 1.2em;
     color: #1C68AA; }
-  @media screen and (max-width: 600px) {
+  @media screen and (max-width: 480px) {
     #logo-text h4 {
-      font-size: 1.5em; }
+      font-size: 1.1em; }
     #logo-text h6 {
       font-size: 0.8em; } }
 
@@ -31,10 +34,10 @@ h1, h2, h3, h4, h5, h6 {
   font-family: Arial, Verdana;
   line-height: 1.5em;
   margin: 0.6em 0.5em; }
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 768px) {
   .content-box .header h4 {
     line-height: 1.2em;
-    font-size: 1em; }
+    font-size: 1.1em; }
   .content-box h6 {
     margin-top: 0.8em;
     margin-bottom: 0.4em;
@@ -44,22 +47,13 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 0.8em;
     line-height: 1.2em; } }
 
-.breadcrumb {
-  font-size: 0.8em; }
+@media screen and (max-width: 768px) {
+  .breadcrumb {
+    font-size: 1em; } }
+@media screen and (max-width: 480px) {
+  .breadcrumb {
+    font-size: 0.8em; } }
 
-.lang-menu, #navigation {
-  font-size: 1em; }
-  @media screen and (max-width: 600px) {
-    .lang-menu, #navigation {
-      font-size: 0.75em; } }
-
-/*@media screen and (min-width: 320px) and (max-width: 600px){
-    .lang-menu {
-        span{
-            font-size: 1.2em;
-        }
-    }
-}*/
 #sol-trasporti, #links-trasporti {
   zoom: 1; }
   #sol-trasporti .content-box .header h1, #sol-trasporti .content-box .header h2, #sol-trasporti .content-box .header h3, #sol-trasporti .content-box .header h4, #sol-trasporti .content-box .header h5, #sol-trasporti .content-box .header h6, #links-trasporti .content-box .header h1, #links-trasporti .content-box .header h2, #links-trasporti .content-box .header h3, #links-trasporti .content-box .header h4, #links-trasporti .content-box .header h5, #links-trasporti .content-box .header h6 {
@@ -79,15 +73,29 @@ h1, h2, h3, h4, h5, h6 {
       #sol-trasporti .content-box span, #links-trasporti .content-box span {
         font-size: 0.8em; } }
 
-#navigation {
+#navigation, .lang-menu {
   font-family: Arial, Verdana;
-  font-size: 1em; }
-  @media screen and (max-width: 768px) {
-    #navigation {
-      font-size: 0.8em; } }
-  @media screen and (max-width: 600px) {
-    #navigation {
-      font-size: 0.75em; } }
+  font-size: 1.2em;
+  /*    @media screen and (max-width: 768px)
+      {
+          font-size: 1em;
+      }
+      @media screen and (max-width: 320px){
+          font-size: 0.7em;
+      }
+      @media screen and (max-width: 150px){
+          font-size: 0.6em;
+      }*/ }
+
+@media screen and (max-width: 768px) {
+  #navigation ul li, .lang-menu ul li {
+    font-size: 0.9em; } }
+@media screen and (max-width: 320px) {
+  #navigation ul li, .lang-menu ul li {
+    font-size: 0.6em; } }
+@media screen and (max-width: 150px) {
+  #navigation ul li, .lang-menu ul li {
+    font-size: 0.5em; } }
 
 .infoWindow {
   font-family: Arial, Verdana; }
@@ -108,12 +116,19 @@ h1, h2, h3, h4, h5, h6 {
   #main-image .image-mask p {
     font-size: 0.8em; } }
 
-#tab a {
-  font-family: Arial, Verdana;
-  font-size: 1.1em; }
-@media screen and (max-width: 600px) {
-  #tab a {
-    font-size: 0.9em; } }
+#tab {
+  /*    a{
+          font-family: Arial, Verdana;
+          font-size: 1.1em;
+      }*/ }
+  #tab .tab_menu a {
+    font-size: 1.2em; }
+    @media screen and (max-width: 768px) {
+      #tab .tab_menu a {
+        font-size: 1em; } }
+  @media screen and (max-width: 480px) {
+    #tab a {
+      font-size: 0.9em; } }
 
 .carousel h2 {
   font-size: 1.2em; }
