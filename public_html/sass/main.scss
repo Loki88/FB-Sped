@@ -192,7 +192,7 @@ html, body {
             position: absolute;
             float: none;
             padding: 0;
-            top: 1em;
+            top: 0.5em;
             left: 25%;
             right: 25%;
             width: 50%;
@@ -486,6 +486,7 @@ html, body {
                 padding: 0.1em 0;
                 margin: 0;
                 text-align: center;
+                line-height: 3em;
                 
                 &:last-child{
                     border-bottom-width: 1pt;
@@ -494,18 +495,19 @@ html, body {
                 span{
                     display: block;
                     position: relative;
-                    float: right;
-                    margin: auto;
-                    padding: 0 0.2em;
+                    margin: 10% auto;
+                    padding: 0 0.3em;
                     width: auto;
-                    height: 100%;
-                    line-height: 1.8em;
                 }
 
                 img{
+                    display: block;
                     float: left;
-                    height: 90%;
-                    max-width: 30%;
+                    position: relative;
+                    max-height: 80%;
+                    height: auto;
+                    width: 40%;
+                    top: 10%;
                     margin: auto 5%;
                     @include border-box;
                     border: 0;
@@ -526,7 +528,11 @@ html, body {
                         margin-right: auto;
                         float: none;
                         padding: 0;
-                        max-width: 90%;
+                        height: auto;
+                        width: auto;
+                        top: 10%;
+                        max-width: 80%;
+                        max-height: 80%;
                     }
 
                     span{

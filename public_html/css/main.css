@@ -140,7 +140,7 @@ html, body {
       position: absolute;
       float: none;
       padding: 0;
-      top: 1em;
+      top: 0.5em;
       left: 25%;
       right: 25%;
       width: 50%;
@@ -389,22 +389,24 @@ html, body {
         text-decoration: none;
         padding: 0.1em 0;
         margin: 0;
-        text-align: center; }
+        text-align: center;
+        line-height: 3em; }
         .lang-menu #lang-menu a:last-child {
           border-bottom-width: 1pt; }
         .lang-menu #lang-menu a span {
           display: block;
           position: relative;
-          float: right;
-          margin: auto;
-          padding: 0 0.2em;
-          width: auto;
-          height: 100%;
-          line-height: 1.8em; }
+          margin: 10% auto;
+          padding: 0 0.3em;
+          width: auto; }
         .lang-menu #lang-menu a img {
+          display: block;
           float: left;
-          height: 90%;
-          max-width: 30%;
+          position: relative;
+          max-height: 80%;
+          height: auto;
+          width: 40%;
+          top: 10%;
           margin: auto 5%;
           -webkit-box-sizing: border-box;
           /* Android ≤ 2.3, iOS ≤ 4 */
@@ -461,7 +463,11 @@ html, body {
           margin-right: auto;
           float: none;
           padding: 0;
-          max-width: 90%; }
+          height: auto;
+          width: auto;
+          top: 10%;
+          max-width: 80%;
+          max-height: 80%; }
         .lang-menu #lang-menu a span {
           display: none; } }
 @media screen and (max-width: 480px) {
