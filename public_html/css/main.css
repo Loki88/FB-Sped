@@ -1128,9 +1128,9 @@ html, body {
 
 @media screen and (max-width: 768px) {
   .sticky-footer {
-    margin-bottom: -3em; }
+    margin-bottom: -15em; }
     .sticky-footer:after {
-      height: 3em; }
+      height: 15em; }
 
   #footer {
     margin-top: 0;

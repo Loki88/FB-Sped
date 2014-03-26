@@ -11,7 +11,7 @@ var Carousel = {
             Carousel.carousel = gallery.children('.carousel');
             Carousel.inputs = gallery.find('input')
             Carousel.index = Carousel.inputs.index(checked);
-            Carousel.carousel.css({'cursor': 'pointer', 'z-index': 3});
+            Carousel.carousel.css('cursor', 'pointer');
             Carousel.carousel.swipe({
                 swipeLeft: Carousel.forward,
                 swipeRight: Carousel.backward
