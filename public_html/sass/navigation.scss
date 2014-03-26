@@ -34,7 +34,6 @@ $second-level-text: #FFFFFF;
     margin: 0;
     margin-top: 0.6em;
     border-bottom: 1pt inset #1C68AA;
-    /*@include content-box;*/
     
     .decorator{
         display: none;
@@ -76,7 +75,6 @@ $second-level-text: #FFFFFF;
         padding: 0;
         border: 0;
         text-align: left;
-        /*margin-bottom: -2pt;*/
         z-index: 3;
 
         li {
@@ -84,10 +82,8 @@ $second-level-text: #FFFFFF;
             height: 1.8em;
             position: relative;
             @include content-box;
-            /*float: left;*/
             margin: 0;
             margin-left: 0.3em;
-            /*margin-bottom: -2pt;*/
             &:first-child{
                 margin-left: 0;
             }
@@ -117,7 +113,6 @@ $second-level-text: #FFFFFF;
         height: auto;
         border: 0;
         padding-top: -2pt;
-        margin-top: 0.3em;
         width: 100%;
         float: left;
         border-top-width: 0.1em;
@@ -338,4 +333,3 @@ $second-level-text: #FFFFFF;
         }
     }
 }
-

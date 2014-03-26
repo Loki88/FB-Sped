@@ -238,7 +238,7 @@ html, body {
             width: 98%;
             margin-left: 1%;
             margin-right: 1%;
-            margin-bottom: 0.5em;
+            margin-bottom: 0.2em;
             
             #logo-img{
                 height: 100%;
@@ -281,23 +281,18 @@ html, body {
 {
     #page-header{
         #logo{
+            position: relative;
             #logo-img{
-                height: 100%;
-                width: 60%;
-                margin: 0.2em 20%;
-                height: 3.6em;
-                float: none;               
+                width: 25%;
+                margin: 0.2em auto;
+                margin-right: 5%;
+                max-height: 2.6em;
+                float: left;               
             }
             #logo-text{
-                width: 90%;
-                float: none;
-                margin: auto 5%;
-                margin-bottom: 0.4em;
-                text-align: center;
-                
-/*                h6{
-                    display: none;
-                }*/
+                width: 70%;
+                float: left;
+                margin: 0.3em auto;
             }
         }
     }
@@ -431,23 +426,32 @@ html, body {
             height: 3.16em;
             padding: 0em 0;
             border: 0;
-            /*background-color: rgba(28, 104, 170, 1);*/
             border-left-width: 0.1em;
             border-left-style: groove;
-/*            border-top-width: 0.1em;
-            border-top-style: outset;*/
-/*            border-bottom-width: 0.1em;
-            border-bottom-style: outset;*/
             border-color: #1C68AA;
             
             img{
                 display: block;
                 position: relative;
-                max-height: 90%;
-                max-width: 90%;
+                max-width: 80%;
+                max-height: 80%;
                 float: none;
-                margin: 0 auto;
+                margin: auto;
+                top: 10%;
+                box-shadow: none;
+                @include border-box;
+                border: 0;
+                @include border-radius(3pt, 3pt, 3pt, 3pt);
             }
+            
+            &:hover{
+                img{
+                    border-color: #FFA01A;
+                    border-style: solid;
+                    border-width: 1pt;
+                }
+            }
+            
         }
 
         #lang-close{
@@ -503,6 +507,17 @@ html, body {
                     height: 90%;
                     max-width: 30%;
                     margin: auto 5%;
+                    @include border-box;
+                    border: 0;
+                    @include border-radius(3pt, 3pt, 3pt, 3pt);
+                }
+
+                &:not(.selected):hover{
+                    img{
+                        border-color: #FFA01A;
+                        border-style: solid;
+                        border-width: 1pt;
+                    }
                 }
 
                 @media screen and (max-width: 480px){
@@ -580,13 +595,6 @@ html, body {
     .lang-menu{
         width: 35%;
         
-        .controls{
-            img{
-                max-width: 90%;
-                height: 90%;
-                margin: auto;
-            }
-        }
         #lang-menu{
             a{
                 img{
@@ -709,7 +717,7 @@ html, body {
             text-decoration: none;
             
             &:hover{
-                h5{
+                h5, span{
                     color: #FFA01A;
                 }
             }
@@ -718,18 +726,29 @@ html, body {
                 display: block;
                 position: relative;
                 text-align: center;
-                margin: 0.4em auto;
+                margin: 0.3em auto;
                 padding: 0 0.4em;
-                
             }
             
             p{
                 display: inline-block;
                 width: 90%;
                 margin: 5% 5%;
+                margin-bottom: 15%;
                 overflow:hidden;
                 text-overflow: ellipsis-word;
-                height: 60%;
+                min-height: 40%;
+                max-height: 40%;
+            }
+            
+            span{
+                display: block;
+                position: absolute;
+                bottom: 0.5em;
+                right: 1em;
+                padding: 0;
+                text-decoration: underline;
+                text-align: right;
             }
         }
     }
@@ -753,12 +772,10 @@ html, body {
             top: 35%;
             
             a{
-                h5 {
-                    margin: 0.2em auto;
-                }
+                position: relative;
                 p{
-                    text-align: center;
-                    margin: auto 2%;
+                    margin: 0.2em 2%;
+                    margin-bottom: 10%;
                 }
             }
         }
@@ -1116,8 +1133,6 @@ html, body {
             text-decoration: none;
             @include content-box;
             .header{
-                /*min-height: 7em;*/
-
                 .icon{
                     display: table;
                     position: relative;
@@ -1228,8 +1243,23 @@ html, body {
     display: none;
 }
 
-@media  screen and (max-width: 480px)
-{
+@media screen and (max-width: 768px){
+    .trasporti-links{
+        .content-box{
+            a{
+                .header{
+                    h5{
+                        br{
+                            display: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 480px){
     .desktop_content{
         display: none;
     }

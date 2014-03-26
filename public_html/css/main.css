@@ -174,7 +174,7 @@ html, body {
       width: 98%;
       margin-left: 1%;
       margin-right: 1%;
-      margin-bottom: 0.5em; }
+      margin-bottom: 0.2em; }
       #page-header #logo #logo-img {
         height: 100%;
         width: 40%;
@@ -202,21 +202,18 @@ html, body {
         display: table;
         clear: both; } }
 @media screen and (max-width: 480px) {
-  #page-header #logo #logo-img {
-    height: 100%;
-    width: 60%;
-    margin: 0.2em 20%;
-    height: 3.6em;
-    float: none; }
-  #page-header #logo #logo-text {
-    width: 90%;
-    float: none;
-    margin: auto 5%;
-    margin-bottom: 0.4em;
-    text-align: center;
-    /*                h6{
-                        display: none;
-                    }*/ } }
+  #page-header #logo {
+    position: relative; }
+    #page-header #logo #logo-img {
+      width: 25%;
+      margin: 0.2em auto;
+      margin-right: 5%;
+      max-height: 2.6em;
+      float: left; }
+    #page-header #logo #logo-text {
+      width: 70%;
+      float: left;
+      margin: 0.3em auto; } }
 .img {
   display: block;
   position: relative;
@@ -327,21 +324,33 @@ html, body {
       height: 3.16em;
       padding: 0em 0;
       border: 0;
-      /*background-color: rgba(28, 104, 170, 1);*/
       border-left-width: 0.1em;
       border-left-style: groove;
-      /*            border-top-width: 0.1em;
-                  border-top-style: outset;*/
-      /*            border-bottom-width: 0.1em;
-                  border-bottom-style: outset;*/
       border-color: #1C68AA; }
       .lang-menu .controls img {
         display: block;
         position: relative;
-        max-height: 90%;
-        max-width: 90%;
+        max-width: 80%;
+        max-height: 80%;
         float: none;
-        margin: 0 auto; }
+        margin: auto;
+        top: 10%;
+        box-shadow: none;
+        -webkit-box-sizing: border-box;
+        /* Android ≤ 2.3, iOS ≤ 4 */
+        -moz-box-sizing: border-box;
+        /* Firefox 1+ */
+        box-sizing: border-box;
+        /* Chrome, IE 8+, Opera, Safari 5.1 */
+        border: 0;
+        -webkit-border-radius: 3pt 3pt 3pt 3pt;
+        -moz-border-radius: 3pt 3pt 3pt 3pt;
+        -ms-border-radius: 3pt 3pt 3pt 3pt;
+        border-radius: 3pt 3pt 3pt 3pt; }
+      .lang-menu .controls:hover img {
+        border-color: #FFA01A;
+        border-style: solid;
+        border-width: 1pt; }
     .lang-menu #lang-close {
       display: none;
       position: absolute;
@@ -396,7 +405,22 @@ html, body {
           float: left;
           height: 90%;
           max-width: 30%;
-          margin: auto 5%; }
+          margin: auto 5%;
+          -webkit-box-sizing: border-box;
+          /* Android ≤ 2.3, iOS ≤ 4 */
+          -moz-box-sizing: border-box;
+          /* Firefox 1+ */
+          box-sizing: border-box;
+          /* Chrome, IE 8+, Opera, Safari 5.1 */
+          border: 0;
+          -webkit-border-radius: 3pt 3pt 3pt 3pt;
+          -moz-border-radius: 3pt 3pt 3pt 3pt;
+          -ms-border-radius: 3pt 3pt 3pt 3pt;
+          border-radius: 3pt 3pt 3pt 3pt; }
+        .lang-menu #lang-menu a:not(.selected):hover img {
+          border-color: #FFA01A;
+          border-style: solid;
+          border-width: 1pt; }
         .lang-menu #lang-menu a:not(.selected) {
           background-color: #FFFFFF; }
       .lang-menu #lang-menu .selected {
@@ -443,10 +467,6 @@ html, body {
 @media screen and (max-width: 480px) {
   .lang-menu {
     width: 35%; }
-    .lang-menu .controls img {
-      max-width: 90%;
-      height: 90%;
-      margin: auto; }
     .lang-menu #lang-menu a img {
       max-width: 90%;
       height: 90%;
@@ -544,21 +564,31 @@ html, body {
       z-index: 3;
       color: #FFFFFF;
       text-decoration: none; }
-      #main-image .image-mask a:hover h5 {
+      #main-image .image-mask a:hover h5, #main-image .image-mask a:hover span {
         color: #FFA01A; }
       #main-image .image-mask a h5 {
         display: block;
         position: relative;
         text-align: center;
-        margin: 0.4em auto;
+        margin: 0.3em auto;
         padding: 0 0.4em; }
       #main-image .image-mask a p {
         display: inline-block;
         width: 90%;
         margin: 5% 5%;
+        margin-bottom: 15%;
         overflow: hidden;
         text-overflow: ellipsis-word;
-        height: 60%; }
+        min-height: 40%;
+        max-height: 40%; }
+      #main-image .image-mask a span {
+        display: block;
+        position: absolute;
+        bottom: 0.5em;
+        right: 1em;
+        padding: 0;
+        text-decoration: underline;
+        text-align: right; }
 
 @media screen and (max-width: 768px) {
   #main-image img {
@@ -572,11 +602,11 @@ html, body {
     left: 0;
     right: 0;
     top: 35%; }
-    #main-image .image-mask a h5 {
-      margin: 0.2em auto; }
-    #main-image .image-mask a p {
-      text-align: center;
-      margin: auto 2%; } }
+    #main-image .image-mask a {
+      position: relative; }
+      #main-image .image-mask a p {
+        margin: 0.2em 2%;
+        margin-bottom: 10%; } }
 @media screen and (max-width: 480px) {
   #main-image {
     min-height: 0; }
@@ -861,18 +891,16 @@ html, body {
     /* Firefox 1+ */
     box-sizing: content-box;
     /* Chrome, IE 8+, Opera, Safari 5.1 */ }
-    .trasporti-links .content-box a .header {
-      /*min-height: 7em;*/ }
-      .trasporti-links .content-box a .header .icon {
-        display: table;
-        position: relative;
-        height: 2em;
-        margin: 0.3em auto;
-        padding: 0 auto;
-        width: 80%;
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: 2em auto; }
+    .trasporti-links .content-box a .header .icon {
+      display: table;
+      position: relative;
+      height: 2em;
+      margin: 0.3em auto;
+      padding: 0 auto;
+      width: 80%;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: 2em auto; }
     .trasporti-links .content-box a p {
       color: #000000;
       text-decoration: none; }
@@ -927,6 +955,9 @@ html, body {
 .mobile_content {
   display: none; }
 
+@media screen and (max-width: 768px) {
+  .trasporti-links .content-box a .header h5 br {
+    display: none; } }
 @media screen and (max-width: 480px) {
   .desktop_content {
     display: none; }
