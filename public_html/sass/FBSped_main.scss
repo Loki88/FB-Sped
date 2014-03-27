@@ -2322,6 +2322,9 @@ body{
             span{
                 color: #1C68AA;
             }
+            p{
+                color: #030320;
+            }
             &:hover{
                 .header{
                     color: #FFA01A;
@@ -2337,6 +2340,10 @@ body{
 
 #footer{
     border-color: #1C68AA;
+    
+    p, span{
+        color: inherit;
+    }
 }
 
 .gallery{

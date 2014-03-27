@@ -1710,6 +1710,8 @@ body {
     background-color: rgba(28, 104, 170, 0.5); } }
 .trasporti-links .content-box a span {
   color: #1C68AA; }
+.trasporti-links .content-box a p {
+  color: #030320; }
 .trasporti-links .content-box a:hover .header {
   color: #FFA01A; }
 .trasporti-links .content-box a:hover span {
@@ -1717,6 +1719,8 @@ body {
 
 #footer {
   border-color: #1C68AA; }
+  #footer p, #footer span {
+    color: inherit; }
 
 .gallery .carousel .panes li h5 {
   background-color: #1C68AA;
