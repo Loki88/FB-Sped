@@ -36,7 +36,7 @@ html, body {
     padding: 0;
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 768px) {
 
     html {
             -webkit-text-size-adjust: none;
@@ -55,7 +55,7 @@ html, body {
     background: -moz-linear-gradient(bottom,  #8DBF3F , #FFFFFF); /* For Firefox 3.6 to 15 */
     background: linear-gradient(to bottom,  #8DBF3F , #FFFFFF); /* Standard syntax */
     
-    @media screen and (max-width: 600px){
+    @media screen and (max-width: 768px){
         background: none;
         border-top: 1pt inset #8DBF3F;
     }
@@ -92,7 +92,7 @@ html, body {
     }
 }
 
-@media screen and (max-width: 600px){
+@media screen and (max-width: 768px){
     body{
         background-color: #8DBF3F;
     }
@@ -448,7 +448,7 @@ html, body {
                 img{
                     border-color: #FFA01A;
                     border-style: solid;
-                    border-width: 1pt;
+                    border-width: 2pt;
                 }
             }
             
@@ -518,7 +518,7 @@ html, body {
                     img{
                         border-color: #FFA01A;
                         border-style: solid;
-                        border-width: 1pt;
+                        border-width: 2pt;
                     }
                 }
 
@@ -1257,6 +1257,10 @@ html, body {
                     h5{
                         br{
                             display: none;
+                            @media screen and (max-width: 200px)
+                            {
+                                display: block;
+                            }
                         }
                     }
                 }
@@ -1341,16 +1345,26 @@ html, body {
 }
 
 .content-box-shadow{
-    box-shadow: 1pt 1pt 5pt #000000;
+    box-shadow: 1pt 1pt 5pt #030320;
     @media screen and (max-width: 768px){
-        box-shadow: 1pt 1pt 2pt #1C68AA;
+        box-shadow: 1pt 1pt 2pt #030320;
+        /*box-shadow: 0 0 0 #000000;*/
+        overflow: hidden;
+/*        border-width: 1pt;*/
+        /*border-color: #1C68AA;*/
+        /*border-style: groove;*/
     }
 }
 
 .content-box {
     @include border-box;
     padding-bottom: 0.5em;
-
+    overflow: hidden;
+    
+    @media screen and (max-width: 768px){
+        @include border-radius(0.4em, 0.4em, 0, 0);
+    }
+    
     .decorator, .decorator-bottom, .decorator-header{
         display: none;
         visibility: hidden;
@@ -1600,7 +1614,8 @@ html, body {
 }*/
 
 //IMMAGINI CON RISOLUZIONI ADATTATE AI DISPOSITIVI PER RIDURRE I TEMPI DI CARICAMENTO
-@media screen and (min-width: 769px){
+    
+@media screen and (min-width: 769px){    
     #main-image{
         .lazy-image{
             background-image: url('../img/main-image.png');
@@ -1629,6 +1644,7 @@ html, body {
 }
 
 @media screen and (min-width: 481px){
+    
     #chi-siamo-image{
         .lazy-image{
             background-image: url('../img/chisiamo.png');

@@ -5,6 +5,7 @@
 
 html, body{
     font-size: 16px;
+    /*font-size: 12 / 16 * 100%;*/
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -12,7 +13,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #logo-text{
-    font-family: Times New Roman, Boldoni;
+    font-family: 'Times New Roman', Boldoni;
     
     h4{
         font-size: 2.2em;
@@ -70,7 +71,7 @@ h1, h2, h3, h4, h5, h6 {
     }
     
     h1, h2, h3, h4, h5, h6{
-        font-family: Times New Roman, Boldoni;
+        font-family: 'Times New Roman', Boldoni;
         margin: 0.6em 0.5em;
     }
     
@@ -173,7 +174,7 @@ h1, h2, h3, h4, h5, h6 {
     .image-mask{
         h5{
             color: #FFFFFF;
-            font-family: Times New Roman, Boldoni;
+            font-family: 'Times New Roman', Boldoni;
             line-height: 1.2em;
             font-size: 1.5em;
         }
@@ -185,7 +186,7 @@ h1, h2, h3, h4, h5, h6 {
         }
         
         span{
-            font-family: Times New Roman, Boldoni;
+            font-family: 'Times New Roman', Boldoni;
             font-size: 1.2em;
         }
         @media screen and (max-width: 768px){

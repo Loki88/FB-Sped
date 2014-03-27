@@ -3,13 +3,14 @@
     Author     : Lorenzo Di Giuseppe <lorenzo.digiuseppe88@gmail.com>
 */
 html, body {
-  font-size: 16px; }
+  font-size: 16px;
+  /*font-size: 12 / 16 * 100%;*/ }
 
 h1, h2, h3, h4, h5, h6 {
   color: #E2E5DF; }
 
 #logo-text {
-  font-family: Times New Roman, Boldoni; }
+  font-family: 'Times New Roman', Boldoni; }
   #logo-text h4 {
     font-size: 2.2em;
     color: #1C68AA; }
@@ -39,7 +40,7 @@ h1, h2, h3, h4, h5, h6 {
 .content-box .header h4 {
   font-size: 1.2em; }
 .content-box h1, .content-box h2, .content-box h3, .content-box h4, .content-box h5, .content-box h6 {
-  font-family: Times New Roman, Boldoni;
+  font-family: 'Times New Roman', Boldoni;
   margin: 0.6em 0.5em; }
 .content-box h6 {
   line-height: 2em;
@@ -103,7 +104,7 @@ h1, h2, h3, h4, h5, h6 {
 
 #main-image .image-mask h5 {
   color: #FFFFFF;
-  font-family: Times New Roman, Boldoni;
+  font-family: 'Times New Roman', Boldoni;
   line-height: 1.2em;
   font-size: 1.5em; }
 #main-image .image-mask p {
@@ -111,7 +112,7 @@ h1, h2, h3, h4, h5, h6 {
   font-family: Arial, Verdana;
   font-size: 1em; }
 #main-image .image-mask span {
-  font-family: Times New Roman, Boldoni;
+  font-family: 'Times New Roman', Boldoni;
   font-size: 1.2em; }
 @media screen and (max-width: 768px) {
   #main-image .image-mask h5 {
