@@ -19,8 +19,9 @@ h1, h2, h3, h4, h5, h6 {
         color: #1C68AA;
     }
     
-    h6{
+    span{
         font-size: 1.2em;
+        font-weight: bold;
         color: #1C68AA;
     }
     
@@ -29,13 +30,13 @@ h1, h2, h3, h4, h5, h6 {
             font-size: 1em;
         }
     
-        h6{
+        span{
             font-size: 0.9em;
         }
     }
     
     @media screen and (max-width: 360px){
-        h6{
+        span{
             font-size: 0.8em;
         }
     }
@@ -45,7 +46,7 @@ h1, h2, h3, h4, h5, h6 {
         h4{
             font-size: 1em;
         }
-        h6{
+        span{
             font-size: 0.6em;
         }
     }
@@ -55,7 +56,7 @@ h1, h2, h3, h4, h5, h6 {
         h4{
             font-size: 0.9em;
         }
-        h6{
+        span{
             font-size: 0.5em;
         }
     }
