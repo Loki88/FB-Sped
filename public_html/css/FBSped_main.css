@@ -171,8 +171,6 @@
   padding: 0;
   margin: 0;
   border: 0; }
-  .lazy-image img {
-    z-index: -1; }
 
 .content-box {
   -webkit-box-sizing: border-box;
@@ -215,8 +213,7 @@
     color: inherit; }
   .content-box p {
     display: block;
-    clear: both;
-    color: inherit; }
+    clear: both; }
 
 /* ----- STILI GLOBALI ------ */
 body {
@@ -908,85 +905,35 @@ html, body {
   /* Firefox 1+ */
   box-sizing: content-box;
   /* Chrome, IE 8+, Opera, Safari 5.1 */
-  display: table;
   position: relative;
   height: fit-content;
   min-width: 100%;
   width: 100%;
-  max-width: 100%; }
-  #main-image .lazy-image img {
-    display: table;
-    top: 0;
-    min-width: 100%;
-    width: 100%;
-    max-width: 100%;
-    height: auto;
-    margin: auto;
-    left: 0;
-    z-index: -1; }
-  #main-image .image-mask {
+  max-width: 100%;
+  height: 23em; }
+  #main-image .lazy-image {
     display: block;
-    position: absolute;
-    width: 40%;
+    position: relative;
     height: 100%;
-    left: 0;
-    top: 0;
-    z-index: 2; }
-    #main-image .image-mask a {
-      display: inline-block;
-      position: relative;
+    width: 100%; }
+    #main-image .lazy-image img {
+      display: block;
+      top: 0;
+      min-width: 100%;
       width: 100%;
+      max-width: 100%;
       height: 100%;
-      max-height: 100%;
-      z-index: 3;
-      text-decoration: none; }
-      #main-image .image-mask a h5 {
-        display: block;
-        position: relative;
-        text-align: center;
-        margin: 0.3em auto;
-        padding: 0 0.4em; }
-      #main-image .image-mask a p {
-        display: inline-block;
-        width: 90%;
-        margin: 5% 5%;
-        margin-bottom: 15%;
-        overflow: hidden;
-        text-overflow: ellipsis-word;
-        min-height: 40%;
-        max-height: 40%; }
-      #main-image .image-mask a span {
-        display: block;
-        position: absolute;
-        bottom: 0.5em;
-        right: 1em;
-        padding: 0;
-        text-decoration: underline;
-        text-align: right; }
+      margin: auto;
+      left: 0; }
 
 @media screen and (max-width: 768px) {
   #main-image img {
     display: block;
     top: 0;
-    height: 100%; }
-  #main-image .image-mask {
-    width: 100%;
-    height: 65%;
-    bottom: 0%;
-    left: 0;
-    right: 0;
-    top: 35%; }
-    #main-image .image-mask a {
-      position: relative; }
-      #main-image .image-mask a p {
-        margin: 0.2em 2%;
-        margin-bottom: 10%; } }
+    height: 100%; } }
 @media screen and (max-width: 480px) {
   #main-image {
-    min-height: 0; }
-    #main-image .image-mask {
-      position: relative;
-      height: auto; } }
+    min-height: 0; } }
 /* ---- TAB -> ACCORDION ---- */
 .tab_to_accordion {
   margin-bottom: 2em;
@@ -1229,16 +1176,6 @@ html, body {
     /* Firefox 1+ */
     box-sizing: content-box;
     /* Chrome, IE 8+, Opera, Safari 5.1 */ }
-    .trasporti-links .content-box a .header .icon {
-      display: table;
-      position: relative;
-      height: 2em;
-      margin: 0.3em auto;
-      padding: 0 auto;
-      width: 80%;
-      background-position: center;
-      background-repeat: no-repeat;
-      background-size: 2em auto; }
     .trasporti-links .content-box a p {
       text-decoration: none; }
       @media screen and (max-width: 480px) {
@@ -1251,7 +1188,7 @@ html, body {
       display: block;
       position: relative;
       width: 90%;
-      margin: 0.3em auto;
+      margin: 0.3em 0.2em;
       clear: both;
       text-decoration: underline;
       text-align: right; }
@@ -1378,7 +1315,7 @@ html, body {
     box-sizing: border-box;
     /* Chrome, IE 8+, Opera, Safari 5.1 */
     width: 100%;
-    height: auto;
+    height: 23em;
     margin: 0 auto;
     overflow: hidden;
     background: none; }
@@ -1387,7 +1324,7 @@ html, body {
       -webkit-transition: left 0.8s ease-in-out 0s;
       display: block;
       position: relative;
-      height: auto;
+      height: 100%;
       width: 500%;
       list-style: none;
       padding: 0;
@@ -1399,6 +1336,7 @@ html, body {
         padding: 0;
         float: left;
         margin: 0;
+        height: 100%;
         width: 20%; }
         .gallery .carousel .panes li h5 {
           display: none;
@@ -1416,7 +1354,7 @@ html, body {
           display: block;
           position: relative;
           width: 100%;
-          height: auto;
+          height: 100%;
           margin: 0 auto;
           z-index: -1; }
   .gallery .controls {
@@ -1499,26 +1437,6 @@ html, body {
     background-color: #8DBF3F; }
 
 /* ---- COLORI ----- */
-body {
-  background-color: #FFFFFF; }
-
-@media screen and (max-width: 768px) {
-  body {
-    background-color: #8DBF3F; } }
-.body-background {
-  background: -webkit-linear-gradient(top, #8dbf3f, white);
-  /* For Safari 5.1 to 6.0 */
-  background: -o-linear-gradient(bottom, #8dbf3f, white);
-  /* For Opera 11.1 to 12.0 */
-  background: -moz-linear-gradient(bottom, #8dbf3f, white);
-  /* For Firefox 3.6 to 15 */
-  background: linear-gradient(to bottom, #8dbf3f, white);
-  /* Standard syntax */ }
-  @media screen and (max-width: 768px) {
-    .body-background {
-      background: none;
-      border-top: 1pt inset #8DBF3F; } }
-
 .content-box-shadow {
   box-shadow: 1pt 1pt 5pt #030320; }
   @media screen and (max-width: 768px) {
@@ -1603,28 +1521,21 @@ body {
     left: auto; } }
 .navigation {
   border-color: #1C68AA; }
-  .navigation .selected {
-    border-color: #8DBF3F; }
 
 @media screen and (max-width: 768px) {
   .navigation {
     border-color: #1C68AA; }
     .navigation .wrapper .menu-link {
-      background-color: rgba(28, 104, 170, 0.8);
-      border-color: #1C68AA; }
+      background-color: rgba(28, 104, 170, 0.8); }
       .navigation .wrapper .menu-link .icon {
         background-image: url("../img/icons/menu-white.png"); }
-      .navigation .wrapper .menu-link:hover .icon {
-        background-image: url("../img/icons/menu-hover.png"); }
     .navigation .wrapper ul {
-      border-color: #030320; }
-      .navigation .wrapper ul li {
-        border-color: #1C68AA; }
-        .navigation .wrapper ul li a {
-          background-color: #FFFFFF;
-          color: #327CCB; }
-        .navigation .wrapper ul li:hover:not(.selected) a {
-          color: #FFA01A; }
+      border-color: #000000; }
+      .navigation .wrapper ul li a {
+        background-color: #FFFFFF;
+        color: #1C68AA; }
+      .navigation .wrapper ul li:hover:not(.selected) a {
+        color: #FFA01A; }
       .navigation .wrapper ul .selected a {
         background-color: #8DBF3F;
         color: #000000; } }

@@ -257,9 +257,7 @@ $vertical-margin-mobile: 0.7em;
     padding: 0;
     margin: 0;
     border: 0;
-    img{
-        z-index: -1;
-    }
+
 }
 
 .content-box {
@@ -306,7 +304,6 @@ $vertical-margin-mobile: 0.7em;
     p{
         display: block;
         clear: both;
-        color: inherit;
     }
 }
 
@@ -1154,73 +1151,27 @@ html, body {
 /* ---- IMMAGINE PRINCIPALE DELLA HOME PAGE ----*/
 #main-image{
     @include content-box;
-    display: table;
     position: relative;
     height: fit-content;
     min-width: 100%;
     width: 100%;
     max-width: 100%;
+    height: 23em;
     
-    .lazy-image{        
+    .lazy-image{
+        display: block;
+        position: relative;
+        height: 100%;
+        width: 100%;
         img {
-            display: table;
+            display: block;
             top: 0;
             min-width: 100%;
             width: 100%;
             max-width: 100%;
-            height: auto;
+            height: 100%;
             margin: auto;
             left: 0;
-            z-index: -1;
-        }
-    }
-    
-    .image-mask{
-        display: block;
-        position: absolute;
-        width: 40%;
-        height: 100%;
-        left: 0;
-        top: 0;
-        z-index: 2;
-        
-        a{
-            display: inline-block;
-            position: relative;
-            width: 100%;
-            height: 100%;
-            max-height: 100%;
-            z-index: 3;
-            text-decoration: none;
-            
-            h5 {
-                display: block;
-                position: relative;
-                text-align: center;
-                margin: 0.3em auto;
-                padding: 0 0.4em;
-            }
-            
-            p{
-                display: inline-block;
-                width: 90%;
-                margin: 5% 5%;
-                margin-bottom: 15%;
-                overflow:hidden;
-                text-overflow: ellipsis-word;
-                min-height: 40%;
-                max-height: 40%;
-            }
-            
-            span{
-                display: block;
-                position: absolute;
-                bottom: 0.5em;
-                right: 1em;
-                padding: 0;
-                text-decoration: underline;
-                text-align: right;
-            }
         }
     }
 }
@@ -1233,23 +1184,6 @@ html, body {
             top: 0;
             height: 100%;
         }
-        
-        .image-mask{
-            width: 100%;
-            height: 65%;
-            bottom: 0%;
-            left: 0;
-            right: 0;
-            top: 35%;
-            
-            a{
-                position: relative;
-                p{
-                    margin: 0.2em 2%;
-                    margin-bottom: 10%;
-                }
-            }
-        }
     }
 }
 
@@ -1258,10 +1192,6 @@ html, body {
 {
     #main-image{
         min-height: 0;
-        .image-mask{
-            position: relative;
-            height: auto;
-        }
     } 
 }
 
@@ -1551,19 +1481,6 @@ html, body {
             height: 100%;
             text-decoration: none;
             @include content-box;
-            .header{
-                .icon{
-                    display: table;
-                    position: relative;
-                    height: 2em;
-                    margin: 0.3em auto;
-                    padding: 0 auto;
-                    width: 80%;
-                    background-position: center;
-                    background-repeat: no-repeat;
-                    background-size: 2em auto;
-                }
-            }
 
             p{
                 text-decoration: none;
@@ -1579,7 +1496,7 @@ html, body {
                 display: block;
                 position: relative;
                 width: 90%;
-                margin: 0.3em auto;
+                margin: 0.3em 0.2em;
                 clear: both;
                 text-decoration: underline;
                 text-align: right;
@@ -1763,7 +1680,7 @@ $controls_to_top: 40%;
         position: relative;
         @include border-box;
         width: 100%;
-        height: auto;
+        height: 23em;
         margin: 0 auto;
         overflow: hidden; //usato per eliminare i floats
         background: none;
@@ -1773,7 +1690,7 @@ $controls_to_top: 40%;
             -webkit-transition: left 0.8s ease-in-out 0s;
             display: block;
             position: relative;
-            height: auto;
+            height: 100%;
             width: $number_of_page * 100%;
             list-style: none;
             padding: 0;
@@ -1786,6 +1703,7 @@ $controls_to_top: 40%;
                 padding: 0;
                 float: left;
                 margin: 0;
+                height: 100%;
                 width: 100% / $number_of_page;
                 
                 h5{
@@ -1806,7 +1724,7 @@ $controls_to_top: 40%;
                     display:block;
                     position: relative;
                     width:100%;
-                    height: auto;
+                    height: 100%;
                     margin: 0 auto;
                     z-index: -1;
                 }
@@ -1937,27 +1855,6 @@ $controls_to_top: 40%;
 
 
 /* ---- COLORI ----- */
-body{
-    background-color: #FFFFFF;
-}
-
-@media screen and (max-width: 768px){
-    body{
-        background-color: #8DBF3F;
-    }
-}
-
-.body-background {
-    background: -webkit-linear-gradient(top, #8DBF3F , #FFFFFF); /* For Safari 5.1 to 6.0 */
-    background: -o-linear-gradient(bottom,  #8DBF3F , #FFFFFF); /* For Opera 11.1 to 12.0 */
-    background: -moz-linear-gradient(bottom,  #8DBF3F , #FFFFFF); /* For Firefox 3.6 to 15 */
-    background: linear-gradient(to bottom,  #8DBF3F , #FFFFFF); /* Standard syntax */
-    
-    @media screen and (max-width: 768px){
-        background: none;
-        border-top: 1pt inset #8DBF3F;
-    }
-}
 
 .content-box-shadow{
     box-shadow: 1pt 1pt 5pt #030320;
@@ -2108,9 +2005,6 @@ body{
 .navigation{
     border-color: #1C68AA;
 
-    .selected{
-        border-color: #8DBF3F;
-    }
 }
 
 @media screen and (max-width: 768px){
@@ -2120,28 +2014,20 @@ body{
         .wrapper{
             .menu-link {
                 background-color: rgba(28,104,170,0.8);
-                border-color: #1C68AA;
                 
                 .icon{
                     background-image: url('../img/icons/menu-white.png');
                 }
-                
-                &:hover{
-                    .icon{
-                        background-image: url('../img/icons/menu-hover.png');
-                    }
-                }
             }
 
             ul {
-                border-color: #030320;
+                border-color: #000000;
 
                 li {
-                  border-color: #1C68AA;
                   
                   a {
                       background-color: #FFFFFF;
-                      color: #327CCB;
+                      color: #1C68AA;
                   }
 
                   &:hover:not(.selected){
