@@ -647,20 +647,6 @@ html, body {
     border: 0; }
   .navigation .menu-link {
     display: none; }
-  .navigation .selected {
-    border-width: 1pt 1pt 0 1pt;
-    padding-bottom: 1pt;
-    margin-bottom: -1pt;
-    -webkit-border-radius: 3pt 3pt 0 0;
-    -moz-border-radius: 3pt 3pt 0 0;
-    -ms-border-radius: 3pt 3pt 0 0;
-    border-radius: 3pt 3pt 0 0;
-    border-style: outset;
-    border-color: #8DBF3F; }
-    @media screen and (min-width: 2500px) {
-      .navigation .selected {
-        padding-bottom: 2pt;
-        margin-bottom: -2pt; } }
   .navigation ul {
     display: inline-block;
     position: relative;
@@ -1710,7 +1696,7 @@ body {
 .trasporti-links .content-box a span {
   color: #1C68AA; }
 .trasporti-links .content-box a p {
-  color: #030320; }
+  color: #000000; }
 .trasporti-links .content-box a:hover .header {
   color: #FFA01A; }
 .trasporti-links .content-box a:hover span {
@@ -1721,191 +1707,67 @@ body {
   #footer p, #footer span {
     color: inherit; }
 
-.gallery .carousel .panes li h5 {
-  background-color: #1C68AA;
-  color: #FFFFFF; }
 .gallery .controls {
-  background-color: #1C68AA;
+  background-color: #999999;
   color: #FFFFFF; }
   .gallery .controls:hover {
-    opacity: 1;
-    color: #FFA01A; }
+    opacity: 1; }
 .gallery .bottom {
   background-color: #FFFFFF; }
   .gallery .bottom label {
-    border-color: #030320;
-    background-color: #1C68AA; }
+    border-color: #000000;
+    background-color: #999999; }
     .gallery .bottom label:hover {
       background-color: #FFA01A; }
 .gallery #img_1:checked ~ .bottom .img_1, .gallery #img_2:checked ~ .bottom .img_2, .gallery #img_3:checked ~ .bottom .img_3, .gallery #img_4:checked ~ .bottom .img_4, .gallery #img_5:checked ~ .bottom .img_5 {
-  background-color: #8DBF3F; }
+  background-color: #030320; }
 
-/* ---- ICONE DEI TRASPORTI ----- */
-#truck .icon {
-  background-image: url("../img/icons/icona-truck.png"); }
-#truck:hover .icon {
-  background-image: url("../img/icons/icona-truck-hover.png"); }
-
-#train .icon {
-  background-image: url("../img/icons/icona-train.png"); }
-#train:hover .icon {
-  background-image: url("../img/icons/icona-train-hover.png"); }
-
-#ship .icon {
-  background-image: url("../img/icons/icona-ship.png"); }
-#ship:hover .icon {
-  background-image: url("../img/icons/icona-ship-hover.png"); }
-
-#airplane .icon {
-  background-image: url("../img/icons/icona-plane.png"); }
-#airplane:hover .icon {
-  background-image: url("../img/icons/icona-plane-hover.png"); }
-
-#combined .icon {
-  background-image: url("../img/icons/icona-combined.png"); }
-#combined:hover .icon {
-  background-image: url("../img/icons/icona-combined-hover.png"); }
-
-/* ----- IMMAGINI ----- */
-@media screen and (min-width: 769px) {
-  #main-image .lazy-image {
-    background-image: url("../img/main-image.png"); }
-
-  .carousel .panes .img_1 {
-    background-image: url("../img/carousel/carousel-1.png"); }
-  .carousel .panes .img_2 {
-    background-image: url("../img/carousel/carousel-2.png"); }
-  .carousel .panes .img_3 {
-    background-image: url("../img/carousel/carousel-3.png"); }
-  .carousel .panes .img_4 {
-    background-image: url("../img/carousel/carousel-4.png"); }
-  .carousel .panes .img_5 {
-    background-image: url("../img/carousel/carousel-5.png"); } }
-@media screen and (min-width: 481px) {
-  #chi-siamo-image .lazy-image {
-    background-image: url("../img/chisiamo.png"); }
-
-  #cosa-facciamo-image .lazy-image {
-    background-image: url("../img/cosa.png"); }
-
-  #contatti-image .lazy-image {
-    background-image: url("../img/ufficio.png"); }
-
-  .tab_to_accordion #image-ferroviario {
-    background-image: url("../img/768/treno.png"); }
-  .tab_to_accordion #image-marittimo {
-    background-image: url("../img/768/nave.png"); }
-  .tab_to_accordion #image-aereo {
-    background-image: url("../img/768/aereo.png"); }
-  .tab_to_accordion #image-gomma {
-    background-image: url("../img/768/camion.png"); }
-  .tab_to_accordion #image-combinato {
-    background-image: url("../img/768/combinato.png"); }
-
-  .carousel .panes .img_1 {
-    background-image: url("../img/carousel/768/carousel-1.png"); }
-  .carousel .panes .img_2 {
-    background-image: url("../img/carousel/768/carousel-2.png"); }
-  .carousel .panes .img_3 {
-    background-image: url("../img/carousel/768/carousel-3.png"); }
-  .carousel .panes .img_4 {
-    background-image: url("../img/carousel/768/carousel-4.png"); }
-  .carousel .panes .img_5 {
-    background-image: url("../img/carousel/768/carousel-5.png"); } }
-@media screen and (min-width: 481px) and (max-width: 768px) {
-  #main-image .lazy-image {
-    background-image: url("../img/768/main-image.png"); } }
-@media screen and (max-width: 480px) {
-  #main-image .lazy-image {
-    background-image: url("../img/480/main-image.png"); } }
-@media screen and (min-width: 301px) and (max-width: 480px) {
-  #main-image .lazy-image {
-    background-image: url("../img/480/main-image.png"); }
-
-  #chi-siamo-image .lazy-image {
-    background-image: url("../img/480/chisiamo.png"); }
-
-  #cosa-facciamo-image .lazy-image {
-    background-image: url("../img/480/cosa.png"); }
-
-  #contatti-image .lazy-image {
-    background-image: url("../img/480/ufficio.png"); }
-
-  .tab_to_accordion #image-ferroviario {
-    background-image: url("../img/480/treno.png"); }
-  .tab_to_accordion #image-marittimo {
-    background-image: url("../img/480/nave.png"); }
-  .tab_to_accordion #image-aereo {
-    background-image: url("../img/480/aereo.png"); }
-  .tab_to_accordion #image-gomma {
-    background-image: url("../img/480/camion.png"); }
-  .tab_to_accordion #image-combinato {
-    background-image: url("../img/480/combinato.png"); } }
-@media screen and (max-width: 300px) {
-  #chi-siamo-image .lazy-image {
-    background-image: url("../img/300/chisiamo.png"); }
-
-  #cosa-facciamo-image .lazy-image {
-    background-image: url("../img/300/cosa.png"); }
-
-  #contatti-image .lazy-image {
-    background-image: url("../img/300/ufficio.png"); }
-
-  .tab_to_accordion #image-ferroviario {
-    background-image: url("../img/300/treno.png"); }
-  .tab_to_accordion #image-marittimo {
-    background-image: url("../img/300/nave.png"); }
-  .tab_to_accordion #image-aereo {
-    background-image: url("../img/300/aereo.png"); }
-  .tab_to_accordion #image-gomma {
-    background-image: url("../img/300/camion.png"); }
-  .tab_to_accordion #image-combinato {
-    background-image: url("../img/300/combinato.png"); } }
 /* ----- TESTI ----- */
 html, body {
   font-size: 16px; }
 
-h1, h2, h3, h4, h5, h6 {
-  color: #1C68AA; }
-
-#logo-text {
-  font-family: 'Times New Roman', Boldoni; }
+#logo-text h4 {
+  font-size: 2.2em; }
+#logo-text span {
+  font-size: 1.2em;
+  font-weight: bold; }
+@media screen and (max-width: 480px) {
   #logo-text h4 {
-    font-size: 2.2em; }
+    font-size: 1em; }
   #logo-text span {
-    font-size: 1.2em;
-    font-weight: bold; }
-  @media screen and (max-width: 480px) {
-    #logo-text h4 {
-      font-size: 1em; }
-    #logo-text span {
-      font-size: 0.9em; } }
-  @media screen and (max-width: 360px) {
-    #logo-text span {
-      font-size: 0.8em; } }
-  @media screen and (max-width: 240px) {
-    #logo-text h4 {
-      font-size: 1em; }
-    #logo-text span {
-      font-size: 0.6em; } }
-  @media screen and (max-width: 160px) {
-    #logo-text h4 {
-      font-size: 0.9em; }
-    #logo-text span {
-      font-size: 0.5em; } }
+    font-size: 0.9em; } }
+@media screen and (max-width: 360px) {
+  #logo-text span {
+    font-size: 0.8em; } }
+@media screen and (max-width: 240px) {
+  #logo-text h4 {
+    font-size: 1em; }
+  #logo-text span {
+    font-size: 0.6em; } }
+@media screen and (max-width: 160px) {
+  #logo-text h4 {
+    font-size: 0.9em; }
+  #logo-text span {
+    font-size: 0.5em; } }
 
+.content-box a {
+  text-decoration: none;
+  color: inherit; }
 .content-box .header h4 {
   font-size: 1.2em; }
 .content-box h1, .content-box h2, .content-box h3, .content-box h4, .content-box h5, .content-box h6 {
-  font-family: 'Times New Roman', Boldoni;
   margin: 0.6em 0.5em; }
 .content-box h6 {
   line-height: 2em;
   font-size: 1em; }
 .content-box p {
-  font-family: Arial, Verdana;
   line-height: 1.5em;
-  margin: 0.6em 0.5em; }
+  margin: 0.6em 0.5em;
+  text-decoration: none; }
+.content-box span {
+  float: right;
+  margin: 0.2em;
+  text-decoration: underline; }
 @media screen and (max-width: 768px) {
   .content-box .header h4 {
     line-height: 1.2em;
@@ -1946,7 +1808,6 @@ h1, h2, h3, h4, h5, h6 {
         font-size: 0.8em; } }
 
 #navigation, .lang-menu {
-  font-family: Arial, Verdana;
   font-size: 1.2em; }
 
 @media screen and (max-width: 768px) {
@@ -1960,14 +1821,11 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 0.5em; } }
 
 #main-image .image-mask h5 {
-  font-family: 'Times New Roman', Boldoni;
   line-height: 1.2em;
   font-size: 1.5em; }
 #main-image .image-mask p {
-  font-family: Arial, Verdana;
   font-size: 1em; }
 #main-image .image-mask span {
-  font-family: 'Times New Roman', Boldoni;
   font-size: 1.2em; }
 @media screen and (max-width: 768px) {
   #main-image .image-mask h5 {
@@ -2001,8 +1859,6 @@ h1, h2, h3, h4, h5, h6 {
     .carousel h2 {
       font-size: 0.7em; } }
 
-#footer {
-  font-family: Arial, Verdana; }
-  @media screen and (max-width: 600px) {
-    #footer {
-      font-size: 0.9em; } }
+@media screen and (max-width: 600px) {
+  #footer {
+    font-size: 0.9em; } }
