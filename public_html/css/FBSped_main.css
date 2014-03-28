@@ -1,9 +1,8 @@
 @charset "UTF-8";
 /* 
-    Created on : 23-mar-2014, 12.08.24
+    Created on : 14-mar-2014, 12.08.24
     Author     : Lorenzo Di Giuseppe
 */
-/* ---- MIXIN ----- */
 /* ---- GRIGLIA ------ */
 .column {
   float: left;
