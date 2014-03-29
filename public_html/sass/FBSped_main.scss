@@ -265,10 +265,6 @@ $vertical-margin-mobile: 0.7em;
     padding-bottom: 0.5em;
     overflow: hidden;
     
-    @media screen and (max-width: 768px){
-        @include border-radius(0.4em, 0.4em, 0, 0);
-    }
-    
     .decorator, .decorator-bottom, .decorator-header{
         display: none;
         visibility: hidden;
@@ -389,7 +385,7 @@ html, body {
     #logo {
         @include border-box;
         display: block;
-        height: 6em;
+        height: 8em;
         padding: 0;
         border: 0;
         
@@ -398,7 +394,7 @@ html, body {
             position: relative;
             float: left;
             height: 100%;
-            width: 40%;
+            width: 60%;
             margin: auto 5%;
             margin-left: 0;
             
@@ -420,34 +416,6 @@ html, body {
                 }
             }
         }
-    
-        #logo-text{
-            display: inline-block;
-            position: absolute;
-            float: none;
-            padding: 0;
-            top: 0.5em;
-            left: 25%;
-            right: 25%;
-            width: 50%;
-            text-align: center;
-            
-            h4{
-                display: block;
-                position: relative;
-                padding: 0;
-                width: 100%;
-                margin: 0;
-                margin-bottom: 0.1em;
-            }
-
-            span{
-                display: block;
-                max-width: 100%;
-                margin: 0;
-                padding: 0;
-            }
-        }
     }
     .jump{
         position: absolute;
@@ -466,7 +434,7 @@ html, body {
         
         #logo{
             clear: both;
-            height: auto;
+            height: 6em;
             width: 98%;
             margin-left: 1%;
             margin-right: 1%;
@@ -474,10 +442,10 @@ html, body {
             
             #logo-img{
                 height: 100%;
-                width: 40%;
-                margin: 0.2em 0;
-                height: 5.6em;
-                float: left;
+                width: 80%;
+                margin: 0.2em auto;
+                height: 100%;
+                float: none;
                 a{
                     margin: auto;
                     img{
@@ -487,17 +455,6 @@ html, body {
                         margin: 0 auto;
                     }
                 }
-            }
-            
-            #logo-text{
-                position: relative;
-                left: auto;
-                right: auto;
-                top: 0;
-                width: 60%;
-                float: right;
-                margin: 0.5em 0;
-                text-align: right;
             }
             
             &:after{
@@ -514,25 +471,7 @@ html, body {
     #page-header{
         #logo{
             position: relative;
-            #logo-img{
-                width: 25%;
-                margin: 0.2em auto;
-                margin-right: 5%;
-                max-height: 3em;
-                height: 3em;
-                float: left;       
-                img{
-                    display: block;
-                    position: relative;
-                    max-width: 100%;
-                    max-height: 100%;
-                }
-            }
-            #logo-text{
-                width: 70%;
-                float: left;
-                margin: 0.3em auto;
-            }
+            height: 4em;
         }
     }
 }
@@ -541,7 +480,6 @@ html, body {
     display: inline-block;
     position: relative;
     height: auto;
-    float: left;
     margin-top: 0.8em;
     
     .decorator{
@@ -586,15 +524,6 @@ html, body {
         padding: 0;
         margin: 0.5em 0;
         float: left;
-        
-        img{
-            display: block;
-            float: left;
-            height: 1.5em;
-            margin: 0.25em 0.2em;
-            margin: auto 0;
-            vertical-align: middle;
-        }
         
         span{
             display: block;
@@ -646,28 +575,8 @@ html, body {
             border: 0;
             border-left-width: 0.1em;
             border-left-style: groove;
-            
-            img{
-                display: block;
-                position: relative;
-                max-width: 80%;
-                max-height: 80%;
-                float: none;
-                margin: auto;
-                top: 10%;
-                box-shadow: none;
-                @include border-box;
-                border: 0;
-                @include border-radius(3pt, 3pt, 3pt, 3pt);
-            }
-            
-            &:hover{
-                img{
-                    border-style: solid;
-                    border-width: 2pt;
-                }
-            }
-            
+            color: #FFFFFF;
+            line-height: 3em;
         }
 
         #lang-close{
@@ -713,46 +622,12 @@ html, body {
                     padding: 0 0.3em;
                     width: auto;
                 }
-
-                img{
-                    display: block;
-                    float: left;
-                    position: relative;
-                    max-height: 80%;
-                    height: auto;
-                    width: 40%;
-                    top: 10%;
-                    margin: auto 5%;
-                    @include border-box;
-                    border: 0;
-                    @include border-radius(3pt, 3pt, 3pt, 3pt);
-                }
-
+                
                 &:not(.selected):hover{
-                    img{
-                        border-style: solid;
-                        border-width: 2pt;
-                    }
-                }
-
-                @media screen and (max-width: 480px){
-                    img{
-                        margin-left: auto;
-                        margin-right: auto;
-                        float: none;
-                        padding: 0;
-                        height: auto;
-                        width: auto;
-                        top: 10%;
-                        max-width: 80%;
-                        max-height: 80%;
-                    }
-
                     span{
-                        display: none;
+                        color: #FFA01A;
                     }
                 }
-
             }
         }
         
@@ -803,16 +678,6 @@ html, body {
 @media screen and (max-width: 480px){
     .lang-menu{
         width: 35%;
-        
-        #lang-menu{
-            a{
-                img{
-                    max-width: 90%;
-                    height: 90%;
-                    margin: auto;
-                }
-            }
-        }
     }
 }
 
@@ -1102,12 +967,8 @@ html, body {
     .wrapper{
         margin: auto;
         div{
-            @include border-radius(0.2em, 0.2em, 0.2em, 0.2em); 
             display: inline-block;
             @include border-box;
-            border-style: solid;
-            border-width: 1pt;
-            border-color: #f6eded;
             padding: 0.2em 0.5em;
             
             a{
@@ -1253,7 +1114,7 @@ html, body {
                 }
             }
             
-            #trasporto-gomma-link{
+            #trasporti-link{
                 margin-top: 0;
             }
             
@@ -1667,201 +1528,13 @@ html, body {
     }
 }
 
-/* ---- GALLERY ----- */
-$number_of_page: 5;
-$controls_to_top: 40%;
-
-.gallery{
-    overflow: hidden;
-    position: relative;
-    
-    .carousel{
-        display: block;
-        position: relative;
-        @include border-box;
-        width: 100%;
-        height: 23em;
-        margin: 0 auto;
-        overflow: hidden; //usato per eliminare i floats
-        background: none;
-        
-        .panes{
-            transition: left 0.8s ease-in-out 0s;
-            -webkit-transition: left 0.8s ease-in-out 0s;
-            display: block;
-            position: relative;
-            height: 100%;
-            width: $number_of_page * 100%;
-            list-style: none;
-            padding: 0;
-            margin: 0;
-            overflow: hidden;
-            z-index: 1;
-            
-            li{
-                position: relative;
-                padding: 0;
-                float: left;
-                margin: 0;
-                height: 100%;
-                width: 100% / $number_of_page;
-                
-                h5{
-                    display: none;
-                    position: absolute;
-                    height: 1.2em;
-                    padding: 0.4em;
-                    font-size: 1.2em;
-                    line-height: 1.2em;
-                    width: 100%;
-                    margin: 0;
-                    top: 0;
-                    left: 0;
-                    text-align: center;
-                }
-
-                img{
-                    display:block;
-                    position: relative;
-                    width:100%;
-                    height: 100%;
-                    margin: 0 auto;
-                    z-index: -1;
-                }
-            }
-        }
-    }
-    
-    .controls{
-        display: block;
-        position: absolute;
-        top: $controls_to_top;
-        font-size: 1.5em;
-        width: 2em;
-        height: 2em;
-        border-radius: 50%;
-        opacity: .5;
-        cursor: pointer;
-        z-index: 2;
-        
-        &:hover{
-            opacity: 1;
-        }
-        
-        label{
-            display: none;
-            position: relative;
-            padding: 0;
-            float: left;
-            width: 100%;
-            height: 100%;
-            line-height: 1.8em;
-            text-align: center;
-            border-radius: 50%;
-            cursor: pointer;
-            color: inherit;
-        }
-    }
-    
-    .left{
-        left: 1%;
-    }
-    
-    .right{
-        right: 1%;
-    }
-    
-    .bottom{
-        display: block;
-        position: absolute;
-        bottom: 0;
-        width: 100%;
-        opacity: .7;
-        z-index: 2;
-        &:hover{
-            opacity: 1;
-        }
-        
-        .container{
-            height: 1.2em;
-            width: 12em;
-            margin: 0.3em auto;
-        }
-       label{
-            display: inline-block;
-            @include border-box;
-            width: 1.2em;
-            height: 1.2em;
-            cursor: pointer;
-            margin: auto;
-            margin-left: 1.5em;
-            padding: 0;
-            float: left;
-            border-radius: 50%;
-            border-width: 1pt;
-            border-style: groove;
-             
-            &:first-child{
-                margin-left: 0;
-            }
-        }
-    }
-    
-    input {
-        display: none;
-    }
-    
-    //Scorrimento immagini
-    #img_1:checked ~ .carousel {
-        .panes{
-            left: 0;
-        }
-    }
-    
-    #img_2:checked ~ .carousel {
-        .panes{
-            left: -100%;
-        }
-    }
-    
-    #img_3:checked ~ .carousel {
-        .panes{
-            left: -200%;
-        }
-    }
-    
-    #img_4:checked ~ .carousel {
-        .panes{
-            left: -300%;
-        }
-    }
-    
-    #img_5:checked ~ .carousel {
-        .panes{
-            left: -400%;
-        }
-    }
-    
-    //Cambio bottoni laterali per lo scorrimento ciclico delle immagini
-    #img_1:checked ~ .controls .a, #img_2:checked ~ .controls .b, #img_3:checked ~ .controls .c, #img_4:checked ~ .controls .d, #img_5:checked ~ .controls .e{
-        display: block;
-    }
-    
-    //Stile controlli in basso quando selezionati
-    #img_1:checked ~ .bottom .img_1, #img_2:checked ~ .bottom .img_2, #img_3:checked ~ .bottom .img_3, #img_4:checked ~ .bottom .img_4, #img_5:checked ~ .bottom .img_5{
-        background-color: #8DBF3F;
-    }
-}
-
-
 /* ---- COLORI ----- */
 
-.content-box-shadow{
-    box-shadow: 1pt 1pt 5pt #030320;
-    @media screen and (max-width: 768px){
-        box-shadow: 1pt 1pt 2pt #030320;
-        overflow: hidden;
-    }
+.content-box-decoration{
+    @include border-box;
+    border-width: 1pt;
+    border-style: groove;
+    border-color: #000000;
 }
 
 .color_green{
@@ -1924,26 +1597,10 @@ $controls_to_top: 40%;
 @media screen and (max-width: 768px)
 {
     .lang-menu{
-        .controls{
-            border-color: #1C68AA;
-            
-            &:hover{
-                img{
-                    border-color: #FFA01A;
-                }
-            }
-            
-        }
-        
+      
         #lang-menu{          
             a{
                 border-color: #1C68AA;
-
-                &:not(.selected):hover{
-                    img{
-                        border-color: #FFA01A;
-                    }
-                }
 
                 &:not(.selected){
                     background-color: #FFFFFF;
@@ -2004,7 +1661,6 @@ $controls_to_top: 40%;
 
 .navigation{
     border-color: #1C68AA;
-
 }
 
 @media screen and (max-width: 768px){
@@ -2044,14 +1700,6 @@ $controls_to_top: 40%;
                   }
                 }
             }
-        }
-    }
-}
-
-.breadcrumb{
-    .wrapper{
-        div{
-            border-color: #f6eded;
         }
     }
 }
@@ -2118,14 +1766,6 @@ $controls_to_top: 40%;
             }
         }
     }
-    
-    .tab_contents{
-        .tab_pane{            
-            .tab_page{
-                box-shadow: 1pt 1pt 5pt #030320;
-            }
-        }
-    }
 }
 
 @media screen and (max-width: 480px)
@@ -2162,7 +1802,7 @@ $controls_to_top: 40%;
                 
                 .tab_page{
                     border-color: #8DBF3F;
-                    box-shadow: 0pt 0pt 0pt #000000;
+                    /*box-shadow: 0pt 0pt 0pt #000000;*/
                 }
                 
                 .content-box{
