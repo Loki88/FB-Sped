@@ -60,7 +60,7 @@
                 <div class="breadcrumb" id="breadcrumb">
                     <div class="wrapper">
                         <div class="col_5_5 color_white content-box-shadow">
-                            <span class="hidden">You are in </span><a href="home.html">Home</a> - <span class="mobile_content">Transports</span><a class="desktop_content" href="transports.html">Transports</a><span class="desktop_content"> - Transport on tyre</span>
+                            <span class="hidden">You are in </span><a href="home.html">Home</a> - <span class="mobile_content">Transports</span><a class="desktop_content" href="transports.html">Transports</a><span class="desktop_content">&nbsp;- Transport on tyre</span>
                         </div>
                     </div>
                 </div>
@@ -69,7 +69,7 @@
                         <div class="col_2_5 tab_right_col column-right">
                             <div class="tab_menu content-box content-box-shadow color_white">
                                 <div class="header color_blue" id="trasporti-header" data-href="./transports.html" data-title="FB Sped S.r.l. - Transports"><h4>Transports</h4></div>
-                                <!--<div id="trasporti-link" class="menu-button"><a data-target="#trasporti" href="./trasporti.html">Trasporti</a></div>-->
+                                <div id="trasporti-link" class="menu-button"><div class="icon"></div><a data-target="#trasporti" href="./transports.html">General informations</a></div>
                                 <div id="trasporto-gomma-link" class="menu-button selected"><div class="icon"></div><a data-target="#trasporto-gomma" href="./transports-on-tyre.html">Transport on tyre</a></div>
                                 <div id="trasporto-ferroviario-link" class="menu-button"><div class="icon"></div><a data-target="#trasporto-ferroviario" href="./rail-transport.html">Rail transport</a></div>
                                 <div id="trasporto-marittimo-link" class="menu-button"><div class="icon"></div><a data-target="#trasporto-marittimo" href="./maritime-transport.html">Maritime transport</a></div>
@@ -83,7 +83,14 @@
                             </div>
                         </div>
                         <div class="col_3_5 tab_contents column-right">
-                            <div data-trigger="#trasporto-gomma-link" data-title="Trasporto su gomma - FB Sped" class="tab_pane current" id="trasporto-gomma">
+                            <div data-trigger="#trasporti-link" data-title="FB Sped S.r.l - Transports" class="tab_pane" id="trasporti">
+                               <div class="accordion-button" id="general">
+                                   <a class="open" href="./transports.html"><div class="accordion_icon icon"></div><div>General informations</div><div class="accordion_icon"></div></a>
+                                    <a class="close" href="#tab"><div class="accordion_icon icon"></div><div>General informations</div><div class="accordion_icon"></div></a>
+                                </div>
+                                <div class="decorator"></div>
+                            </div>
+                            <div data-trigger="#trasporto-gomma-link" data-title="FB Sped S.r.l - Transport on tyre" class="tab_pane current" id="trasporto-gomma">
                                 <div class="accordion-button" id="truck">
                                     <a class="open" href="./transports-on-tyre.html"><div class="accordion_icon icon"></div><div>Transport on tyre</div><div class="accordion_icon"></div></a>
                                     <a class="close" href="#tab"><div class="accordion_icon icon"></div><div>Transport on tyre</div><div class="accordion_icon"></div></a>
@@ -125,28 +132,28 @@
                                     </div>
                                 </div>
                             </div>
-                            <div data-trigger="#trasporto-ferroviario-link" data-title="Trasporto ferroviario - FB Sped" class="tab_pane" id="trasporto-ferroviario">
+                            <div data-trigger="#trasporto-ferroviario-link" data-title="FB Sped S.r.l - Rail transport" class="tab_pane" id="trasporto-ferroviario">
                                 <div class="accordion-button" id="train">
                                     <a class="open" href="./rail-transport.html"><div class="accordion_icon icon"></div><div>Rail transport</div><div class="accordion_icon"></div></a>
                                     <a class="close" href="#tab"><div class="accordion_icon icon"></div><div>Rail transport</div><div class="accordion_icon"></div></a>
                                 </div>
                                 <div class="decorator"></div>
                             </div>
-                            <div data-trigger="#trasporto-marittimo-link" data-title="Trasporto marittimo - FB Sped" class="tab_pane" id="trasporto-marittimo">
+                            <div data-trigger="#trasporto-marittimo-link" data-title="FB Sped S.r.l - Maritime transport" class="tab_pane" id="trasporto-marittimo">
                                 <div class="accordion-button" id="ship">
                                     <a class="open" href="./maritime-transport.html"><div class="accordion_icon icon"></div><div>Maritime transport</div><div class="accordion_icon"></div></a>
                                     <a class="close" href="#tab"><div class="accordion_icon icon"></div><div>Maritime transport</div><div class="accordion_icon"></div></a>
                                 </div>
                                 <div class="decorator"></div>
                             </div>
-                            <div data-trigger="trasporto-aereo-link" data-title="Trasporto aereo - FB Sped" class="tab_pane" id="trasporto-aereo">
+                            <div data-trigger="#trasporto-aereo-link" data-title="FB Sped S.r.l - Air transport" class="tab_pane" id="trasporto-aereo">
                                 <div class="accordion-button" id="airplane">
                                     <a class="open" href="./air-transport.html"><div class="accordion_icon icon"></div><div>Air transport</div><div class="accordion_icon"></div></a>
                                     <a class="close" href="#tab"><div class="accordion_icon icon"></div><div>Air transport</div><div class="accordion_icon"></div></a>
                                 </div>
                                 <div class="decorator"></div>
                             </div>
-                            <div data-trigger="trasporto-combinato-link" data-title="Trasporto combinato - FB Sped" class="tab_pane" data-trigger="" id="trasporto-combinato">
+                            <div data-trigger="#trasporto-combinato-link" data-title="FB Sped S.r.l - Combined transport" class="tab_pane" id="trasporto-combinato">
                                 <div class="accordion-button" id="combined">
                                     <a class="open" href="./combined-transport.html"><div class="accordion_icon icon"></div><div>Combined transport</div><div class="accordion_icon"></div></a>
                                     <a class="close" href="#tab"><div class="accordion_icon icon"></div><div>Combined transport</div><div class="accordion_icon"></div></a>

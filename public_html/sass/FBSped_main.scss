@@ -61,13 +61,13 @@ $vertical-margin-mobile: 0.7em;
 
 @media only screen and (max-width: 480px) {
     .column {
-        margin: 0.5em 0 0 0;
+        margin: $vertical-margin-mobile 0 0 0;
         &:first-child{
             margin: 0;
         }
     }
     .column-right {
-        margin: 0 0 0.5em 0;
+        margin: 0 0 $vertical-margin-mobile 0;
         &:first-child{
             margin: 0;
         }
@@ -453,10 +453,37 @@ html, body {
         }
     }
     .jump{
-        position: absolute;
+        position: relative;
         width: 30%;
-        left: -9999px;
+        margin: 0 35%;
+        height: 0px;
         text-align: center;
+        
+        a{
+            position: absolute;
+            left: -9999px;
+            height: 0;
+        }
+        
+        a:focus{
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 2em;
+            border-width: 1pt;
+            border-style: groove;
+            @include border-box;
+            @include border-radius(0, 0, 3pt, 3pt);
+            background-color: #1C68AA;
+            color: #FFFFFF;
+            border-color: #8DBF3F;
+            z-index: 10;
+            
+            &:hover{
+                color: #FFA01A;
+            }
+        }
     }
 }
 
@@ -1090,9 +1117,6 @@ html, body {
                 height: auto;
             }
         }
-        #breadcrumb{
-            left: -99999px;
-        }
     }
 }
 
@@ -1103,7 +1127,7 @@ html, body {
     left: -99999px;
     height: 0;
     width: 100%;
-    margin-top: 0.5em;
+    margin-top: 0.7em;
     
     @media screen and (max-width: 768px){
         display: block;
@@ -1333,7 +1357,7 @@ html, body {
                 }
             }
             
-            #trasporto-gomma-link{
+            #trasporti-link{
                 margin-top: 0;
             }
             
@@ -1760,192 +1784,6 @@ html, body {
     }
 }
 
-/* ---- GALLERY ----- */
-$number_of_page: 5;
-$controls_to_top: 40%;
-
-.gallery{
-    overflow: hidden;
-    position: relative;
-    
-    .carousel{
-        display: block;
-        position: relative;
-        @include border-box;
-        width: 100%;
-        height: auto;
-        margin: 0 auto;
-        overflow: hidden; //usato per eliminare i floats
-        background: none;
-        
-        .panes{
-            transition: left 0.8s ease-in-out 0s;
-            -webkit-transition: left 0.8s ease-in-out 0s;
-            display: block;
-            position: relative;
-            height: auto;
-            width: $number_of_page * 100%;
-            list-style: none;
-            padding: 0;
-            margin: 0;
-            overflow: hidden;
-            z-index: 1;
-            
-            li{
-                position: relative;
-                padding: 0;
-                float: left;
-                margin: 0;
-                width: 100% / $number_of_page;
-                
-                h5{
-                    display: none;
-                    position: absolute;
-                    height: 1.2em;
-                    padding: 0.4em;
-                    font-size: 1.2em;
-                    line-height: 1.2em;
-                    width: 100%;
-                    margin: 0;
-                    top: 0;
-                    left: 0;
-                    text-align: center;
-                }
-
-                img{
-                    display:block;
-                    position: relative;
-                    width:100%;
-                    height: auto;
-                    margin: 0 auto;
-                    z-index: -1;
-                }
-            }
-        }
-    }
-    
-    .controls{
-        display: block;
-        position: absolute;
-        top: $controls_to_top;
-        font-size: 1.5em;
-        width: 2em;
-        height: 2em;
-        border-radius: 50%;
-        opacity: .5;
-        cursor: pointer;
-        z-index: 2;
-        
-        &:hover{
-            opacity: 1;
-        }
-        
-        label{
-            display: none;
-            position: relative;
-            padding: 0;
-            float: left;
-            width: 100%;
-            height: 100%;
-            line-height: 1.8em;
-            text-align: center;
-            border-radius: 50%;
-            cursor: pointer;
-            color: inherit;
-        }
-    }
-    
-    .left{
-        left: 1%;
-    }
-    
-    .right{
-        right: 1%;
-    }
-    
-    .bottom{
-        display: block;
-        position: absolute;
-        bottom: 0;
-        width: 100%;
-        opacity: .7;
-        z-index: 2;
-        &:hover{
-            opacity: 1;
-        }
-        
-        .container{
-            height: 1.2em;
-            width: 12em;
-            margin: 0.3em auto;
-        }
-       label{
-            display: inline-block;
-            @include border-box;
-            width: 1.2em;
-            height: 1.2em;
-            cursor: pointer;
-            margin: auto;
-            margin-left: 1.5em;
-            padding: 0;
-            float: left;
-            border-radius: 50%;
-            border-width: 1pt;
-            border-style: groove;
-             
-            &:first-child{
-                margin-left: 0;
-            }
-        }
-    }
-    
-    input {
-        display: none;
-    }
-    
-    //Scorrimento immagini
-    #img_1:checked ~ .carousel {
-        .panes{
-            left: 0;
-        }
-    }
-    
-    #img_2:checked ~ .carousel {
-        .panes{
-            left: -100%;
-        }
-    }
-    
-    #img_3:checked ~ .carousel {
-        .panes{
-            left: -200%;
-        }
-    }
-    
-    #img_4:checked ~ .carousel {
-        .panes{
-            left: -300%;
-        }
-    }
-    
-    #img_5:checked ~ .carousel {
-        .panes{
-            left: -400%;
-        }
-    }
-    
-    //Cambio bottoni laterali per lo scorrimento ciclico delle immagini
-    #img_1:checked ~ .controls .a, #img_2:checked ~ .controls .b, #img_3:checked ~ .controls .c, #img_4:checked ~ .controls .d, #img_5:checked ~ .controls .e{
-        display: block;
-    }
-    
-    //Stile controlli in basso quando selezionati
-    #img_1:checked ~ .bottom .img_1, #img_2:checked ~ .bottom .img_2, #img_3:checked ~ .bottom .img_3, #img_4:checked ~ .bottom .img_4, #img_5:checked ~ .bottom .img_5{
-        background-color: #8DBF3F;
-    }
-}
-
-
 /* ---- COLORI ----- */
 body{
     background-color: #FFFFFF;
@@ -1995,8 +1833,13 @@ body{
     }
 }
 
+.color_white_b{
+    background-color: #FFFFFF;
+    color: #1C68AA;
+}
+
 .color_hover{
-    &:hover{
+    &:hover, &:focus{
         color: #FFA01A;
     }
 }
@@ -2024,7 +1867,7 @@ body{
             span{
                 color: #1C68AA;
             }
-            &:hover{
+            &:hover, &:focus{
                 span{
                     color: #FBB820;
                 }
@@ -2040,7 +1883,7 @@ body{
         .controls{
             border-color: #1C68AA;
             
-            &:hover{
+            &:hover, &:focus{
                 img{
                     border-color: #FFA01A;
                 }
@@ -2052,7 +1895,7 @@ body{
             a{
                 border-color: #1C68AA;
 
-                &:not(.selected):hover{
+                &:not(.selected):hover, &:not(.selected):focus{
                     img{
                         border-color: #FFA01A;
                     }
@@ -2136,7 +1979,7 @@ body{
                     background-image: url('../img/icons/menu-white.png');
                 }
                 
-                &:hover{
+                &:hover, &:focus{
                     .icon{
                         background-image: url('../img/icons/menu-hover.png');
                     }
@@ -2154,7 +1997,7 @@ body{
                       color: #327CCB;
                   }
 
-                  &:hover:not(.selected){
+                  &:hover:not(.selected), &:focus:not(.selected){
                        a{
                            color: #FFA01A;
                        }
@@ -2195,7 +2038,7 @@ body{
                 color: inherit;
             }
             
-            &:hover{
+            &:hover, &:focus{
                 h5, span{
                     color: #FFA01A;
                 }
@@ -2209,35 +2052,31 @@ body{
     .tab_right_col{
         .tab_menu{
             background-color: #FFFFFF;
-            
+            color: #1C68AA;
+                
             .menu-button{
                 .icon{
                     background-image: url('../img/icons/arrow-right.png');
                 }
 
                 a {
-                    color: #1C68AA;
+                    color: inherit;
                 }
                 
-                &:hover:not(.selected){
+                &:hover:not(.selected), &:focus:not(.selected){
+                    color: #ffa01a;
+                    
                     .icon{
                         background-image: url('../img/icons/arrow-right-hover.png');
-                    }
-                    a{
-                        color: #FFA01A;
                     }
                 }
             }
             
             .selected{
                 background-color: #8DBF3F;
-                
+                color: #030320;
                 .icon{
-                    background-image: url('../img/icons/arrow-right-white.png');
-                }
-                
-                a{
-                    color: #FFFFFF;
+                    background-image: url('../img/icons/arrow-right-selected.png');
                 }
             }
         }
@@ -2274,7 +2113,7 @@ body{
                         }
                         
                         
-                        &:hover{
+                        &:hover, &:focus{
                             color: #FFA01A;
 
                             .accordion_icon{
@@ -2323,7 +2162,7 @@ body{
             p{
                 color: #030320;
             }
-            &:hover{
+            &:hover, &:focus{
                 .header{
                     color: #FFA01A;
                 }
@@ -2344,54 +2183,23 @@ body{
     }
 }
 
-.gallery{
-    .carousel{
-        .panes{           
-            li{
-                h5{
-                    background-color: #1C68AA;
-                    color: #FFFFFF;
-                }
-            }
-        }
+/* ---- ICONE DEI TRASPORTI ----- */
+#general{
+    .icon{
+        background-image: url('../img/icons/icona-general-info.png');
     }
-    
-    .controls{
-        background-color: #1C68AA;
-        color: #FFFFFF;
-        
-        &:hover{
-            opacity: 1;
-            color: #FFA01A;
+    &:hover, &:focus{
+        .icon{
+            background-image: url('../img/icons/icona-general-info-hover.png');
         }
-    }
-    
-    .bottom{
-        background-color: #FFFFFF;
-        
-       label{
-            border-color: #030320;
-            background-color: #1C68AA;
-            
-            &:hover{
-                background-color: #FFA01A;
-            }
-        }
-    }
-    
-    //Stile controlli in basso quando selezionati
-    #img_1:checked ~ .bottom .img_1, #img_2:checked ~ .bottom .img_2, #img_3:checked ~ .bottom .img_3, #img_4:checked ~ .bottom .img_4, #img_5:checked ~ .bottom .img_5{
-        background-color: #8DBF3F;
     }
 }
 
-
-/* ---- ICONE DEI TRASPORTI ----- */
 #truck{
     .icon{
         background-image: url('../img/icons/icona-truck.png');
     }
-    &:hover{
+    &:hover, &:focus{
         .icon{
             background-image: url('../img/icons/icona-truck-hover.png');
         }
@@ -2402,7 +2210,7 @@ body{
     .icon{
         background-image: url('../img/icons/icona-train.png');
     }
-    &:hover{
+    &:hover, &:focus{
         .icon{
             background-image: url('../img/icons/icona-train-hover.png');
         }
@@ -2413,7 +2221,7 @@ body{
     .icon{
         background-image: url('../img/icons/icona-ship.png');
     }
-    &:hover{
+    &:hover, &:focus{
         .icon{
             background-image: url('../img/icons/icona-ship-hover.png');
         }
@@ -2424,7 +2232,7 @@ body{
     .icon{
         background-image: url('../img/icons/icona-plane.png');
     }
-    &:hover{
+    &:hover, &:focus{
         .icon{
             background-image: url('../img/icons/icona-plane-hover.png');
         }
@@ -2435,7 +2243,7 @@ body{
     .icon{
         background-image: url('../img/icons/icona-combined.png');
     }
-    &:hover{
+    &:hover, &:focus{
         .icon{
             background-image: url('../img/icons/icona-combined-hover.png');
         }
@@ -2448,26 +2256,6 @@ body{
     #main-image{
         .lazy-image{
             background-image: url('../img/main-image.png');
-        }
-    }
-
-    .carousel{
-        .panes{
-            .img_1{
-                background-image: url('../img/carousel/carousel-1.png');
-            }
-            .img_2{
-                background-image: url('../img/carousel/carousel-2.png');
-            }
-            .img_3{
-                background-image: url('../img/carousel/carousel-3.png');
-            }
-            .img_4{
-                background-image: url('../img/carousel/carousel-4.png');
-            }
-            .img_5{
-                background-image: url('../img/carousel/carousel-5.png');
-            }
         }
     }
 }
@@ -2493,6 +2281,7 @@ body{
     }
     
     .tab_to_accordion{
+        
         #image-ferroviario{
             background-image: url('../img/768/treno.png');
         }
@@ -2732,7 +2521,7 @@ h1, h2, h3, h4, h5, h6 {
     }
 }
 
-.breadcrumb{
+.breadcrumb .col_5_5{
     @media screen and (max-width: 768px){
         font-size: 1em;
     }
