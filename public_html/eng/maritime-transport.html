@@ -2,16 +2,12 @@
 <html lang="en">
     <head>
         <title>FB Sped S.r.l. - Maritime transport</title>
-        <link href="../css/normalize.min.css" type="text/css" rel="stylesheet" />
+        <link href="../css/normalize.css" type="text/css" rel="stylesheet" />
         <!--[if lt IE 9]>
             <script src="../js/libs/html5shiv.js"></script>
         <![endif]-->
         <link href="../img/icons/logo.png" type="image/gif" rel="icon">
-        <link href="../css/grid.css" type="text/css" rel="stylesheet" />
-        <link href="../css/text.css" type="text/css" rel="stylesheet" />
-        <link href="../css/navigation.css" type="text/css" rel="stylesheet" />
-        <link href="../css/main.css" type="text/css" rel="stylesheet" />
-        <link href="../css/gallery.css" type="text/css" rel="stylesheet" />
+        <link href="../css/FBSped_main.css" type="text/css" rel="stylesheet" />
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatibility" content="IE=Edge" />
         <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0">
@@ -33,11 +29,11 @@
                     </div>
                     <div class="column col_1_5 lang-menu" id="language">
                         <div class="container">
-                            <a href="#language" class="controls" id="lang-open"><img alt="Scegli la lingua per il sito. / Select the language for the site." src="../img/united_kingdom_flag_256.png" /></a>
-                            <a href="#" class="controls" id="lang-close"><img src="../img/united_kingdom_flag_256.png" /></a>
+                            <a href="#language" class="controls" id="lang-open"><img alt="Scegli la lingua per il sito. / Select the language for the site." src="../img/UK_Flag.png" /></a>
+                            <a href="#" class="controls" id="lang-close"><img src="../img/UK_Flag.png" /></a>
                             <div id="lang-menu">
                                 <a href="../ita/trasporto-marittimo.html"><img alt="Passa alla pagina in italiano." src="../img/Italy-Flag.png" /><span>Ita</span></a>
-                                <a class="selected" href="#"><img alt="You are currently on english page." src="../img/united_kingdom_flag_256.png" /><span>Eng</span></a>
+                                <a class="selected" href="#"><img alt="You are currently on english page." src="../img/UK_Flag.png" /><span>Eng</span></a>
                             </div>
                         </div>
                     </div>
@@ -64,7 +60,7 @@
                 <div class="breadcrumb" id="breadcrumb">
                     <div class="wrapper">
                         <div class="col_5_5 color_white content-box-shadow">
-                            <span class="hidden">You are in </span><a href="home.html">Home</a> - <span class="mobile_content">Transports</span><a class="desktop_content" href="transports.html">Transports</a><span class="desktop_content"> - Maritime transport</span>
+                            <span class="hidden">You are in </span><a href="home.html">Home</a> - <span class="mobile_content">Transports</span><a class="desktop_content" href="transports.html">Transports</a><span class="desktop_content">&nbsp;- Maritime transport</span>
                         </div>
                     </div>
                 </div>
@@ -73,7 +69,7 @@
                         <div class="col_2_5 tab_right_col column-right">
                             <div class="tab_menu content-box content-box-shadow color_white">
                                 <div class="header color_blue" id="trasporti-header" data-href="./transports.html" data-title="FB Sped S.r.l. - Transports"><h4>Transports</h4></div>
-                                <!--<div id="trasporti-link" class="menu-button"><a data-target="#trasporti" href="./trasporti.html">Trasporti</a></div>-->
+                                <div id="trasporti-link" class="menu-button"><div class="icon"></div><a data-target="#trasporti" href="./transports.html">General informations</a></div>
                                 <div id="trasporto-gomma-link" class="menu-button"><div class="icon"></div><a data-target="#trasporto-gomma" href="./transports-on-tyre.html">Transport on tyre</a></div>
                                 <div id="trasporto-ferroviario-link" class="menu-button"><div class="icon"></div><a data-target="#trasporto-ferroviario" href="./rail-transport.html">Rail transport</a></div>
                                 <div id="trasporto-marittimo-link" class="menu-button selected"><div class="icon"></div><a data-target="#trasporto-marittimo" href="./maritime-transport.html">Maritime transport</a></div>
@@ -87,21 +83,28 @@
                             </div>
                         </div>
                         <div class="col_3_5 tab_contents column-right">
-                            <div data-trigger="#trasporto-gomma-link" data-title="Trasporto su gomma - FB Sped" class="tab_pane" id="trasporto-gomma">
+                            <div data-trigger="#trasporti-link" data-title="FB Sped S.r.l - Transports" class="tab_pane" id="trasporti">
+                               <div class="accordion-button" id="general">
+                                   <a class="open" href="./transports.html"><div class="accordion_icon icon"></div><div>General informations</div><div class="accordion_icon"></div></a>
+                                    <a class="close" href="#tab"><div class="accordion_icon icon"></div><div>General informations</div><div class="accordion_icon"></div></a>
+                                </div>
+                                <div class="decorator"></div>
+                            </div>
+                            <div data-trigger="#trasporto-gomma-link" data-title="FB Sped S.r.l - Transport on tyre" class="tab_pane" id="trasporto-gomma">
                                 <div class="accordion-button" id="truck">
                                     <a class="open" href="./transports-on-tyre.html"><div class="accordion_icon icon"></div><div>Transport on tyre</div><div class="accordion_icon"></div></a>
                                     <a class="close" href="#tab"><div class="accordion_icon icon"></div><div>Transport on tyre</div><div class="accordion_icon"></div></a>
                                 </div>
                                 <div class="decorator"></div>
                             </div>
-                            <div data-trigger="#trasporto-ferroviario-link" data-title="Trasporto ferroviario - FB Sped" class="tab_pane" id="trasporto-ferroviario">
+                            <div data-trigger="#trasporto-ferroviario-link" data-title="FB Sped S.r.l - Rail transport" class="tab_pane" id="trasporto-ferroviario">
                                 <div class="accordion-button" id="train">
                                     <a class="open" href="./rail-transport.html"><div class="accordion_icon icon"></div><div>Rail transport</div><div class="accordion_icon"></div></a>
                                     <a class="close" href="#tab"><div class="accordion_icon icon"></div><div>Rail transport</div><div class="accordion_icon"></div></a>
                                 </div>
                                 <div class="decorator"></div>
                             </div>
-                            <div data-trigger="#trasporto-marittimo-link" data-title="Trasporto marittimo - FB Sped" class="tab_pane current" id="trasporto-marittimo">
+                            <div data-trigger="#trasporto-marittimo-link" data-title="FB Sped S.r.l - Maritime transport" class="tab_pane current" id="trasporto-marittimo">
                                 <div class="accordion-button" id="ship">
                                     <a class="open" href="./maritime-transport.html"><div class="accordion_icon icon"></div><div>Maritime transport</div><div class="accordion_icon"></div></a>
                                     <a class="close" href="#tab"><div class="accordion_icon icon"></div><div>Maritime transport</div><div class="accordion_icon"></div></a>
@@ -143,14 +146,14 @@
                                     </div>
                                 </div>
                             </div>
-                            <div data-trigger="#trasporto-aereo-link" data-title="Trasporto aereo - FB Sped" class="tab_pane" id="trasporto-aereo">
+                            <div data-trigger="#trasporto-aereo-link" data-title="FB Sped S.r.l - Air transport" class="tab_pane" id="trasporto-aereo">
                                 <div class="accordion-button" id="airplane">
                                     <a class="open" href="./air-transport.html"><div class="accordion_icon icon"></div><div>Air transport</div><div class="accordion_icon"></div></a>
                                     <a class="close" href="#tab"><div class="accordion_icon icon"></div><div>Air transport</div><div class="accordion_icon"></div></a>
                                 </div>
                                 <div class="decorator"></div>
                             </div>
-                            <div data-trigger="#trasporto-combinato-link" data-title="Trasporto combinato - FB Sped" class="tab_pane" id="trasporto-combinato">
+                            <div data-trigger="#trasporto-combinato-link" data-title="FB Sped S.r.l - Combined transport" class="tab_pane" id="trasporto-combinato">
                                 <div class="accordion-button" id="combined">
                                     <a class="open" href="./combined-transport.html"><div class="accordion_icon icon"></div><div>Combined transport</div><div class="accordion_icon"></div></a>
                                     <a class="close" href="#tab"><div class="accordion_icon icon"></div><div>Combined transport</div><div class="accordion_icon"></div></a>
@@ -175,9 +178,9 @@
                 </div>
             </div>
         </div>   
-        <script src="../min/js/libs/ui/jquery/jquery.min.js"></script>
+        <script src="../js/libs/ui/jquery/jquery.js"></script>
         <script src="../js/menu.js"></script>
-        <script src="../min/js/libs/jquery.history.min.js"></script>
+        <script src="../js/libs/jquery.history.js"></script>
         <script src="../js/tab-to-accordion.js"></script>
     </body>
 </html>

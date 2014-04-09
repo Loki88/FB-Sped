@@ -6,6 +6,7 @@ var TabToAccordion = {
         TabToAccordion.current = $('.current');
         if(TabToAccordion.current.length > 0)
         {
+            TabToAccordion.current.prop('nav_position', $('#breadcrumb'));
             TabToAccordion.current.prop('setted', true);
             TabToAccordion.current.prop('open', true);
         }
@@ -14,30 +15,12 @@ var TabToAccordion = {
        
         var accordion_links = $('.tab_pane').find('a:not(.close)');
         var accordion_links_close = $('.tab_pane').find('.close');
-        var trasportiDesktop = $('#trasporti-desktop');
-        if(trasportiDesktop.length == 0)
-        {
-            TabToAccordion.home = false;
-             $.ajax({
-                type: "GET",
-                url: $('#trasporti-main').attr('href'),
-                dataType: 'html',
-                success: function(data, status, jqXHR){
-                    if(data !== undefined)
-                    {
-                        var content = $(data).find('#trasporti-desktop');
-                        content.css('display', 'none');
-                        $('.body-background').append(content);
-                    }
-                }
-            });
-        }
+
         for(var i=0; i<accordion_links.length; i++)
         {
             var accordionLink = $(accordion_links[i]);
             var panel = accordionLink.parents('.tab_pane:first');
             accordionLink.prop('panel', panel);
-            console.log('open panel', panel);
             accordionLink.click(TabToAccordion.accordionOpenClick);
             var accordionClose = $(accordion_links_close[i]);
             accordionClose.prop('panel', panel);
@@ -51,15 +34,13 @@ var TabToAccordion = {
         else
             TabToAccordion.mobile = false;
         
-        $(window).on('oneColumn', function(){
-            TabToAccordion.mobile = true;
-            $('#trasporti-desktop').css('display', 'none');
-            $('#trasporti-tab').css('display', 'block');
-        });
-        
         $(window).on('fluidGrid', function(){
             TabToAccordion.mobile = false;
             TabToAccordion.restoreTab();
+        });
+        
+        $(window).on('oneColumn', function(){
+            TabToAccordion.mobile = true;
         });
         
         $(window).on('noMobile', function(){
@@ -87,42 +68,15 @@ var TabToAccordion = {
     
     restoreTab: function()
     {
-        console.log('While restoring, tab to accordion... ', TabToAccordion.current)
-        if(TabToAccordion.current != null){
-            var panel = $(this.current);
-
-            panel.find('a').removeAttr('style');
-            panel.find('.tab_page').removeAttr('style');
-            panel.addClass('current');
-        }
-        else{
-            console.log('no current entry');
-            $('#trasporti-desktop').css('display', 'block');
-            $('#trasporti-tab').css('display', 'none');
-            var trasporti = $('#trasporti-header');
-            var state = {
-                href: trasporti.data('href'),
-            };
-            var s = History.getState();
-            if(s.href != state.href)
-                History.pushState(state, trasporti.data('title'), state.href);
-        }
-//        if(TabToAccordion.home)
-//        {
-//            $('#trasporti-desktop').removeAttr('style');
-//            $('#trasporti-tab').removeAttr('style');
-//        }
-//        else{
-//            $('#trasporti-desktop').css('display', 'none');
-//            $('#trasporti-tab').css('display', 'block');
-//        }
+        var panel = $(this.current);
+        panel.find('a').removeAttr('style');
+        panel.find('.tab_page').removeAttr('style');
+        panel.addClass('current');
     },
 
     accordionCloseClick: function(event)
     {
         event.preventDefault();
-        TabToAccordion.current = null;
-        TabToAccordion.home = true;
         var link = $(this);
         var panel = link.prop('panel');
         panel.removeClass('current');
@@ -153,7 +107,9 @@ var TabToAccordion = {
                     if(data !== undefined)
                     {
                         var content = $(data).find('.tab_page');
+                        var breadcrumb = $(data).find('#breadcrumb');
                         panel.append(content);
+                        panel.prop('nav_position', breadcrumb);
                         content.slideUp(0);
                         panel.prop('setted', true);
                         link.prop('panel', panel);
@@ -183,6 +139,7 @@ var TabToAccordion = {
             });
             current.prop('open', false);
             TabToAccordion.current = panel;
+            $('#breadcrumb').replaceWith($(panel.prop('nav_position')));
             TabToAccordion.pushState();
             $('.tab_controls').children('.selected').removeClass('selected');
             var link = $(panel.prop('tabLink'));
@@ -197,7 +154,6 @@ var TabToAccordion = {
         else{
             if(panel.prop('open'))
             {
-                TabToAccordion.current = null;
                 TabToAccordion.home = true;
                 panel.children('.close').hide();
                 TabToAccordion.hide(panel.children('.tab_page'));
@@ -206,8 +162,6 @@ var TabToAccordion = {
             }   
             else
             {
-                TabToAccordion.home = false;
-                TabToAccordion.current = panel;
                 panel.children('.close').css('display', 'table');
                 TabToAccordion.show(panel.children('.tab_page'));
                 panel.addClass('current');
