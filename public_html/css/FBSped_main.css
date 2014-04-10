@@ -122,12 +122,13 @@
 .wrapper {
   display: block;
   float: none;
-  width: 98%;
-  margin: 0 1%; }
-  @media screen and (min-width: 481px) {
-    .wrapper {
-      width: 96.8%;
-      margin: 1.6%; } }
+  width: 96.8%;
+  margin: 0 1.6%;
+  /*    @media screen and (min-width: 481px){
+          width: 96.8%;
+          margin: 1.6%;
+      }
+      */ }
 
 @media screen and (min-width: 1281px) {
   .wrapper {
