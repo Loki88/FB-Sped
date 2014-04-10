@@ -1010,8 +1010,7 @@ html, body {
         margin: 0.3em auto;
         padding: 0 0.4em; }
       #main-image .image-mask a p {
-        display: inline-block;
-        width: 90%;
+        display: block;
         margin: 5% 5%;
         margin-bottom: 15%;
         overflow: hidden;
@@ -1042,14 +1041,16 @@ html, body {
     #main-image .image-mask a {
       position: relative; }
       #main-image .image-mask a p {
-        margin: 0.2em 2%;
-        margin-bottom: 10%; } }
+        margin: 0.2em 2%; } }
 @media screen and (max-width: 480px) {
   #main-image {
     min-height: 0; }
     #main-image .image-mask {
       position: relative;
-      height: auto; } }
+      height: auto; }
+      #main-image .image-mask a span {
+        position: relative;
+        margin-top: 0.7em; } }
 /* ---- TAB -> ACCORDION ---- */
 .tab_to_accordion {
   margin-bottom: 2em;
@@ -1460,7 +1461,15 @@ body {
       overflow: hidden; } }
 
 .color_green {
-  background-color: #4E8300;
+  /*background-color: $green_color_2;*/
+  background: -webkit-linear-gradient(top, #79a637, #538308);
+  /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(bottom, #79a637, #538308);
+  /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(bottom, #79a637, #538308);
+  /* For Firefox 3.6 to 15 */
+  background: linear-gradient(to bottom, #79a637, #538308);
+  /* Standard syntax */
   color: #FFFFFF; }
 
 .color_blue {
@@ -1493,7 +1502,7 @@ body {
 .lang-menu a:not(.controls):not(.selected) span {
   color: #1C68AA; }
 .lang-menu a:not(.controls):not(.selected):hover span, .lang-menu a:not(.controls):not(.selected):focus span {
-  color: #FBB820; }
+  color: #FFA01A; }
 
 @media screen and (max-width: 768px) {
   .lang-menu .controls {
@@ -1507,9 +1516,17 @@ body {
     .lang-menu #lang-menu a:not(.selected) {
       background-color: #FFFFFF; }
   .lang-menu #lang-menu .selected {
-    background-color: #8DBF3F; }
+    /*background-color: $green_color_2;*/
+    background: -webkit-linear-gradient(top, #79a637, #538308);
+    /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(bottom, #79a637, #538308);
+    /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(bottom, #79a637, #538308);
+    /* For Firefox 3.6 to 15 */
+    background: linear-gradient(to bottom, #79a637, #538308);
+    /* Standard syntax */ }
     .lang-menu #lang-menu .selected span {
-      color: #000000; }
+      color: #FFFFFF; }
   .lang-menu:target {
     clear: both;
     float: right;
@@ -1543,13 +1560,13 @@ body {
   .navigation .selected {
     /*@include background-gradient-top-down(#79A637, #8DBF3F);*/
     /*@include background-gradient-top-down(#5C7E29, #8DBF3F);*/
-    background: -webkit-linear-gradient(top, #4e7f04, #79a637);
+    background: -webkit-linear-gradient(top, #55830d, #79a637);
     /* For Safari 5.1 to 6.0 */
-    background: -o-linear-gradient(bottom, #4e7f04, #79a637);
+    background: -o-linear-gradient(bottom, #55830d, #79a637);
     /* For Opera 11.1 to 12.0 */
-    background: -moz-linear-gradient(bottom, #4e7f04, #79a637);
+    background: -moz-linear-gradient(bottom, #55830d, #79a637);
     /* For Firefox 3.6 to 15 */
-    background: linear-gradient(to bottom, #4e7f04, #79a637);
+    background: linear-gradient(to bottom, #55830d, #79a637);
     /* Standard syntax */
     border-color: #8DBF3F;
     color: #FFFFFF; }
@@ -1574,7 +1591,15 @@ body {
         .navigation .wrapper ul li:hover:not(.selected) a, .navigation .wrapper ul li:focus:not(.selected) a {
           color: #FFA01A; }
       .navigation .wrapper ul .selected a {
-        background-color: rgba(78, 131, 0, 0.8);
+        /*background-color: $green_color_2;*/
+        background: -webkit-linear-gradient(top, #79a637, #538308);
+        /* For Safari 5.1 to 6.0 */
+        background: -o-linear-gradient(bottom, #79a637, #538308);
+        /* For Opera 11.1 to 12.0 */
+        background: -moz-linear-gradient(bottom, #79a637, #538308);
+        /* For Firefox 3.6 to 15 */
+        background: linear-gradient(to bottom, #79a637, #538308);
+        /* Standard syntax */
         color: #FFFFFF; } }
 .breadcrumb .wrapper div {
   border-color: #f6eded; }
@@ -1605,7 +1630,15 @@ body {
     .tab_to_accordion .tab_right_col .tab_menu .menu-button:hover:not(.selected) .icon, .tab_to_accordion .tab_right_col .tab_menu .menu-button:focus:not(.selected) .icon {
       background-image: url("../img/icons/arrow-right-hover.png"); }
   .tab_to_accordion .tab_right_col .tab_menu .selected {
-    background-color: rgba(78, 131, 0, 0.8);
+    background-color: #55830d;
+    background: -webkit-linear-gradient(top, #79a637, #538308);
+    /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(bottom, #79a637, #538308);
+    /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(bottom, #79a637, #538308);
+    /* For Firefox 3.6 to 15 */
+    background: linear-gradient(to bottom, #79a637, #538308);
+    /* Standard syntax */
     color: #FFFFFF; }
     .tab_to_accordion .tab_right_col .tab_menu .selected .icon {
       background-image: url("../img/icons/arrow-right-white.png"); }
@@ -1771,6 +1804,11 @@ body {
   .tab_to_accordion #image-combinato {
     background-image: url("../img/300/combinato.png"); } }
 /* ----- TESTI ----- */
+@font-face {
+  font-family: Comfortaa;
+  src: url("./font/Comfortaa-Regular.ttf");
+  font-weight: normal; }
+
 html, body {
   font-size: 16px; }
 
@@ -1801,15 +1839,17 @@ h1, h2, h3, h4, h5, h6 {
       font-size: 0.7em; } }
 
 .content-box .header h4 {
-  font-size: 1.2em; }
+  font-size: 1.1em; }
 .content-box h1, .content-box h2, .content-box h3, .content-box h4, .content-box h5, .content-box h6 {
-  font-family: "Bodoni MT", Didot, "Didot LT STD", "Book Antiqua", Garamond, "Times New Roman", serif;
+  /*font-family: Arial, Verdana;*/
+  font-family: Futura, "Trebuchet MS", Arial, sans-serif;
   margin: 0.6em 0.5em; }
 .content-box h6 {
   line-height: 2em;
   font-size: 1em; }
 .content-box p {
-  font-family: Arial, Verdana;
+  /*font-family: Arial, Verdana;*/
+  font-family: Futura, "Trebuchet MS", Arial, sans-serif;
   line-height: 1.5em;
   margin: 0.6em 0.5em; }
 @media screen and (max-width: 768px) {
@@ -1835,7 +1875,7 @@ h1, h2, h3, h4, h5, h6 {
 #sol-trasporti, #links-trasporti {
   zoom: 1; }
   #sol-trasporti .content-box .header h1, #sol-trasporti .content-box .header h2, #sol-trasporti .content-box .header h3, #sol-trasporti .content-box .header h4, #sol-trasporti .content-box .header h5, #sol-trasporti .content-box .header h6, #links-trasporti .content-box .header h1, #links-trasporti .content-box .header h2, #links-trasporti .content-box .header h3, #links-trasporti .content-box .header h4, #links-trasporti .content-box .header h5, #links-trasporti .content-box .header h6 {
-    font-size: 1.2em; }
+    font-size: 1.1em; }
   #sol-trasporti .content-box span, #links-trasporti .content-box span {
     font-size: 1em; }
   @media screen and (max-width: 768px) {
@@ -1852,7 +1892,8 @@ h1, h2, h3, h4, h5, h6 {
         font-size: 0.8em; } }
 
 #navigation, .lang-menu {
-  font-family: Arial, Verdana;
+  /*font-family: Arial, Verdana;*/
+  font-family: Futura, "Trebuchet MS", Arial, sans-serif;
   font-size: 1.2em; }
 
 @media screen and (max-width: 768px) {
@@ -1866,29 +1907,32 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 0.5em; } }
 
 #main-image .image-mask h5 {
-  font-family: "Bodoni MT", Didot, "Didot LT STD", "Book Antiqua", Garamond, "Times New Roman", serif;
+  /*font-family: Arial, Verdana;*/
+  font-family: Futura, "Trebuchet MS", Arial, sans-serif;
   line-height: 1.2em;
   font-size: 1.5em; }
 #main-image .image-mask p {
-  font-family: Arial, Verdana;
+  /*font-family: Arial, Verdana;*/
+  font-family: Futura, "Trebuchet MS", Arial, sans-serif;
   font-size: 1em; }
 #main-image .image-mask span {
-  font-family: "Bodoni MT", Didot, "Didot LT STD", "Book Antiqua", Garamond, "Times New Roman", serif;
+  /*font-family: Arial, Verdana;*/
+  font-family: Futura, "Trebuchet MS", Arial, sans-serif;
   font-size: 1.2em; }
 @media screen and (max-width: 768px) {
   #main-image .image-mask h5 {
-    font-size: 1.2em;
-    line-height: 1.2em; }
+    font-size: 1.1em;
+    line-height: 1.1em; }
   #main-image .image-mask p {
-    font-size: 0.9em; }
+    font-size: 0.8em; }
   #main-image .image-mask span {
-    font-size: 1em; } }
+    font-size: 0.9em; } }
 @media screen and (max-width: 480px) {
   #main-image .image-mask h5 {
     font-size: 0.9em;
     line-height: 1em; }
   #main-image .image-mask p {
-    font-size: 0.7em; }
+    font-size: 0.6em; }
   #main-image .image-mask span {
     font-size: 0.8em; } }
 
@@ -1908,7 +1952,8 @@ h1, h2, h3, h4, h5, h6 {
       font-size: 0.7em; } }
 
 #footer {
-  font-family: Arial, Verdana; }
+  /*font-family: Arial, Verdana;*/
+  font-family: Futura, "Trebuchet MS", Arial, sans-serif; }
   @media screen and (max-width: 600px) {
     #footer {
       font-size: 0.9em; } }

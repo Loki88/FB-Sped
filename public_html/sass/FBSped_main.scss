@@ -1267,8 +1267,7 @@ html, body {
             }
             
             p{
-                display: inline-block;
-                width: 90%;
+                display: block;
                 margin: 5% 5%;
                 margin-bottom: 15%;
                 overflow:hidden;
@@ -1311,7 +1310,6 @@ html, body {
                 position: relative;
                 p{
                     margin: 0.2em 2%;
-                    margin-bottom: 10%;
                 }
             }
         }
@@ -1326,6 +1324,12 @@ html, body {
         .image-mask{
             position: relative;
             height: auto;
+            a{
+                span{
+                    position: relative;
+                    margin-top: 0.7em;
+                }
+            }
         }
     } 
 }
@@ -1816,6 +1820,9 @@ html, body {
 }
 
 /* ---- COLORI ----- */
+$green_color_2: #55830d;
+$green_color_3: #538308;
+
 body{
     background-color: #FFFFFF;
 }
@@ -1848,7 +1855,8 @@ body{
 }
 
 .color_green{
-    background-color: #4E8300;
+    /*background-color: $green_color_2;*/
+    @include background-gradient-top-down(#79A637, $green_color_3);
     color: #FFFFFF;
 }
 
@@ -1901,7 +1909,7 @@ body{
             }
             &:hover, &:focus{
                 span{
-                    color: #FBB820;
+                    color: #FFA01A;
                 }
             }
         }
@@ -1939,9 +1947,10 @@ body{
             }
             
             .selected{
-                background-color: #8DBF3F;
+                /*background-color: $green_color_2;*/
+                @include background-gradient-top-down(#79A637, $green_color_3);
                 span{
-                    color: #000000;
+                    color: #FFFFFF;
                 }
             }
         }
@@ -1996,7 +2005,7 @@ body{
     .selected{
         /*@include background-gradient-top-down(#79A637, #8DBF3F);*/
         /*@include background-gradient-top-down(#5C7E29, #8DBF3F);*/
-        @include background-gradient-top-down(rgb(78,127,4), #79A637);
+        @include background-gradient-top-down($green_color_2, #79A637);
         border-color: #8DBF3F;
         color: #FFFFFF;
     }
@@ -2042,7 +2051,8 @@ body{
               
               .selected{
                   a{
-                      background-color: rgba(78,131,0,0.8);
+                      /*background-color: $green_color_2;*/
+                      @include background-gradient-top-down(#79A637, $green_color_3);
                       color: #FFFFFF;
                   }
                 }
@@ -2109,7 +2119,8 @@ body{
             }
             
             .selected{
-                background-color: rgba(78,131,0,0.8);
+                background-color: $green_color_2;
+                @include background-gradient-top-down(#79A637, $green_color_3);
                 color: #FFFFFF;
                 .icon{
                     background-image: url('../img/icons/arrow-right-white.png');
@@ -2456,6 +2467,14 @@ body{
 }
 
 /* ----- TESTI ----- */
+@font-face
+{
+    font-family: Comfortaa;
+    src: url('./font/Comfortaa-Regular.ttf');
+    font-weight: normal;
+} 
+
+
 @mixin font-con-grazie()
 {
     font-family: "Bodoni MT", Didot, "Didot LT STD", "Book Antiqua", Garamond, "Times New Roman", serif;
@@ -2463,7 +2482,8 @@ body{
 
 @mixin font-senza-grazie()
 {
-    font-family: Arial, Verdana;
+    /*font-family: Arial, Verdana;*/
+    font-family: Futura, "Trebuchet MS", Arial, sans-serif;
 }
 
 html, body{
@@ -2519,12 +2539,12 @@ h1, h2, h3, h4, h5, h6 {
 .content-box{
     .header{
         h4{
-            font-size: 1.2em;
+            font-size: 1.1em;
         }
     }
     
     h1, h2, h3, h4, h5, h6{
-        @include font-con-grazie();
+        @include font-senza-grazie();
         margin: 0.6em 0.5em;
     }
     
@@ -2574,7 +2594,7 @@ h1, h2, h3, h4, h5, h6 {
     .content-box{
         .header{
             h1, h2, h3, h4, h5, h6 {
-                font-size: 1.2em;
+                font-size: 1.1em;
             }
         }
         span{
@@ -2626,7 +2646,7 @@ h1, h2, h3, h4, h5, h6 {
 #main-image{
     .image-mask{
         h5{
-            @include font-con-grazie();
+            @include font-senza-grazie();
             line-height: 1.2em;
             font-size: 1.5em;
         }
@@ -2637,19 +2657,19 @@ h1, h2, h3, h4, h5, h6 {
         }
         
         span{
-            @include font-con-grazie();
+            @include font-senza-grazie();
             font-size: 1.2em;
         }
         @media screen and (max-width: 768px){
             h5{
-                font-size: 1.2em;
-                line-height: 1.2em;
+                font-size: 1.1em;
+                line-height: 1.1em;
             }
             p{
-                font-size: 0.9em;
+                font-size: 0.8em;
             }   
             span{
-                font-size: 1em;
+                font-size: 0.9em;
             }
         }
         @media screen and (max-width: 480px){
@@ -2658,9 +2678,10 @@ h1, h2, h3, h4, h5, h6 {
                 line-height: 1em;
             }
             p{
-                font-size: 0.7em;
+                font-size: 0.6em;
             }   
             span{
+                
                 font-size: 0.8em;
             }
         }
