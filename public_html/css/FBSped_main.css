@@ -286,7 +286,7 @@ html, body {
     box-sizing: border-box;
     /* Chrome, IE 8+, Opera, Safari 5.1 */
     display: block;
-    height: 6em;
+    height: 8em;
     padding: 0;
     border: 0; }
     #page-header #logo #logo-img {
@@ -316,7 +316,7 @@ html, body {
       position: absolute;
       float: none;
       padding: 0;
-      top: 0.5em;
+      top: 1em;
       left: 25%;
       right: 25%;
       width: 50%;
@@ -1819,21 +1819,31 @@ h1, h2, h3, h4, h5, h6 {
 #logo-text {
   font-family: "Bodoni MT", Didot, "Didot LT STD", "Book Antiqua", Garamond, "Times New Roman", serif; }
   #logo-text h4 {
-    font-size: 2.2em; }
+    font-size: 2.6em; }
   #logo-text span {
-    font-size: 1.2em;
+    font-size: 1.5em;
     font-weight: bold; }
   @media screen and (max-width: 480px) {
     #logo-text h4 {
-      font-size: 1.6em; }
+      font-size: 2em; }
     #logo-text span {
       font-size: 1em; } }
-  @media screen and (max-width: 380px) {
+  @media screen and (max-width: 385px) {
     #logo-text h4 {
-      font-size: 1.4em; }
+      font-size: 1.8em; }
     #logo-text span {
       font-size: 0.9em; } }
   @media screen and (max-width: 280px) {
+    #logo-text h4 {
+      font-size: 1.6em; }
+    #logo-text span {
+      font-size: 0.7em; } }
+  @media screen and (max-width: 220px) {
+    #logo-text h4 {
+      font-size: 1.4em; }
+    #logo-text span {
+      font-size: 0.7em; } }
+  @media screen and (max-width: 180px) {
     #logo-text h4 {
       font-size: 1.2em; }
     #logo-text span {
@@ -1842,14 +1852,12 @@ h1, h2, h3, h4, h5, h6 {
 .content-box .header h4 {
   font-size: 1.1em; }
 .content-box h1, .content-box h2, .content-box h3, .content-box h4, .content-box h5, .content-box h6 {
-  /*font-family: Arial, Verdana;*/
   font-family: Futura, "Trebuchet MS", Arial, sans-serif;
   margin: 0.6em 0.5em; }
 .content-box h6 {
   line-height: 2em;
   font-size: 1em; }
 .content-box p {
-  /*font-family: Arial, Verdana;*/
   font-family: Futura, "Trebuchet MS", Arial, sans-serif;
   line-height: 1.5em;
   margin: 0.6em 0.5em; }
@@ -1893,7 +1901,6 @@ h1, h2, h3, h4, h5, h6 {
         font-size: 0.8em; } }
 
 #navigation, .lang-menu {
-  /*font-family: Arial, Verdana;*/
   font-family: Futura, "Trebuchet MS", Arial, sans-serif;
   font-size: 1.2em; }
 
@@ -1908,16 +1915,13 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 0.5em; } }
 
 #main-image .image-mask h5 {
-  /*font-family: Arial, Verdana;*/
   font-family: Futura, "Trebuchet MS", Arial, sans-serif;
   line-height: 1.2em;
   font-size: 1.5em; }
 #main-image .image-mask p {
-  /*font-family: Arial, Verdana;*/
   font-family: Futura, "Trebuchet MS", Arial, sans-serif;
   font-size: 1em; }
 #main-image .image-mask span {
-  /*font-family: Arial, Verdana;*/
   font-family: Futura, "Trebuchet MS", Arial, sans-serif;
   font-size: 1.2em; }
 @media screen and (max-width: 768px) {
@@ -1953,7 +1957,6 @@ h1, h2, h3, h4, h5, h6 {
       font-size: 0.7em; } }
 
 #footer {
-  /*font-family: Arial, Verdana;*/
   font-family: Futura, "Trebuchet MS", Arial, sans-serif; }
   @media screen and (max-width: 600px) {
     #footer {

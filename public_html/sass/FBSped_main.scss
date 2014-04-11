@@ -403,7 +403,7 @@ html, body {
     #logo {
         @include border-box;
         display: block;
-        height: 6em;
+        height: 8em;
         padding: 0;
         border: 0;
         
@@ -440,7 +440,7 @@ html, body {
             position: absolute;
             float: none;
             padding: 0;
-            top: 0.5em;
+            top: 1em;
             left: 25%;
             right: 25%;
             width: 50%;
@@ -2482,7 +2482,6 @@ body{
 
 @mixin font-senza-grazie()
 {
-    /*font-family: Arial, Verdana;*/
     font-family: Futura, "Trebuchet MS", Arial, sans-serif;
 }
 
@@ -2498,17 +2497,17 @@ h1, h2, h3, h4, h5, h6 {
     @include font-con-grazie();
     
     h4{
-        font-size: 2.2em;
+        font-size: 2.6em;
     }
     
     span{
-        font-size: 1.2em;
+        font-size: 1.5em;
         font-weight: bold;
     }
     
     @media screen and (max-width: 480px){
         h4{
-            font-size: 1.6em;
+            font-size: 2em;
         }
     
         span{
@@ -2516,9 +2515,9 @@ h1, h2, h3, h4, h5, h6 {
         }
     }
     
-    @media screen and (max-width: 380px){
+    @media screen and (max-width: 385px){
         h4{
-            font-size: 1.4em;
+            font-size: 1.8em;
         }
         span{
             font-size: 0.9em;
@@ -2527,6 +2526,24 @@ h1, h2, h3, h4, h5, h6 {
     
     
     @media screen and (max-width: 280px){
+        h4{
+            font-size: 1.6em;
+        }
+        span{
+            font-size: 0.7em;
+        }
+    }
+    
+    @media screen and (max-width: 220px){
+        h4{
+            font-size: 1.4em;
+        }
+        span{
+            font-size: 0.7em;
+        }
+    }
+    
+    @media screen and (max-width: 180px){
         h4{
             font-size: 1.2em;
         }
