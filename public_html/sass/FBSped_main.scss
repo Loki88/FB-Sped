@@ -2472,14 +2472,6 @@ body{
 }
 
 /* ----- TESTI ----- */
-@font-face
-{
-    font-family: Comfortaa;
-    src: url('./font/Comfortaa-Regular.ttf');
-    font-weight: normal;
-} 
-
-
 @mixin font-con-grazie()
 {
     font-family: "Bodoni MT", Didot, "Didot LT STD", "Book Antiqua", Garamond, "Times New Roman", serif;
@@ -2488,6 +2480,11 @@ body{
 @mixin font-senza-grazie()
 {
     font-family: Futura, "Trebuchet MS", Arial, sans-serif;
+}
+
+@mixin font-senza-grazie-testi()
+{
+    font-family: Arial, Verdana;
 }
 
 html, body{
@@ -2576,7 +2573,7 @@ h1, h2, h3, h4, h5, h6 {
     }
     
     p{
-        @include font-senza-grazie();
+        @include font-senza-grazie-testi();
         line-height: 1.5em;
         margin: 0.6em 0.5em;
     }
@@ -2647,7 +2644,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #navigation, .lang-menu{
-    @include font-senza-grazie();
+    @include font-senza-grazie-testi();
     font-size: 1.2em;
 }
 
@@ -2674,12 +2671,12 @@ h1, h2, h3, h4, h5, h6 {
         }
         
         p{
-            @include font-senza-grazie();
+            @include font-senza-grazie-testi();
             font-size: 1em;
         }
         
         span{
-            @include font-senza-grazie();
+            @include font-senza-grazie-testi();
             font-size: 1.2em;
         }
         @media screen and (max-width: 768px){

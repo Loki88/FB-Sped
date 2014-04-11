@@ -1808,11 +1808,6 @@ body {
   .tab_to_accordion #image-combinato {
     background-image: url("../img/300/combinato.png"); } }
 /* ----- TESTI ----- */
-@font-face {
-  font-family: Comfortaa;
-  src: url("./font/Comfortaa-Regular.ttf");
-  font-weight: normal; }
-
 html, body {
   font-size: 16px; }
 
@@ -1864,7 +1859,7 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 2em;
   font-size: 1em; }
 .content-box p {
-  font-family: Futura, "Trebuchet MS", Arial, sans-serif;
+  font-family: Arial, Verdana;
   line-height: 1.5em;
   margin: 0.6em 0.5em; }
 @media screen and (max-width: 768px) {
@@ -1907,7 +1902,7 @@ h1, h2, h3, h4, h5, h6 {
         font-size: 0.8em; } }
 
 #navigation, .lang-menu {
-  font-family: Futura, "Trebuchet MS", Arial, sans-serif;
+  font-family: Arial, Verdana;
   font-size: 1.2em; }
 
 @media screen and (max-width: 768px) {
@@ -1925,10 +1920,10 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 1.2em;
   font-size: 1.5em; }
 #main-image .image-mask p {
-  font-family: Futura, "Trebuchet MS", Arial, sans-serif;
+  font-family: Arial, Verdana;
   font-size: 1em; }
 #main-image .image-mask span {
-  font-family: Futura, "Trebuchet MS", Arial, sans-serif;
+  font-family: Arial, Verdana;
   font-size: 1.2em; }
 @media screen and (max-width: 768px) {
   #main-image .image-mask h5 {
