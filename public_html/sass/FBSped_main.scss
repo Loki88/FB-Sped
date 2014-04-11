@@ -403,7 +403,7 @@ html, body {
     #logo {
         @include border-box;
         display: block;
-        height: 8em;
+        height: 7em;
         padding: 0;
         border: 0;
         
@@ -517,7 +517,7 @@ html, body {
                 height: 100%;
                 width: 40%;
                 margin: 0.2em 0;
-                height: 5.6em;
+                height: 6em;
                 float: left;
                 a{
                     margin: auto;
@@ -556,12 +556,12 @@ html, body {
         #logo{
             position: relative;
             #logo-img{
-                width: 40%;
+                width: 50%;
                 margin: 0.2em auto;
                 margin-right: 5%;
                 max-height: 5em;
                 height: 5em;
-                float: left;       
+                  
                 img{
                     display: block;
                     position: relative;
@@ -570,9 +570,14 @@ html, body {
                 }
             }
             #logo-text{
-                width: 50%;
+                display: block;
+                float: none;
+                width: 100%;
                 /*float: left;*/
                 /*margin: 0.3em auto;*/
+                span{
+                    display: inline-block;
+                }
             }
         }
     }
@@ -2534,23 +2539,23 @@ h1, h2, h3, h4, h5, h6 {
         }
     }
     
-    @media screen and (max-width: 220px){
+    @media screen and (max-width: 215px){
         h4{
-            font-size: 1.4em;
+            font-size: 1.5em;
         }
         span{
             font-size: 0.7em;
         }
     }
     
-    @media screen and (max-width: 180px){
+/*    @media screen and (max-width: 180px){
         h4{
             font-size: 1.2em;
         }
         span{
             font-size: 0.7em;
         }
-    }
+    }*/
 }
 
 .content-box{
