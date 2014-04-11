@@ -69,8 +69,12 @@ var TabToAccordion = {
     restoreTab: function()
     {
         var panel = $(this.current);
-        panel.find('a').removeAttr('style');
-        panel.find('.tab_page').removeAttr('style');
+        var link = panel.find('a');
+        link.removeAttr('style');
+        link.attr("style", "");
+        var page = panel.find('.tab_page');
+        page.removeAttr('style');
+        page.attr("style", "");
         panel.addClass('current');
     },
 

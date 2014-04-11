@@ -425,7 +425,14 @@ html, body {
       /*float: left;*/
       /*margin: 0.3em auto;*/ }
       #page-header #logo #logo-text span {
-        display: inline-block; } }
+        /*                    float: left;*/
+        display: inline-block;
+        /*display: none;*/ } }
+      @media screen and (max-width: 480px) and (max-width: 423px) {
+        #page-header #logo #logo-text span {
+          width: 100%;
+          /*text-align: center;*/ } }
+
 .lang-menu {
   display: inline-block;
   position: relative;
@@ -445,7 +452,8 @@ html, body {
     border: 0;
     left: 0;
     top: 0;
-    display: block; }
+    display: block;
+    visibility: visible; }
   .lang-menu .controls {
     display: none;
     position: absolute;
@@ -1126,7 +1134,8 @@ html, body {
         visibility: hidden; }
       .tab_to_accordion .tab_contents .tab_pane a {
         display: none;
-        visibility: hidden; }
+        visibility: hidden;
+        text-decoration: none; }
       .tab_to_accordion .tab_contents .tab_pane .tab-image {
         display: none;
         position: relative;
@@ -1511,8 +1520,8 @@ body {
 @media screen and (max-width: 768px) {
   .lang-menu .controls {
     border-color: #1C68AA; }
-    .lang-menu .controls:hover img, .lang-menu .controls:focus img {
-      border-color: #FFA01A; }
+    .lang-menu .controls:hover span, .lang-menu .controls:focus span {
+      color: #FFA01A; }
   .lang-menu #lang-menu a {
     border-color: #1C68AA; }
     .lang-menu #lang-menu a:not(.selected):hover img, .lang-menu #lang-menu a:not(.selected):focus img {
@@ -1815,15 +1824,7 @@ h1, h2, h3, h4, h5, h6 {
   color: #1C68AA; }
 
 #logo-text {
-  font-family: "Bodoni MT", Didot, "Didot LT STD", "Book Antiqua", Garamond, "Times New Roman", serif;
-  /*    @media screen and (max-width: 180px){
-          h4{
-              font-size: 1.2em;
-          }
-          span{
-              font-size: 0.7em;
-          }
-      }*/ }
+  font-family: "Bodoni MT", Didot, "Didot LT STD", "Book Antiqua", Garamond, "Times New Roman", serif; }
   #logo-text h4 {
     font-size: 2.6em; }
   #logo-text span {
@@ -1843,10 +1844,15 @@ h1, h2, h3, h4, h5, h6 {
     #logo-text h4 {
       font-size: 1.6em; }
     #logo-text span {
-      font-size: 0.7em; } }
+      font-size: 0.9em; } }
   @media screen and (max-width: 215px) {
     #logo-text h4 {
       font-size: 1.5em; }
+    #logo-text span {
+      font-size: 0.8em; } }
+  @media screen and (max-width: 180px) {
+    #logo-text h4 {
+      font-size: 1.4em; }
     #logo-text span {
       font-size: 0.7em; } }
 

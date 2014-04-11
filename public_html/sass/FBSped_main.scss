@@ -576,7 +576,13 @@ html, body {
                 /*float: left;*/
                 /*margin: 0.3em auto;*/
                 span{
+/*                    float: left;*/
                     display: inline-block;
+                    /*display: none;*/
+                    @media screen and (max-width: 423px){
+                        width: 100%;
+                        /*text-align: center;*/
+                    }
                 }
             }
         }
@@ -606,6 +612,7 @@ html, body {
         left: 0;
         top: 0;
         display: block;
+        visibility: visible;
     }
     
     .controls{
@@ -1442,6 +1449,7 @@ html, body {
             a{
                 display: none;
                 visibility: hidden;
+                text-decoration: none;
             }
             
             .tab-image{
@@ -1929,9 +1937,9 @@ body{
             border-color: #1C68AA;
             
             &:hover, &:focus{
-                img{
-                    border-color: #FFA01A;
-                }
+                span{
+                    color: #FFA01A;
+                }            
             }
             
         }
@@ -2532,7 +2540,7 @@ h1, h2, h3, h4, h5, h6 {
             font-size: 1.6em;
         }
         span{
-            font-size: 0.7em;
+            font-size: 0.9em;
         }
     }
     
@@ -2541,18 +2549,18 @@ h1, h2, h3, h4, h5, h6 {
             font-size: 1.5em;
         }
         span{
-            font-size: 0.7em;
+            font-size: 0.8em;
         }
     }
     
-/*    @media screen and (max-width: 180px){
+    @media screen and (max-width: 180px){
         h4{
-            font-size: 1.2em;
+            font-size: 1.4em;
         }
         span{
             font-size: 0.7em;
         }
-    }*/
+    }
 }
 
 .content-box{

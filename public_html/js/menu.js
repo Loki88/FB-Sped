@@ -136,11 +136,12 @@ var Navigation = {
         //Ripristina il menu per la versione desktop e tablet landscape
         lang.removeClass('languageMobileVisible');
 //        lang.css('display', 'block');
-        
+        lang.removeAttr('style');
+        lang.attr("style", "");
         open.removeAttr('style');
         close.removeAttr('style');
         
-        lang.removeAttr('style');
+        
     },
     
     prepareMenu: function()
