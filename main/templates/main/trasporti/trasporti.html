@@ -1,0 +1,38 @@
+{% extends "main/trasporti/base.html" %}
+{% load i18n %}
+
+{% block title %}<title>FB Sped S.r.l. - {% trans "Trasporti" %}</title>{% endblock %}
+
+{% block breadcrumb-path %}<span class="mobile_content">{% trans "Trasporti" %}</span><a class="desktop_content" href="{% url trasporti %}">{% trans "Trasporti" %}</a><span class="desktop_content">&nbsp;- {% trans "Informazioni generali" %}</span>{% endblock %}
+
+{% block tab-menu-generals %}<div id="trasporti-link" class="menu-button selected"><div class="icon"></div><a data-target="#trasporti" href="{% url trasporti %}">{% trans "Informazioni generali" %}</a></div>{% endblock %}
+
+{% block tab-image-box %}{% endblock %}
+
+{% block tab-pane-generals %}
+    <div data-trigger="#trasporti-link" data-title="FB Sped S.r.l - {% trans "Transporti" %}" class="tab_pane current" id="trasporti">
+       <div class="accordion-button" id="general">
+           <a class="open" href="{% url trasporti %}"><div class="accordion_icon icon"></div><div>{% trans "Informazioni generali" %}</div><div class="accordion_icon"></div></a>
+            <a class="close" href="#tab"><div class="accordion_icon icon"></div><div>{% trans "Informazioni generali" %}</div><div class="accordion_icon"></div></a>
+        </div>
+        <div class="decorator"></div>
+        <div class="content-box tab_page color_white">
+            <div class="header color_blue">
+                <h4>{% trans "Informazioni generali sui trasporti" %}</h4>
+            </div>
+            <p>
+                {% trans "Descrizione generale dei servizi di trasporto: paragrafo 1" %}
+            </p>
+            <ul>
+                <li>{% trans "Trasporto su gomma" %}</li>
+                <li>{% trans "Trasporto ferroviario" %}</li>
+                <li>{% trans "Trasporto marittimo" %}</li>
+                <li>{% trans "Trasporto aereo" %}</li>
+                <li>{% trans "Trasporto combinato" %}</li>
+            </ul>
+            <p>
+                {% trans "Descrizione generale dei servizi di trasporto: paragrafo 2" %}
+            </p>
+        </div>
+    </div>
+{% endblock %}

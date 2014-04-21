@@ -1,0 +1,37 @@
+{% extends "main/trasporti/base.html" %}
+{% load i18n %}
+
+{% block title %}<title>FB Sped S.r.l. - {% trans "Trasporto combinato" %}</title>{% endblock %}
+
+{% block breadcrumb-path %}<span class="mobile_content">{% trans "Trasporti" %}</span><a class="desktop_content" href="{% url trasporti %}">{% trans "Trasporti" %}</a><span class="desktop_content">&nbsp;- {% trans "Trasporto combinato" %}</span>{% endblock %}
+
+{% block tab-menu-combined %}<div id="trasporto-combinato-link" class="menu-button selected"><div class="icon"></div><a data-target="#trasporto-combinato" href="{% url trasporto-combinato %}">{% trans "Trasporto combinato" %}</a></div>{% endblock %}
+
+{% block tab-image %}
+    <div class="lazy-image" id="image-aereo">
+        <img class="img" src="/static/img/blank_small.png" alt="Veicolo per il trasporto aereo." />
+    </div>
+{% endblock %}
+
+{% block tab-pane-combined %}
+    <div data-trigger="#trasporto-combinato-link" data-title="FB Sped S.r.l - Trasporto combinato" class="tab_pane current" id="trasporto-combinato">
+        <div class="accordion-button" id="combined">
+            <a class="open" href="{% url trasporto-combinato %}"><div class="accordion_icon icon"></div><div>{% trans "Trasporto combinato" %}</div><div class="accordion_icon"></div></a>
+            <a class="close" href="#tab"><div class="accordion_icon icon"></div><div>{% trans "Trasporto combinato" %}</div><div class="accordion_icon"></div></a>
+        </div>
+        <div class="decorator"></div>
+        <div class="content-box tab_page color_white">
+            <div class="header color_blue">
+                <h4>{% trans "I nostri servizi per il trasporto combinato" %}</h4>
+            </div>
+            <p>
+                {% trans "Descrizione del servizio di trasporto combinato" %}
+            </p>
+            <div class="tab-image">
+                <div class="lazy-image" id="image-combinato">
+                    <img class="img" src="/static/img/blank_small.png" alt="Esempio di trasporto combinato con mezzo su gomma e marittimo." />
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

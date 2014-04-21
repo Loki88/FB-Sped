@@ -1,0 +1,96 @@
+{% extends "base.html" %}
+
+{% load i18n %}
+{% load webdesign %}
+
+{% block menu-link-home %}<li class="selected color_green"><a href="{% url home %}">Home</a></li>{% endblock %}
+
+{% block breadcrumb-path %}Home{% endblock %}
+
+
+
+{% block page_content %}
+    <div id="main-image" class="group section content-box-shadow">
+        <div class="lazy-image">
+            <img src="/static/img/blank.png" alt="{% trans "Immagine di presentazione aziendale. Ci occupiamo di trasporti multimodali in campo internazionale." %}"/>
+        </div>
+        <div class="image-mask">
+            <a href="{% url chi-siamo %}">
+                {% trans "La logistica nelle giuste mani" as main_title %}
+                {% trans "Chi siamo paragrafo 1" as intro_azienda %}
+                <h5>{{ main_title }}</h5>
+                <p>
+                   {{ intro_azienda|truncatechars:150 }}
+                </p>
+                <span>{% trans "Continua a leggere" %}</span>
+            </a>
+        </div>
+    </div>
+
+    <div class="section group trasporti-links" id="sol-trasporti">
+        <div class="column col_1_5_to_2_4 content-box content-box-shadow color_white" id="truck">
+            <a href="{% url trasporto-gomma %}">
+                <div class="header color_blue">
+                    <div class="icon"></div>
+                    <h5>{% trans "Trasporto&nbsp;<br/>su gomma" %}</h5>
+                </div>
+                <p class="color_white">
+                    {% trans "Intro Trasporto su gomma" %}
+                </p>
+                <span>{% trans "Vai alla pagina" %}</span>
+            </a>
+        </div>
+        <div class="column col_1_5_to_2_4 content-box content-box-shadow color_white"  id="train">
+            <a href="{% url trasporto-ferroviario %}" alt="{% trans "Scopri i nostri trasporti ferroviari" %}">
+                <div class="header color_blue">
+                    <div class="icon"></div>
+                    <h5>{% trans "Trasporto&nbsp;<br/>ferroviario" %}</h5>
+                </div>
+                <p class="color_white">
+                    {% trans "Intro Trasporto ferroviario" %}
+                </p>
+                <span>{% trans "Vai alla pagina" %}</span>
+            </a>
+        </div>
+        <span class="grid-brake"></span>
+        <div class="column col_1_5_to_2_4 content-box content-box-shadow color_white" id="ship">
+            <a href="{% url trasporto-marittimo %}">
+                <div class="header color_blue">
+                    <div class="icon"></div>
+                    <h5>{% trans "Trasporto&nbsp;<br/>marittimo" %}</h5>
+                </div>
+                <p class="color_white">
+                    {% trans "Intro Trasporto marittimo" %}
+                </p>
+                <span>{% trans "Vai alla pagina" %}</span>
+            </a>
+        </div>
+        <div class="column col_1_5_to_2_4 content-box content-box-shadow color_white" id="airplane">
+            <a href="{% url trasporto-aereo %}">
+                <div class="header color_blue">
+                    <div class="icon"></div>
+                    <h5>{% trans "Trasporto&nbsp;<br/>aereo" %}</h5>
+                </div>
+                <p class="color_white">
+                    {% trans "Intro Trasporto aereo" %}
+                </p>
+                <span>{% trans "Vai alla pagina" %}</span>
+            </a>
+        </div>
+        <span class="grid-brake"></span>
+        <div class="column col_1_5_to_2_4 content-box content-box-shadow color_white" id="combined">
+            <a href="{% url trasporto-combinato %}">
+                <div class="header color_blue">
+                    <div class="icon"></div>
+                    <h5>{% trans "Trasporto&nbsp;<br/>combinato" %}</h5>
+                </div>
+                <p class="color_white">
+                    {% trans "Intro Trasporto combinato" %}
+                </p>
+                <span>{% trans "Vai alla pagina" %}</span>
+            </a>
+        </div>
+        <span class="grid-brake"></span>
+    </div>
+{% endblock %}
+

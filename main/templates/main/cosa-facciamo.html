@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% load i18n %}
+
+{% block title %}<title>FB Sped S.r.l. - {% trans "Cosa facciamo" %}</title>{% endblock %}
+
+{% block menu-link-cosa %}<li class="selected color_green"><a href="{% url cosa-facciamo %}">{% trans "Cosa facciamo" %}</a></li>{% endblock %}
+
+{% block breadcrumb-path %}{% trans "Cosa facciamo" %}{% endblock %}
+
+{% block page_content %}
+    <div class="section group">
+        <div class="column col_3_5">
+           <div class="col_5_5 content-box content-box-shadow color_white" id="content">
+                <div class="decorator"></div>
+                <div class="color_blue header">
+                    <h4 class="title">{% trans "Cosa facciamo alla FB Sped S.r.l." %}</h4>
+                </div>
+               <div class="decorator-header"></div>
+                <p class="intro" style="text-align: center;">{% trans "Cosa facciamo: intro" %}</p>
+                <p>
+                    {% trans "Cosa facciamo: paragrafo 1" %}
+                </p>
+            </div>
+        </div>
+        <div class="column col_2_5">
+            <div class="col_5_5 page-img content-box-shadow" id="cosa-facciamo-image">
+                <div class="lazy-image">
+                    <img class="img" src="/static/img/blank_small.png" alt="" />
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

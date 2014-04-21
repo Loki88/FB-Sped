@@ -1,0 +1,183 @@
+/* 
+    Created on : 13-mar-2014, 18.28.32
+    Author     : Lorenzo Di Giuseppe
+*/
+
+@mixin border-box(){
+    -webkit-box-sizing: border-box; /* Android ≤ 2.3, iOS ≤ 4 */
+     -moz-box-sizing: border-box; /* Firefox 1+ */
+          box-sizing: border-box; /* Chrome, IE 8+, Opera, Safari 5.1 */
+}
+
+$orizontal-margin: 1.6%;
+$horizontal-margin: 1.6%;
+$vertical-margin: 1em;
+$vertical-margin-mobile: 0.7em;
+
+
+//COLONNE
+.column{
+    float:left;
+    margin: 0 0 0 $horizontal-margin;
+    &:first-child{
+        margin-left: 0;
+    }
+}
+
+.column-right{
+    float: right;
+    margin: 0 $horizontal-margin 0 0;
+    &:first-child{
+        margin-right: 0;
+    }
+}
+
+.column, .column-right{
+    display: block;
+    font-size: inherit;
+    .col_1_5, .col_2_5, .col_3_5, .col_4_5, .col_5_5{
+        margin-top: $vertical-margin;
+        &:first-child{
+            margin-top: 0;
+        }
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .column {
+        margin: 0.5em 0 0 0;
+        &:first-child{
+            margin: 0;
+        }
+    }
+    .column-right {
+        margin: 0 0 0.5em 0;
+        &:first-child{
+            margin: 0;
+        }
+    }
+    .column, .column-right{
+        .col_1_5, .col_2_5, .col_3_5, .col_4_5, .col_5_5{
+            font-size: inherit;
+            margin-top: $vertical-margin-mobile;
+            &:first-child{
+                margin-top: 0;
+            }
+        }
+    }
+}
+
+//Raggruppatori di elementi
+
+//Section imposta i margini di sezione e previene il floating degli elementi a destra e sinistra
+.section{
+    font-size: inherit;
+    clear: both;
+    padding: 0px;
+    margin: 0px;
+    margin-bottom: 1.6em;
+    &:first-child{
+        margin-top: 1.6em;
+    }
+}
+
+.group:before,
+.group:after {
+    content:"";
+    display:table;
+}
+.group:after {
+    clear:both;
+}
+.group {
+    font-size: inherit;
+    zoom:1; /* Per IE 7 */
+    &:before,  &:after {
+        content: ""; //Assicura la separazione dei contenuti
+        display: table;
+    }
+    
+    &:after{
+        clear: both; //Previene il floating degli elementi che seguono il gruppo
+    }
+}
+
+//GRIGLIA
+
+.col_1_5, .col_1_5_to_2_4{
+    width: (100% - 4 * $orizontal-margin) / 5;
+}
+
+.col_2_5{
+    width: 2*(100% - 4 * $orizontal-margin) / 5 + $orizontal-margin;
+}
+
+.col_3_5{
+    width: 3*(100% - 4 * $orizontal-margin) / 5 + 2 * $orizontal-margin;
+}
+
+.col_4_5{
+    width: 4*(100% - 4 * $orizontal-margin) / 5 + 3 * $orizontal-margin;
+}
+
+.col_5_5{
+    width: 100%;
+}
+
+.grid-brake{
+    display: none;
+    height: 0;
+    clear: both;
+    float: left;
+    width: 100%;
+    margin-top: 0.5em;
+}
+
+@media screen and (max-width: 768px){
+    .col_1_5_to_2_4{
+        width: 98.4 / 2 * 1%;
+        
+        &:nth-of-type(1), &:nth-of-type(3), &:nth-of-type(5){
+            margin-left: 0;
+        }
+        
+        &:nth-of-type(2), &:nth-of-type(4), &:nth-of-type(6){
+            float: right;
+            margin-right: 0;
+        }
+    }
+    
+    .section{  
+        clear: both;
+        padding: 0px;
+        margin-bottom: $vertical-margin-mobile;
+        &:first-child{
+            margin-top: $vertical-margin-mobile;
+        }
+        
+        .grid-brake{
+            display: block;
+        }
+    }
+}
+
+@media screen and (max-width: 480px)
+{
+    .col_1_5_to_2_4{
+        margin-top: 0.5em;
+
+        &:nth-of-type(1), &:nth-of-type(3), &:nth-of-type(5){
+            margin-left: 0;
+        }
+    }
+    
+    .section{
+        .grid-brake{
+            display: none;
+        }
+    }
+    
+    .col_1_5, .col_2_5, .col_3_5, .col_4_5, .col_5_5, .col_1_5_to_2_4{
+        width: 100%;
+    }
+}

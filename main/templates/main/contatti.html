@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+{% load i18n %}
+
+{% block title %}<title>FB Sped S.r.l. - {% trans "Contatti" %}</title>{% endblock %}
+
+{% block menu-link-contatti %}<li class="selected color_green"><a href="{% url contatti %}">{% trans "Contatti" %}</a></li>{% endblock %}
+
+{% block breadcrumb-path %}{% trans "Contatti" %}{% endblock %}
+
+{% block page_content %}
+    <div class="section group">
+        <div class="column col_3_5">
+            <div class="col_5_5 content-box content-box-shadow color_white" id="content">
+                <div class="decorator"></div>
+                <div class="color_blue header">
+                    <h4 class="title">{% trans "Contatti" %}</h4>
+                </div>
+                <div class="decorator-header"></div>
+                <h6>{% trans "Uffici" %}</h6>
+                <p>{% trans "Contatti: ufficio" %}</p>
+                <h6>Francesca Di Carlantonio</h6>
+                <p>{% trans "Contatti: Francesca Di Carlantonio" %}</p>
+                <div class="decorator-bottom"></div>
+            </div>
+        </div>
+        <div class="column col_2_5">
+            <div class="col_5_5 page-img content-box-shadow" id="contatti-image">
+                <div class="lazy-image">
+                    <img class="img" src="/static/img/blank_small.png" alt="{% trans "I nostri uffici." %}" />
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

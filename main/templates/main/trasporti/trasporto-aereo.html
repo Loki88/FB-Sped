@@ -1,0 +1,37 @@
+{% extends "main/trasporti/base.html" %}
+{% load i18n %}
+
+{% block title %}<title>FB Sped S.r.l. - {% trans "Trasporto aereo" %}</title>{% endblock %}
+
+{% block breadcrumb-path %}<span class="mobile_content">{% trans "Trasporti" %}</span><a class="desktop_content" href="{% url trasporti %}">{% trans "Trasporti" %}</a><span class="desktop_content">&nbsp;- {% trans "Trasporto aereo" %}</span>{% endblock %}
+
+{% block tab-menu-air %}<div id="trasporto-aereo-link" class="menu-button selected"><div class="icon"></div><a data-target="#trasporto-aereo" href="{% url trasporto-aereo %}">{% trans "Trasporto aereo" %}</a></div>{% endblock %}
+
+{% block tab-image %}
+    <div class="lazy-image" id="image-aereo">
+        <img class="img" src="/static/img/blank_small.png" alt="Veicolo per il trasporto aereo." />
+    </div>
+{% endblock %}
+
+{% block tab-pane-air %}
+    <div data-trigger="#trasporto-aereo-link" data-title="FB Sped S.r.l - Trasporto aereo" class="tab_pane current" id="trasporto-aereo">
+        <div class="accordion-button" id="airplane">
+            <a class="open" href="{% url trasporto-aereo %}"><div class="accordion_icon icon"></div><div>{% trans "Trasporto aereo" %}</div><div class="accordion_icon"></div></a>
+            <a class="close" href="#tab"><div class="accordion_icon icon"></div><div>{% trans "Trasporto aereo" %}</div><div class="accordion_icon"></div></a>
+        </div>
+        <div class="decorator"></div>
+        <div class="content-box tab_page color_white">
+            <div class="header color_blue">
+                <h4>{% trans "I nostri servizi per il trasporto aereo" %}</h4>
+            </div>
+            <p>
+                {% trans "Descrizione del servizio di trasporto aereo" %}
+            </p>
+            <div class="tab-image">
+                <div class="lazy-image" id="image-aereo">
+                    <img class="img" src="/static/img/blank_small.png" alt="Veicolo per il trasporto aereo." />
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,255 @@
+/* 
+    Created on : 18-feb-2014, 23.02.43
+    Author     : Lorenzo Di Giuseppe <lorenzo.digiuseppe88@gmail.com>
+*/
+
+html, body{
+    font-size: 16px;
+    /*font-size: 12 / 16 * 100%;*/
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: #E2E5DF;
+}
+
+#logo-text{
+    font-family: 'Times New Roman', Boldoni;
+    
+    h4{
+        font-size: 2.2em;
+        color: #1C68AA;
+    }
+    
+    span{
+        font-size: 1.2em;
+        font-weight: bold;
+        color: #1C68AA;
+    }
+    
+    @media screen and (max-width: 480px){
+        h4{
+            font-size: 1em;
+        }
+    
+        span{
+            font-size: 0.9em;
+        }
+    }
+    
+    @media screen and (max-width: 360px){
+        span{
+            font-size: 0.8em;
+        }
+    }
+
+    
+    @media screen and (max-width: 240px){
+        h4{
+            font-size: 1em;
+        }
+        span{
+            font-size: 0.6em;
+        }
+    }
+    
+    
+    @media screen and (max-width: 160px){
+        h4{
+            font-size: 0.9em;
+        }
+        span{
+            font-size: 0.5em;
+        }
+    }
+}
+
+.content-box{
+    .header{
+        h4{
+            font-size: 1.2em;
+        }
+    }
+    
+    h1, h2, h3, h4, h5, h6{
+        font-family: 'Times New Roman', Boldoni;
+        margin: 0.6em 0.5em;
+    }
+    
+    h6{
+        line-height: 2em;
+        font-size: 1em;
+    }
+    
+    p{
+        font-family: Arial, Verdana;
+        line-height: 1.5em;
+        margin: 0.6em 0.5em;
+    }
+    
+    @media screen and (max-width: 768px){
+        .header{
+            h4{
+                line-height: 1.2em;
+                font-size: 1.1em;
+            }
+        }
+        
+        h6{
+            margin-top: 0.8em;
+            margin-bottom: 0.4em;
+            font-size: 0.9em;
+            line-height: 1.2em;
+        }
+        p{
+            font-size: 0.8em;
+            line-height: 1.2em;
+        }
+    }
+}
+
+.breadcrumb{
+    @media screen and (max-width: 768px){
+        font-size: 1em;
+    }
+    @media screen and (max-width: 480px){
+        font-size: 0.8em;
+    }
+}
+
+#sol-trasporti, #links-trasporti{
+    zoom: 1;
+    .content-box{
+        .header{
+            h1, h2, h3, h4, h5, h6 {
+                font-size: 1.2em;
+            }
+        }
+        span{
+            font-size: 1em;
+        }
+        @media screen and(max-width: 768px){
+            font-size: 0.9em;
+            .header{
+                h1, h2, h3, h4, h5, h6 {
+                    font-size: 1em;
+                }
+            }
+        }
+        
+        @media screen and (max-width: 600px){
+            font-size: 0.8em;
+            .header{
+                h1, h2, h3, h4, h5, h6 {
+                    font-size: 1em;
+                }
+            }
+            span{
+                font-size: 0.8em;
+            }
+        }
+        
+    }
+}
+
+#navigation, .lang-menu{
+    font-family: Arial, Verdana;
+    font-size: 1.2em;
+}
+
+#navigation ul li, .lang-menu ul li
+{
+    @media screen and (max-width: 768px)
+    {
+        font-size: 0.9em;
+    }
+    @media screen and (max-width: 320px){
+        font-size: 0.6em;
+    }
+    @media screen and (max-width: 150px){
+        font-size: 0.5em;
+    }
+}
+
+#main-image{
+    .image-mask{
+        h5{
+            color: #FFFFFF;
+            font-family: 'Times New Roman', Boldoni;
+            line-height: 1.2em;
+            font-size: 1.5em;
+        }
+        
+        p{
+            color: #FFFFFF;
+            font-family: Arial, Verdana;
+            font-size: 1em;
+        }
+        
+        span{
+            font-family: 'Times New Roman', Boldoni;
+            font-size: 1.2em;
+        }
+        @media screen and (max-width: 768px){
+            h5{
+                font-size: 1.2em;
+                line-height: 1.2em;
+            }
+            p{
+                font-size: 0.9em;
+            }   
+            span{
+                font-size: 1em;
+            }
+        }
+        @media screen and (max-width: 480px){
+            h5{
+                font-size: 0.9em;
+                line-height: 1em;
+            }
+            p{
+                font-size: 0.7em;
+            }   
+            span{
+                font-size: 0.8em;
+            }
+        }
+    }
+}
+
+#tab{
+    .tab_menu{
+        a{
+            font-size: 1.2em;
+            @media screen and (max-width: 768px){
+                font-size: 1em;
+            }
+        }
+    }
+/*    a{
+        font-family: Arial, Verdana;
+        font-size: 1.1em;
+    }*/
+    
+    @media screen and (max-width: 480px){
+        a{
+            font-size: 0.9em;
+        }
+    }
+}
+
+.carousel{
+    h2{
+        font-size: 1.2em;
+        @media screen and (max-width: 600px)
+        {
+            font-size: 0.7em;
+        }
+    }
+}
+
+#footer{
+    font-family: Arial, Verdana;
+    @media screen and (max-width: 600px){
+        font-size: 0.9em;
+    }
+}

@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+{% load i18n %}
+
+{% block title %}<title>FB Sped S.r.l. - {% trans "Chi siamo" %}</title>{% endblock %}
+
+{% block menu-link-chi %}<li class="selected color_green"><a href="{% url chi-siamo %}">{% trans "Chi siamo" %}</a></li>{% endblock %}
+
+{% block breadcrumb-path %}{% trans "Chi siamo" %}{% endblock %}
+
+{% block page_content %}
+    <div class="section group">
+        <div class="column col_3_5">
+            <div class="col_5_5 content-box content-box-shadow color_white" id="content">
+                <div class="color_blue header">
+                    <h4 class="title">{% trans "La storia dell'azienda" %}</h4>
+                </div>
+                <p>{% trans "Chi siamo paragrafo 1" %}</p>
+                <p>{% trans "Chi siamo paragrafo 2" %}</p>
+            </div>
+
+            <div class="col_5_5 content-box content-box-shadow color_white" id="content">
+                <div class="color_blue header">
+                    <h4 class="title">{% trans "Il direttivo della società" %}</h4>
+                </div>
+                <p>{% trans "Il direttivo paragrafo 1" %}</p>
+            </div>
+        </div>
+        <div class="column col_2_5">
+            <div class="col_5_5 page-img content-box-shadow" id="chi-siamo-image">
+                <div class="lazy-image">
+                    <img class="img" src="/static/img/blank_small.png" alt="{% trans "I membri dell'azienda." %}" />
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

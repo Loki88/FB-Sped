@@ -1,0 +1,94 @@
+{% extends "base.html" %}
+{% load i18n %}
+
+{% block title %}<title>FB Sped S.r.l. - {% trans "Trasporti" %}</title>{% endblock %}
+
+{% block menu-link-trasporti %}<li class="selected color_green"><a id="trasporti-main" href="{% url trasporti %}">{% trans "Trasporti" %}</a></li>{% endblock %}
+
+{% block breadcrumb-path %}<span class="mobile_content">{% trans "Trasporti" %}</span><a class="desktop_content" href="{% url trasporti %}">{% trans "Trasporti" %}</a><span class="desktop_content">&nbsp;- {% trans "Informazioni generali" %}</span>{% endblock %}
+
+{% block page_content %}
+<div class="section group tab_to_accordion"  id="tab">
+    <div class="col_2_5 tab_right_col column-right">
+        <div class="tab_menu content-box content-box-shadow color_white">
+            <div class="header color_blue" id="trasporti-header" data-href="{% url trasporti %}" data-title="FB Sped S.r.l - Trasporti"><h4>{% trans "Trasporti" %}</h4></div>
+            {% block tab-menu-generals %}<div id="trasporti-link" class="menu-button"><div class="icon"></div><a data-target="#trasporti" href="{% url trasporti %}">{% trans "Informazioni generali" %}</a></div>{% endblock %}
+            {% block tab-menu-tyre %}<div id="trasporto-gomma-link" class="menu-button"><div class="icon"></div><a data-target="#trasporto-gomma" href="{% url trasporto-gomma %}">{% trans "Trasporto su gomma" %}</a></div>{% endblock %}
+            {% block tab-menu-rail %}<div id="trasporto-ferroviario-link" class="menu-button"><div class="icon"></div><a data-target="#trasporto-ferroviario" href="{% url trasporto-ferroviario %}">{% trans "Trasporto ferroviario" %}</a></div>{% endblock %}
+            {% block tab-menu-maritime %}<div id="trasporto-marittimo-link" class="menu-button"><div class="icon"></div><a data-target="#trasporto-marittimo" href="{% url trasporto-marittimo %}">{% trans "Trasporto marittimo" %}</a></div>{% endblock %}
+            {% block tab-menu-air %}<div id="trasporto-aereo-link" class="menu-button"><div class="icon"></div><a data-target="#trasporto-aereo" href="{% url trasporto-aereo %}">{% trans "Trasporto aereo" %}</a></div>{% endblock %}
+            {% block tab-menu-combined %}<div id="trasporto-combinato-link" class="menu-button"><div class="icon"></div><a data-target="#trasporto-combinato" href="{% url trasporto-combinato %}">{% trans "Trasporto combinato" %}</a></div>{% endblock %}
+        </div>
+        {% block tab-image-box %}
+            <div class="tab-image content-box-shadow">
+                {% block tab-image %}
+                    <div class="lazy-image">
+                        <img class="img" src="/static/img/blank_small.png" alt="" />
+                    </div>
+                {% endblock %}
+            </div>
+        {% endblock %}
+    </div>
+    <div class="col_3_5 tab_contents column-right">
+        {% block tab-pane-generals %}
+            <div data-trigger="#trasporti-link" data-title="FB Sped S.r.l - Transporti" class="tab_pane" id="trasporti">
+                <div class="accordion-button" id="general">
+                    <a class="open" href="{% url trasporti %}"><div class="accordion_icon icon"></div><div>{% trans "Informazioni generali" %}</div><div class="accordion_icon"></div></a>
+                    <a class="close" href="#tab"><div class="accordion_icon icon"></div><div>{% trans "Informazioni generali" %}</div><div class="accordion_icon"></div></a>
+                </div>
+                <div class="decorator"></div>
+            </div>
+        {% endblock %}
+        {% block tab-pane-tyre %}
+            <div data-trigger="#trasporto-gomma-link" data-title="FB Sped S.r.l - Trasporto su gomma" class="tab_pane" id="trasporto-gomma">
+                <div class="accordion-button" id="truck">
+                    <a class="open" href="{% url trasporto-gomma %}"><div class="accordion_icon icon"></div><div>{% trans "Trasporto su gomma" %}</div><div class="accordion_icon"></div></a>
+                    <a class="close" href="#tab"><div class="accordion_icon icon"></div><div>{% trans "Trasporto su gomma" %}</div><div class="accordion_icon"></div></a>
+                </div>
+                <div class="decorator"></div>
+            </div>
+        {% endblock %}
+        {% block tab-pane-rail %}
+            <div data-trigger="#trasporto-ferroviario-link" data-title="FB Sped S.r.l - Trasporto ferroviario" class="tab_pane" id="trasporto-ferroviario">
+                <div class="accordion-button" id="train">
+                    <a class="open" href="{% url trasporto-ferroviario %}"><div class="accordion_icon icon"></div><div>{% trans "Trasporto ferroviario" %}</div><div class="accordion_icon"></div></a>
+                    <a class="close" href="#tab"><div class="accordion_icon icon"></div><div>{% trans "Trasporto ferroviario" %}</div><div class="accordion_icon"></div></a>
+                </div>
+                <div class="decorator"></div>
+            </div>
+        {% endblock %}
+        {% block tab-pane-maritime %}
+            <div data-trigger="#trasporto-marittimo-link" data-title="FB Sped S.r.l - Trasporto marittimo" class="tab_pane" id="trasporto-marittimo">
+                <div class="accordion-button" id="ship">
+                    <a class="open" href="{% url trasporto-marittimo %}"><div class="accordion_icon icon"></div><div>{% trans "Trasporto marittimo" %}</div><div class="accordion_icon"></div></a>
+                    <a class="close" href="#tab"><div class="accordion_icon icon"></div><div>{% trans "Trasporto marittimo" %}</div><div class="accordion_icon"></div></a>
+                </div>
+                <div class="decorator"></div>
+            </div>
+        {% endblock %}
+        {% block tab-pane-air %}
+            <div data-trigger="#trasporto-aereo-link" data-title="FB Sped S.r.l - Trasporto aereo" class="tab_pane" id="trasporto-aereo">
+                <div class="accordion-button" id="airplane">
+                    <a class="open" href="{% url trasporto-aereo %}"><div class="accordion_icon icon"></div><div>{% trans "Trasporto aereo" %}</div><div class="accordion_icon"></div></a>
+                    <a class="close" href="#tab"><div class="accordion_icon icon"></div><div>{% trans "Trasporto aereo" %}</div><div class="accordion_icon"></div></a>
+                </div>
+                <div class="decorator"></div>
+            </div>
+        {% endblock %}
+        {% block tab-pane-combined %}
+            <div data-trigger="#trasporto-combinato-link" data-title="FB Sped S.r.l - Trasporto combinato" class="tab_pane" id="trasporto-combinato">
+                <div class="accordion-button" id="combined">
+                    <a class="open" href="{% url trasporto-combinato %}"><div class="accordion_icon icon"></div><div>{% trans "Trasporto combinato" %}</div><div class="accordion_icon"></div></a>
+                    <a class="close" href="#tab"><div class="accordion_icon icon"></div><div>{% trans "Trasporto combinato" %}</div><div class="accordion_icon"></div></a>
+                </div>
+                <div class="decorator"></div>
+            </div>
+        {% endblock %}
+    </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+    <script src="/static/js/libs/jquery.history.js"></script>
+    <script src="/static/js/tab-to-accordion.js"></script>
+{% endblock %}

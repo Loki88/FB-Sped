@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+{% load i18n %}
+
+{% block title %}<title>FB Sped S.r.l. - {% trans "Dove siamo" %}</title>{% endblock %}
+
+{% block menu-link-dove %}<li class="selected color_green"><a href="{% url dove-siamo %}"">{% trans "Dove siamo" %}</a></li>{% endblock %}
+
+{% block breadcrumb-path %}{% trans "Dove siamo" %}{% endblock %}
+        
+{% block page_content %}
+    <div class="section group">
+        <div class="column col_2_5">
+            <div class="col_5_5 content-box content-box-shadow color_white" id="content">
+                <div class="decorator"></div>
+                <div class="color_blue header">
+                    <h4 class="title">{% trans "Dove siamo" %}</h4>
+                </div>
+                <div class="decorator-header"></div>
+                <p>
+                    {% trans "Dove siamo - contenuto" %}
+                </p>
+                <div class="decorator-bottom"></div>
+            </div>
+            <div class="col_5_5 content-box content-box-shadow color_white">
+                <div class="decorator"></div>
+                <div class="color_blue header">
+                    <h4 class="title">{% trans "Come raggiungere i nostri uffici" %}</h4>
+                </div>
+                <div class="decorator-header"></div>
+                <p>
+                    {% trans "Come raggiungere gli uffici: paragrafo 1" %}
+                </p>
+                <div class="decorator-bottom"></div>
+            </div>
+        </div>
+        <div class="column col_3_5">
+            <div class="col_5_5 page-img content-box-shadow" id="map-wrapper">
+                <div id="map-canvas"></div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block scripts %}
+    <script type="text/javascript"
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB6sF5SD7zgWGsxO1Q37u8KfRIbPFv7Bbs&sensor=true">
+    </script>
+    <script src="/static/js/maps/map.js" type="text/javascript"></script>
+{% endblock %}

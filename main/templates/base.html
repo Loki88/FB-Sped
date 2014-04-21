@@ -1,0 +1,113 @@
+{% load i18n %}
+{% load staticfiles %}
+
+{% get_current_language as LANGUAGE_CODE %}
+
+<!DOCTYPE html>
+<html lang="{{ LANGUAGE_CODE }}">
+    <head>
+        {% block title %}{% endblock %}
+        <link href="/static/css/normalize.css" type="text/css" rel="stylesheet" />
+        <!--[if lt IE 9]>
+            <script src="../js/libs/html5shiv.js"></script>
+        <![endif]-->
+        <link href="/static/img/icons/logo.png" type="image/gif" rel="icon">
+        <link href="/static/css/FBSped_main.css" type="text/css" rel="stylesheet" />
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatibility" content="IE=Edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/> <!--320-->
+    </head>
+    <body>
+        <div class="sticky-footer">
+            <div id="page-header" class="group">
+                <div class="wrapper">
+                    <div id="logo" class="column col_4_5 group">
+                        <div id="logo-img">
+                            <a href="{% url home %}">
+                                <img src="/static/img/logo.png" alt="Logo della società" />
+                            </a>
+                        </div>
+                        <div id="logo-text">
+                            <h4>FB Sped S.r.l.</h4>
+                            <span>{% trans "spedizioniere multimodale" %}</span>
+                        </div>
+                    </div>
+                    <div class="jump">
+                        <a href="#content">{% trans "Salta al contenuto" %}</a>
+                    </div>
+                    <div class="column col_1_5 lang-menu" id="language">
+                        <div class="container">
+                            {% if LANGUAGE_CODE == "it" %}
+                                <a href="#language" class="controls" id="lang-open"><span class="color_blue color_hover">Ita</span></a>
+                                <a href="#" class="controls" id="lang-close"><span class="color_blue color_hover">Ita</span></a>
+                                <div id="lang-menu">
+                                    <a class="selected" href="#"><span>Ita</span></a>
+                                    <span class="divider">-</span>
+                                    <form action="{{ request.path }}" method="post">
+                                        {% csrf_token %}
+                                        <input type="hidden" name="language" value="en" />
+                                        <input type="submit" value="Eng" />
+                                    </form>
+                                </div>
+                            {% else %}
+                                <a href="#language" class="controls" id="lang-open"><span class="color_blue color_hover">Eng</span></a>
+                                <a href="#" class="controls" id="lang-close"><span class="color_blue color_hover">Eng</span></a>
+                                <div id="lang-menu">
+                                    <form action="{{ request.path }}" method="post">
+                                        {% csrf_token %}
+                                        <input type="hidden" name="language" value="it" />
+                                        <input type="submit" value="Ita" />
+                                    </form>
+                                    <span class="divider">-</span>
+                                    <a class="selected" href="#"><span>Eng</span></a>
+                                </div>
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+                <div class="col_5_5 color_blue navigation" id="navigation">
+                    <div class="wrapper nav-wrapper" id="nav">
+                        <a id="open" class="color_blue color_hover menu-link" href="#navigation" alt="Apri menù"><span>{% trans "Menu" %}</span><div class="icon"></div></a>
+                        <a id="close" class="color_blue color_hover menu-link" href="#" alt="Chiudi menù"><span>{% trans "Chiudi" %}</span><div class="icon"></div></a>
+                        <ul id="menu" class="color_blue">
+                            {% block menu-link-home %}<li class="color_blue color_hover"><a href="{% url home %}">Home</a></li>{% endblock %}
+                            {% block menu-link-chi %}<li class="color_blue color_hover"><a href="{% url chi-siamo %}">{% trans "Chi siamo" %}</a></li>{% endblock %}
+                            {% block menu-link-cosa %}<li class="color_blue color_hover"><a href="{% url cosa-facciamo %}">{% trans "Cosa facciamo" %}</a></li>{% endblock %}
+                            {% block menu-link-trasporti %}<li class="color_blue color_hover"><a id="trasporti-main" href="{% url trasporti %}">{% trans "Trasporti" %}</a></li>{% endblock %}
+                            {% block menu-link-dove %}<li class="color_blue color_hover"><a href="{% url dove-siamo %}">{% trans "Dove siamo" %}</a></li>{% endblock %}
+                            {% block menu-link-contatti %}<li class="color_blue color_hover"><a href="{% url contatti %}">{% trans "Contatti" %}</a></li>{% endblock %}
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="body-background">
+                <div class="breadcrumb" id="breadcrumb">
+                    <div class="wrapper">
+                        <div class="col_5_5 color_white content-box-shadow">
+                            {% block breadcrumb %}
+                                <span class="hidden">{% trans "Sei in" %}&nbsp;</span>{% block breadcrumb-path %}{% endblock %}
+                            {% endblock %}
+                        </div>
+                    </div>
+                </div>
+                <div class="wrapper">
+                    {% block page_content %}
+
+                    {% endblock %}
+                </div>
+            </div>
+        </div>
+        <div id="footer" class="color_blue">
+            <div class="wrapper">
+                <div class="group">
+                    {% include "footer.html" %}
+                </div>
+            </div>
+        </div>
+        <script src="/static/js/libs/ui/jquery/jquery.js"></script>
+        <script src="/static/js/menu.js"></script>
+        {% block scripts %}
+
+        {% endblock %}
+    </body>
+</html>

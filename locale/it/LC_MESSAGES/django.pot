@@ -1,0 +1,342 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-04-21 23:17+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: urls.py:25
+msgid "^chi-siamo/$"
+msgstr ""
+
+#: urls.py:26
+msgid "^cosa-facciamo/$"
+msgstr ""
+
+#: urls.py:27
+msgid "^dove-siamo/$"
+msgstr ""
+
+#: urls.py:28
+msgid "^contatti/$"
+msgstr ""
+
+#: urls.py:32
+msgid "^trasporti/$"
+msgstr ""
+
+#: urls.py:33
+msgid "^trasporti/gomma/$"
+msgstr ""
+
+#: urls.py:34
+msgid "^trasporti/ferroviario/$"
+msgstr ""
+
+#: urls.py:35
+msgid "^trasporti/marittimo/$"
+msgstr ""
+
+#: urls.py:36
+msgid "^trasporti/aereo/$"
+msgstr ""
+
+#: urls.py:37
+msgid "^trasporti/combinato/$"
+msgstr ""
+
+#: django/conf/global_settings.py:52
+msgid "Arabic"
+msgstr ""
+
+#: django/conf/global_settings.py:53
+msgid "Azerbaijani"
+msgstr ""
+
+#: django/conf/global_settings.py:54
+msgid "Bulgarian"
+msgstr ""
+
+#: django/conf/global_settings.py:55
+msgid "Bengali"
+msgstr ""
+
+#: django/conf/global_settings.py:56
+msgid "Bosnian"
+msgstr ""
+
+#: django/conf/global_settings.py:57
+msgid "Catalan"
+msgstr ""
+
+#: django/conf/global_settings.py:58
+msgid "Czech"
+msgstr ""
+
+#: django/conf/global_settings.py:59
+msgid "Welsh"
+msgstr ""
+
+#: django/conf/global_settings.py:60
+msgid "Danish"
+msgstr ""
+
+#: django/conf/global_settings.py:61
+msgid "German"
+msgstr ""
+
+#: django/conf/global_settings.py:62
+msgid "Greek"
+msgstr ""
+
+#: django/conf/global_settings.py:63
+msgid "English"
+msgstr ""
+
+#: django/conf/global_settings.py:64
+msgid "British English"
+msgstr ""
+
+#: django/conf/global_settings.py:65
+msgid "Esperanto"
+msgstr ""
+
+#: django/conf/global_settings.py:66
+msgid "Spanish"
+msgstr ""
+
+#: django/conf/global_settings.py:67
+msgid "Argentinian Spanish"
+msgstr ""
+
+#: django/conf/global_settings.py:68
+msgid "Mexican Spanish"
+msgstr ""
+
+#: django/conf/global_settings.py:69
+msgid "Nicaraguan Spanish"
+msgstr ""
+
+#: django/conf/global_settings.py:70
+msgid "Estonian"
+msgstr ""
+
+#: django/conf/global_settings.py:71
+msgid "Basque"
+msgstr ""
+
+#: django/conf/global_settings.py:72
+msgid "Persian"
+msgstr ""
+
+#: django/conf/global_settings.py:73
+msgid "Finnish"
+msgstr ""
+
+#: django/conf/global_settings.py:74
+msgid "French"
+msgstr ""
+
+#: django/conf/global_settings.py:75
+msgid "Frisian"
+msgstr ""
+
+#: django/conf/global_settings.py:76
+msgid "Irish"
+msgstr ""
+
+#: django/conf/global_settings.py:77
+msgid "Galician"
+msgstr ""
+
+#: django/conf/global_settings.py:78
+msgid "Hebrew"
+msgstr ""
+
+#: django/conf/global_settings.py:79
+msgid "Hindi"
+msgstr ""
+
+#: django/conf/global_settings.py:80
+msgid "Croatian"
+msgstr ""
+
+#: django/conf/global_settings.py:81
+msgid "Hungarian"
+msgstr ""
+
+#: django/conf/global_settings.py:82
+msgid "Indonesian"
+msgstr ""
+
+#: django/conf/global_settings.py:83
+msgid "Icelandic"
+msgstr ""
+
+#: django/conf/global_settings.py:84
+msgid "Italian"
+msgstr ""
+
+#: django/conf/global_settings.py:85
+msgid "Japanese"
+msgstr ""
+
+#: django/conf/global_settings.py:86
+msgid "Georgian"
+msgstr ""
+
+#: django/conf/global_settings.py:87
+msgid "Kazakh"
+msgstr ""
+
+#: django/conf/global_settings.py:88
+msgid "Khmer"
+msgstr ""
+
+#: django/conf/global_settings.py:89
+msgid "Kannada"
+msgstr ""
+
+#: django/conf/global_settings.py:90
+msgid "Korean"
+msgstr ""
+
+#: django/conf/global_settings.py:91
+msgid "Lithuanian"
+msgstr ""
+
+#: django/conf/global_settings.py:92
+msgid "Latvian"
+msgstr ""
+
+#: django/conf/global_settings.py:93
+msgid "Macedonian"
+msgstr ""
+
+#: django/conf/global_settings.py:94
+msgid "Malayalam"
+msgstr ""
+
+#: django/conf/global_settings.py:95
+msgid "Mongolian"
+msgstr ""
+
+#: django/conf/global_settings.py:96
+msgid "Norwegian Bokmal"
+msgstr ""
+
+#: django/conf/global_settings.py:97
+msgid "Nepali"
+msgstr ""
+
+#: django/conf/global_settings.py:98
+msgid "Dutch"
+msgstr ""
+
+#: django/conf/global_settings.py:99
+msgid "Norwegian Nynorsk"
+msgstr ""
+
+#: django/conf/global_settings.py:100
+msgid "Punjabi"
+msgstr ""
+
+#: django/conf/global_settings.py:101
+msgid "Polish"
+msgstr ""
+
+#: django/conf/global_settings.py:102
+msgid "Portuguese"
+msgstr ""
+
+#: django/conf/global_settings.py:103
+msgid "Brazilian Portuguese"
+msgstr ""
+
+#: django/conf/global_settings.py:104
+msgid "Romanian"
+msgstr ""
+
+#: django/conf/global_settings.py:105
+msgid "Russian"
+msgstr ""
+
+#: django/conf/global_settings.py:106
+msgid "Slovak"
+msgstr ""
+
+#: django/conf/global_settings.py:107
+msgid "Slovenian"
+msgstr ""
+
+#: django/conf/global_settings.py:108
+msgid "Albanian"
+msgstr ""
+
+#: django/conf/global_settings.py:109
+msgid "Serbian"
+msgstr ""
+
+#: django/conf/global_settings.py:110
+msgid "Serbian Latin"
+msgstr ""
+
+#: django/conf/global_settings.py:111
+msgid "Swedish"
+msgstr ""
+
+#: django/conf/global_settings.py:112
+msgid "Swahili"
+msgstr ""
+
+#: django/conf/global_settings.py:113
+msgid "Tamil"
+msgstr ""
+
+#: django/conf/global_settings.py:114
+msgid "Telugu"
+msgstr ""
+
+#: django/conf/global_settings.py:115
+msgid "Thai"
+msgstr ""
+
+#: django/conf/global_settings.py:116
+msgid "Turkish"
+msgstr ""
+
+#: django/conf/global_settings.py:117
+msgid "Tatar"
+msgstr ""
+
+#: django/conf/global_settings.py:118
+msgid "Ukrainian"
+msgstr ""
+
+#: django/conf/global_settings.py:119
+msgid "Urdu"
+msgstr ""
+
+#: django/conf/global_settings.py:120
+msgid "Vietnamese"
+msgstr ""
+
+#: django/conf/global_settings.py:121
+msgid "Simplified Chinese"
+msgstr ""
+
+#: django/conf/global_settings.py:122
+msgid "Traditional Chinese"
+msgstr ""
